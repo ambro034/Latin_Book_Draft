@@ -43,7 +43,7 @@
         width: calc(50% - 3px);
     }
 
-    .book.with-summary .book-body .book-header {
+    .book.with-summary .book-body {
         overflow-x: hidden;
         overflow-y: hidden;
     }
