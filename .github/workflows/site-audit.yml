@@ -33,6 +33,7 @@ jobs:
         env:
           BEOPS_ORIGIN: https://neverthesame.github.io
           BEOPS_BASEURL: /BeOps
+          BEOPS_CATEGORIES: devops,k8s,sre,ai,job-interviews
         run: node audit.mjs
 
       - name: Upload audit report

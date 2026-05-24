@@ -2,6 +2,7 @@
 title: SRE
 layout: home
 permalink: /sre/
+is_category: true
 description: Site Reliability Engineering principles and practices.
 ---
 

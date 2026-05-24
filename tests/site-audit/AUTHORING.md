@@ -61,11 +61,11 @@ It also runs automatically in GitHub Actions on every push to `gh-pages` and nig
 
 ## 4. New category? Update three places
 
-If you ever add a 5th category (say `platform`):
+If you ever add a new category (say `platform`):
 
-1. Create `_pages/platform.md` with `permalink: /platform/` (copy `_pages/ai.md`).
-2. Add the link to `index.md` under "📚 Categories".
-3. Add the slug to the audit: `BEOPS_CATEGORIES=devops,k8s,sre,ai,platform` in `.github/workflows/site-audit.yml`.
+1. Append it to **`_data/categories.yml`** (single source of truth — picked up by the homepage and sidebar automatically).
+2. Create **`_pages/<slug>.md`** with `permalink: /<slug>/` and `is_category: true` (copy `_pages/ai.md`).
+3. Add the slug to the audit: `BEOPS_CATEGORIES=devops,k8s,sre,ai,job-interviews,<slug>` in `.github/workflows/site-audit.yml`.
 
 ## 5. Don't change
 

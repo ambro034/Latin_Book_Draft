@@ -98,7 +98,7 @@ bundle exec jekyll build --verbose
 ### Posts
 - Store in `_posts/` with format: `YYYY-MM-DD-title.md`
 - Use consistent front matter (see `tests/site-audit/POST_TEMPLATE.md`)
-- Required: `title`, `author`, `date`, `layout: post`, and `category` (one of `devops`, `k8s`, `sre`, `ai`)
+- Required: `title`, `author`, `date`, `layout: post`, and `category` (one of `devops`, `k8s`, `sre`, `ai`, `job-interviews`)
 - Include proper categories and tags
 
 ### Assets
@@ -114,7 +114,7 @@ bundle exec jekyll build --verbose
 - Live site: https://neverthesame.github.io/BeOps/
 - All authoring and content changes must be made from the `gh-pages` branch.
 - **Site is served under baseurl `/BeOps`.** Every internal link in templates, includes, or hand-written Liquid MUST use the `relative_url` filter (e.g. `{{ '/devops/' | relative_url }}`). Hard-coded absolute paths like `/devops/` will 404 on the live site. See `tests/site-audit/AUTHORING.md`.
-- **Supported categories**: `devops`, `k8s`, `sre`, `ai`. Each has an index page in `_pages/<slug>.md` with `permalink: /<slug>/`. Adding a new category requires (1) a new `_pages/<slug>.md`, (2) a link in `index.md`, and (3) updating `BEOPS_CATEGORIES` in `.github/workflows/site-audit.yml`.
+- **Supported categories**: `devops`, `k8s`, `sre`, `ai`, `job-interviews`. Single source of truth is `_data/categories.yml`. Each has an index page in `_pages/<slug>.md` with `permalink: /<slug>/` and `is_category: true` in front matter. Adding a new category requires (1) appending to `_data/categories.yml`, (2) creating `_pages/<slug>.md`, and (3) updating `BEOPS_CATEGORIES` in `.github/workflows/site-audit.yml`.
 - **Site audit**: `tests/site-audit/` contains a Playwright + lychee audit. It runs in CI on every push to `gh-pages` and nightly; run locally with `cd tests/site-audit && npm run audit`. The audit fails on broken links, missing-baseurl links, unreachable/orphan posts, or category pages that don't list their posts.
 
 ### Content Updates

@@ -2,6 +2,7 @@
 title: AI
 layout: home
 permalink: /ai/
+is_category: true
 description: AI engineering, LLM operations, and applied AI for platform teams.
 ---
 

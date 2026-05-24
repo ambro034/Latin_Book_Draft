@@ -2,6 +2,7 @@
 title: Kubernetes
 layout: home
 permalink: /k8s/
+is_category: true
 description: Kubernetes deep dives, patterns, and operations.
 ---
 

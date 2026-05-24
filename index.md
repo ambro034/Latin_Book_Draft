@@ -6,27 +6,27 @@ permalink: /
 
 # BeOps - Best Practices for DevOps and SRE
 
-Welcome to BeOps, your comprehensive resource for DevOps best practices, Kubernetes deep dives, and Site Reliability Engineering (SRE) principles.
+Welcome to BeOps, your comprehensive resource for DevOps best practices, Kubernetes deep dives, Site Reliability Engineering (SRE) principles, and applied AI for operations.
 
-## 🚀 Latest Posts
+## 📚 Browse by Category
 
-{% for post in site.posts limit:5 %}
-### [{{ post.title }}]({{ post.url | relative_url }})
-**{{ post.date | date: "%B %d, %Y" }}** - {{ post.category | capitalize }}
+{% for cat in site.data.categories %}
+{% assign cat_posts = site.posts | where: "category", cat.slug | sort: "date" | reverse %}
+### [{{ cat.title }}]({{ '/' | append: cat.slug | append: '/' | relative_url }})
+_{{ cat.description }}_
 
-{{ post.excerpt | strip_html | truncatewords: 30 }}
+{% if cat_posts.size == 0 %}
+- _No posts yet — check back soon._
+{% else %}
+{% for post in cat_posts %}
+- [{{ post.title }}]({{ post.url | relative_url }}) <span class="post-date">— {{ post.date | date: "%b %-d, %Y" }}</span>
+{% endfor %}
+{% endif %}
 
 {% endfor %}
 
-## 📚 Categories
-
-- **[DevOps]({{ '/devops/' | relative_url }})** - Best practices and methodologies
-- **[Kubernetes]({{ '/k8s/' | relative_url }})** - Container orchestration and management
-- **[SRE]({{ '/sre/' | relative_url }})** - Site Reliability Engineering principles
-- **[AI]({{ '/ai/' | relative_url }})** - AI engineering and operations
-
 ## 🔗 Quick Links
 
-- [About]({{ '/pages/about/' | relative_url }}) - Learn more about BeOps
-- [Contact]({{ '/pages/contact/' | relative_url }}) - Get in touch
-- [RSS Feed]({{ '/feed.xml' | relative_url }}) - Subscribe to updates
+- [About]({{ '/pages/about/' | relative_url }}) — Learn more about BeOps
+- [Contact]({{ '/pages/contact/' | relative_url }}) — Get in touch
+- [RSS Feed]({{ '/feed.xml' | relative_url }}) — Subscribe to updates

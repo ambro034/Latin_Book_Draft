@@ -2,6 +2,7 @@
 title: DevOps
 layout: home
 permalink: /devops/
+is_category: true
 description: DevOps best practices, methodologies, and tooling.
 ---
 

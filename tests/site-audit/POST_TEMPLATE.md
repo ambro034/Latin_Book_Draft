@@ -2,7 +2,7 @@
 title: TITLE_HERE
 author: Kirill Kuklin
 date: YYYY-MM-DD
-category: devops         # one of: devops | k8s | sre | ai
+category: devops         # one of: devops | k8s | sre | ai | job-interviews
 layout: post
 cover: ../assets/COVER.gif
 tags:
@@ -30,6 +30,6 @@ renders posts under `/BeOps/<category>/...`.
 ## Checklist before pushing
 
 - [ ] Filename: `_posts/YYYY-MM-DD-slug.md` (date matches front matter)
-- [ ] `category` is one of `devops | k8s | sre | ai`
+- [ ] `category` is one of `devops | k8s | sre | ai | job-interviews`
 - [ ] All links use `relative_url` or are `../`-relative
 - [ ] Ran `cd tests/site-audit && npm run audit` → 0 issues
