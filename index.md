@@ -11,7 +11,7 @@ Welcome to BeOps, your comprehensive resource for DevOps best practices, Kuberne
 ## 🚀 Latest Posts
 
 {% for post in site.posts limit:5 %}
-### [{{ post.title }}]({{ post.url }})
+### [{{ post.title }}]({{ post.url | relative_url }})
 **{{ post.date | date: "%B %d, %Y" }}** - {{ post.category | capitalize }}
 
 {{ post.excerpt | strip_html | truncatewords: 30 }}
@@ -20,12 +20,13 @@ Welcome to BeOps, your comprehensive resource for DevOps best practices, Kuberne
 
 ## 📚 Categories
 
-- **[DevOps](/devops/)** - Best practices and methodologies
-- **[Kubernetes](/k8s/)** - Container orchestration and management
-- **[SRE](/sre/)** - Site Reliability Engineering principles
+- **[DevOps]({{ '/devops/' | relative_url }})** - Best practices and methodologies
+- **[Kubernetes]({{ '/k8s/' | relative_url }})** - Container orchestration and management
+- **[SRE]({{ '/sre/' | relative_url }})** - Site Reliability Engineering principles
+- **[AI]({{ '/ai/' | relative_url }})** - AI engineering and operations
 
 ## 🔗 Quick Links
 
-- [About](/pages/about/) - Learn more about BeOps
-- [Contact](/pages/contact/) - Get in touch
-- [RSS Feed](/feed.xml) - Subscribe to updates
+- [About]({{ '/pages/about/' | relative_url }}) - Learn more about BeOps
+- [Contact]({{ '/pages/contact/' | relative_url }}) - Get in touch
+- [RSS Feed]({{ '/feed.xml' | relative_url }}) - Subscribe to updates
