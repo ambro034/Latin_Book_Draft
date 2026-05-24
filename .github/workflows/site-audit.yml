@@ -1,0 +1,43 @@
+name: Site audit
+
+on:
+  push:
+    branches: [gh-pages, main]
+  schedule:
+    - cron: '0 12 * * *'  # daily noon UTC
+  workflow_dispatch:
+
+# Allow GitHub Pages a moment to redeploy before we crawl
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Wait for Pages deploy (push only)
+        if: github.event_name == 'push'
+        run: sleep 90
+
+      - name: Install audit deps
+        working-directory: tests/site-audit
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Run audit against live site
+        working-directory: tests/site-audit
+        env:
+          BEOPS_ORIGIN: https://neverthesame.github.io
+          BEOPS_BASEURL: /BeOps
+        run: node audit.mjs
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-audit-report
+          path: tests/site-audit/reports/

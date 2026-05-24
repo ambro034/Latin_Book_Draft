@@ -47,3 +47,8 @@ Desktop.ini
 
 .specstory/
 .cursorindexingignore
+
+# Site audit artifacts
+tests/site-audit/node_modules/
+tests/site-audit/reports/
+tests/site-audit/lychee-*.txt
