@@ -6,8 +6,6 @@ is_category: true
 description: Kubernetes deep dives, patterns, and operations.
 ---
 
-# Kubernetes
-
 Container orchestration, cluster operations, and Kubernetes patterns.
 
 {% assign category_posts = site.categories.k8s | default: site.posts | where: "category", "k8s" %}

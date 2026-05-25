@@ -18,7 +18,4 @@
   description: AI engineering and operations
 - slug: job-interviews
   title: Job Interviews
-  description: Interview prep for SRE/DevOps/AI/platform roles
-- slug: interviews
-  title: Interviews
-  description: Conversations with engineers and architects working at the frontier
+  description: Interviews — both ones I've taken and prep notes for SRE/DevOps/AI/platform roles

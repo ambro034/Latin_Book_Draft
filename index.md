@@ -4,8 +4,6 @@ title: BeOps - Best Practices for DevOps and SRE
 permalink: /
 ---
 
-# BeOps - Best Practices for DevOps and SRE
-
 Welcome to BeOps, your comprehensive resource for DevOps best practices, Kubernetes deep dives, Site Reliability Engineering (SRE) principles, and applied AI for operations.
 
 ## 📚 Browse by Category

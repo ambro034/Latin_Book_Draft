@@ -2,7 +2,7 @@
 title: "I Just Took a Staff AI Engineer Interview — Here's What I Said"
 author: Kirill Kuklin
 date: 2026-05-25
-category: interviews
+category: job-interviews
 layout: post
 tags:
   - ai-engineering
@@ -18,7 +18,7 @@ excerpt: >
   and one or two opinions about Grafana.
 ---
 
-# I Just Took a Staff AI Engineer Interview — Here's What I Said
+---
 
 _Posting this mostly for me — a sanity-check of the answers I gave in a recent Staff AI Engineer loop. Also because writing it down is cheaper than therapy 💸. Names of the hiring company and my current employer are off-limits, so I'll keep the specifics generic, but the technical substance is exactly what I said in the room._
 

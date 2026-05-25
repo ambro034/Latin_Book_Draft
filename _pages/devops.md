@@ -6,8 +6,6 @@ is_category: true
 description: DevOps best practices, methodologies, and tooling.
 ---
 
-# DevOps
-
 Best practices, methodologies, and tooling for modern DevOps teams.
 
 {% assign category_posts = site.categories.devops | default: site.posts | where: "category", "devops" %}

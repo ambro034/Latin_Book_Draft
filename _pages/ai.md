@@ -6,8 +6,6 @@ is_category: true
 description: AI engineering, LLM operations, and applied AI for platform teams.
 ---
 
-# AI
-
 AI engineering, LLM operations, and applied AI for platform & operations teams.
 
 {% assign category_posts = site.categories.ai | default: site.posts | where: "category", "ai" %}

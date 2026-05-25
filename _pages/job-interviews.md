@@ -3,12 +3,10 @@ title: Job Interviews
 layout: home
 permalink: /job-interviews/
 is_category: true
-description: Interview prep for SRE, DevOps, AI, and platform roles.
+description: Interviews I've taken plus prep notes for SRE, DevOps, AI, and platform roles.
 ---
 
-# Job Interviews
-
-Interview preparation for SRE, DevOps, AI, and platform engineering roles.
+First-person interview write-ups and prep notes for SRE, DevOps, AI, and platform engineering roles.
 
 {% assign category_posts = site.categories.job-interviews | default: site.posts | where: "category", "job-interviews" %}
 {% if category_posts.size == 0 %}

@@ -6,8 +6,6 @@ is_category: true
 description: Site Reliability Engineering principles and practices.
 ---
 
-# SRE
-
 Site Reliability Engineering: SLOs, incident response, and reliability patterns.
 
 {% assign category_posts = site.categories.sre | default: site.posts | where: "category", "sre" %}
