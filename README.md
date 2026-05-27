@@ -9,6 +9,7 @@ A comprehensive documentation site covering DevOps best practices, Kubernetes, a
 - **SRE Principles**: Site Reliability Engineering methodologies
 - **Ingress Controllers**: Comprehensive coverage of Kubernetes networking
 - **AI-Powered Content Generation**: Automated blog post creation using OpenAI and Google Gemini APIs
+- **RAG over own posts**: Hybrid retrieval (pgvector + Postgres FTS + RRF) so the generator cites prior work and stops repeating itself — see [**docs/architecture.md**](docs/architecture.md) for diagrams of the pipeline.
 
 ## 📚 Content
 
