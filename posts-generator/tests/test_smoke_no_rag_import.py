@@ -1,10 +1,13 @@
 """Smoke test: importing the generator's hot path must NOT pull in
-sentence_transformers, psycopg, or any RAG runtime when BEOPS_RAG_ENABLED
-is unset.
+sentence_transformers, psycopg, or any RAG runtime.
 
 This is the safety rail the rubber-duck pass called out: if the generator
 silently imports torch on every invocation, we regress startup time and
 break environments that don't have it installed.
+
+The contract is now stronger: regardless of env vars, *importing*
+openai_worker_4o never touches RAG modules. The heavy imports are gated
+inside the _rag_context_block() call site.
 """
 from __future__ import annotations
 
@@ -17,12 +20,11 @@ import textwrap
 SCRIPT = textwrap.dedent(
     """
     import os, sys
-    os.environ.pop("BEOPS_RAG_ENABLED", None)
+    # Force a clean import: no DB url, no flags.
+    for k in ("BEOPS_RAG_DISABLED", "NEON_DATABASE_URL",
+              "DATABASE_URL", "BEOPS_TEST_DATABASE_URL"):
+        os.environ.pop(k, None)
 
-    # Import the modules the generator entrypoints touch on startup.
-    # Use a non-failing import probe — if any module is unavailable in this
-    # environment (Azure SDK etc.), skip it. We're only asserting absence
-    # of RAG-runtime imports.
     for mod in ("openai_worker_4o",):
         try:
             __import__(mod)
@@ -47,11 +49,11 @@ SCRIPT = textwrap.dedent(
 )
 
 
-def test_generator_does_not_import_rag_when_flag_off(tmp_path):
+def test_generator_does_not_import_rag_on_module_import(tmp_path):
     env = os.environ.copy()
-    env.pop("BEOPS_RAG_ENABLED", None)
-    # Run as a fresh subprocess from posts-generator/ so the import paths
-    # match real usage.
+    for k in ("BEOPS_RAG_DISABLED", "NEON_DATABASE_URL",
+              "DATABASE_URL", "BEOPS_TEST_DATABASE_URL"):
+        env.pop(k, None)
     cwd = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = subprocess.run(
         [sys.executable, "-c", SCRIPT],

@@ -123,11 +123,53 @@ bundle exec jekyll build --verbose
 3. Add to `_posts/` directory
 4. Commit and push to trigger rebuild
 
+## RAG over own posts (mandatory before drafting)
+
+This repo has a hybrid-retrieval RAG store over every published post
+(see `docs/architecture.md`). **Any agent — human or AI — drafting a
+new post MUST consult it first** so we cite prior work and stop
+repeating ourselves.
+
+### For the CLI agent (Copilot CLI, Claude Code, etc.) — required step
+
+Before writing a new `_posts/*.md`, run:
+
+```bash
+cd posts-generator
+export NEON_DATABASE_URL='postgres://…'   # the prod DSN; same value as the GH secret
+python -m rag.cli context "<one-paragraph description of the post you're about to write>"
+```
+
+The command prints a "PRIOR POSTS YOU HAVE ALREADY WRITTEN" block with
+clickable URLs and an anti-rehash instruction. Use it to:
+
+1. **Cite** every prior post your draft overlaps with (link to its URL).
+2. **Avoid rehashing** angles that are already covered — pick a genuinely
+   new angle or explicitly extend / contradict prior coverage.
+3. If `python -m rag.cli context` returns empty: the topic is new, proceed.
+
+If `NEON_DATABASE_URL` is unset, ask the user for it before drafting.
+Skipping this step is a regression — the whole point of the RAG layer is
+to prevent duplicate coverage.
+
+### For the Python generator (`py-feedparser.py` etc.)
+
+The integration in `openai_worker_4o.py` runs RAG **by default** when
+`NEON_DATABASE_URL` is in the environment. To opt out for a one-off run:
+
+```bash
+BEOPS_RAG_DISABLED=1 python py-feedparser.py --config config-4o.json
+```
+
+After publishing a new post, the `rag-index.yml` workflow re-indexes the
+corpus automatically on push to `gh-pages`.
+
 ## Common Tasks
 
 ### Adding New Content
 ```bash
 cd posts-generator
+export NEON_DATABASE_URL='postgres://…'   # enables RAG grounding
 python py-feedparser.py --config config-4o.json
 ```
 

@@ -39,6 +39,13 @@ def main(argv: list[str] | None = None) -> int:
     ps.add_argument("query")
     ps.add_argument("-k", type=int, default=8)
 
+    pc = sub.add_parser(
+        "context",
+        help="print the prompt block to inject when drafting a post about <seed>",
+    )
+    pc.add_argument("seed", help="topic / first paragraph / draft title")
+    pc.add_argument("-k", type=int, default=8)
+
     args = p.parse_args(argv)
 
     if args.cmd == "init":
@@ -68,6 +75,12 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {h.score:.4f}  {h.slug}#{h.ord}")
             preview = h.text.replace("\n", " ")[:200]
             print(f"           {preview}…")
+        return 0
+
+    if args.cmd == "context":
+        with connect() as conn:
+            block = retriever.context_for(conn, args.seed, k=args.k)
+        print(block)
         return 0
 
     return 2

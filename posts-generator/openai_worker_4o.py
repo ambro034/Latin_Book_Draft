@@ -5,19 +5,27 @@ from openai import AzureOpenAI
 
 
 def _rag_context_block(seed_text: str) -> str:
-    """Optional: pull prior-work context from the RAG store if enabled.
+    """Pull prior-work context from the RAG store.
 
-    Default OFF. Set BEOPS_RAG_ENABLED=1 to opt in. Imports are local so
-    that disabling the flag also disables loading sentence-transformers /
-    psycopg / the model — the smoke test guards this invariant.
+    ON by default. Disable with BEOPS_RAG_DISABLED=1. Also auto-skips when
+    no database URL is configured (NEON_DATABASE_URL / DATABASE_URL), so
+    environments without Neon don't break.
+
+    All RAG imports are local so importing this module never pulls in
+    sentence-transformers / torch / psycopg — the smoke test enforces
+    that invariant.
     """
-    if os.getenv("BEOPS_RAG_ENABLED") != "1":
+    if os.getenv("BEOPS_RAG_DISABLED") == "1":
+        return ""
+    if not (os.getenv("NEON_DATABASE_URL") or os.getenv("DATABASE_URL")
+            or os.getenv("BEOPS_TEST_DATABASE_URL")):
+        # No DB configured — silently no-op rather than crash.
         return ""
     try:
         from rag.db import connect
         from rag.retriever import context_for
     except Exception as e:  # pragma: no cover - opt-in failure shouldn't crash
-        print(f"⚠️ BEOPS_RAG_ENABLED=1 but rag package not importable: {e}")
+        print(f"⚠️ RAG packages not importable, skipping context: {e}")
         return ""
     try:
         with connect() as conn:
