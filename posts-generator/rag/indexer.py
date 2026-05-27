@@ -69,8 +69,8 @@ def index(
     force: bool = False,
 ) -> IndexStats:
     """Index every Markdown post under `posts_dir`."""
-    assert_meta_matches(conn)
     init_schema(conn)  # idempotent; creates tables if missing and pins meta
+    assert_meta_matches(conn)
 
     if not acquire_index_lock(conn):
         raise RuntimeError(
