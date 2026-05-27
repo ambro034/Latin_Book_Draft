@@ -97,10 +97,11 @@ def _wait_until_reachable(dsn: str, deadline: float = 60.0) -> None:
 
 
 @pytest.fixture(scope="session")
-def database_url() -> str:
+def database_url():
     """Return a DSN to a real Postgres+pgvector instance, or skip."""
     if dsn := os.getenv("BEOPS_TEST_DATABASE_URL"):
-        return dsn
+        yield dsn
+        return
 
     api_key = os.getenv("NEON_API_KEY")
     project_id = os.getenv("NEON_PROJECT_ID")
@@ -112,8 +113,10 @@ def database_url() -> str:
 
     name = f"ci-pytest-{uuid.uuid4().hex[:8]}"
     branch_id, dsn = _create_branch(api_key, project_id, name)
-    yield dsn
-    _delete_branch(api_key, project_id, branch_id)
+    try:
+        yield dsn
+    finally:
+        _delete_branch(api_key, project_id, branch_id)
 
 
 @pytest.fixture
