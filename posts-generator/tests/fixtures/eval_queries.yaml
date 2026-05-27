@@ -1,0 +1,29 @@
+# Hand-picked retrieval queries with expected top-K post slugs.
+#
+# Used by tests/test_eval.py as a regression gate: if a query's expected
+# slug drops out of the top-K, CI fails. Tune chunker/embedder/RRF/k
+# until everything passes again.
+#
+# Keep this set SMALL and OBVIOUS — these are smoke-tests for the
+# pipeline, not a benchmark.
+#
+# Each entry:
+#   query:         what we'd search for
+#   expect_in_top: slug(s) that MUST appear in the top-K hits
+#   top_k:         retrieval k (default 5)
+
+queries:
+  - query: "kubernetes readiness probe configuration"
+    expect_in_top: ["2024-12-15-kubernetes"]
+
+  - query: "nginx ingress controller for k8s"
+    expect_in_top: ["2024-12-17-ingress-controllers"]
+
+  - query: "agents.md file convention for ai coding tools"
+    expect_in_top: ["2025-08-27-agentsmd-ate-my-readme"]
+
+  - query: "forward deployed engineer hiring trend at openai palantir"
+    expect_in_top: ["2026-05-25-forward-deployed-engineering-ate-customer-success"]
+
+  - query: "staff ai engineer interview rag agents observability"
+    expect_in_top: ["2026-05-25-staff-ai-engineer-interview"]

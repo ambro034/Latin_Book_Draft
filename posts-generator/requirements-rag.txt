@@ -1,0 +1,7 @@
+# RAG dependencies. Kept separate from requirements.txt so existing
+# py-feedparser flows don't pull torch unless RAG is actually used.
+psycopg[binary]>=3.1,<4
+sentence-transformers>=2.7,<4
+pyyaml>=6.0
+pytest>=8.0
+requests>=2.31

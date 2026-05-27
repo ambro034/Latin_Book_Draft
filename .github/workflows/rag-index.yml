@@ -1,0 +1,49 @@
+name: RAG index
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - '_posts/**'
+      - 'posts-generator/rag/**'
+      - 'posts-generator/requirements-rag.txt'
+      - '.github/workflows/rag-index.yml'
+  workflow_dispatch:
+
+concurrency:
+  # only one indexer at a time per ref — DB advisory lock is belt-and-braces
+  group: rag-index-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: posts-generator/requirements-rag.txt
+
+      - name: Install RAG deps
+        working-directory: posts-generator
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-rag.txt
+
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-MiniLM-L6-v2-v1
+
+      - name: Run indexer
+        working-directory: posts-generator
+        env:
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          PYTHONPATH: ${{ github.workspace }}/posts-generator
+        run: |
+          python -m rag.cli index ../_posts

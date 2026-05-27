@@ -5,7 +5,17 @@ _site/
 .jekyll-metadata
 
 # Posts generator directory (contains sensitive config files)
-posts-generator/
+posts-generator/*
+# ...but track source code, package, tests, and shared metadata.
+# Configs / logs / produced posts / virtualenv remain ignored via the
+# wildcard above.
+!posts-generator/AGENTS.md
+!posts-generator/rag/
+!posts-generator/tests/
+!posts-generator/requirements-rag.txt
+!posts-generator/requirements.txt
+!posts-generator/pytest.ini
+!posts-generator/openai_worker_4o.py
 
 # Configuration files with sensitive data
 configs/
