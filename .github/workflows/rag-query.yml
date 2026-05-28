@@ -15,6 +15,13 @@ on:
         description: "How many chunks to fuse (default 8)"
         required: false
         default: "8"
+  # Self-registering push: GitHub only indexes a workflow_dispatch trigger
+  # after the workflow has been seen running on the default branch, OR
+  # has been triggered by another `on:` event. Pushing the workflow file
+  # itself runs a no-op (seed is empty on push) and registers it.
+  push:
+    branches: [gh-pages]
+    paths: ['.github/workflows/rag-query.yml']
 
 concurrency:
   group: rag-query-${{ github.ref }}
@@ -45,6 +52,7 @@ jobs:
 
       - name: Run RAG context query
         id: query
+        if: github.event_name == 'workflow_dispatch'
         working-directory: posts-generator
         env:
           NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
@@ -69,9 +77,14 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload prompt block as artifact
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: rag-context
           path: ${{ runner.temp }}/rag-context.txt
           if-no-files-found: error
           retention-days: 1
+
+      - name: Self-registration no-op
+        if: github.event_name == 'push'
+        run: echo "Workflow file changed — this run exists only to register the workflow_dispatch trigger."
