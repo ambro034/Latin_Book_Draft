@@ -1,0 +1,77 @@
+name: RAG query (dispatch)
+
+# Manual / programmatic query against the prod RAG store. Lets an external
+# agent (or human) ask "what have I already written about X?" without ever
+# seeing NEON_DATABASE_URL — the secret stays inside Actions, the prompt
+# block comes back as a workflow artifact.
+
+on:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: "Topic / first paragraph / draft title to ground"
+        required: true
+      k:
+        description: "How many chunks to fuse (default 8)"
+        required: false
+        default: "8"
+
+concurrency:
+  group: rag-query-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  query:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: posts-generator/requirements-rag.txt
+
+      - name: Install RAG deps
+        run: pip install -r posts-generator/requirements-rag.txt
+
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-models-MiniLM-L6-v2
+
+      - name: Run RAG context query
+        id: query
+        working-directory: posts-generator
+        env:
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          PYTHONPATH: ${{ github.workspace }}/posts-generator
+        run: |
+          set -euo pipefail
+          python -m rag.cli context "${{ inputs.seed }}" -k "${{ inputs.k }}" \
+            | tee "${{ runner.temp }}/rag-context.txt"
+          # Also surface to the job summary for quick human inspection.
+          {
+            echo "## RAG context for seed"
+            echo
+            echo "\`\`\`"
+            echo "${{ inputs.seed }}"
+            echo "\`\`\`"
+            echo
+            echo "### Prompt block"
+            echo
+            echo "\`\`\`"
+            cat "${{ runner.temp }}/rag-context.txt"
+            echo "\`\`\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload prompt block as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rag-context
+          path: ${{ runner.temp }}/rag-context.txt
+          if-no-files-found: error
+          retention-days: 1
