@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Afsprakenstelsel
+longtitle:        Het Jeugd Zorg en Veiligheid Afsprakenstelsel 
+author:           lg
+email:            234217824+samen-onder-handbereik@users.noreply.github.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Samen onder Handbereik - Netwerksamenwerking onder de vingertoppen. Het Jeugd Zorg en Veiligheid Afsprakenstelsel
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://samen-onder-handbereik.github.io'
+baseurl:          '/afsprakenstelsel'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
