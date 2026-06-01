@@ -22,7 +22,9 @@ _DEFAULT_MODEL = "deepseek/deepseek-chat-v3:free"
 
 
 def default_model() -> str:
-    return os.getenv("OPENROUTER_MODEL", _DEFAULT_MODEL)
+    # Treat an unset OR empty/whitespace value (e.g. an undefined CI variable
+    # that expands to "") as "use the built-in default".
+    return (os.getenv("OPENROUTER_MODEL") or "").strip() or _DEFAULT_MODEL
 
 
 def chat(
@@ -46,7 +48,7 @@ def chat(
 
     payload = json.dumps(
         {
-            "model": model or default_model(),
+            "model": (model or "").strip() or default_model(),
             "messages": messages,
             "max_tokens": max_tokens,
             "temperature": temperature,
