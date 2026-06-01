@@ -7,7 +7,7 @@ Docs: https://openrouter.ai/docs
 
 Env:
   OPENROUTER_API_KEY   (required)
-  OPENROUTER_MODEL     (optional; default deepseek/deepseek-chat-v3:free)
+  OPENROUTER_MODEL     (optional; default meta-llama/llama-3.3-70b-instruct:free)
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ import urllib.error
 import urllib.request
 
 _API_URL = "https://openrouter.ai/api/v1/chat/completions"
-_DEFAULT_MODEL = "deepseek/deepseek-chat-v3:free"
+_DEFAULT_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
 
 def default_model() -> str:
