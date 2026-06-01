@@ -16,6 +16,10 @@ posts-generator/*
 !posts-generator/requirements.txt
 !posts-generator/pytest.ini
 !posts-generator/openai_worker_4o.py
+!posts-generator/scrape_telegram.py
+!posts-generator/llm_openrouter.py
+!posts-generator/telegram_drafter.py
+!posts-generator/style_corpus/
 
 # Configuration files with sensitive data
 configs/

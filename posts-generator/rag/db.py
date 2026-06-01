@@ -107,14 +107,14 @@ def assert_meta_matches(conn: psycopg.Connection) -> None:
         )
 
 
-def acquire_index_lock(conn: psycopg.Connection) -> bool:
+def acquire_index_lock(conn: psycopg.Connection, key: int = 7142001) -> bool:
     """Postgres advisory lock so concurrent indexer runs serialize.
 
     Returns True if lock acquired, False if another indexer is running.
-    Lock is automatically released on connection close.
+    Lock is automatically released on connection close. Use distinct keys for
+    independent indexers (e.g. blog vs style corpus) so they don't collide.
     """
     with conn.cursor() as cur:
-        # arbitrary stable key for the "indexer" critical section
-        cur.execute("select pg_try_advisory_lock(7142001)")
+        cur.execute("select pg_try_advisory_lock(%s)", (key,))
         (got,) = cur.fetchone()
         return bool(got)
