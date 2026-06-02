@@ -101,7 +101,17 @@ Categories are defined in **three** places that MUST stay in sync
    ```
    Keep the Liquid block that lists `site.categories.<slug>` posts.
 3. Add the slug to `BEOPS_CATEGORIES` in `.github/workflows/site-audit.yml`
-   (comma-separated list — the audit fails if a category page can't be reached).
+   (comma-separated list; the audit fails if a category page can't be reached).
+4. **Map the slug in `.github/scripts/build_posts_ts.py` (`CATEGORY_MAP`).**
+   This is easy to forget. The external site `beops.site`
+   (`NeverTheSame/beops-main-site`) is fed by the `sync-to-beops-site.yml`
+   workflow, which runs that script. Any post whose category is NOT in
+   `CATEGORY_MAP` is **silently skipped** and never appears on `beops.site`.
+   `beops.site` only has the filter tabs `devops | kubernetes | ai | interviews`,
+   so map a new sub-category onto one of those (e.g.
+   `"ai-developments": "ai"`). The post URL still uses its real category path.
+   A genuinely new tab on `beops.site` requires editing the separate
+   `beops-main-site` repo (filter UI + the `Post` TS union type).
 
 The homepage (`index.md`) and sidebar (`_includes/toc-date.html`) iterate
 `site.data.categories`, so they pick up the new category automatically.
