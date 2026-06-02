@@ -27,6 +27,7 @@ CATEGORY_MAP = {
     "ai-developments": "ai",
     "job-interviews": "interviews",
     "sre": "devops",
+    "data": "data",
 }
 
 FRONT_MATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?(.*)$", re.DOTALL)
@@ -145,7 +146,7 @@ def build(posts_dir: Path) -> str:
         "export interface Post {",
         "  title: string;",
         "  date: string;",
-        "  category: 'devops' | 'kubernetes' | 'ai' | 'interviews';",
+        "  category: 'devops' | 'kubernetes' | 'ai' | 'interviews' | 'data';",
         "  url: string;",
         "  read?: string;",
         "}",
