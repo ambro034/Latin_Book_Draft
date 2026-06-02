@@ -13,41 +13,41 @@ tags:
 excerpt: >
   A small FastAPI service that speaks the OpenAI Chat Completions API on the
   front and the Anthropic Messages API on the back. Any tool that already talks
-  to OpenAI can point at it and get Claude instead — zero client changes. Here's
+  to OpenAI can point at it and get Claude instead, with zero client changes. Here's
   what I built, the API mismatches that bite, and the SRE reasoning underneath.
 ---
 
 I built a small service called **`llm-batcher`**: a FastAPI proxy that speaks the
 **OpenAI Chat Completions API** on the front and the **Anthropic Messages API** on
-the back. Any tool that already emits OpenAI-shaped requests — an SDK, `curl`,
-LangChain — can point at it and get **Claude** instead, with zero client changes.
+the back. Any tool that already emits OpenAI-shaped requests (an SDK, `curl`,
+LangChain) can point at it and get **Claude** instead, with zero client changes.
 
 - **Repo:** [github.com/NeverTheSame/llm-batcher](https://github.com/NeverTheSame/llm-batcher)
 - **Stack:** Python 3.12, FastAPI, httpx (async), Pydantic v2, Docker
 - **Tests:** 5 unit tests, mocked upstream, no API key required, all green
 
-It's deliberately small — a clean pass-through with request/response translation and
-a real test suite — but it's the seed of the thing an inference-serving team actually
+It's deliberately small: a clean pass-through with request/response translation and
+a real test suite. But it's the seed of the thing an inference-serving team actually
 runs in production: adaptive batching, routing, backpressure, and a cost/latency
 observatory.
 
 ## Why a proxy at all
 
-I've spent years as an SRE keeping distributed systems alive — Kubernetes, Terraform,
+I've spent years as an SRE keeping distributed systems alive: Kubernetes, Terraform,
 observability, the on-call pager. I'm deliberately pointing those skills at **AI
 inference**, the part of the ML stack that's *least* about training and *most* about
 the thing I already do: serving traffic reliably, cheaply, and fast at scale. (I
-[said roughly this in a Staff AI Engineer interview]({{ '/job-interviews/2026-05-25-staff-ai-engineer-interview.html' | relative_url }})
-— less model magic, more boring engineering.)
+[said roughly this in a Staff AI Engineer interview]({{ '/job-interviews/2026-05-25-staff-ai-engineer-interview.html' | relative_url }}),
+less model magic and more boring engineering.)
 
 The insight that unlocked the project: **an LLM inference proxy is just a reverse
 proxy with interesting backpressure.** Connection pooling, request batching, queueing
-under load, latency budgets, cost telemetry — those are exactly the problems I've
+under load, latency budgets, cost telemetry. Those are exactly the problems I've
 solved for databases and microservices. I don't need to learn ML from scratch; I need
 to point existing skills at a new kind of upstream. It's the same "treat generative AI
 like any other production workload" stance I took on
 [Composer LLM]({{ '/ai/2025-11-20-composer-llm-model.html' | relative_url }}) and the
-[Hugging Face model radar]({{ '/ai/2025-11-20-huggingface-model-radar.html' | relative_url }}) —
+[Hugging Face model radar]({{ '/ai/2025-11-20-huggingface-model-radar.html' | relative_url }}),
 just from the serving side instead of the model-selection side.
 
 ## What it does
@@ -62,14 +62,14 @@ just from the serving side instead of the model-selection side.
 
 Concretely, the proxy:
 
-1. **Accepts an OpenAI `POST /v1/chat/completions` request** — the de-facto shape
+1. **Accepts an OpenAI `POST /v1/chat/completions` request**, the de-facto shape
    nearly every LLM tool already emits.
 2. **Translates it to Anthropic's Messages format** (the two contracts differ in
-   subtle, important ways — more below).
+   subtle, important ways; more below).
 3. **Forwards it** to `https://api.anthropic.com/v1/messages` over async httpx, with a
    timeout and proper error propagation.
-4. **Translates Claude's response back** into the OpenAI `chat.completion` shape —
-   including `usage` token counts and a mapped `finish_reason` — so the caller never
+4. **Translates Claude's response back** into the OpenAI `chat.completion` shape,
+   including `usage` token counts and a mapped `finish_reason`, so the caller never
    knows it wasn't talking to OpenAI.
 5. Exposes **`GET /health`** for liveness checks (the SRE in me refuses to ship a
    service without one).
@@ -82,7 +82,7 @@ Anthropic both do "chat," but the contracts diverge in ways that *will* bite you
 ### 1. The system prompt lives in a different place
 
 OpenAI carries the system prompt as a *message* with `role: "system"` inside the
-`messages` array. Anthropic does **not** allow a `system` role inside `messages` — the
+`messages` array. Anthropic does **not** allow a `system` role inside `messages`. The
 system prompt is a **top-level field**. So the translator has to lift every `system`
 message out of the array and join them into the top-level `system` field:
 
@@ -164,26 +164,26 @@ Pinning the version in one place means I never chase that bug across call sites.
 
 **Async all the way down (`httpx.AsyncClient`).** A proxy's whole job is to wait on an
 upstream. Blocking I/O would cap concurrency at the worker count; async lets one
-process hold thousands of in-flight requests cheaply — which matters enormously once
+process hold thousands of in-flight requests cheaply, which matters enormously once
 batching enters the picture, because batching is *literally* "hold requests and wait."
 
 **Timeouts and explicit error mapping.** Every upstream call has a timeout. Network
 failures become `502 Bad Gateway`; a missing key becomes a clear `500` with a human
 message; Anthropic's own errors are propagated with their status code. No silent hangs,
-no leaked stack traces — the difference between "works on my laptop" and "survives a
+no leaked stack traces. That's the difference between "works on my laptop" and "survives a
 bad afternoon in prod."
 
 **Config via environment, secrets via `.env` (git-ignored).** `ANTHROPIC_API_KEY`,
 `DEFAULT_MODEL`, `DEFAULT_MAX_TOKENS`, and `REQUEST_TIMEOUT_S` are all env-driven. The
 repo ships a `.env.example` and a `.gitignore` that keeps real keys out of version
-control — verified before I made the repo public.
+control, verified before I made the repo public.
 
 **Pydantic v2 request models.** Incoming requests validate against a typed schema, so
 malformed input fails fast with a 422 instead of exploding three layers deep.
 
 ## Testing without spending a cent (or leaking a key)
 
-I wanted a suite that runs in CI with **no API key and no network** — because tests
+I wanted a suite that runs in CI with **no API key and no network**, because tests
 that hit the real API are slow, flaky, and cost money, and a key in CI is a key that
 can leak. So the upstream Anthropic call is **mocked** and the deterministic
 translation logic is tested directly. Five tests cover:
@@ -200,7 +200,7 @@ $ pytest -q
 5 passed in 1.53s
 ```
 
-There's also a `tests/smoke.sh` for a live round-trip once you drop in a real key — but
+There's also a `tests/smoke.sh` for a live round-trip once you drop in a real key, but
 it's never required for the suite to pass.
 
 ## Try it yourself
@@ -239,16 +239,16 @@ docker compose up --build
 
 ## Where it's going
 
-Today it's a pass-through. The name — `llm-batcher` — is a promise about the next
+Today it's a pass-through. The name, `llm-batcher`, is a promise about the next
 bricks: **request batching** (accumulate concurrent requests into one upstream window),
 a **cost & latency observatory** (per-request p50/p95/p99 and a dollar estimate),
 **backpressure and concurrency caps** (graceful degradation under load), and a
 **benchmark harness** to put throughput-vs-latency-vs-cost numbers on the table.
 
-The point isn't to build a production gateway — those exist. The point is to
+The point isn't to build a production gateway; those exist. The point is to
 demonstrate, in public, that I think about LLM serving the way an inference engineer
 does: in terms of tail latency, fleet efficiency, and dollars per million tokens, not
 model accuracy.
 
-**Repo:** [github.com/NeverTheSame/llm-batcher](https://github.com/NeverTheSame/llm-batcher) —
-follow along to watch a reverse proxy turn into an inference-serving primitive.
+**Repo:** [github.com/NeverTheSame/llm-batcher](https://github.com/NeverTheSame/llm-batcher).
+Follow along to watch a reverse proxy turn into an inference-serving primitive.

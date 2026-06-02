@@ -126,7 +126,10 @@ The homepage (`index.md`) and sidebar (`_includes/toc-date.html`) iterate
   ```
 - Voice/house style: first person, SRE/operator perspective, concrete code
   blocks and tables, opinionated but grounded. Match existing posts in `_posts/`.
-- The first paragraph is the excerpt shown on the homepage — make it land.
+- **Never use em-dashes (—) or en-dashes (–) as punctuation** (see AGENTS.md
+  "Prose style"). Use commas, periods, parentheses, colons, or split sentences.
+  This applies to the post body, excerpt, and commit message.
+- The first paragraph is the excerpt shown on the homepage. Make it land.
 - Internal links: `[Text]({{ '/<cat>/<file>.html' | relative_url }})`.
   External links: plain markdown. Include any repo/link the user requested.
 

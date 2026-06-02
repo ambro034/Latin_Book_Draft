@@ -54,6 +54,15 @@ pip install -r requirements.txt
 - Use descriptive file names with dates
 - Maintain consistent heading hierarchy
 
+### Prose style (applies to ALL written content — posts, pages, Telegram drafts, commit messages)
+- **Never use em-dashes (—).** Em-dashes read as AI-generated and break the
+  natural, human voice we want. This is a hard rule.
+- Also avoid en-dashes (–) used as sentence punctuation. For ranges use "to"
+  (e.g. "5 to 10"), not an en-dash.
+- Rewrite to use commas, periods, parentheses, or a colon instead. Split into
+  two sentences when a dash was joining two clauses.
+- Hyphens in compound words (e.g. "pass-through", "on-call") are fine.
+
 ## Testing Instructions
 
 ### Python Tools Testing
