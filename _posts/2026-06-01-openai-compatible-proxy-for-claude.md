@@ -50,6 +50,92 @@ like any other production workload" stance I took on
 [Hugging Face model radar]({{ '/ai/2025-11-20-huggingface-model-radar.html' | relative_url }}),
 just from the serving side instead of the model-selection side.
 
+## Before and after: switching a real app to Claude
+
+Here's the concrete payoff, the thing I care about most: a real app, before and
+after. Say you have a small tool built on the **official OpenAI Python SDK**. It
+works, it's in production, and now someone asks: "can we try Claude for this?"
+
+**Before (no proxy):** to answer that question you rewrite the call against the
+**Anthropic SDK**. Watch how many lines that touch the API have to change.
+
+```python
+# BEFORE: the app as it ships today, talking to OpenAI
+from openai import OpenAI
+
+client = OpenAI()  # reads OPENAI_API_KEY
+resp = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "system", "content": "You are terse."},
+        {"role": "user", "content": "Reply with exactly: pong"},
+    ],
+    max_tokens=16,
+)
+print(resp.choices[0].message.content)
+```
+
+```python
+# BEFORE: the rewrite you need to run that same logic on Claude
+from anthropic import Anthropic
+
+client = Anthropic()  # different client, reads ANTHROPIC_API_KEY
+resp = client.messages.create(
+    model="claude-3-5-haiku-latest",
+    system="You are terse.",                  # system prompt leaves the messages array
+    messages=[
+        {"role": "user", "content": "Reply with exactly: pong"},
+    ],
+    max_tokens=16,                            # no longer optional
+)
+print(resp.content[0].text)                   # response is a list of typed blocks
+```
+
+Every line that touches the API changed: the client class, the system-prompt
+placement, the now-mandatory `max_tokens`, and the response parsing. Multiply
+that across a codebase with retries, streaming, function-calling, logging, and
+tests, and "let's just try Claude" quietly becomes a multi-day migration.
+
+**After (with `llm-batcher`):** the app doesn't change at all. You point the
+OpenAI client at the proxy and ask for a Claude model. That's the entire diff.
+
+```python
+# AFTER: same OpenAI SDK, same message shape, same parsing
+from openai import OpenAI
+
+client = OpenAI(base_url="http://localhost:8000/v1")  # the only line that changed
+resp = client.chat.completions.create(
+    model="claude-3-5-haiku-latest",   # a Claude model id
+    messages=[
+        {"role": "system", "content": "You are terse."},
+        {"role": "user", "content": "Reply with exactly: pong"},
+    ],
+    max_tokens=16,
+)
+print(resp.choices[0].message.content)
+```
+
+Or change nothing in code at all, because the OpenAI SDK already honors an env var:
+
+```bash
+export OPENAI_BASE_URL="http://localhost:8000/v1"
+```
+
+The proxy absorbs every contract difference, so the application code stays
+exactly as it was:
+
+| What changes to use Claude | Without the proxy | With `llm-batcher` |
+| --- | --- | --- |
+| SDK / client class | swap OpenAI for Anthropic | unchanged |
+| System prompt | move into top-level `system` | unchanged |
+| `max_tokens` | add it (now required) | unchanged |
+| Response parsing | rewrite for content blocks | unchanged |
+| Net code change | every API call site | one `base_url`, or one env var |
+
+That's the whole idea: meet the tool where it already is. The interesting
+engineering is in *how* the proxy absorbs those differences, which is the rest of
+this post.
+
 ## What it does
 
 ```
