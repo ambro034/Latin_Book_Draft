@@ -123,6 +123,17 @@ bundle exec jekyll build --verbose
 3. Add to `_posts/` directory
 4. Commit and push to trigger rebuild
 
+## Publishing a post — use the `beops-publish-post` skill
+
+This repo ships a project skill at
+`.copilot/skills/beops-publish-post/SKILL.md` that encodes the full publish
+workflow: RAG grounding over prior posts (incl. the `rag-query.yml` Actions
+fallback when `NEON_DATABASE_URL` isn't local), creating new
+categories/subcategories, writing correctly-front-mattered `_posts/*.md`,
+running the site audit, and pushing to `gh-pages`. The Copilot CLI auto-loads
+it as a project skill. **Any agent asked to create, publish, or add a category
+for a BeOps post should follow that skill.**
+
 ## RAG over own posts (mandatory before drafting)
 
 This repo has a hybrid-retrieval RAG store over every published post

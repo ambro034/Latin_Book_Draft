@@ -16,6 +16,9 @@
 - slug: ai
   title: AI
   description: AI engineering and operations
+- slug: ai-developments
+  title: AI Developments
+  description: Things I'm building in applied AI — proxies, inference plumbing, and tools
 - slug: job-interviews
   title: Job Interviews
   description: Interviews — both ones I've taken and prep notes for SRE/DevOps/AI/platform roles
