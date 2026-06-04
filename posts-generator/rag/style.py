@@ -290,6 +290,48 @@ def examples_block(conn: psycopg.Connection, seed: str, k: int = 6) -> str:
     return "\n".join(parts)
 
 
+def related_links_block(conn: psycopg.Connection, seed: str, k: int = 6) -> str:
+    """Prior @beops_it channel posts (with t.me links) that the new draft can
+    reference, so the channel reads as one connected story instead of isolated
+    posts. Returns a Russian, prompt-ready block, or '' if there are no hits.
+
+    Reuses the same style corpus as the voice exemplars, but here we surface the
+    clickable t.me/<channel>/<tg_id> link so the model can weave in a reference.
+    """
+    ex = style_examples(conn, seed, k=k)
+    if not ex:
+        return ""
+    ids = [e.tg_id for e in ex]
+    with conn.cursor() as cur:
+        cur.execute(
+            "select tg_id, channel from style_posts where tg_id = any(%s)", (ids,)
+        )
+        chan = {i: c for i, c in cur.fetchall()}
+
+    lines = []
+    for e in ex:
+        c = chan.get(e.tg_id)
+        if not c:
+            continue
+        snippet = " ".join(e.text.split())
+        if len(snippet) > 220:
+            snippet = snippet[:220].rsplit(" ", 1)[0] + "..."
+        lines.append(f"- https://t.me/{c}/{e.tg_id} | {snippet}")
+    if not lines:
+        return ""
+
+    header = (
+        "ТВОИ ПРОШЛЫЕ ПОСТЫ В КАНАЛЕ @beops_it (для связности, чтобы канал "
+        "читался как единая история, а не как набор разрозненных постов). "
+        "Если один из них действительно близок по теме, ВПЛЕТИ в текст ровно "
+        "одну естественную отсылку с кликабельной ссылкой на него "
+        "(например: «как я уже писал тут: https://t.me/beops_it/123»). "
+        "Максимум одна такая ссылка на пост, и только если она по-настоящему "
+        "уместна. Не цитируй их дословно, просто свяжи мысли."
+    )
+    return header + "\n" + "\n".join(lines)
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
     p = argparse.ArgumentParser(prog="rag.style")
