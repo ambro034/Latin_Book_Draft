@@ -1,0 +1,5 @@
+# Substack drafting deps. Used by propose-substack-post.yml to create a DRAFT
+# (never auto-publish) on the author's Substack from a new blog post.
+# Unofficial, reverse-engineered client; this handles account cookies/password,
+# so pin it exactly for reproducible, auditable CI.
+python-substack==0.1.22

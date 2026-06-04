@@ -19,6 +19,8 @@ posts-generator/*
 !posts-generator/scrape_telegram.py
 !posts-generator/llm_openrouter.py
 !posts-generator/telegram_drafter.py
+!posts-generator/substack_drafter.py
+!posts-generator/requirements-substack.txt
 !posts-generator/style_corpus/
 
 # Configuration files with sensitive data

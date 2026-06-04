@@ -175,7 +175,12 @@ Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
 ```
 
 After push, GitHub Pages rebuilds automatically; `rag-index.yml` re-indexes the
-corpus so the new post is available to future RAG queries.
+corpus so the new post is available to future RAG queries. Two draft workflows
+also fire on the same push (both create drafts only, nothing auto-publishes):
+`propose-telegram-post.yml` DMs a Russian `@beops_it` draft, and
+`propose-substack-post.yml` creates a shorter English Substack draft (with a
+backlink) on `beops.substack.com`. To regenerate either for one post, dispatch
+it with `-f post_path="_posts/<file>.md"`.
 
 ## Reporting Back
 
