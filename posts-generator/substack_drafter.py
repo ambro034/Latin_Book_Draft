@@ -32,6 +32,16 @@ from pathlib import Path
 import llm_openrouter
 from telegram_drafter import load_post  # reuse the same front-matter parser
 
+# Convenience for LOCAL runs: auto-load a gitignored posts-generator/.env so the
+# operator pastes NEON_DATABASE_URL / OPENROUTER_API_KEY / SUBSTACK_* only once.
+# Real env vars (e.g. in CI) always win. No-op if python-dotenv isn't installed.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(Path(__file__).resolve().parent / ".env", override=False)
+except Exception:
+    pass
+
 DEFAULT_PUBLICATION_URL = "https://beops.substack.com"
 
 # Source body is sent to the model whole so no technical detail is lost. This
