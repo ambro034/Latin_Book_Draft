@@ -175,12 +175,23 @@ Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
 ```
 
 After push, GitHub Pages rebuilds automatically; `rag-index.yml` re-indexes the
-corpus so the new post is available to future RAG queries. Two draft workflows
-also fire on the same push (both create drafts only, nothing auto-publishes):
-`propose-telegram-post.yml` DMs a Russian `@beops_it` draft, and
-`propose-substack-post.yml` creates a shorter English Substack draft (with a
-backlink) on `beops.substack.com`. To regenerate either for one post, dispatch
-it with `-f post_path="_posts/<file>.md"`.
+corpus so the new post is available to future RAG queries. The
+`propose-telegram-post.yml` workflow also fires on the same push and DMs a
+Russian `@beops_it` draft (draft only, nothing auto-publishes); regenerate it for
+one post with `-f post_path="_posts/<file>.md"`.
+
+A Substack draft is a separate LOCAL-ONLY step (Substack's Cloudflare blocks CI),
+run after publishing:
+```bash
+cd posts-generator
+export NEON_DATABASE_URL='postgres://…'
+export OPENROUTER_API_KEY='sk-or-…'
+export SUBSTACK_COOKIES_STRING='s%3A…'        # substack.sid from a logged-in browser
+export SUBSTACK_PUBLICATION_URL='https://beops.substack.com'
+python substack_drafter.py "../_posts/<file>.md" -k 6
+```
+It creates a shorter English draft with a backlink; review and publish it
+manually in the Substack dashboard.
 
 ## Reporting Back
 
