@@ -2,7 +2,7 @@
 title: "I Taught My LLM Proxy to Wait on Purpose"
 author: Kirill Kuklin
 date: 2026-06-03
-category: ai-developments
+category: ai
 layout: post
 tags:
   - llm-ops
@@ -19,7 +19,7 @@ excerpt: >
   footguns I had to dodge.
 ---
 
-A few days ago I built [`llm-batcher`, an OpenAI-shaped proxy in front of Claude]({{ '/ai-developments/2026-06-01-openai-compatible-proxy-for-claude.html' | relative_url }}).
+A few days ago I built [`llm-batcher`, an OpenAI-shaped proxy in front of Claude]({{ '/ai/2026-06-01-openai-compatible-proxy-for-claude.html' | relative_url }}).
 It was a clean pass-through, and at the very end I left an IOU: the name promises
 batching, and the proxy didn't do any yet. This post pays that IOU.
 

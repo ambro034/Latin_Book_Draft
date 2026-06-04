@@ -24,7 +24,6 @@ CATEGORY_MAP = {
     "devops": "devops",
     "k8s": "kubernetes",
     "ai": "ai",
-    "ai-developments": "ai",
     "job-interviews": "interviews",
     "sre": "devops",
     "data": "data",

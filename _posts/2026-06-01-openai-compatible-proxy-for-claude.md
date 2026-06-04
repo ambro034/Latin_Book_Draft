@@ -2,7 +2,7 @@
 title: "I Put an OpenAI-Shaped Proxy in Front of Claude"
 author: Kirill Kuklin
 date: 2026-06-01
-category: ai-developments
+category: ai
 layout: post
 tags:
   - llm-ops

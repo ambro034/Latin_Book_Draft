@@ -109,12 +109,13 @@ Categories are defined in **three** places that MUST stay in sync
    `CATEGORY_MAP` is **silently skipped** and never appears on `beops.site`.
    `beops.site` only has the filter tabs `devops | kubernetes | ai | interviews`,
    so map a new sub-category onto one of those (e.g.
-   `"ai-developments": "ai"`). The post URL still uses its real category path.
+   `"my-sub-category": "ai"`). The post URL still uses its real category path.
    A genuinely new tab on `beops.site` requires editing the separate
    `beops-main-site` repo (filter UI + the `Post` TS union type).
 
-The homepage (`index.md`) and sidebar (`_includes/toc-date.html`) iterate
-`site.data.categories`, so they pick up the new category automatically.
+The sidebar (`_includes/toc-date.html`) iterates `site.data.categories`, so it
+picks up the new category automatically. The homepage (`index.md`) lists every
+post in reverse-chronological order regardless of category.
 
 ## Step 4 — Write the post
 
