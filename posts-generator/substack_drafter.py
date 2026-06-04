@@ -201,6 +201,22 @@ def _normalize_pub_url(raw: str | None) -> str:
     return url.rstrip("/")
 
 
+def _normalize_cookies_string(raw: str) -> str:
+    """Accept either a full cookie header (``substack.sid=s%3A...; other=...``)
+    or a bare ``substack.sid`` value pasted without its name. The substack
+    client splits each pair on ``=`` and silently drops pairs that have no
+    name, so a bare value would send zero cookies and yield a 401. If no
+    ``name=value`` pair is present, assume the whole string is the sid value
+    and prefix it with ``substack.sid=``."""
+    s = raw.strip()
+    has_named_pair = any(
+        "=" in part.strip() for part in s.split(";") if part.strip()
+    )
+    if not has_named_pair:
+        return "substack.sid=" + s
+    return s
+
+
 def _make_api():
     """Build an authenticated Substack Api from env. Imported lazily so dry-run
     and unit tests never need the package installed."""
@@ -208,7 +224,8 @@ def _make_api():
 
     pub = _normalize_pub_url(os.getenv("SUBSTACK_PUBLICATION_URL"))
     cookies = os.getenv("SUBSTACK_COOKIES_STRING")
-    if cookies:
+    if cookies and cookies.strip():
+        cookies = _normalize_cookies_string(cookies)
         return Api(cookies_string=cookies, publication_url=pub), pub
     email = os.getenv("SUBSTACK_EMAIL")
     password = os.getenv("SUBSTACK_PASSWORD")

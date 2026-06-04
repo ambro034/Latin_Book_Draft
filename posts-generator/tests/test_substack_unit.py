@@ -65,6 +65,17 @@ def test_normalize_pub_url():
     assert substack_drafter._normalize_pub_url("https://x.substack.com/") == "https://x.substack.com"
 
 
+def test_normalize_cookies_string_adds_name_for_bare_value():
+    bare = "s%3Aabc123.def456"
+    assert substack_drafter._normalize_cookies_string(bare) == "substack.sid=" + bare
+
+
+def test_normalize_cookies_string_keeps_named_pairs():
+    named = "substack.sid=s%3Aabc; other=1"
+    assert substack_drafter._normalize_cookies_string(named) == named
+    assert substack_drafter._normalize_cookies_string("  substack.sid=x  ") == "substack.sid=x"
+
+
 def test_warn_unsupported_markdown_flags_table(capsys):
     substack_drafter._warn_unsupported_markdown("| a | b |\n| - | - |\n| 1 | 2 |")
     err = capsys.readouterr().err
