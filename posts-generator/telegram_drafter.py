@@ -5,8 +5,11 @@ Pipeline:
   1. parse a Jekyll `_posts/*.md` (front matter + body)
   2. retrieve the author's own most-similar Telegram posts as voice exemplars
      (rag.style — a SEPARATE corpus from the blog RAG)
-  3. ask an OpenRouter model to write a short Telegram post in that voice
-  4. send the draft to the author via the Telegram bot (sendMessage)
+  3. retrieve related prior BLOG posts (the blog RAG corpus) so the draft can
+     chain to earlier writing by linking one relevant earlier post
+  4. ask an OpenRouter model to write a short Telegram post in that voice,
+     ALWAYS in Russian (@beops_it is a Russian-language channel)
+  5. send the draft to the author via the Telegram bot (sendMessage)
 
 LLM: OpenRouter (OPENROUTER_API_KEY). Delivery: TELEGRAM_BOT_TOKEN +
 TELEGRAM_CHAT_ID. Style retrieval needs NEON_DATABASE_URL.
@@ -122,21 +125,74 @@ def _style_block(seed: str, k: int = 6) -> str:
         return ""
 
 
+def _related_block(seed: str, exclude_slug: str, k: int = 6) -> str:
+    """Related prior BLOG posts (the blog RAG corpus, SEPARATE from the Telegram
+    style corpus) so the draft can chain to the author's earlier writing.
+    Returns a Russian, prompt-ready block, or empty string if no DB / no hits."""
+    if not (
+        os.getenv("NEON_DATABASE_URL")
+        or os.getenv("DATABASE_URL")
+        or os.getenv("BEOPS_TEST_DATABASE_URL")
+    ):
+        return ""
+    try:
+        from rag.db import connect
+        from rag.retriever import search
+    except Exception as e:  # pragma: no cover
+        print(f"⚠️ blog RAG not importable: {e}", file=sys.stderr)
+        return ""
+    try:
+        with connect() as conn:
+            hits = search(conn, seed, k=k + 3)
+            slugs: list[str] = []
+            for h in hits:
+                if h.slug == exclude_slug or h.slug in slugs:
+                    continue
+                slugs.append(h.slug)
+            slugs = slugs[:k]
+            if not slugs:
+                return ""
+            with conn.cursor() as cur:
+                cur.execute(
+                    "select slug, url, title from posts where slug = any(%s)", (slugs,)
+                )
+                meta = {s: (u, t) for s, u, t in cur.fetchall()}
+    except Exception as e:  # pragma: no cover
+        print(f"⚠️ related-posts retrieval failed (continuing without it): {e}", file=sys.stderr)
+        return ""
+
+    lines = [f"- {meta[s][1]}: {meta[s][0]}" for s in slugs if s in meta]
+    if not lines:
+        return ""
+    header = (
+        "РОДСТВЕННЫЕ ПРОШЛЫЕ ПОСТЫ автора (для связки с прошлыми материалами). "
+        "Если один из них действительно близок по теме, добавь в конце поста "
+        "отдельной строкой короткую отсылку со ссылкой на него "
+        "(например: «Ранее писал об этом: <ссылка>»). Максимум одна такая отсылка, "
+        "и только если она по делу. Не пересказывай их содержание."
+    )
+    return header + "\n" + "\n".join(lines)
+
+
 def draft_post(post: dict, *, k: int = 6, model: str | None = None) -> str:
     """Generate the Telegram post text in the author's voice."""
     prompts = _load_prompts()
     seed = f"{post['title']}\n\n{post['body'][:1500]}"
-    language = detect_language(post["body"])
+    # @beops_it is a Russian-language channel: always draft in Russian,
+    # regardless of the (usually English) blog post language.
+    language = "russian"
 
-    key = "telegram_style_prompt" if language == "russian" else "telegram_style_prompt_en"
-    default = (
-        _DEFAULT_TELEGRAM_PROMPT_RU if language == "russian" else _DEFAULT_TELEGRAM_PROMPT_EN
-    )
+    key = "telegram_style_prompt"
+    default = _DEFAULT_TELEGRAM_PROMPT_RU
     system_message = prompts.get("additional_guidelines", "") + prompts.get(key, default)
 
     style_block = _style_block(seed, k=k)
     if style_block:
         system_message = system_message + "\n\n" + style_block
+
+    related_block = _related_block(seed, exclude_slug=post["slug"], k=k)
+    if related_block:
+        system_message = system_message + "\n\n" + related_block
 
     if language == "russian":
         user_message = (

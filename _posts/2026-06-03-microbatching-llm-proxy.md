@@ -30,7 +30,7 @@ trade is the whole feature.
 
 I also built a small interactive visualization of the window filling and
 flushing, which makes the idea click faster than any paragraph:
-**[batching.html on GitHub](https://github.com/NeverTheSame/llm-batcher/blob/main/batching.html)**
+**[batching.html on GitHub](https://neverthesame.github.io/llm-batcher/batching.html)**
 (open the raw file in a browser to watch the waves).
 
 ## Before and after: 200 clients in the same 50 ms
@@ -251,7 +251,7 @@ backpressure, concurrency limiting, failure isolation, timeout discipline, clean
 async lifecycle management, and the judgment to pick the right primitive over the
 literally-named one. The job, in miniature.
 
-**Visualization:** [batching.html](https://github.com/NeverTheSame/llm-batcher/blob/main/batching.html) ·
+**Visualization:** [batching.html](https://neverthesame.github.io/llm-batcher/batching.html) ·
 **Repo:** [github.com/NeverTheSame/llm-batcher](https://github.com/NeverTheSame/llm-batcher).
 Next brick is the cost and latency observatory: per-request p50/p95/p99 and a
 dollar estimate, so the tail latency I keep talking about stops being a claim and
