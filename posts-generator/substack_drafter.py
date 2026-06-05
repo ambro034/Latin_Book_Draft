@@ -241,7 +241,14 @@ def _existing_draft_id(api, title: str) -> str | None:
     """Best-effort idempotency: find a recent draft with the same title so
     re-runs do not spam duplicate drafts."""
     try:
-        drafts = api.get_drafts(limit=50) or []
+        # The library's get_drafts omits offset, which the endpoint rejects
+        # with 400, so query directly. The response is {"posts": [...]} and a
+        # draft's title lives in "draft_title" ("title" is null for drafts).
+        resp = api._session.get(
+            f"{api.publication_url}/drafts", params={"offset": 0, "limit": 25}
+        )
+        data = api._handle_response(response=resp)
+        drafts = data.get("posts", []) if isinstance(data, dict) else (data or [])
     except Exception as e:  # pragma: no cover
         print(f"⚠️ could not list drafts (continuing): {e}", file=sys.stderr)
         return None
