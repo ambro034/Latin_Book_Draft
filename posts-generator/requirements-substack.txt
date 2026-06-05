@@ -1,6 +1,0 @@
-# Substack drafting deps for substack_drafter.py. Run LOCALLY (Substack's
-# Cloudflare blocks CI) to create a DRAFT (never auto-publish) on the author's
-# Substack from a new blog post. Unofficial, reverse-engineered client; this
-# handles account cookies/password, so pin it exactly for reproducibility.
-python-substack==0.1.22
-python-dotenv>=1.0.0

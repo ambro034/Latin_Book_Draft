@@ -48,6 +48,21 @@ permalink:                /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
+  # Defensive: never publish tooling even if it lingers in the working tree.
+  # The automation now lives in the private beops-ops superproject.
+  - posts-generator
+  - configs
+  - tests
+  - docs
+  - .github
+  - .copilot
+  - AGENTS.md
+  - doppler.yaml
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 collections:
   pages:

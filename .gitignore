@@ -4,25 +4,17 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Posts generator directory (contains sensitive config files)
-posts-generator/*
-# ...but track source code, package, tests, and shared metadata.
-# Configs / logs / produced posts / virtualenv remain ignored via the
-# wildcard above.
-!posts-generator/AGENTS.md
-!posts-generator/rag/
-!posts-generator/tests/
-!posts-generator/requirements-rag.txt
-!posts-generator/requirements.txt
-!posts-generator/pytest.ini
-!posts-generator/openai_worker_4o.py
-!posts-generator/scrape_telegram.py
-!posts-generator/llm_openrouter.py
-!posts-generator/telegram_drafter.py
-!posts-generator/substack_drafter.py
-!posts-generator/requirements-substack.txt
-!posts-generator/.env.example
-!posts-generator/style_corpus/
+# Tooling moved to the private NeverTheSame/beops-ops superproject.
+# This public repo is content-only; never re-track tooling here.
+posts-generator/
+.github/
+.copilot/
+tests/
+docs/
+AGENTS.md
+doppler.yaml
+.cursorrules
+.cursorindexingignore
 
 # Configuration files with sensitive data
 configs/
