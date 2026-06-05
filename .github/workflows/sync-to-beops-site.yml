@@ -17,26 +17,13 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Skip on weekends (UTC)
-        id: gate
-        run: |
-          dow=$(date -u +%u)  # 1=Mon .. 7=Sun
-          if [ "$dow" -ge 6 ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            echo "It's the weekend in UTC (dow=$dow). Skipping sync."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Checkout BeOps (gh-pages)
-        if: steps.gate.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: beops
 
       - name: Checkout beops-main-site (main)
-        if: steps.gate.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           repository: NeverTheSame/beops-main-site
@@ -45,20 +32,17 @@ jobs:
           path: site
 
       - name: Set up Python
-        if: steps.gate.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Regenerate src/data/posts.ts
-        if: steps.gate.outputs.skip != 'true'
         run: |
           python3 beops/.github/scripts/build_posts_ts.py \
             beops/_posts \
             site/src/data/posts.ts
 
       - name: Commit and push if changed
-        if: steps.gate.outputs.skip != 'true'
         working-directory: site
         env:
           SRC_SHA: ${{ github.sha }}
