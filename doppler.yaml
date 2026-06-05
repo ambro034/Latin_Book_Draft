@@ -1,0 +1,5 @@
+# Doppler project/config for this repo. On any machine: `doppler setup --no-interactive`
+# then run tools via `doppler run -- <cmd>` (e.g. the local Substack drafter).
+setup:
+  project: beops
+  config: dev

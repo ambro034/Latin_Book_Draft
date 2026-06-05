@@ -184,14 +184,14 @@ A Substack draft is a separate LOCAL-ONLY step (Substack's Cloudflare blocks CI)
 run after publishing:
 ```bash
 cd posts-generator
-export NEON_DATABASE_URL='postgres://…'
-export OPENROUTER_API_KEY='sk-or-…'
-export SUBSTACK_COOKIES_STRING='s%3A…'        # substack.sid from a logged-in browser
-export SUBSTACK_PUBLICATION_URL='https://beops.substack.com'
-python substack_drafter.py "../_posts/<file>.md" -k 6
+doppler run -- python3 substack_drafter.py "../_posts/<file>.md" -k 6
 ```
+Secrets (Neon DSN, OpenRouter key, Substack cookie) come from Doppler (project
+`beops`, config `dev`); `doppler run` injects them. On a new machine first run
+`doppler login && doppler setup --no-interactive` (reads the repo `doppler.yaml`).
 It creates a shorter English draft with a backlink; review and publish it
-manually in the Substack dashboard.
+manually in the Substack dashboard. A `401 Please sign in` means the substack.sid
+cookie expired: refresh it via `doppler secrets set SUBSTACK_COOKIES_STRING -p beops -c dev`.
 
 ## Reporting Back
 
