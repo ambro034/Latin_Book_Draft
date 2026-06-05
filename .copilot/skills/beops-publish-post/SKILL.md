@@ -1,6 +1,6 @@
 ---
 name: beops-publish-post
-description: Publishes a new post to the BeOps Jekyll site (NeverTheSame/BeOps) from a source file or topic. Runs the RAG store over prior posts for coherence and anti-rehash, writes a correctly-front-mattered _posts/*.md, creates a new category/subcategory when asked (categories.yml + _pages page + site-audit env), runs the Playwright/lychee site audit, shows the draft for approval, then commits and pushes to gh-pages. Use when the user asks to "create/publish a BeOps post", "turn this file into a post", "post this to BeOps", "add a new category", or similar BeOps authoring tasks.
+description: Publishes a new post to the BeOps Jekyll site (NeverTheSame/BeOps) from a source file or topic. Runs the RAG store over prior posts for coherence and anti-rehash, writes a correctly-front-mattered _posts/*.md, creates a new category/subcategory when asked (categories.yml + _pages page + site-audit env), embeds any associated visualization (.html) via its rendered GitHub Pages URL, runs the Playwright/lychee site audit, shows the draft for approval, then commits and pushes to gh-pages. Use when the user asks to "create/publish a BeOps post", "turn this file into a post", "post this to BeOps", "add a new category", or similar BeOps authoring tasks.
 ---
 
 # beops-publish-post — Author & Publish a BeOps Post
@@ -27,6 +27,11 @@ happens on the **`gh-pages`** branch.
    paths 404 on the live site (baseurl is `/BeOps`).
 4. **Always show the full draft to the user and get approval before pushing.**
 5. **Always run the site audit before pushing** and fix any issues.
+6. **If the post has an associated visualization (an `.html` diagram/dashboard),
+   embedding it is MANDATORY.** The post MUST link to the visualization, and the
+   link MUST be the rendered GitHub Pages URL, never the GitHub `blob/` code view
+   (which shows source, not the rendered page). See Step 4a. Skipping or
+   mis-linking the visualization is a regression.
 
 ## Step 1 — Read the source & gather context
 
@@ -40,15 +45,18 @@ happens on the **`gh-pages`** branch.
 The RAG store lives in Neon; the DSN is the `NEON_DATABASE_URL` **GitHub Actions
 secret** and is normally NOT in the local environment. Two ways to query it:
 
-### Preferred: run it locally if the DSN is available
+### Preferred: run it locally with Doppler (secrets injected from the cloud)
 
 ```bash
 cd posts-generator
-export NEON_DATABASE_URL='postgres://…'   # only if the user provides it
-python -m rag.cli context "<one-paragraph description of the post>"
+doppler run -- python -m rag.cli context "<one-paragraph description of the post>"
 ```
 
-### If `NEON_DATABASE_URL` is NOT set locally: dispatch the Actions workflow
+`doppler run` injects `NEON_DATABASE_URL` (project `beops`, config `dev`) so the
+DSN never has to be pasted. On a new machine: `doppler login && doppler setup
+--no-interactive` first (see AGENTS.md "Secrets (Doppler)").
+
+### Fallback if Doppler is unavailable: dispatch the Actions workflow
 
 There is a dedicated workflow `rag-query.yml` that runs the query inside Actions
 (the secret never leaves CI) and returns the prompt block as an artifact.
@@ -143,6 +151,30 @@ post in reverse-chronological order regardless of category.
 - The first paragraph is the excerpt shown on the homepage. Make it land.
 - Internal links: `[Text]({{ '/<cat>/<file>.html' | relative_url }})`.
   External links: plain markdown. Include any repo/link the user requested.
+
+## Step 4a — Visualizations (MANDATORY when one exists)
+
+If the post has an associated visualization (a standalone `.html` diagram or
+dashboard, e.g. `batching.html`, `observability.html` in the `llm-batcher`
+repo), it MUST be hosted as a rendered page and linked from the post. Process:
+
+1. **Host it on GitHub Pages, not the `blob/` view.** The source repo
+   (`NeverTheSame/llm-batcher`) has Pages enabled (main branch, root), so a file
+   `foo.html` is served at `https://neverthesame.github.io/llm-batcher/foo.html`.
+   The visualization must be fully self-contained (inline CSS/JS, no local asset
+   imports) so it renders standalone.
+2. **Ensure it is committed and pushed** to the source repo, then verify it
+   renders:
+   ```bash
+   curl -s -o /dev/null -w "%{http_code}\n" https://neverthesame.github.io/llm-batcher/<file>.html
+   ```
+   Must be `200`. If Pages is not yet enabled on the repo, enable it:
+   `gh api -X POST repos/NeverTheSame/<repo>/pages -f 'source[branch]=main' -f 'source[path]=/'`.
+3. **Link it in the post using the rendered Pages URL.** NEVER link the
+   `github.com/.../blob/.../<file>.html` view — that shows source code, not the
+   rendered page, and is the exact bug we fixed before. Add a clear call-out,
+   e.g. `[Interactive visualization](https://neverthesame.github.io/<repo>/<file>.html)`.
+4. Confirm with the user that the visualization link renders before approval.
 
 ## Step 5 — Show the draft & get approval
 
