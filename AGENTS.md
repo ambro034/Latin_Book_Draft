@@ -168,12 +168,16 @@ unreadable; keep them in sync manually if a CI workflow ever needs the value.
 
 This repo ships a project skill at
 `.copilot/skills/beops-publish-post/SKILL.md` that encodes the full publish
-workflow: RAG grounding over prior posts (incl. the `rag-query.yml` Actions
-fallback when `NEON_DATABASE_URL` isn't local), creating new
-categories/subcategories, writing correctly-front-mattered `_posts/*.md`,
-running the site audit, and pushing to `gh-pages`. The Copilot CLI auto-loads
-it as a project skill. **Any agent asked to create, publish, or add a category
-for a BeOps post should follow that skill.**
+workflow: RAG grounding over prior posts (via `doppler run`, with the
+`rag-query.yml` Actions fallback), creating new categories/subcategories,
+writing correctly-front-mattered `_posts/*.md`, **embedding any associated
+`.html` visualization via its rendered GitHub Pages URL (mandatory, never the
+`blob/` view)**, running the site audit, and pushing to `gh-pages`. The skill is
+committed to the repo, so it travels with a clone: any agent on any machine gets
+it, no extra setup. The Copilot CLI auto-loads it as a project skill. **Any
+agent asked to create, publish, or add a category for a BeOps post should follow
+that skill.** Keep all BeOps-specific skills under `.copilot/skills/` in this
+repo (not in a machine-global `~/.copilot`) so they stay portable.
 
 ## RAG over own posts (mandatory before drafting)
 
