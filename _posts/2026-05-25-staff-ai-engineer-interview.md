@@ -148,7 +148,3 @@ A few patterns kept showing up in my own answers that I want to plant flags on:
 I got the email a couple of days later: **invited to the next round** 🎉. So either the above answers were directionally right or I caught the interviewer on a generous day — I'll take either. Next stage is a system-design round, and I suspect "design the incident-triage system without the benefit of having already built it" is going to be the prompt. Updates to follow.
 
 If you're prepping for a Staff-level AI engineering loop yourself, the section headers above are basically the question list. You're welcome 🎁.
-
----
-
-_Want to compare notes? [Get in touch]({{ '/pages/contact/' | relative_url }})._

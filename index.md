@@ -14,6 +14,4 @@ Welcome to BeOps, your comprehensive resource for DevOps best practices, Kuberne
 
 ## 🔗 Quick Links
 
-- [About]({{ '/pages/about/' | relative_url }}): learn more about BeOps
-- [Contact]({{ '/pages/contact/' | relative_url }}): get in touch
 - [RSS Feed]({{ '/feed.xml' | relative_url }}): subscribe to updates
