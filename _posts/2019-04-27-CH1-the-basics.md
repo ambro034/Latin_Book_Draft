@@ -1,5 +1,5 @@
 ---
-title: The Basics
+title: 1. The Basics
 author: Dustin Heinen
 date: 2019-04-27
 category: Chapter 1
