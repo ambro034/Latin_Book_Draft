@@ -8,4 +8,4 @@ permalink: /
 
 Welcome!
 
-Use the navigation menu to explore the lessons.
+Use the navigation menu to explore the lessons. 
