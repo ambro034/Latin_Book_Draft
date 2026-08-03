@@ -1,7 +1,7 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           Graham Ambrose
+title:            Latin By Patterns
+longtitle:        Latin By Patterns
+author:           Dustin Heinen: Graham Ambrose
 email:            gwambros@ncsu.edu
 description: >
   Build Jekyll site with the GitBook style.
@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://ambro034.github.io/Latin_Book_Draft'
-baseurl:          ''
+url:              'https://ambro034.github.io/Latin_Book_Draft/'
+baseurl:          '/Latin_Book_Draft'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
