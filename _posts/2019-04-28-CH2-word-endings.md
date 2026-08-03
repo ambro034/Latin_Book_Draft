@@ -28,7 +28,7 @@ Then we could move the words around to emphasize different parts of the sentence
 
 We’ll see that the Romans used endings not only to show what a noun is doing in a sentence, but number (one friend or many friends), but what verbs are doing as well. **When** the friends and players meet, **if** they meet, and more. All of this is told with endings, so they are essential to memorize.
 
-The most important task you have in starting Latin is to identify this new pattern of endings instead of word order. This is like driving in a new country. Lots of the rules are still the same, but there are important differences (which side of the road should you drive on?).
+**The most important task you have in starting Latin is to identify this new pattern of endings instead of word order. This is like driving in a new country.** Lots of the rules are still the same, but there are important differences (which side of the road should you drive on?).
 
 -   Latin uses inflections, but instead of exclamation marks or pound signs, the Romans just used different letters at the end of words.
 -   For now, we will focus on 2 types of inflected words (nouns and verbs).
