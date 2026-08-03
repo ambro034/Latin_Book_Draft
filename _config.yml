@@ -1,16 +1,16 @@
 # Configurations
 title:            Jekyll Gitbook
 longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+author:           Graham Ambrose
+email:            gwambros@ncsu.edu
 description: >
   Build Jekyll site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://ambro034.github.io/'
+baseurl:          'Latin_Book_Draft'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
