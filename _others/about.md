@@ -124,6 +124,7 @@ Place for test code
 
 
 <!-- POS Block  -->
+<!--
 <style>
   .pos-quiz-container {
     padding: 20px;
@@ -177,17 +178,18 @@ Place for test code
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
   }
 </style>
-
+-->
 
 <!-- POS Reveal Block Start -->
-<div class="pos-quiz-container">
+<!-- <div class="pos-quiz-container"> -->
   <!-- Interactive Sentence Display -->
-  <div class="pos-sentence-display"></div>
+  <!-- <div class="pos-sentence-display"></div> -->
   
   <!-- Dynamic Toggle Buttons -->
-  <div class="pos-btn-group"></div>
-</div>
+  <!-- <div class="pos-btn-group"></div> -->
+<!-- </div> -->
 
+<!-- 
 <script>
   (function() {
     // CONFIGURATION: Define your words and their associated part of speech (pos)
@@ -249,6 +251,7 @@ Place for test code
     });
   })();
 </script>
+-->
 <!-- POS Reveal Block End -->
 
 <!-- POS Block End -->
