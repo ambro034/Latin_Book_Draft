@@ -127,14 +127,147 @@ When memorizing a word, it’s important to remember not just what it means in E
 > ##### Chapter 2 Exercises
 {: .block-warning }
 
-> A: Identify the following verbs as **TRANSITIVE** or **INTRANSITIVE**
->
-> 1.  jump \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
-> 2.  understand \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
-> 3.  cut \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
-> 4.  exist \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-> 5.  walk \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-{: .block-warning }   
+<!-- TRANSITIVE or INTRANSITIVE identification -->
+
+<div class="ti-verb-quiz-container">
+  <style>
+    .ti-verb-quiz-container {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #e7c000;
+      border-radius: 10px;
+      background:  #fff8d8;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .ti-verb-quiz-container h3 {
+      margin-top: 0;
+    }
+
+    .ti-verb-question {
+      margin: 18px 0;
+      padding: 12px;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .ti-verb-word {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+
+    .ti-feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .ti-correct {
+      color: #0b7a0b;
+    }
+
+    .ti-incorrect {
+      color: #b00020;
+    }
+
+    ti-button {
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 10px 18px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #ti-score {
+      margin-top: 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  </style>
+
+  <p><strong>A:</strong> Identify the following verbs as <strong>TRANSITIVE</strong> or <strong>INTRANSITIVE</strong>.</p>
+
+  <div id="quiz"></div>
+
+  <button onclick="checkVerbQuiz()">Check Answers</button>
+  <button onclick="resetVerbQuiz()">Reset</button>
+
+  <div id="score"></div>
+
+  <script>
+    const verbQuestions = [
+      {verb: "jump", answer: "Intransitive"},
+      {verb: "understand", answer: "Transitive"},
+      {verb: "cut", answer: "Transitive"},
+      {verb: "exist", answer: "Intransitive"},
+      {verb: "walk", answer: "Intransitive"}
+    ];
+
+    const quizDiv = document.getElementById("quiz");
+
+    function buildVerbQuiz() {
+      quizDiv.innerHTML = "";
+
+      verbQuestions.forEach((q, i) => {
+        quizDiv.innerHTML += `
+          <div class="ti-verb-question">
+            <div class="ti-verb-word">${q.verb}</div>
+
+            <label>
+              <input type="radio" name="q${i}" value="Transitive">
+              Transitive
+            </label>
+
+            <label style="margin-left:20px;">
+              <input type="radio" name="q${i}" value="Intransitive">
+              Intransitive
+            </label>
+
+            <div id="feedback${i}" class="ti-feedback"></div>
+          </div>
+        `;
+      });
+    }
+
+    function checkVerbQuiz() {
+      let score = 0;
+
+      verbQuestions.forEach((q, i) => {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const feedback = document.getElementById(`feedback${i}`);
+
+        if (!selected) {
+          feedback.innerHTML = "Please choose an answer.";
+          feedback.className = "feedback incorrect";
+          return;
+        }
+
+        if (selected.value === q.answer) {
+          score++;
+          feedback.innerHTML = "✓ Correct";
+          feedback.className = "feedback correct";
+        } else {
+          feedback.innerHTML = `✗ Incorrect. Correct answer: <strong>${q.answer}</strong>`;
+          feedback.className = "feedback incorrect";
+        }
+      });
+
+      document.getElementById("score").innerHTML =
+        `Score: ${score} / ${verbQuestions.length}`;
+    }
+
+    function resetVerbQuiz() {
+      buildVerbQuiz();
+      document.getElementById("score").innerHTML = "";
+    }
+
+    buildVerbQuiz();
+  </script>
+</div>
+
+<!-- END TRANSITIVE or INTRANSITIVE identification -->   
 
 > B: For each clause, circle the correct use of the underlined word. Then give the correct Latin form (remember the endings!):
 >
