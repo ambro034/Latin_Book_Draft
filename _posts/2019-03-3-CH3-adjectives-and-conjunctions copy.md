@@ -1,7 +1,7 @@
 ---
 title: Chapter 3. Adjectives and Conjunctions
 author: Dustin Heinen
-date: 2019-04-27
+date: 2019-03-03
 category: Chapter-3
 layout: post
 ---

@@ -1,7 +1,7 @@
 ---
 title: Chapter 2. Word Endings
 author: Dustin Heinen
-date: 2019-04-27
+date: 2019-02-02
 category: Chapter-2
 layout: post
 ---

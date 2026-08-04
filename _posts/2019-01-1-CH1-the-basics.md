@@ -1,7 +1,7 @@
 ---
 title: Chapter 1. The Basics
 author: Dustin Heinen
-date: 2019-04-27
+date: 2019-01-01
 category: Chapter-1
 layout: post
 ---
