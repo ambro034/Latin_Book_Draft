@@ -269,6 +269,7 @@ Place for test code
 
     .verb-quiz-container h3 {
       margin-top: 0;
+      background: #fff8d8;
     }
 
     .verb-question {
@@ -313,9 +314,7 @@ Place for test code
     }
   </style>
 
-  <h3>Exercise A</h3>
-
-  <p><strong>Identify the following verbs as <u>TRANSITIVE</u> or <u>INTRANSITIVE</u>.</strong></p>
+  <p><strong>A: Identify the following verbs as <b>TRANSITIVE</b> or <b>INTRANSITIVE</b>.</strong></p>
 
   <div id="quiz"></div>
 
