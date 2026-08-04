@@ -253,144 +253,226 @@ Place for test code
 
 <!-- POS Block End -->
 
-<!-- TRANSITIVE or INTRANSITIVE identification -->
+<!-- function identification -->
 
-<div class="ti-verb-quiz-container">
-  <style>
-    .ti-verb-quiz-container {
+<div class="latin-function-quiz">
+
+<style>
+.latin-function-quiz{
       max-width: 700px;
       margin: 20px auto;
       padding: 20px;
-      border: 1px solid #e7c000;
+      border: 3px solid #e7c000;
       border-radius: 10px;
       background:  #fff8d8;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .ti-verb-quiz-container h3 {
-      margin-top: 0;
-    }
+.latin-function-quiz h3{
+    margin-top:0;
+}
 
-    .ti-verb-question {
-      margin: 18px 0;
-      padding: 12px;
-      background: white;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-    }
+.question{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    margin:18px 0;
+}
 
-    .ti-verb-word {
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-bottom: 8px;
-    }
+.question p{
+    margin-top:0;
+    font-size:1.05em;
+}
 
-    .ti-feedback {
-      margin-top: 8px;
-      font-weight: bold;
-    }
+.feedback{
+    margin-top:10px;
+    font-weight:bold;
+}
 
-    .ti-correct {
-      color: #0b7a0b;
-    }
+.correct{
+    color:green;
+}
 
-    .ti-incorrect {
-      color: #b00020;
-    }
+.incorrect{
+    color:#b30000;
+}
 
-    ti-button {
-      margin-top: 20px;
-      margin-right: 10px;
-      padding: 10px 18px;
-      font-size: 1em;
-      cursor: pointer;
-    }
+input[type=text]{
+    padding:6px;
+    font-size:1em;
+    width:170px;
+}
 
-    #ti-score {
-      margin-top: 20px;
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-  </style>
+button{
+    padding:10px 18px;
+    margin-right:10px;
+    margin-top:20px;
+    cursor:pointer;
+    font-size:1em;
+}
+</style>
 
-  <p><strong>A:</strong> Identify the following verbs as <strong>TRANSITIVE</strong> or <strong>INTRANSITIVE</strong>.</p>
+<h3>Exercise B</h3>
 
-  <div id="quiz"></div>
+<p><strong>For each clause, choose the grammatical function of the <u>underlined</u> word. Then enter the correct Latin form.</strong></p>
 
-  <button onclick="checkVerbQuiz()">Check Answers</button>
-  <button onclick="resetVerbQuiz()">Reset</button>
+<div id="latinQuiz"></div>
 
-  <div id="score"></div>
+<button onclick="gradeLatinQuiz()">Check Answers</button>
+<button onclick="resetLatinQuiz()">Reset</button>
 
-  <script>
-    const verbQuestions = [
-      {verb: "jump", answer: "Intransitive"},
-      {verb: "understand", answer: "Transitive"},
-      {verb: "cut", answer: "Transitive"},
-      {verb: "exist", answer: "Intransitive"},
-      {verb: "walk", answer: "Intransitive"}
-    ];
+<div id="latinScore" style="margin-top:20px;font-weight:bold;font-size:1.1em;"></div>
 
-    const quizDiv = document.getElementById("quiz");
+<script>
 
-    function buildVerbQuiz() {
-      quizDiv.innerHTML = "";
+const latinQuestions = [
 
-      verbQuestions.forEach((q, i) => {
-        quizDiv.innerHTML += `
-          <div class="ti-verb-question">
-            <div class="ti-verb-word">${q.verb}</div>
+{
+sentence:'He loves his <u>mother</u>.',
+answer:'Object',
+latin:'matrem'
+},
 
-            <label>
-              <input type="radio" name="q${i}" value="Transitive">
-              Transitive
-            </label>
+{
+sentence:'He does see the <u>foot</u>.',
+answer:'Object',
+latin:'pedem'
+},
 
-            <label style="margin-left:20px;">
-              <input type="radio" name="q${i}" value="Intransitive">
-              Intransitive
-            </label>
+{
+sentence:'She <u>is holding</u> them.',
+answer:'Verb',
+latin:'tenet'
+},
 
-            <div id="feedback${i}" class="ti-feedback"></div>
-          </div>
-        `;
-      });
-    }
+{
+sentence:'My <u>eyes</u> see the sons.',
+answer:'Subject',
+latin:'oculi'
+},
 
-    function checkVerbQuiz() {
-      let score = 0;
+{
+sentence:'The <u>men</u> are fathers.',
+answer:'Subject',
+latin:'viri'
+}
 
-      verbQuestions.forEach((q, i) => {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        const feedback = document.getElementById(`feedback${i}`);
+];
 
-        if (!selected) {
-          feedback.innerHTML = "Please choose an answer.";
-          feedback.className = "feedback incorrect";
-          return;
-        }
+const container=document.getElementById("latinQuiz");
 
-        if (selected.value === q.answer) {
-          score++;
-          feedback.innerHTML = "✓ Correct";
-          feedback.className = "feedback correct";
-        } else {
-          feedback.innerHTML = `✗ Incorrect. Correct answer: <strong>${q.answer}</strong>`;
-          feedback.className = "feedback incorrect";
-        }
-      });
+function buildLatinQuiz(){
 
-      document.getElementById("score").innerHTML =
-        `Score: ${score} / ${verbQuestions.length}`;
-    }
+container.innerHTML="";
 
-    function resetVerbQuiz() {
-      buildVerbQuiz();
-      document.getElementById("score").innerHTML = "";
-    }
+latinQuestions.forEach((q,i)=>{
 
-    buildVerbQuiz();
-  </script>
+container.innerHTML+=`
+
+<div class="question">
+
+<p>${q.sentence}</p>
+
+<label>
+<input type="radio" name="role${i}" value="Subject">
+Subject
+</label>
+
+<label style="margin-left:15px;">
+<input type="radio" name="role${i}" value="Object">
+Object
+</label>
+
+<label style="margin-left:15px;">
+<input type="radio" name="role${i}" value="Verb">
+Verb
+</label>
+
+<br><br>
+
+<label>
+Latin form:
+<input type="text" id="latin${i}">
+</label>
+
+<div id="feedback${i}" class="feedback"></div>
+
 </div>
 
-<!-- END TRANSITIVE or INTRANSITIVE identification -->
+`;
+
+});
+
+}
+
+function gradeLatinQuiz(){
+
+let score=0;
+let possible=latinQuestions.length*2;
+
+latinQuestions.forEach((q,i)=>{
+
+const role=document.querySelector(`input[name="role${i}"]:checked`);
+const latin=document.getElementById(`latin${i}`).value.trim().toLowerCase();
+
+let fb=document.getElementById(`feedback${i}`);
+
+let roleCorrect=false;
+let latinCorrect=false;
+
+if(role && role.value===q.answer){
+roleCorrect=true;
+score++;
+}
+
+if(latin===q.latin.toLowerCase()){
+latinCorrect=true;
+score++;
+}
+
+if(roleCorrect && latinCorrect){
+
+fb.className="feedback correct";
+fb.innerHTML="✓ Both answers are correct.";
+
+}else{
+
+fb.className="feedback incorrect";
+
+let text="";
+
+if(!roleCorrect){
+text+=`Role: <strong>${q.answer}</strong>. `;
+}
+
+if(!latinCorrect){
+text+=`Latin: <strong>${q.latin}</strong>.`;
+}
+
+fb.innerHTML=text;
+
+}
+
+});
+
+document.getElementById("latinScore").innerHTML=
+`Score: ${score} / ${possible}`;
+
+}
+
+function resetLatinQuiz(){
+
+buildLatinQuiz();
+
+document.getElementById("latinScore").innerHTML="";
+
+}
+
+buildLatinQuiz();
+
+</script>
+
+</div>
+
+<!-- END -->

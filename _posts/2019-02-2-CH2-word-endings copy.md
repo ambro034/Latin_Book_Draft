@@ -147,7 +147,7 @@ When memorizing a word, it’s important to remember not just what it means in E
 
     .ti-verb-question {
       margin: 20px 0;
-      padding: 20px;
+      padding: 5px 20px;
       background: white;
       border-radius: 6px;
       border: 1px solid #e7c000;
