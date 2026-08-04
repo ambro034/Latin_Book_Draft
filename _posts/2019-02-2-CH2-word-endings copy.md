@@ -190,7 +190,7 @@ When memorizing a word, it’s important to remember not just what it means in E
 
 > ##### Chapter 2 Vocabulary
 >
->| **Nouns**  |
+>| **Nouns**  ||
 >| --- | --- |
 >| pater, patris (masculine) | father |
 >| vir, virī (m.) | man, husband |
