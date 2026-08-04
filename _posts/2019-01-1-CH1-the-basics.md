@@ -58,16 +58,16 @@ Latin was centered around clauses. A clause in linguistic terms is anything with
 
 > ####### A: For each clause, circle the subject(s) and underline the predicate(s). If there is no clause, write an X
 >
-> ####### 1.  The dog barks at the bird
-> ####### 2.  After we see the field
-> ####### 3.  Once my friends leave
-> ####### 4.  In the afternoon
-> ####### 5.  If you build it, they will come
-> ####### 6.  We are happy
-> ####### 7.  We are
-> ####### 8.  Many of the people
-> ####### 9.  She’s happy
-> ####### 10.  I am reading the book
+> 1.  The dog barks at the bird
+> 2.  After we see the field
+> 3.  Once my friends leave
+> 4.  In the afternoon
+> 5.  If you build it, they will come
+> 6.  We are happy
+> 7.  We are
+> 8.  Many of the people
+> 9.  She’s happy
+> 10.  I am reading the book
 {: .block-warning }
 
 > B: Review the rules for pronunciation above, then write the following Latin words phonetically (doing the best you can). For example, for *amīcus*, you might answer “a-mee-kus”.
