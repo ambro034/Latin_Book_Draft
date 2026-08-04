@@ -1,5 +1,5 @@
 ---
-title: Chapter 2. Adjectives and Conjunctions
+title: Chapter 3. Adjectives and Conjunctions
 author: Dustin Heinen
 date: 2019-04-27
 category: Chapter-3
@@ -188,3 +188,23 @@ Vocabulary note:
 | nec...nec | neither...nor |
 
 \*\*This is the first of many words (especially verbs) that you’ll encounter in Latin that have seemingly unrelated definitions. To help, first think about patterns (when you see this word, remember that there may be several possible patterns to follow). Second, try different translations; even if you’re wrong, it will help you see the most likely patterns. In chapter 18 (Funky Verbs) below, you’ll see lists of verbs that have unusual patterns, so this is a chance to start learning special (or funky, if you’d like) verbs.
+
+
+># Reading Chapter I
+>
+>Read the story about a young unwilling king named Lucius below. First, segment each sentence, then answer the questions. Finally, use the notes to translate the passage.
+>
+>Some notes before you begin
+>
+>-   Latin can assume possession. For example, if someone calls parents, we can assume they are calling *their* parents and not the parents of others.
+>-   Names decline in Latin like any other noun. Therefore, Lucius’ name when it’s the direct object of the sentence will be Lucium
+>-   Remember there are no definite or indefinite articles in Latin, so you can supply “a/an” or “the” as you see fit.
+
+>vir et coniunx natum, Lucium, certē amant. volunt[^1] eum esse novum regem. iuvenis patrem matremque amat, sed cupit silvam et equōs. parentēs parvus Lucius vocat. is[^2] oculōs ad magnōs agrōs movet. mater ac pater autem mentem habent. postea bonus rex est. regit enim multōs hominēs et multās gentēs.
+>
+>\*notes: *volunt eum esse* = “they want him to be;” *cupit*: he desires; *ad magnos agros*: the direct object ending (accusative) can also show *motion toward*—“to the fields”; *habent*: translate “uphold;” *postea*: later; *est* he/she/it is; *regit*: he/she/it rules
+>
+>As you translate, answer the following questions:
+>
+>1.  What is the subject of volunt?
+>2.  *is* replaces a person in the story. Who?
