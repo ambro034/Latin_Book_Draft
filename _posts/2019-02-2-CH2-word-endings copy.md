@@ -289,12 +289,12 @@ When memorizing a word, it’s important to remember not just what it means in E
 }
 
 .question{
-    background:white;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding:15px;
-    margin:18px 0;
-}
+      margin: 20px 0;
+      padding: 5px 20px;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid #e7c000;
+    }
 
 .question p{
     margin-top:0;
