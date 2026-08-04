@@ -2955,8 +2955,7 @@ Vocabulary help: aliquis, aliquid: some/someone/something; numerus, -i (m): numb
 
 # Ablative Absolute and uses of the Dative
 
-###   
-Principles of Grammar
+### Principles of Grammar
 
 Participles are verbal adjectives and have therefore taken the traits of both. Some participles are more descriptive of nouns (e.g., “the broken pot”), and some have more a verbal force and govern clauses (e.g., “those caught breaking any pots in the house will be punished”).
 

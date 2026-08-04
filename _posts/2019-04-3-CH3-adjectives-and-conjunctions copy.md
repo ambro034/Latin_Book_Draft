@@ -33,7 +33,7 @@ In the same way, the endings of Latin adjectives determine which nouns they **mo
 
 \*Note that the neuter endings are the same for the subject and object case. For now, just memorize the endings, and we will use them in future chapters.
 
-## Latin Coordinating Conjunctions
+### Latin Coordinating Conjunctions
 
 | For (because), indeed | And | Nor (and not) | But | Or | Yet | So |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -79,7 +79,7 @@ Then we could move the words around to emphasize different parts of the sentence
 
 In the final sentence, the ending of “good” is the same as friends, so the meaning of the sentence changed.
 
-## Pattern Recognition
+### Pattern Recognition
 
 When you come across a coordinating conjunction, don’t just translate “and” and move on. Find out what is similar on each side of the conjunction. Is it two words in the same case? Two clauses? This practice can even help you deal with one “side” of the conjunction if it’s more difficult than the other.
 
