@@ -261,15 +261,14 @@ Place for test code
       max-width: 700px;
       margin: 20px auto;
       padding: 20px;
-      border: 1px solid #ccc;
+      border: 1px solid #e7c000;
       border-radius: 10px;
-      background: #fafafa;
+      background:  #fff8d8;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .verb-quiz-container h3 {
       margin-top: 0;
-      background: #fff8d8;
     }
 
     .verb-question {
