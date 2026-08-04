@@ -124,113 +124,107 @@ patris — -is = *patr* (stem)
 
 When memorizing a word, it’s important to remember not just what it means in English, but what it does in a sentence. Pay close attention to if a noun is a subject or object, or singular or plural. Decide if a verb is transitive or intransitive before you move to the rest of the sentence. If you have an intransitive verb, you don’t need to look for a direct object.
 
-##### Chapter 2 Exercises
+> ##### Chapter 2 Exercises
+{: .block-warning }
 
-A: Identify the following verbs as **TRANSITIVE** or **INTRANSITIVE**
+> A: Identify the following verbs as **TRANSITIVE** or **INTRANSITIVE**
+>
+> 1.  jump \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
+> 2.  understand \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
+> 3.  cut \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
+> 4.  exist \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+> 5.  walk \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+{: .block-warning }   
 
-1.  jump \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-2.  understand \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-3.  cut \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-4.  exist \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-5.  walk \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
+> B: For each clause, circle the correct use of the underlined word. Then give the correct Latin form (remember the endings!):
+>
+> 1.  He loves his mother. SUBJECT OBJECT VERB
+> 2.  He does see the foot. SUBJECT OBJECT VERB
+> 3.  She is holding them. SUBJECT OBJECT VERB
+> 4.  My eyes see the sons. SUBJECT OBJECT VERB    
+> 5.  The men are fathers. SUBJECT OBJECT VERB
+>
+> Now, translate the verb of each sentence into Latin (reference the vocabulary list below).  
+> 1.  loves \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
+> 2.  sees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
+> 3.  holds \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
+> 4.  see \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
+> 5.  are \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+{: .block-warning }
 
-B: For each clause, circle the correct use of the underlined word. Then give the correct Latin form (remember the endings!):
+> C: Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in **–am, –um, and –em** are singular direct objects, words ending in **–ās, –ōs, and –ēs** are plural direct objects. Other words are subjects.
+>
+> After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
+>
+> 1.  vocat gens \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the man is calling \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 2.  oculōs nōn habet rex \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the mother does not see eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 3.  eum ea videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    she sees the son \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 4.  is gentem vocat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    she does love the family \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 5.  pedem mēns movet \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the boy holds a foot \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 6.  patrem mater amat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the father loves the mother \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 7.  nōn videt mater puerum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the spouse does not see the boys \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 8.  is eam videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the king sees the humans \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 9.  movent pedēs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>      
+>    the eyes are moving \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>    
+> 10.  habent oculōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+>       
+>     the man has eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+{: .block-warning }     
 
-1.  He loves his mother. SUBJECT OBJECT VERB
-2.  He does see the foot. SUBJECT OBJECT VERB
-3.  She is holding them. SUBJECT OBJECT VERB
-4.  My eyes see the sons. SUBJECT OBJECT VERB  
-    
-5.  The men are fathers. SUBJECT OBJECT VERB
+> ##### Chapter 2 Vocabulary
+>
+>| **Nouns** |  |
+>| --- | --- |
+>| pater, patris (masculine) | father |
+>| vir, virī (m.) | man, husband |
+>| homō, hominis (m.) | human, man |
+>| māter, mātris (feminine) | mother |
+>| mēns, mentis (f.) | mind |
+>| parēns, parentis (masculine or feminine) | parent |
+>| puer, puerī (m.) | boy |
+>| gēns, gentis (f.) | family, tribe, race, nation |
+>| pēs, pedis (m.) | foot |
+>| oculus, oculī (m.) | eye |
+>| nātus, natī (m.) | son |
+>| coniunx, coniugis (m./f.) | spouse/husband/wife |
+>| rēx, rēgis (m) | king |
+>| **Verbs** |  |
+>| amat/amant | he/she/it loves; they love |
+>| videt/vident | he/she/it sees; they see |
+>| habet/habent | he/she/it has, holds; they have, hold |
+>| vocat/vocant | he/she/it calls; they call |
+>| movet/movent | he/she/it moves; they move |
+>| **Special words** |  |
+>| is / ea | he / she |
+>| eum / eam | him / her |
+>| nōn | not |
+{: .block-danger }
 
-Now, translate the verb of each sentence into Latin (reference the vocabulary list below).  
-
-1.  loves \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-2.  sees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-3.  holds \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-4.  see \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-5.  are \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-C: Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in **–am, –um, and –em** are singular direct objects, words ending in **–ās, –ōs, and –ēs** are plural direct objects. Other words are subjects.
-
-After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
-
-1.  vocat gens \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the man is calling \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-2.  oculōs nōn habet rex \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the mother does not see eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-3.  eum ea videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    she sees the son \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-4.  is gentem vocat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    she does love the family \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-5.  pedem mēns movet \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the boy holds a foot \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-6.  patrem mater amat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the father loves the mother \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-7.  nōn videt mater puerum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the spouse does not see the boys \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-8.  is eam videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the king sees the humans \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-9.  movent pedēs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    the eyes are moving \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-10.  habent oculōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-       
-     the man has eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-     
-
-##### Chapter 2 Vocabulary
-
-| **Nouns** |  |
-| --- | --- |
-| pater, patris (masculine) | father |
-| vir, virī (m.) | man, husband |
-| homō, hominis (m.) | human, man |
-| māter, mātris (feminine) | mother |
-| mēns, mentis (f.) | mind |
-| parēns, parentis (masculine or feminine) | parent |
-| puer, puerī (m.) | boy |
-| gēns, gentis (f.) | family, tribe, race, nation |
-| pēs, pedis (m.) | foot |
-| oculus, oculī (m.) | eye |
-| nātus, natī (m.) | son |
-| coniunx, coniugis (m./f.) | spouse/husband/wife |
-| rēx, rēgis (m) | king |
-| **Verbs** |  |
-| amat/amant | he/she/it loves; they love |
-| videt/vident | he/she/it sees; they see |
-| habet/habent | he/she/it has, holds; they have, hold |
-| vocat/vocant | he/she/it calls; they call |
-| movet/movent | he/she/it moves; they move |
-| **Special words** |  |
-| is / ea | he / she |
-| eum / eam | him / her |
-| nōn | not |
-
-\*Note: All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
+>\*Note: All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
+{: .block-tip }

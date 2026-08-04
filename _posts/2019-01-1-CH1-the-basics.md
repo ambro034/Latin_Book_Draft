@@ -56,7 +56,7 @@ Latin was centered around clauses. A clause in linguistic terms is anything with
 > ##### Chapter 1 Practice
 {: .block-warning }
 
-> ####### A: For each clause, circle the subject(s) and underline the predicate(s). If there is no clause, write an X
+> A: For each clause, circle the subject(s) and underline the predicate(s). If there is no clause, write an X
 >
 > 1.  The dog barks at the bird
 > 2.  After we see the field
