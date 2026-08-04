@@ -271,76 +271,94 @@ When memorizing a word, it’s important to remember not just what it means in E
 
 <!-- function identification -->
 
-<div class="latin-function-quiz">
+<div class="func-quiz-container">
 
 <style>
-.latin-function-quiz{
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 20px;
-      border: 3px solid #e7c000;
-      border-radius: 10px;
-      background:  #fff8d8;
-      font-family: Arial, Helvetica, sans-serif;
-    }
 
-.latin-function-quiz h3{
-    margin-top:0;
+.func-quiz-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #e7c000;
+  border-radius: 10px;
+  background: #fff8d8;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.question{
-      margin: 20px 0;
-      padding: 5px 20px;
-      background: white;
-      border-radius: 6px;
-      border: 1px solid #e7c000;
-    }
-
-.question p{
-    margin-top:0;
-    font-size:1.05em;
+.func-quiz-container h3 {
+  margin-top: 0;
 }
 
-.feedback {
+.func-question {
+  margin: 20px 0;
+  padding: 5px 20px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e7c000;
+}
+
+.func-question p {
+  margin-top: 0;
+  font-size: 1.05em;
+}
+
+.func-answer {
+  padding: 6px;
+  font-size: 1em;
+  width: 170px;
+}
+
+.func-feedback {
   margin-top: 8px;
   font-weight: bold;
 }
 
-.correct {
+.func-correct {
   color: #0b7a0b;
 }
 
-.incorrect {
+.func-incorrect {
   color: #b00020;
 }
 
-input[type=text]{
-    padding:6px;
-    font-size:1em;
-    width:170px;
-}
-
-button {
+.func-button {
   margin-top: 20px;
   margin-right: 10px;
   padding: 10px 18px;
   font-size: 1em;
   cursor: pointer;
 }
+
+#func-score {
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 </style>
 
-<p><strong>B: </strong> For each clause, choose the grammatical function of the <u>underlined</u> word. Then enter the correct Latin form.</p>
 
-<div id="latinQuiz"></div>
+<p>
+<strong>B:</strong> For each clause, choose the grammatical function of the <u>underlined</u> word. Then enter the correct Latin form.
+</p>
 
-<button onclick="gradeLatinQuiz()">Check Answers</button>
-<button onclick="resetLatinQuiz()">Reset</button>
 
-<div id="latinScore" style="margin-top:20px;font-weight:bold;font-size:1.1em;"></div>
+<div id="func-quiz"></div>
+
+
+<button class="func-button" onclick="checkFuncQuiz()">Check Answers</button>
+<button class="func-button" onclick="resetFuncQuiz()">Reset</button>
+
+
+<div id="func-score"></div>
+
+
 
 <script>
 
-const latinQuestions = [
+(function(){
+
+const funcQuestions = [
 
 {
 sentence:'He loves his <u>mother</u>.',
@@ -374,43 +392,73 @@ latin:'viri'
 
 ];
 
-const container=document.getElementById("latinQuiz");
 
-function buildLatinQuiz(){
+const funcContainer=document.getElementById("func-quiz");
 
-container.innerHTML="";
 
-latinQuestions.forEach((q,i)=>{
 
-container.innerHTML+=`
+function normalizeFunc(text){
 
-<div class="question">
+return text
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"")
+.trim();
+
+}
+
+
+
+function buildFuncQuiz(){
+
+funcContainer.innerHTML="";
+
+
+funcQuestions.forEach((q,i)=>{
+
+
+funcContainer.innerHTML += `
+
+<div class="func-question">
 
 <p>${q.sentence}</p>
 
+
 <label>
-<input type="radio" name="role${i}" value="Subject">
+<input type="radio" name="func-role-${i}" value="Subject">
 Subject
 </label>
 
+
 <label style="margin-left:15px;">
-<input type="radio" name="role${i}" value="Object">
+<input type="radio" name="func-role-${i}" value="Object">
 Object
 </label>
 
+
 <label style="margin-left:15px;">
-<input type="radio" name="role${i}" value="Verb">
+<input type="radio" name="func-role-${i}" value="Verb">
 Verb
 </label>
 
+
 <br><br>
+
 
 <label>
 Latin form:
-<input type="text" id="latin${i}">
+<input 
+class="func-answer"
+type="text"
+id="func-latin-${i}">
 </label>
 
-<div id="feedback${i}" class="feedback"></div>
+
+<div 
+id="func-feedback-${i}" 
+class="func-feedback">
+</div>
+
 
 </div>
 
@@ -420,72 +468,121 @@ Latin form:
 
 }
 
-function gradeLatinQuiz(){
+
+
+window.checkFuncQuiz=function(){
 
 let score=0;
-let possible=latinQuestions.length*2;
 
-latinQuestions.forEach((q,i)=>{
+let possible=funcQuestions.length*2;
 
-const role=document.querySelector(`input[name="role${i}"]:checked`);
-const latin=document.getElementById(`latin${i}`).value.trim().toLowerCase();
 
-let fb=document.getElementById(`feedback${i}`);
 
-let roleCorrect=false;
-let latinCorrect=false;
+funcQuestions.forEach((q,i)=>{
 
-if(role && role.value===q.answer){
-roleCorrect=true;
+
+const role=document.querySelector(
+`input[name="func-role-${i}"]:checked`
+);
+
+
+const latin=document.getElementById(
+`func-latin-${i}`
+).value;
+
+
+const feedback=document.getElementById(
+`func-feedback-${i}`
+);
+
+
+
+let roleCorrect =
+role && role.value===q.answer;
+
+
+let latinCorrect =
+normalizeFunc(latin)===normalizeFunc(q.latin);
+
+
+
+if(roleCorrect){
 score++;
 }
 
-if(latin===q.latin.toLowerCase()){
-latinCorrect=true;
+if(latinCorrect){
 score++;
 }
+
+
 
 if(roleCorrect && latinCorrect){
 
-fb.className="feedback correct";
-fb.innerHTML="✓ Both answers are correct.";
 
-}else{
+feedback.className="func-feedback func-correct";
+feedback.innerHTML="✓ Both answers are correct.";
 
-fb.className="feedback incorrect";
 
-let text="";
+}
+
+else{
+
+
+feedback.className="func-feedback func-incorrect";
+
+
+let message="";
+
 
 if(!roleCorrect){
-text+=`✗ Role: <strong>${q.answer}</strong>. `;
+
+message += `✗ Function: <strong>${q.answer}</strong>. `;
+
 }
+
 
 if(!latinCorrect){
-text+=`✗ Latin: <strong>${q.latin}</strong>.`;
-}
 
-fb.innerHTML=text;
+message += `✗ Latin: <strong>${q.latin}</strong>.`;
 
 }
+
+
+feedback.innerHTML=message;
+
+
+}
+
 
 });
 
-document.getElementById("latinScore").innerHTML=
+
+
+document.getElementById("func-score").innerHTML =
 `Score: ${score} / ${possible}`;
 
-}
-
-function resetLatinQuiz(){
-
-buildLatinQuiz();
-
-document.getElementById("latinScore").innerHTML="";
 
 }
 
-buildLatinQuiz();
+
+
+window.resetFuncQuiz=function(){
+
+buildFuncQuiz();
+
+document.getElementById("func-score").innerHTML="";
+
+}
+
+
+
+buildFuncQuiz();
+
+
+})();
 
 </script>
+
 
 </div>
 
