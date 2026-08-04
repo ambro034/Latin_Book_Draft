@@ -491,41 +491,324 @@ buildLatinQuiz();
 
 <!-- END -->
 
-> C: Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in **–am, –um, and –em** are singular direct objects, words ending in **–ās, –ōs, and –ēs** are plural direct objects. Other words are subjects.
->
->
-> After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
->
-> 1.  vocat gens \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the man is calling \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 2.  oculōs nōn habet rex \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the mother does not see eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 3.  eum ea videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     she sees the son \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 4.  is gentem vocat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     she does love the family \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 5.  pedem mēns movet \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the boy holds a foot \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->
-> 6.  patrem mater amat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the father loves the mother \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 7.  nōn videt mater puerum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the spouse does not see the boys \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 8.  is eam videt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the king sees the humans \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 9.  movent pedēs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->     the eyes are moving \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->    
-> 10.  habent oculōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
->      the man has eyes \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-{: .block-warning }     
+<!-- Translation verb endings  -->
+
+accepting minor punctuation differences,
+allowing macrons to be omitted (e.g., oculos = oculōs).
+<div class="trans-quiz-container">
+
+<style>
+.trans-quiz-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #e7c000;
+  border-radius: 10px;
+  background: #fff8d8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.trans-quiz-container h3 {
+  margin-top: 0;
+}
+
+.trans-question {
+  margin: 20px 0;
+  padding: 5px 20px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e7c000;
+}
+
+.trans-sentence {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.trans-label {
+  display: block;
+  margin-top: 10px;
+}
+
+.trans-answer {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.trans-feedback {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.trans-correct {
+  color: #0b7a0b;
+}
+
+.trans-incorrect {
+  color: #b00020;
+}
+
+.trans-button {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 18px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#trans-score {
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+</style>
+
+<p>
+<strong>C:</strong> Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in <strong>–am, –um, and –em*</strong> are singular direct objects, words ending in <strong>–ās, –ōs, and –ēs*</strong> are plural direct objects. Other words are subjects.
+</p>
+<p>
+After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
+</p>
+
+<div id="trans-quiz"></div>
+
+<button class="trans-button" onclick="checkTransQuiz()">Check Answers</button>
+<button class="trans-button" onclick="resetTransQuiz()">Reset</button>
+
+<div id="trans-score"></div>
+
+
+<script>
+
+(function(){
+
+const transQuestions = [
+
+{
+latin:"vocat gens",
+englishAnswer:"the people calls",
+english:"the man is calling",
+latinAnswer:"vir vocat"
+},
+
+{
+latin:"oculōs nōn habet rex",
+englishAnswer:"the king does not have eyes",
+english:"the mother does not see eyes",
+latinAnswer:"mater oculos non videt"
+},
+
+{
+latin:"eum ea videt",
+englishAnswer:"she sees him",
+english:"she sees the son",
+latinAnswer:"ea filium videt"
+},
+
+{
+latin:"is gentem vocat",
+englishAnswer:"he calls the people",
+english:"she does love the family",
+latinAnswer:"ea familiam amat"
+},
+
+{
+latin:"pedem mēns movet",
+englishAnswer:"the mind moves a foot",
+english:"the boy holds a foot",
+latinAnswer:"puer pedem tenet"
+},
+
+{
+latin:"patrem mater amat",
+englishAnswer:"the mother loves the father",
+english:"the father loves the mother",
+latinAnswer:"pater matrem amat"
+},
+
+{
+latin:"nōn videt mater puerum",
+englishAnswer:"the mother does not see the boy",
+english:"the spouse does not see the boys",
+latinAnswer:"coniux pueros non videt"
+},
+
+{
+latin:"is eam videt",
+englishAnswer:"he sees her",
+english:"the king sees the humans",
+latinAnswer:"rex homines videt"
+},
+
+{
+latin:"movent pedēs",
+englishAnswer:"the feet move",
+english:"the eyes are moving",
+latinAnswer:"oculi movent"
+},
+
+{
+latin:"habent oculōs",
+englishAnswer:"they have eyes",
+english: "the man has eyes",
+latinAnswer:"vir habet oculos"
+}
+
+];
+
+
+const transContainer=document.getElementById("trans-quiz");
+
+
+function normalizeTrans(text){
+
+return text
+.toLowerCase()
+.replace(/[.,!?]/g,"")
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"")
+.trim();
+
+}
+
+
+function buildTransQuiz(){
+
+transContainer.innerHTML="";
+
+transQuestions.forEach((q,i)=>{
+
+transContainer.innerHTML += `
+
+<div class="trans-question">
+
+<div class="trans-sentence">
+${i+1}. ${q.latin}
+</div>
+
+<label class="trans-label">
+English Translation:
+<input 
+class="trans-answer"
+id="trans-eng-${i}" 
+type="text">
+</label>
+
+<br>
+
+<div class="trans-sentence">
+${q.english}
+</div>
+
+<label class="trans-label">
+Latin Translation:
+<input 
+class="trans-answer"
+id="trans-lat-${i}" 
+type="text">
+</label>
+
+
+<div id="trans-feedback-${i}" class="trans-feedback"></div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+
+window.checkTransQuiz=function(){
+
+let score=0;
+let total=transQuestions.length*2;
+
+
+transQuestions.forEach((q,i)=>{
+
+let eng=document.getElementById(`trans-eng-${i}`).value;
+let lat=document.getElementById(`trans-lat-${i}`).value;
+
+let feedback=document.getElementById(`trans-feedback-${i}`);
+
+let engCorrect =
+normalizeTrans(eng) === normalizeTrans(q.englishAnswer);
+
+let latCorrect =
+normalizeTrans(lat) === normalizeTrans(q.latinAnswer);
+
+
+if(engCorrect){
+score++;
+}
+
+if(latCorrect){
+score++;
+}
+
+
+if(engCorrect && latCorrect){
+
+feedback.className="trans-feedback trans-correct";
+feedback.innerHTML="✓ Both translations are correct.";
+
+}
+
+else{
+
+feedback.className="trans-feedback trans-incorrect";
+
+let message="";
+
+if(!engCorrect){
+message += `✗ English: <strong>${q.englishAnswer}</strong><br>`;
+}
+
+if(!latCorrect){
+message += `✗ Latin: <strong>${q.latinAnswer}</strong>`;
+}
+
+feedback.innerHTML=message;
+
+}
+
+
+});
+
+
+document.getElementById("trans-score").innerHTML =
+`Score: ${score} / ${total}`;
+
+}
+
+
+
+window.resetTransQuiz=function(){
+
+buildTransQuiz();
+
+document.getElementById("trans-score").innerHTML="";
+
+}
+
+
+
+buildTransQuiz();
+
+
+})();
+
+</script>
+
+</div>
+
+<!-- Translation verb endings END -->
 
 > ##### Chapter 2 Vocabulary
 >
