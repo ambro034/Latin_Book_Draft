@@ -26,7 +26,7 @@ There are two significant differences between Latin and English pronouns.
 
 Rather than worrying about how each pronoun gets translated (because sometimes the translation changes based on context), think about the relationship between all four pronouns. They can be visualized as concentric circles:
 
-![Nested circles used to show how context changes meaning given the relationship between words](assets\Chapter-7-circles.png "Nested circles used to show how context changes meaning given the relationship between words")
+![Nested circles used to show how context changes meaning given the relationship between words](/assets/Chapter-7-circles.png "Nested circles used to show how context changes meaning given the relationship between words")
 
 The smaller circle (*is, ea, id*) just represents the simplest of pronouns, like “he” or “him” or “it.” The next circle (*hic, haec, hoc*) can still mean “he,” him,” or “it,” but it is sometimes more emphatic, like “this,” or “these.” *Ille, illa, illud* is more emphatic still, and can sometimes connote distance like “that” and “those.” The largest circle (*iste, ista, istud*) is less common, and often connotes separation. In legal speeches, for example, it is usually used by one party (whose client might be referred to as *is* or *hic*) when referring to the other (obviously guilty) party—*iste*.
 
