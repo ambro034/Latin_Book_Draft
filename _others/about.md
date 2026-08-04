@@ -297,12 +297,14 @@ Place for test code
   background: #fff1a8;
 }
 
-.sp-selected-subject {
+.sp-subject {
   background: #cce5ff;
+  border: 2px solid #4a90e2;
 }
 
-.sp-selected-predicate {
+.sp-predicate {
   background: #d4edda;
+  border-bottom: 3px solid #0b7a0b;
 }
 
 .sp-no-clause {
@@ -355,7 +357,6 @@ If there is no clause, write an X.
 <button class="sp-button" onclick="resetSPQuiz()">Reset</button>
 
 <div id="sp-score"></div>
-
 
 
 <script>
@@ -439,7 +440,6 @@ noclause:false
 
 const spContainer=document.getElementById("sp-quiz");
 
-
 let spSelections=[];
 
 
@@ -451,7 +451,7 @@ spSelections=[];
 
 spQuestions.forEach((q,i)=>{
 
-spSelections[i]=[];
+spSelections[i]={};
 
 
 let words=q.sentence.map((word,index)=>{
@@ -459,6 +459,7 @@ let words=q.sentence.map((word,index)=>{
 return `
 <span 
 class="sp-word" 
+id="sp-word-${i}-${index}"
 onclick="selectSPWord(${i},${index},this)">
 ${word}
 </span>`;
@@ -474,14 +475,12 @@ spContainer.innerHTML+=`
 ${i+1}. ${words}
 </div>
 
-
 <label class="sp-no-clause">
 <input 
 type="checkbox" 
 id="sp-x-${i}">
 No clause (X)
 </label>
-
 
 <div id="sp-feedback-${i}" class="sp-feedback"></div>
 
@@ -495,30 +494,38 @@ No clause (X)
 
 
 
-window.selectSPWord=function(qIndex,wIndex,element){
+window.selectSPWord=function(question, index, element){
 
-let existing=
-spSelections[qIndex].findIndex(x=>x.index===wIndex);
+let current=spSelections[question][index];
 
 
-if(existing>-1){
+if(!current){
 
-spSelections[qIndex].splice(existing,1);
-element.classList.remove(
-"sp-selected-subject",
-"sp-selected-predicate"
-);
+// First click = Subject
+spSelections[question][index]="subject";
+element.classList.add("sp-subject");
 
 }
 
+
+else if(current==="subject"){
+
+// Second click = Predicate
+spSelections[question][index]="predicate";
+element.classList.remove("sp-subject");
+element.classList.add("sp-predicate");
+
+}
+
+
 else{
 
-spSelections[qIndex].push({
-index:wIndex,
-word:element.innerText
-});
-
-element.classList.add("sp-selected-subject");
+// Third click = Remove
+delete spSelections[question][index];
+element.classList.remove(
+"sp-subject",
+"sp-predicate"
+);
 
 }
 
@@ -533,28 +540,48 @@ let score=0;
 
 spQuestions.forEach((q,i)=>{
 
-let feedback=document.getElementById(`sp-feedback-${i}`);
+let feedback=
+document.getElementById(`sp-feedback-${i}`);
 
-let selected=
-spSelections[i].map(x=>x.word);
+
+let selectedSubjects=[];
+let selectedPredicates=[];
+
+
+Object.keys(spSelections[i]).forEach(index=>{
+
+let word=q.sentence[index];
+
+if(spSelections[i][index]==="subject"){
+selectedSubjects.push(word);
+}
+
+if(spSelections[i][index]==="predicate"){
+selectedPredicates.push(word);
+}
+
+});
 
 
 let noClause=
 document.getElementById(`sp-x-${i}`).checked;
 
 
-let correctSubjects=
-q.subjects.every(x=>selected.includes(x));
-
-let correctPredicates=
-q.predicates.every(x=>selected.includes(x));
+let subjectsCorrect =
+q.subjects.length===selectedSubjects.length &&
+q.subjects.every(x=>selectedSubjects.includes(x));
 
 
-let correctX=
+let predicatesCorrect =
+q.predicates.length===selectedPredicates.length &&
+q.predicates.every(x=>selectedPredicates.includes(x));
+
+
+let clauseCorrect =
 q.noclause ? noClause : !noClause;
 
 
-if(correctSubjects && correctPredicates && correctX){
+if(subjectsCorrect && predicatesCorrect && clauseCorrect){
 
 score++;
 
@@ -567,23 +594,19 @@ else{
 
 feedback.className="sp-feedback sp-incorrect";
 
-let answer="";
-
 if(q.noclause){
 
-answer="Correct answer: X (no clause).";
+feedback.innerHTML="Correct answer: X (no clause).";
 
 }
 
 else{
 
-answer=
-`Subject(s): ${q.subjects.join(", ")} | 
-Predicate(s): ${q.predicates.join(", ")}`;
+feedback.innerHTML=
+`Subject(s): <strong>${q.subjects.join(", ")}</strong><br>
+Predicate(s): <strong>${q.predicates.join(", ")}</strong>`;
 
 }
-
-feedback.innerHTML=answer;
 
 }
 
