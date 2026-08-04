@@ -253,10 +253,8 @@ Place for test code
 
 <!-- POS Block End -->
 
-<!-- function identification -->
+<!-- Translation verb endings  -->
 
-accepting minor punctuation differences,
-allowing macrons to be omitted (e.g., oculos = oculōs).
 <div class="trans-quiz-container">
 
 <style>
@@ -349,59 +347,68 @@ After you translate into English, translate the next sentence, which has a diffe
 
 const transQuestions = [
 
-// {
-// latin:"vocat gens",
-// english:"the people calls",
-// latinAnswer:"vir vocat"
-// },
-// 
-// {
-// latin:"oculōs nōn habet rex",
-// english:"the king does not have eyes",
-// latinAnswer:"mater oculos non videt"
-// },
-// 
-// {
-// latin:"eum ea videt",
-// english:"she sees him",
-// latinAnswer:"ea filium videt"
-// },
-// 
-// {
-// latin:"is gentem vocat",
-// english:"he calls the people",
-// latinAnswer:"ea familiam amat"
-// },
-// 
-// {
-// latin:"pedem mēns movet",
-// english:"the mind moves a foot",
-// latinAnswer:"puer pedem tenet"
-// },
-// 
-// {
-// latin:"patrem mater amat",
-// english:"the mother loves the father",
-// latinAnswer:"pater matrem amat"
-// },
-// 
-// {
-// latin:"nōn videt mater puerum",
-// english:"the mother does not see the boy",
-// latinAnswer:"coniux pueros non videt"
-// },
-// 
-// {
-// latin:"is eam videt",
-// english:"he sees her",
-// latinAnswer:"rex homines videt"
-// },
-// 
-// {
-// latin:"movent pedēs",
-// english:"the feet move",
-// latinAnswer:"oculi movent"
-// },
+{
+latin:"vocat gens",
+englishAnswer:"the people calls",
+english:"the man is calling",
+latinAnswer:"vir vocat"
+},
+
+{
+latin:"oculōs nōn habet rex",
+englishAnswer:"the king does not have eyes",
+english:"the mother does not see eyes",
+latinAnswer:"mater oculos non videt"
+},
+
+{
+latin:"eum ea videt",
+englishAnswer:"she sees him",
+english:"she sees the son",
+latinAnswer:"ea filium videt"
+},
+
+{
+latin:"is gentem vocat",
+englishAnswer:"he calls the people",
+english:"she does love the family",
+latinAnswer:"ea familiam amat"
+},
+
+{
+latin:"pedem mēns movet",
+englishAnswer:"the mind moves a foot",
+english:"the boy holds a foot",
+latinAnswer:"puer pedem tenet"
+},
+
+{
+latin:"patrem mater amat",
+englishAnswer:"the mother loves the father",
+english:"the father loves the mother",
+latinAnswer:"pater matrem amat"
+},
+
+{
+latin:"nōn videt mater puerum",
+englishAnswer:"the mother does not see the boy",
+english:"the spouse does not see the boys",
+latinAnswer:"coniux pueros non videt"
+},
+
+{
+latin:"is eam videt",
+englishAnswer:"he sees her",
+english:"the king sees the humans",
+latinAnswer:"rex homines videt"
+},
+
+{
+latin:"movent pedēs",
+englishAnswer:"the feet move",
+english:"the eyes are moving",
+latinAnswer:"oculi movent"
+},
 
 {
 latin:"habent oculōs",
@@ -561,4 +568,4 @@ buildTransQuiz();
 
 </div>
 
-<!-- END -->
+<!-- Translation verb endings END -->

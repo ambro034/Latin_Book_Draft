@@ -493,8 +493,6 @@ buildLatinQuiz();
 
 <!-- Translation verb endings  -->
 
-accepting minor punctuation differences,
-allowing macrons to be omitted (e.g., oculos = oculōs).
 <div class="trans-quiz-container">
 
 <style>
