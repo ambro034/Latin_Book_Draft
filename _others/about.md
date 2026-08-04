@@ -330,7 +330,8 @@ allowing macrons to be omitted (e.g., oculos = oculōs).
 
 <p>
 <strong>C:</strong> Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in <strong>–am, –um, and –em*</strong> are singular direct objects, words ending in <strong>–ās, –ōs, and –ēs*</strong> are plural direct objects. Other words are subjects.
-
+</p>
+<p>
 After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
 </p>
 
@@ -449,7 +450,7 @@ id="trans-eng-${i}"
 type="text">
 </label>
 
-<br><br>
+<br>
 
 <div class="trans-sentence">
 ${q.english}
