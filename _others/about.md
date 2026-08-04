@@ -304,7 +304,7 @@ Place for test code
 
 .sp-predicate {
   background: #d4edda;
-  border-bottom: 3px solid #0b7a0b;
+  border-bottom: 2px solid #0b7a0b;
 }
 
 .sp-no-clause {
@@ -339,14 +339,12 @@ Place for test code
 }
 </style>
 
-
-<h3>Exercise A</h3>
-
 <p>
-<strong>
-Circle the subject(s) and underline the predicate(s). 
-If there is no clause, write an X.
-</strong>
+<strong>A:</strong> For each clause, identify the subject(s) and the predicate(s). <br>
+Click a word <strong>once</strong> to identify it as a subject (blue highlight)<br>
+Click a word <strong>twice</strong> to identify it as a predicate (green highlight)<br>
+Click a word <strong>three-times</strong> to de-identify it (remove selection)<br>
+If there is no clause, write an X
 </p>
 
 
@@ -603,7 +601,8 @@ feedback.innerHTML="Correct answer: X (no clause).";
 else{
 
 feedback.innerHTML=
-`Subject(s): <strong>${q.subjects.join(", ")}</strong><br>
+`<strong>✗ Incorrect</strong><br>
+Subject(s): <strong>${q.subjects.join(", ")}</strong><br>
 Predicate(s): <strong>${q.predicates.join(", ")}</strong>`;
 
 }
