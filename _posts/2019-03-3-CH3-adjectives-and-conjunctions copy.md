@@ -57,7 +57,7 @@ Adjectives
 
 Just like there are families of nouns (five), there are also families of adjectives (2). More about those families will be introduced later, but for now there is one major rule that governs adjectives and the nouns they modify, regardless of their family:
 
->[!NOTE}
+>[!NOTE]
 >an adjective must match the case, gender, and number of the noun it modifies. Unlike nouns (which do not change gender), endings on adjectives will change to match the gender of a noun.
 >
 

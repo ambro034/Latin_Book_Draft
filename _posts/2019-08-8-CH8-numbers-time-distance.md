@@ -81,7 +81,7 @@ Pattern Recognition
 
 -   The new prepositions follow the same pattern as the directional prepositions you have already learned. Once you see the preposition, keep reading until you find the correct case. Everything in between will be part of the segment. |*ante dei et deae templa* | *sedimus* = We sit | in front of the temples of the god and goddess|.
 
-## Chapter 8 Exercises
+##### Chapter 8 Exercises
 
 A) After memorizing the cardinal numbers (one through twelve), give the names of the following Roman numerals without using a dictionary:
 
@@ -117,7 +117,7 @@ C) Paying attention to the case, translate the following time and space phrases 
 5.  unō tempore \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 6.  in pericula \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Chapter 8 Translations
+##### Chapter 8 Translations
 
 1.  eō tempōre ibi septem annōs regis uxor mānsit et lībertātem coluit
 2.  fēminae perīculum saepe vīdērunt sed ad hanc insulam navēs solvērunt
