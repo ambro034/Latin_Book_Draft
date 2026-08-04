@@ -328,14 +328,10 @@ allowing macrons to be omitted (e.g., oculos = oculōs).
 }
 </style>
 
-
-<h3>Exercise C</h3>
-
 <p>
-<strong>
-Pay close attention to endings and vocabulary. Translate the Latin sentence into English.
-Then translate the English sentence into Latin.
-</strong>
+<strong>C:</strong> Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in <strong>–am, –um, and –em*</strong> are singular direct objects, words ending in <strong>–ās, –ōs, and –ēs*</strong> are plural direct objects. Other words are subjects.
+
+After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
 </p>
 
 <div id="trans-quiz"></div>
@@ -453,8 +449,10 @@ id="trans-eng-${i}"
 type="text">
 </label>
 
+<br><br>
+
 <div class="trans-sentence">
-${i+1}. ${q.english}
+${q.english}
 </div>
 
 <label class="trans-label">
