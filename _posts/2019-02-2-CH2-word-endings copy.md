@@ -191,6 +191,7 @@ When memorizing a word, it’s important to remember not just what it means in E
 > ##### Chapter 2 Vocabulary
 >
 > **Nouns**  
+>
 >| LATIN | ENGLISH |
 >| --- | --- |
 >| pater, patris (masculine) | father |
@@ -208,6 +209,7 @@ When memorizing a word, it’s important to remember not just what it means in E
 >| rēx, rēgis (m) | king |
 >
 > **Verbs** 
+>
 >| LATIN | ENGLISH |
 >| amat/amant | he/she/it loves; they love |
 >| videt/vident | he/she/it sees; they see |
@@ -215,7 +217,8 @@ When memorizing a word, it’s important to remember not just what it means in E
 >| vocat/vocant | he/she/it calls; they call |
 >| movet/movent | he/she/it moves; they move |
 >
-> **Special words**  
+> **Special words**
+>  
 >| LATIN | ENGLISH |
 >| is / ea | he / she |
 >| eum / eam | him / her |
