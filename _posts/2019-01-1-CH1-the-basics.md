@@ -197,14 +197,14 @@ noclause:true
 {
 sentence:["If","you","build","it,","they","will","come"],
 subjects:["you","they"],
-predicates:["build","will come"],
+predicates:["build","will","come"],
 noclause:false
 },
 
 {
 sentence:["We","are","happy"],
 subjects:["We"],
-predicates:["are happy"],
+predicates:["are","happy"],
 noclause:false
 },
 
@@ -232,7 +232,7 @@ noclause:false
 {
 sentence:["I","am","reading","the","book"],
 subjects:["I"],
-predicates:["am reading"],
+predicates:["am","reading"],
 noclause:false
 }
 
