@@ -253,12 +253,11 @@ Place for test code
 
 <!-- POS Block End -->
 
-<!-- Translation verb endings  -->
-
-<div class="trans-quiz-container">
+<!-- Subject predicate  -->
+<div class="sp-quiz-container">
 
 <style>
-.trans-quiz-container {
+.sp-quiz-container {
   max-width: 700px;
   margin: 20px auto;
   padding: 20px;
@@ -268,11 +267,11 @@ Place for test code
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.trans-quiz-container h3 {
+.sp-quiz-container h3 {
   margin-top: 0;
 }
 
-.trans-question {
+.sp-question {
   margin: 20px 0;
   padding: 5px 20px;
   background: white;
@@ -280,38 +279,50 @@ Place for test code
   border: 1px solid #e7c000;
 }
 
-.trans-sentence {
+.sp-sentence {
   font-weight: bold;
   font-size: 1.1em;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.trans-label {
-  display: block;
+.sp-word {
+  padding: 5px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.sp-word:hover {
+  background: #fff1a8;
+}
+
+.sp-selected-subject {
+  background: #cce5ff;
+}
+
+.sp-selected-predicate {
+  background: #d4edda;
+}
+
+.sp-no-clause {
   margin-top: 10px;
 }
 
-.trans-answer {
-  width: 95%;
-  padding: 8px;
-  margin-top: 5px;
-  font-size: 1em;
-}
-
-.trans-feedback {
+.sp-feedback {
   margin-top: 8px;
   font-weight: bold;
 }
 
-.trans-correct {
+.sp-correct {
   color: #0b7a0b;
 }
 
-.trans-incorrect {
+.sp-incorrect {
   color: #b00020;
 }
 
-.trans-button {
+.sp-button {
   margin-top: 20px;
   margin-right: 10px;
   padding: 10px 18px;
@@ -319,160 +330,160 @@ Place for test code
   cursor: pointer;
 }
 
-#trans-score {
+#sp-score {
   margin-top: 20px;
   font-size: 1.1em;
   font-weight: bold;
 }
 </style>
 
+
+<h3>Exercise A</h3>
+
 <p>
-<strong>C:</strong> Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in <strong>–am, –um, and –em*</strong> are singular direct objects, words ending in <strong>–ās, –ōs, and –ēs*</strong> are plural direct objects. Other words are subjects.
+<strong>
+Circle the subject(s) and underline the predicate(s). 
+If there is no clause, write an X.
+</strong>
 </p>
-<p>
-After you translate into English, translate the next sentence, which has a different meaning but follows the same pattern, into Latin. You may need to use the vocabulary list below. 6-10 will require you to make educated guesses and look at other answers.
-</p>
 
-<div id="trans-quiz"></div>
 
-<button class="trans-button" onclick="checkTransQuiz()">Check Answers</button>
-<button class="trans-button" onclick="resetTransQuiz()">Reset</button>
+<div id="sp-quiz"></div>
 
-<div id="trans-score"></div>
+
+<button class="sp-button" onclick="checkSPQuiz()">Check Answers</button>
+<button class="sp-button" onclick="resetSPQuiz()">Reset</button>
+
+<div id="sp-score"></div>
+
 
 
 <script>
 
 (function(){
 
-const transQuestions = [
+const spQuestions = [
 
 {
-latin:"vocat gens",
-englishAnswer:"the people calls",
-english:"the man is calling",
-latinAnswer:"vir vocat"
+sentence:["The","dog","barks","at","the","bird"],
+subjects:["dog"],
+predicates:["barks"],
+noclause:false
 },
 
 {
-latin:"oculōs nōn habet rex",
-englishAnswer:"the king does not have eyes",
-english:"the mother does not see eyes",
-latinAnswer:"mater oculos non videt"
+sentence:["After","we","see","the","field"],
+subjects:["we"],
+predicates:["see"],
+noclause:false
 },
 
 {
-latin:"eum ea videt",
-englishAnswer:"she sees him",
-english:"she sees the son",
-latinAnswer:"ea filium videt"
+sentence:["Once","my","friends","leave"],
+subjects:["friends"],
+predicates:["leave"],
+noclause:false
 },
 
 {
-latin:"is gentem vocat",
-englishAnswer:"he calls the people",
-english:"she does love the family",
-latinAnswer:"ea familiam amat"
+sentence:["In","the","afternoon"],
+subjects:[],
+predicates:[],
+noclause:true
 },
 
 {
-latin:"pedem mēns movet",
-englishAnswer:"the mind moves a foot",
-english:"the boy holds a foot",
-latinAnswer:"puer pedem tenet"
+sentence:["If","you","build","it,","they","will","come"],
+subjects:["you","they"],
+predicates:["build","will come"],
+noclause:false
 },
 
 {
-latin:"patrem mater amat",
-englishAnswer:"the mother loves the father",
-english:"the father loves the mother",
-latinAnswer:"pater matrem amat"
+sentence:["We","are","happy"],
+subjects:["We"],
+predicates:["are happy"],
+noclause:false
 },
 
 {
-latin:"nōn videt mater puerum",
-englishAnswer:"the mother does not see the boy",
-english:"the spouse does not see the boys",
-latinAnswer:"coniux pueros non videt"
+sentence:["We","are"],
+subjects:["We"],
+predicates:["are"],
+noclause:false
 },
 
 {
-latin:"is eam videt",
-englishAnswer:"he sees her",
-english:"the king sees the humans",
-latinAnswer:"rex homines videt"
+sentence:["Many","of","the","people"],
+subjects:[],
+predicates:[],
+noclause:true
 },
 
 {
-latin:"movent pedēs",
-englishAnswer:"the feet move",
-english:"the eyes are moving",
-latinAnswer:"oculi movent"
+sentence:["She’s","happy"],
+subjects:["She’s"],
+predicates:["happy"],
+noclause:false
 },
 
 {
-latin:"habent oculōs",
-englishAnswer:"they have eyes",
-english: "the man has eyes",
-latinAnswer:"vir habet oculos"
+sentence:["I","am","reading","the","book"],
+subjects:["I"],
+predicates:["am reading"],
+noclause:false
 }
 
 ];
 
 
-const transContainer=document.getElementById("trans-quiz");
+const spContainer=document.getElementById("sp-quiz");
 
 
-function normalizeTrans(text){
-
-return text
-.toLowerCase()
-.replace(/[.,!?]/g,"")
-.normalize("NFD")
-.replace(/[\u0300-\u036f]/g,"")
-.trim();
-
-}
+let spSelections=[];
 
 
-function buildTransQuiz(){
+function buildSPQuiz(){
 
-transContainer.innerHTML="";
+spContainer.innerHTML="";
+spSelections=[];
 
-transQuestions.forEach((q,i)=>{
 
-transContainer.innerHTML += `
+spQuestions.forEach((q,i)=>{
 
-<div class="trans-question">
+spSelections[i]=[];
 
-<div class="trans-sentence">
-${i+1}. ${q.latin}
+
+let words=q.sentence.map((word,index)=>{
+
+return `
+<span 
+class="sp-word" 
+onclick="selectSPWord(${i},${index},this)">
+${word}
+</span>`;
+
+}).join(" ");
+
+
+spContainer.innerHTML+=`
+
+<div class="sp-question">
+
+<div class="sp-sentence">
+${i+1}. ${words}
 </div>
 
-<label class="trans-label">
-English Translation:
+
+<label class="sp-no-clause">
 <input 
-class="trans-answer"
-id="trans-eng-${i}" 
-type="text">
-</label>
-
-<br>
-
-<div class="trans-sentence">
-${q.english}
-</div>
-
-<label class="trans-label">
-Latin Translation:
-<input 
-class="trans-answer"
-id="trans-lat-${i}" 
-type="text">
+type="checkbox" 
+id="sp-x-${i}">
+No clause (X)
 </label>
 
 
-<div id="trans-feedback-${i}" class="trans-feedback"></div>
+<div id="sp-feedback-${i}" class="sp-feedback"></div>
 
 </div>
 
@@ -484,57 +495,95 @@ type="text">
 
 
 
-window.checkTransQuiz=function(){
+window.selectSPWord=function(qIndex,wIndex,element){
 
-let score=0;
-let total=transQuestions.length*2;
-
-
-transQuestions.forEach((q,i)=>{
-
-let eng=document.getElementById(`trans-eng-${i}`).value;
-let lat=document.getElementById(`trans-lat-${i}`).value;
-
-let feedback=document.getElementById(`trans-feedback-${i}`);
-
-let engCorrect =
-normalizeTrans(eng) === normalizeTrans(q.englishAnswer);
-
-let latCorrect =
-normalizeTrans(lat) === normalizeTrans(q.latinAnswer);
+let existing=
+spSelections[qIndex].findIndex(x=>x.index===wIndex);
 
 
-if(engCorrect){
-score++;
-}
+if(existing>-1){
 
-if(latCorrect){
-score++;
-}
-
-
-if(engCorrect && latCorrect){
-
-feedback.className="trans-feedback trans-correct";
-feedback.innerHTML="✓ Both translations are correct.";
+spSelections[qIndex].splice(existing,1);
+element.classList.remove(
+"sp-selected-subject",
+"sp-selected-predicate"
+);
 
 }
 
 else{
 
-feedback.className="trans-feedback trans-incorrect";
+spSelections[qIndex].push({
+index:wIndex,
+word:element.innerText
+});
 
-let message="";
+element.classList.add("sp-selected-subject");
 
-if(!engCorrect){
-message += `✗ English: <strong>${q.englishAnswer}</strong><br>`;
 }
 
-if(!latCorrect){
-message += `✗ Latin: <strong>${q.latinAnswer}</strong>`;
 }
 
-feedback.innerHTML=message;
+
+
+window.checkSPQuiz=function(){
+
+let score=0;
+
+
+spQuestions.forEach((q,i)=>{
+
+let feedback=document.getElementById(`sp-feedback-${i}`);
+
+let selected=
+spSelections[i].map(x=>x.word);
+
+
+let noClause=
+document.getElementById(`sp-x-${i}`).checked;
+
+
+let correctSubjects=
+q.subjects.every(x=>selected.includes(x));
+
+let correctPredicates=
+q.predicates.every(x=>selected.includes(x));
+
+
+let correctX=
+q.noclause ? noClause : !noClause;
+
+
+if(correctSubjects && correctPredicates && correctX){
+
+score++;
+
+feedback.className="sp-feedback sp-correct";
+feedback.innerHTML="✓ Correct.";
+
+}
+
+else{
+
+feedback.className="sp-feedback sp-incorrect";
+
+let answer="";
+
+if(q.noclause){
+
+answer="Correct answer: X (no clause).";
+
+}
+
+else{
+
+answer=
+`Subject(s): ${q.subjects.join(", ")} | 
+Predicate(s): ${q.predicates.join(", ")}`;
+
+}
+
+feedback.innerHTML=answer;
 
 }
 
@@ -542,24 +591,24 @@ feedback.innerHTML=message;
 });
 
 
-document.getElementById("trans-score").innerHTML =
-`Score: ${score} / ${total}`;
+document.getElementById("sp-score").innerHTML=
+`Score: ${score} / ${spQuestions.length}`;
 
 }
 
 
 
-window.resetTransQuiz=function(){
+window.resetSPQuiz=function(){
 
-buildTransQuiz();
+buildSPQuiz();
 
-document.getElementById("trans-score").innerHTML="";
+document.getElementById("sp-score").innerHTML="";
 
 }
 
 
 
-buildTransQuiz();
+buildSPQuiz();
 
 
 })();
@@ -568,4 +617,4 @@ buildTransQuiz();
 
 </div>
 
-<!-- Translation verb endings END -->
+<!-- Subject predicate END -->
