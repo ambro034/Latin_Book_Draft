@@ -269,21 +269,227 @@ When memorizing a word, it’s important to remember not just what it means in E
 
 <!-- END TRANSITIVE or INTRANSITIVE identification -->   
 
-> B: For each clause, circle the correct use of the underlined word. Then give the correct Latin form (remember the endings!):
->
-> 1.  He loves his mother. SUBJECT OBJECT VERB
-> 2.  He does see the foot. SUBJECT OBJECT VERB
-> 3.  She is holding them. SUBJECT OBJECT VERB
-> 4.  My eyes see the sons. SUBJECT OBJECT VERB    
-> 5.  The men are fathers. SUBJECT OBJECT VERB
->
-> Now, translate the verb of each sentence into Latin (reference the vocabulary list below).  
-> 1.  loves \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
-> 2.  sees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_     
-> 3.  holds \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
-> 4.  see \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_    
-> 5.  are \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-{: .block-warning }
+<!-- function identification -->
+
+<div class="latin-function-quiz">
+
+<style>
+.latin-function-quiz{
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 3px solid #e7c000;
+      border-radius: 10px;
+      background:  #fff8d8;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+.latin-function-quiz h3{
+    margin-top:0;
+}
+
+.question{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    margin:18px 0;
+}
+
+.question p{
+    margin-top:0;
+    font-size:1.05em;
+}
+
+.feedback {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.correct {
+  color: #0b7a0b;
+}
+
+.incorrect {
+  color: #b00020;
+}
+
+input[type=text]{
+    padding:6px;
+    font-size:1em;
+    width:170px;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 18px;
+  font-size: 1em;
+  cursor: pointer;
+}
+</style>
+
+<p><strong>B: </strong> For each clause, choose the grammatical function of the <u>underlined</u> word. Then enter the correct Latin form.</p>
+
+<div id="latinQuiz"></div>
+
+<button onclick="gradeLatinQuiz()">Check Answers</button>
+<button onclick="resetLatinQuiz()">Reset</button>
+
+<div id="latinScore" style="margin-top:20px;font-weight:bold;font-size:1.1em;"></div>
+
+<script>
+
+const latinQuestions = [
+
+{
+sentence:'He loves his <u>mother</u>.',
+answer:'Object',
+latin:'matrem'
+},
+
+{
+sentence:'He does see the <u>foot</u>.',
+answer:'Object',
+latin:'pedem'
+},
+
+{
+sentence:'She <u>is holding</u> them.',
+answer:'Verb',
+latin:'tenet'
+},
+
+{
+sentence:'My <u>eyes</u> see the sons.',
+answer:'Subject',
+latin:'oculi'
+},
+
+{
+sentence:'The <u>men</u> are fathers.',
+answer:'Subject',
+latin:'viri'
+}
+
+];
+
+const container=document.getElementById("latinQuiz");
+
+function buildLatinQuiz(){
+
+container.innerHTML="";
+
+latinQuestions.forEach((q,i)=>{
+
+container.innerHTML+=`
+
+<div class="question">
+
+<p>${q.sentence}</p>
+
+<label>
+<input type="radio" name="role${i}" value="Subject">
+Subject
+</label>
+
+<label style="margin-left:15px;">
+<input type="radio" name="role${i}" value="Object">
+Object
+</label>
+
+<label style="margin-left:15px;">
+<input type="radio" name="role${i}" value="Verb">
+Verb
+</label>
+
+<br><br>
+
+<label>
+Latin form:
+<input type="text" id="latin${i}">
+</label>
+
+<div id="feedback${i}" class="feedback"></div>
+
+</div>
+
+`;
+
+});
+
+}
+
+function gradeLatinQuiz(){
+
+let score=0;
+let possible=latinQuestions.length*2;
+
+latinQuestions.forEach((q,i)=>{
+
+const role=document.querySelector(`input[name="role${i}"]:checked`);
+const latin=document.getElementById(`latin${i}`).value.trim().toLowerCase();
+
+let fb=document.getElementById(`feedback${i}`);
+
+let roleCorrect=false;
+let latinCorrect=false;
+
+if(role && role.value===q.answer){
+roleCorrect=true;
+score++;
+}
+
+if(latin===q.latin.toLowerCase()){
+latinCorrect=true;
+score++;
+}
+
+if(roleCorrect && latinCorrect){
+
+fb.className="feedback correct";
+fb.innerHTML="✓ Both answers are correct.";
+
+}else{
+
+fb.className="feedback incorrect";
+
+let text="";
+
+if(!roleCorrect){
+text+=`✗ Role: <strong>${q.answer}</strong>. `;
+}
+
+if(!latinCorrect){
+text+=`✗ Latin: <strong>${q.latin}</strong>.`;
+}
+
+fb.innerHTML=text;
+
+}
+
+});
+
+document.getElementById("latinScore").innerHTML=
+`Score: ${score} / ${possible}`;
+
+}
+
+function resetLatinQuiz(){
+
+buildLatinQuiz();
+
+document.getElementById("latinScore").innerHTML="";
+
+}
+
+buildLatinQuiz();
+
+</script>
+
+</div>
+
+<!-- END -->
 
 > C: Paying close attention to endings and vocabulary, translate the following sentences into English. Remember than words ending in **–am, –um, and –em** are singular direct objects, words ending in **–ās, –ōs, and –ēs** are plural direct objects. Other words are subjects.
 >
