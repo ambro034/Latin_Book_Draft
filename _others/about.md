@@ -257,7 +257,7 @@ Place for test code
 
 <div class="verb-quiz-container">
   <style>
-    .verb-quiz-container {
+    .ti-verb-quiz-container {
       max-width: 700px;
       margin: 20px auto;
       padding: 20px;
@@ -267,11 +267,11 @@ Place for test code
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .verb-quiz-container h3 {
+    .ti-verb-quiz-container h3 {
       margin-top: 0;
     }
 
-    .verb-question {
+    .ti-verb-question {
       margin: 18px 0;
       padding: 12px;
       background: white;
@@ -279,26 +279,26 @@ Place for test code
       border: 1px solid #ddd;
     }
 
-    .verb-word {
+    .ti-verb-word {
       font-weight: bold;
       font-size: 1.1em;
       margin-bottom: 8px;
     }
 
-    .feedback {
+    .ti-feedback {
       margin-top: 8px;
       font-weight: bold;
     }
 
-    .correct {
+    .ti-correct {
       color: #0b7a0b;
     }
 
-    .incorrect {
+    .ti-incorrect {
       color: #b00020;
     }
 
-    button {
+    ti-button {
       margin-top: 20px;
       margin-right: 10px;
       padding: 10px 18px;
@@ -306,14 +306,14 @@ Place for test code
       cursor: pointer;
     }
 
-    #score {
+    #ti-score {
       margin-top: 20px;
       font-size: 1.1em;
       font-weight: bold;
     }
   </style>
 
-  <p><strong>A: Identify the following verbs as <b>TRANSITIVE</b> or <b>INTRANSITIVE</b>.</strong></p>
+  <p><strong>A:</strong> Identify the following verbs as <strong>TRANSITIVE</strong> or <strong>INTRANSITIVE</strong>.</p>
 
   <div id="quiz"></div>
 
@@ -338,8 +338,8 @@ Place for test code
 
       verbQuestions.forEach((q, i) => {
         quizDiv.innerHTML += `
-          <div class="verb-question">
-            <div class="verb-word">${q.verb}</div>
+          <div class="ti-verb-question">
+            <div class="ti-verb-word">${q.verb}</div>
 
             <label>
               <input type="radio" name="q${i}" value="Transitive">
@@ -351,7 +351,7 @@ Place for test code
               Intransitive
             </label>
 
-            <div id="feedback${i}" class="feedback"></div>
+            <div id="feedback${i}" class="ti-feedback"></div>
           </div>
         `;
       });
