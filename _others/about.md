@@ -255,148 +255,214 @@ Place for test code
 
 <!-- function identification -->
 
-<div class="latin-function-quiz">
+accepting minor punctuation differences,
+allowing macrons to be omitted (e.g., oculos = oculōs).
+<div class="trans-quiz-container">
 
 <style>
-.latin-function-quiz{
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 20px;
-      border: 3px solid #e7c000;
-      border-radius: 10px;
-      background:  #fff8d8;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-.latin-function-quiz h3{
-    margin-top:0;
+.trans-quiz-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #e7c000;
+  border-radius: 10px;
+  background: #fff8d8;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.question{
-    background:white;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding:15px;
-    margin:18px 0;
+.trans-quiz-container h3 {
+  margin-top: 0;
 }
 
-.question p{
-    margin-top:0;
-    font-size:1.05em;
+.trans-question {
+  margin: 20px 0;
+  padding: 5px 20px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e7c000;
 }
 
-.feedback{
-    margin-top:10px;
-    font-weight:bold;
+.trans-sentence {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 8px;
 }
 
-.correct{
-    color:green;
+.trans-label {
+  display: block;
+  margin-top: 10px;
 }
 
-.incorrect{
-    color:#b30000;
+.trans-answer {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 1em;
 }
 
-input[type=text]{
-    padding:6px;
-    font-size:1em;
-    width:170px;
+.trans-feedback {
+  margin-top: 8px;
+  font-weight: bold;
 }
 
-button{
-    padding:10px 18px;
-    margin-right:10px;
-    margin-top:20px;
-    cursor:pointer;
-    font-size:1em;
+.trans-correct {
+  color: #0b7a0b;
+}
+
+.trans-incorrect {
+  color: #b00020;
+}
+
+.trans-button {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 18px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#trans-score {
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 </style>
 
-<h3>Exercise B</h3>
 
-<p><strong>For each clause, choose the grammatical function of the <u>underlined</u> word. Then enter the correct Latin form.</strong></p>
+<h3>Exercise C</h3>
 
-<div id="latinQuiz"></div>
+<p>
+<strong>
+Pay close attention to endings and vocabulary. Translate the Latin sentence into English.
+Then translate the English sentence into Latin.
+</strong>
+</p>
 
-<button onclick="gradeLatinQuiz()">Check Answers</button>
-<button onclick="resetLatinQuiz()">Reset</button>
+<div id="trans-quiz"></div>
 
-<div id="latinScore" style="margin-top:20px;font-weight:bold;font-size:1.1em;"></div>
+<button class="trans-button" onclick="checkTransQuiz()">Check Answers</button>
+<button class="trans-button" onclick="resetTransQuiz()">Reset</button>
+
+<div id="trans-score"></div>
+
 
 <script>
 
-const latinQuestions = [
+(function(){
+
+const transQuestions = [
 
 {
-sentence:'He loves his <u>mother</u>.',
-answer:'Object',
-latin:'matrem'
+latin:"vocat gens",
+english:"the people calls",
+latinAnswer:"vir vocat"
 },
 
 {
-sentence:'He does see the <u>foot</u>.',
-answer:'Object',
-latin:'pedem'
+latin:"oculōs nōn habet rex",
+english:"the king does not have eyes",
+latinAnswer:"mater oculos non videt"
 },
 
 {
-sentence:'She <u>is holding</u> them.',
-answer:'Verb',
-latin:'tenet'
+latin:"eum ea videt",
+english:"she sees him",
+latinAnswer:"ea filium videt"
 },
 
 {
-sentence:'My <u>eyes</u> see the sons.',
-answer:'Subject',
-latin:'oculi'
+latin:"is gentem vocat",
+english:"he calls the people",
+latinAnswer:"ea familiam amat"
 },
 
 {
-sentence:'The <u>men</u> are fathers.',
-answer:'Subject',
-latin:'viri'
+latin:"pedem mēns movet",
+english:"the mind moves a foot",
+latinAnswer:"puer pedem tenet"
+},
+
+{
+latin:"patrem mater amat",
+english:"the mother loves the father",
+latinAnswer:"pater matrem amat"
+},
+
+{
+latin:"nōn videt mater puerum",
+english:"the mother does not see the boy",
+latinAnswer:"coniux pueros non videt"
+},
+
+{
+latin:"is eam videt",
+english:"he sees her",
+latinAnswer:"rex homines videt"
+},
+
+{
+latin:"movent pedēs",
+english:"the feet move",
+latinAnswer:"oculi movent"
+},
+
+{
+latin:"habent oculōs",
+english:"they have eyes",
+latinAnswer:"vir habet oculos"
 }
 
 ];
 
-const container=document.getElementById("latinQuiz");
 
-function buildLatinQuiz(){
+const transContainer=document.getElementById("trans-quiz");
 
-container.innerHTML="";
 
-latinQuestions.forEach((q,i)=>{
+function normalizeTrans(text){
 
-container.innerHTML+=`
+return text
+.toLowerCase()
+.replace(/[.,!?]/g,"")
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"")
+.trim();
 
-<div class="question">
+}
 
-<p>${q.sentence}</p>
 
-<label>
-<input type="radio" name="role${i}" value="Subject">
-Subject
+function buildTransQuiz(){
+
+transContainer.innerHTML="";
+
+transQuestions.forEach((q,i)=>{
+
+transContainer.innerHTML += `
+
+<div class="trans-question">
+
+<div class="trans-sentence">
+${i+1}. ${q.latin}
+</div>
+
+<label class="trans-label">
+English Translation:
+<input 
+class="trans-answer"
+id="trans-eng-${i}" 
+type="text">
 </label>
 
-<label style="margin-left:15px;">
-<input type="radio" name="role${i}" value="Object">
-Object
+
+<label class="trans-label">
+Latin Translation:
+<input 
+class="trans-answer"
+id="trans-lat-${i}" 
+type="text">
 </label>
 
-<label style="margin-left:15px;">
-<input type="radio" name="role${i}" value="Verb">
-Verb
-</label>
 
-<br><br>
-
-<label>
-Latin form:
-<input type="text" id="latin${i}">
-</label>
-
-<div id="feedback${i}" class="feedback"></div>
+<div id="trans-feedback-${i}" class="trans-feedback"></div>
 
 </div>
 
@@ -406,70 +472,87 @@ Latin form:
 
 }
 
-function gradeLatinQuiz(){
+
+
+window.checkTransQuiz=function(){
 
 let score=0;
-let possible=latinQuestions.length*2;
+let total=transQuestions.length*2;
 
-latinQuestions.forEach((q,i)=>{
 
-const role=document.querySelector(`input[name="role${i}"]:checked`);
-const latin=document.getElementById(`latin${i}`).value.trim().toLowerCase();
+transQuestions.forEach((q,i)=>{
 
-let fb=document.getElementById(`feedback${i}`);
+let eng=document.getElementById(`trans-eng-${i}`).value;
+let lat=document.getElementById(`trans-lat-${i}`).value;
 
-let roleCorrect=false;
-let latinCorrect=false;
+let feedback=document.getElementById(`trans-feedback-${i}`);
 
-if(role && role.value===q.answer){
-roleCorrect=true;
+let engCorrect =
+normalizeTrans(eng) === normalizeTrans(q.english);
+
+let latCorrect =
+normalizeTrans(lat) === normalizeTrans(q.latinAnswer);
+
+
+if(engCorrect){
 score++;
 }
 
-if(latin===q.latin.toLowerCase()){
-latinCorrect=true;
+if(latCorrect){
 score++;
 }
 
-if(roleCorrect && latinCorrect){
 
-fb.className="feedback correct";
-fb.innerHTML="✓ Both answers are correct.";
+if(engCorrect && latCorrect){
 
-}else{
-
-fb.className="feedback incorrect";
-
-let text="";
-
-if(!roleCorrect){
-text+=`Role: <strong>${q.answer}</strong>. `;
-}
-
-if(!latinCorrect){
-text+=`Latin: <strong>${q.latin}</strong>.`;
-}
-
-fb.innerHTML=text;
+feedback.className="trans-feedback trans-correct";
+feedback.innerHTML="✓ Both translations are correct.";
 
 }
+
+else{
+
+feedback.className="trans-feedback trans-incorrect";
+
+let message="";
+
+if(!engCorrect){
+message += `English: <strong>${q.english}</strong><br>`;
+}
+
+if(!latCorrect){
+message += `Latin: <strong>${q.latinAnswer}</strong>`;
+}
+
+feedback.innerHTML=message;
+
+}
+
 
 });
 
-document.getElementById("latinScore").innerHTML=
-`Score: ${score} / ${possible}`;
+
+document.getElementById("trans-score").innerHTML =
+`Score: ${score} / ${total}`;
 
 }
 
-function resetLatinQuiz(){
 
-buildLatinQuiz();
 
-document.getElementById("latinScore").innerHTML="";
+window.resetTransQuiz=function(){
+
+buildTransQuiz();
+
+document.getElementById("trans-score").innerHTML="";
 
 }
 
-buildLatinQuiz();
+
+
+buildTransQuiz();
+
+
+})();
 
 </script>
 
