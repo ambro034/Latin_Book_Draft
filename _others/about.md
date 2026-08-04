@@ -352,63 +352,64 @@ Then translate the English sentence into Latin.
 
 const transQuestions = [
 
-{
-latin:"vocat gens",
-english:"the people calls",
-latinAnswer:"vir vocat"
-},
-
-{
-latin:"oculōs nōn habet rex",
-english:"the king does not have eyes",
-latinAnswer:"mater oculos non videt"
-},
-
-{
-latin:"eum ea videt",
-english:"she sees him",
-latinAnswer:"ea filium videt"
-},
-
-{
-latin:"is gentem vocat",
-english:"he calls the people",
-latinAnswer:"ea familiam amat"
-},
-
-{
-latin:"pedem mēns movet",
-english:"the mind moves a foot",
-latinAnswer:"puer pedem tenet"
-},
-
-{
-latin:"patrem mater amat",
-english:"the mother loves the father",
-latinAnswer:"pater matrem amat"
-},
-
-{
-latin:"nōn videt mater puerum",
-english:"the mother does not see the boy",
-latinAnswer:"coniux pueros non videt"
-},
-
-{
-latin:"is eam videt",
-english:"he sees her",
-latinAnswer:"rex homines videt"
-},
-
-{
-latin:"movent pedēs",
-english:"the feet move",
-latinAnswer:"oculi movent"
-},
+// {
+// latin:"vocat gens",
+// english:"the people calls",
+// latinAnswer:"vir vocat"
+// },
+// 
+// {
+// latin:"oculōs nōn habet rex",
+// english:"the king does not have eyes",
+// latinAnswer:"mater oculos non videt"
+// },
+// 
+// {
+// latin:"eum ea videt",
+// english:"she sees him",
+// latinAnswer:"ea filium videt"
+// },
+// 
+// {
+// latin:"is gentem vocat",
+// english:"he calls the people",
+// latinAnswer:"ea familiam amat"
+// },
+// 
+// {
+// latin:"pedem mēns movet",
+// english:"the mind moves a foot",
+// latinAnswer:"puer pedem tenet"
+// },
+// 
+// {
+// latin:"patrem mater amat",
+// english:"the mother loves the father",
+// latinAnswer:"pater matrem amat"
+// },
+// 
+// {
+// latin:"nōn videt mater puerum",
+// english:"the mother does not see the boy",
+// latinAnswer:"coniux pueros non videt"
+// },
+// 
+// {
+// latin:"is eam videt",
+// english:"he sees her",
+// latinAnswer:"rex homines videt"
+// },
+// 
+// {
+// latin:"movent pedēs",
+// english:"the feet move",
+// latinAnswer:"oculi movent"
+// },
 
 {
 latin:"habent oculōs",
-english:"they have eyes",
+englishAnswer:"they have eyes",
+english: "the man has eyes",
 latinAnswer:"vir habet oculos"
 }
 
@@ -452,6 +453,9 @@ id="trans-eng-${i}"
 type="text">
 </label>
 
+<div class="trans-sentence">
+${i+1}. ${q.english}
+</div>
 
 <label class="trans-label">
 Latin Translation:
@@ -488,7 +492,7 @@ let lat=document.getElementById(`trans-lat-${i}`).value;
 let feedback=document.getElementById(`trans-feedback-${i}`);
 
 let engCorrect =
-normalizeTrans(eng) === normalizeTrans(q.english);
+normalizeTrans(eng) === normalizeTrans(q.englishAnswer);
 
 let latCorrect =
 normalizeTrans(lat) === normalizeTrans(q.latinAnswer);
@@ -517,11 +521,11 @@ feedback.className="trans-feedback trans-incorrect";
 let message="";
 
 if(!engCorrect){
-message += `English: <strong>${q.english}</strong><br>`;
+message += `✗ English: <strong>${q.englishAnswer}</strong><br>`;
 }
 
 if(!latCorrect){
-message += `Latin: <strong>${q.latinAnswer}</strong>`;
+message += `✗ Latin: <strong>${q.latinAnswer}</strong>`;
 }
 
 feedback.innerHTML=message;
