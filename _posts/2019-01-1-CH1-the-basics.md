@@ -514,7 +514,7 @@ buildSPQuiz();
 </style>
 
 <p>
-<strong>B: </strong>Review the rules for pronunciation above, then write the following Latin words phonetically (doing the best you can). For example, for amīcus, you might answer “a-mee-kus”.
+<strong>B: </strong>Review the rules for pronunciation above, then write the following Latin words phonetically (doing the best you can). 
 </p>
 
 <p>
