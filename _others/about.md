@@ -255,7 +255,7 @@ Place for test code
 
 <!-- TRANSITIVE or INTRANSITIVE identification -->
 
-<div class="verb-quiz-container">
+<div class="ti-verb-quiz-container">
   <style>
     .ti-verb-quiz-container {
       max-width: 700px;
