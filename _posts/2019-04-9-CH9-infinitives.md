@@ -100,7 +100,7 @@ Notes:
 | 2nd person | fēcistī | fēcistis |
 | 3rd person | fēcit | fēcērunt / fēcēre |
 
-## Chapter 9 Exercises
+##### Chapter 9 Exercises
 
 A) Identify the sentence pattern (either infinitive use or ablative use) and translate:
 
@@ -137,7 +137,7 @@ B) After memorizing vocabulary and without consulting the charts above, translat
 
 9\. with me \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 10. I seize (capere) \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Chapter 9 Translations
+##### Chapter 9 Translations
 
 1.  dein rapere illōs armīs debeō, et nunc terra mareque in magnā pace vivere possunt
 2.  bonī virī sanguis multus in agrō iacēbat, nam istī hostēs eum vicērunt
@@ -152,7 +152,7 @@ B) After memorizing vocabulary and without consulting the charts above, translat
 9.  hae gentēs hostium animōs frēgērunt nam illī pedēs in montibus pōnere nōn poterant
 10.  illōs saepe dē monte cum amicīs dūximus
 
-## Chapter 9 Vocabulary
+##### Chapter 9 Vocabulary
 
 | **Nouns** |  |
 | --- | --- |

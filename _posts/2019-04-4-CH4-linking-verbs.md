@@ -59,7 +59,7 @@ The chapter 4 vocabulary includes some prepositions that can go with the new end
 -   Although you’ll learn new uses for *est/sunt*, any time you see them for now will indicate a linking pattern.
 -   Remember that when you see *ab, de,* or *ex*, there will be an ablative nearby. Anything between the preposition and the ablative belongs inside the segment when you translate. Later, you’ll learn more prepositions that go with the Ablative, and some that go with the Accusative case.
 
-## Chapter 4 Exercises
+##### Chapter 4 Exercises
 
 A) Using the following Ablative forms, translate the following prepositional phrases
 
@@ -83,7 +83,7 @@ A) Using the following Ablative forms, translate the following prepositional phr
     
 10.  in water \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Chapter 4 Translations
+##### Chapter 4 Translations
 
 1) Identify the pattern(s) (transitive/intransitive/linking), (2) then translate the sentences into English. Pay careful attention to cases and prepositions. You can identify prepositional phrases as segments. Remember that subjects may change between coordinated clauses. The second sentence for each number follows a similar pattern to the first. Translate it into Latin.
 
@@ -112,7 +112,7 @@ A) Using the following Ablative forms, translate the following prepositional phr
        
      The field is cheap but large, and he prepares it. \*think about what word *it* replaces and what its ending should be.
 
-Chapter 4 Vocabulary
+##### Chapter 4 Vocabulary
 
 | **Prepositions** |  |
 | --- | --- |

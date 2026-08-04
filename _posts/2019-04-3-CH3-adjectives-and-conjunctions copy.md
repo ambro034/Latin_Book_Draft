@@ -79,7 +79,7 @@ Then we could move the words around to emphasize different parts of the sentence
 
 In the final sentence, the ending of “good” is the same as friends, so the meaning of the sentence changed.
 
-Pattern Recognition
+## Pattern Recognition
 
 When you come across a coordinating conjunction, don’t just translate “and” and move on. Find out what is similar on each side of the conjunction. Is it two words in the same case? Two clauses? This practice can even help you deal with one “side” of the conjunction if it’s more difficult than the other.
 
@@ -97,7 +97,7 @@ For each pattern recognition section, translate the Latin into English. The seco
       
     the girl prepares the mind but does not protect it \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Chapter 3 Exercises
+##### Chapter 3 Exercises
 
 A) Identify the use (subject/object) and number (singular/plural) of each noun:
 
@@ -144,7 +144,7 @@ C) After you are familiar with endings and you have studied your vocabulary, try
 11.  miserī virī agrum parant et bonus\* agrum servat (\*see vocabulary notes).
 12.  superōs tunc dominī amant atque vocant
 
-## Chapter 3 Vocabulary
+##### Chapter 3 Vocabulary
 
 Vocabulary note:
 
