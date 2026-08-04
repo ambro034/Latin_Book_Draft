@@ -135,7 +135,7 @@ When memorizing a word, it’s important to remember not just what it means in E
       max-width: 700px;
       margin: 20px auto;
       padding: 20px;
-      border: 1px solid #e7c000;
+      border: 5px solid #e7c000;
       border-radius: 10px;
       background:  #fff8d8;
       font-family: Arial, Helvetica, sans-serif;
@@ -146,11 +146,11 @@ When memorizing a word, it’s important to remember not just what it means in E
     }
 
     .ti-verb-question {
-      margin: 18px 0;
-      padding: 12px;
+      margin: 5px 0;
+      padding: 5px;
       background: white;
       border-radius: 6px;
-      border: 1px solid #ddd;
+      border: 5px solid #e7c000;
     }
 
     .ti-verb-word {
