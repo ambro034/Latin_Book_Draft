@@ -54,19 +54,20 @@ Latin, like most early languages (including the linguistic ancestor to English) 
 Latin was centered around clauses. A clause in linguistic terms is anything with a **subject** and a **predicate** (“she is,” “they walk,” or “Dead men tell no tales”) are all clauses. Independent clauses are like the previous examples: they do not have to be a sentence, but they do have to stand by themselves (“he walks,” not “if he walks…”). Dependent clauses (“once we get there,” “however much you plan”) still have subjects and predicates, but they need to be joined to an independent clause. In English we tend to write with lots of independent clauses, but the Romans typically had one or two independent clauses with many dependent clauses. Therefore even the longest Latin sentences can often be read by just noting individual clauses and their relationship to each other.
 
 > ##### Chapter 1 Practice
+{: .block-warning }
+
+> ####### A: For each clause, circle the subject(s) and underline the predicate(s). If there is no clause, write an X
 >
-> A: For each clause, circle the subject(s) and underline the predicate(s). If there is no clause, write an X
->
-> 1.  The dog barks at the bird
-> 2.  After we see the field
-> 3.  Once my friends leave
-> 4.  In the afternoon
-> 5.  If you build it, they will come
-> 6.  We are happy
-> 7.  We are
-> 8.  Many of the people
-> 9.  She’s happy
-> 10.  I am reading the book
+> ####### 1.  The dog barks at the bird
+> ####### 2.  After we see the field
+> ####### 3.  Once my friends leave
+> ####### 4.  In the afternoon
+> ####### 5.  If you build it, they will come
+> ####### 6.  We are happy
+> ####### 7.  We are
+> ####### 8.  Many of the people
+> ####### 9.  She’s happy
+> ####### 10.  I am reading the book
 {: .block-warning }
 
 > B: Review the rules for pronunciation above, then write the following Latin words phonetically (doing the best you can). For example, for *amīcus*, you might answer “a-mee-kus”.
