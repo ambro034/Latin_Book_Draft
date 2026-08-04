@@ -59,7 +59,7 @@ Just like there are families of nouns (five), there are also families of adjecti
 
 >
 >an adjective must match the case, gender, and number of the noun it modifies. Unlike nouns (which do not change gender), endings on adjectives will change to match the gender of a noun.
->{: .block-tip }
+{: .block-tip }
 
 Remember our sentence from the previous chapter: “The friends meet the players.”
 
