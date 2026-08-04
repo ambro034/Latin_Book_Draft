@@ -190,7 +190,8 @@ When memorizing a word, it’s important to remember not just what it means in E
 
 > ##### Chapter 2 Vocabulary
 >
->| **Nouns**  ||
+> **Nouns**  
+>| LATIN | ENGLISH |
 >| --- | --- |
 >| pater, patris (masculine) | father |
 >| vir, virī (m.) | man, husband |
@@ -205,13 +206,17 @@ When memorizing a word, it’s important to remember not just what it means in E
 >| nātus, natī (m.) | son |
 >| coniunx, coniugis (m./f.) | spouse/husband/wife |
 >| rēx, rēgis (m) | king |
->| **Verbs** |
+>
+> **Verbs** 
+>| LATIN | ENGLISH |
 >| amat/amant | he/she/it loves; they love |
 >| videt/vident | he/she/it sees; they see |
 >| habet/habent | he/she/it has, holds; they have, hold |
 >| vocat/vocant | he/she/it calls; they call |
 >| movet/movent | he/she/it moves; they move |
->| **Special words**  |
+>
+> **Special words**  
+>| LATIN | ENGLISH |
 >| is / ea | he / she |
 >| eum / eam | him / her |
 >| nōn | not |
