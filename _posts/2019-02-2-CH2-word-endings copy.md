@@ -124,7 +124,7 @@ patris — -is = *patr* (stem)
 
 When memorizing a word, it’s important to remember not just what it means in English, but what it does in a sentence. Pay close attention to if a noun is a subject or object, or singular or plural. Decide if a verb is transitive or intransitive before you move to the rest of the sentence. If you have an intransitive verb, you don’t need to look for a direct object.
 
-> ##### Chapter 2 Exercises 
+> ##### Chapter 2 Exercises
 {: .block-warning }
 
 <!-- TRANSITIVE or INTRANSITIVE identification -->
