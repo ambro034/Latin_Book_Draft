@@ -99,7 +99,8 @@ For each pattern recognition section, translate the Latin into English. The seco
       
     the girl prepares the mind but does not protect it \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-##### Chapter 3 Exercises
+>##### Chapter 3 Exercises
+{: .block-warning }
 
 A) Identify the use (subject/object) and number (singular/plural) of each noun:
 
@@ -115,6 +116,224 @@ A) Identify the use (subject/object) and number (singular/plural) of each noun:
 8.  bonam subject (or) object singular (or) plural
 9.  parva subject (or) object singular (or) plural
 10.  ager subject (or) object singular (or) plural
+
+<!-- Subject / Number Identification -->
+
+<div class="sn-quiz-container">
+
+<style>
+
+.sn-quiz-container{
+  max-width:700px;
+  margin:20px auto;
+  padding:20px;
+  border:3px solid #e7c000;
+  border-radius:10px;
+  background:#fff8d8;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.sn-question{
+  margin:20px 0;
+  padding:5px 20px;
+  background:white;
+  border:1px solid #e7c000;
+  border-radius:6px;
+}
+
+.sn-word{
+  font-weight:bold;
+  font-size:1.1em;
+  margin-bottom:10px;
+}
+
+.sn-group{
+  margin:10px 0;
+}
+
+.sn-feedback{
+  margin-top:10px;
+  font-weight:bold;
+}
+
+.sn-correct{
+  color:#0b7a0b;
+}
+
+.sn-incorrect{
+  color:#b00020;
+}
+
+.sn-button{
+  margin-top:20px;
+  margin-right:10px;
+  padding:10px 18px;
+  font-size:1em;
+  cursor:pointer;
+}
+
+#sn-score{
+  margin-top:20px;
+  font-size:1.1em;
+  font-weight:bold;
+}
+
+</style>
+
+
+<p><strong>A)</strong> Identify the <strong>use</strong> (subject/object) and <strong>number</strong> (singular/plural) of each noun.</p>
+
+<div id="sn-quiz"></div>
+
+<button class="sn-button" onclick="checkSNQuiz()">Check Answers</button>
+<button class="sn-button" onclick="resetSNQuiz()">Reset</button>
+
+<div id="sn-score"></div>
+
+<script>
+
+(function(){
+
+const snQuestions=[
+
+{word:"regem",use:"Object",number:"Singular"},
+{word:"virōs",use:"Object",number:"Plural"},
+{word:"natus",use:"Subject",number:"Singular"},
+{word:"puerum",use:"Object",number:"Singular"},
+{word:"bonae",use:"Subject",number:"Plural"},
+{word:"superī",use:"Subject",number:"Plural"},
+{word:"miserās",use:"Object",number:"Plural"},
+{word:"bonam",use:"Object",number:"Singular"},
+{word:"parva",use:"Subject",number:"Plural"},
+{word:"ager",use:"Subject",number:"Singular"}
+
+];
+
+const snContainer=document.getElementById("sn-quiz");
+
+function buildSNQuiz(){
+
+snContainer.innerHTML="";
+
+snQuestions.forEach((q,i)=>{
+
+snContainer.innerHTML+=`
+
+<div class="sn-question">
+
+<div class="sn-word">${i+1}. ${q.word}</div>
+
+<div class="sn-group">
+
+<strong>Use:</strong><br>
+
+<label>
+<input type="radio" name="sn-use-${i}" value="Subject">
+Subject
+</label>
+
+<label style="margin-left:20px;">
+<input type="radio" name="sn-use-${i}" value="Object">
+Object
+</label>
+
+</div>
+
+<div class="sn-group">
+
+<strong>Number:</strong><br>
+
+<label>
+<input type="radio" name="sn-number-${i}" value="Singular">
+Singular
+</label>
+
+<label style="margin-left:20px;">
+<input type="radio" name="sn-number-${i}" value="Plural">
+Plural
+</label>
+
+</div>
+
+<div id="sn-feedback-${i}" class="sn-feedback"></div>
+
+</div>
+
+`;
+
+});
+
+}
+
+window.checkSNQuiz=function(){
+
+let score=0;
+const possible=snQuestions.length*2;
+
+snQuestions.forEach((q,i)=>{
+
+const use=document.querySelector(`input[name="sn-use-${i}"]:checked`);
+const number=document.querySelector(`input[name="sn-number-${i}"]:checked`);
+
+const feedback=document.getElementById(`sn-feedback-${i}`);
+
+const useCorrect=use && use.value===q.use;
+const numberCorrect=number && number.value===q.number;
+
+if(useCorrect) score++;
+if(numberCorrect) score++;
+
+if(useCorrect && numberCorrect){
+
+feedback.className="sn-feedback sn-correct";
+feedback.innerHTML="✓ Both answers are correct.";
+
+}else{
+
+feedback.className="sn-feedback sn-incorrect";
+
+let text="";
+
+if(!useCorrect){
+
+text+=`✗ Use: <strong>${q.use}</strong><br>`;
+
+}
+
+if(!numberCorrect){
+
+text+=`✗ Number: <strong>${q.number}</strong>`;
+
+}
+
+feedback.innerHTML=text;
+
+}
+
+});
+
+document.getElementById("sn-score").innerHTML=
+`Score: ${score} / ${possible}`;
+
+}
+
+window.resetSNQuiz=function(){
+
+buildSNQuiz();
+
+document.getElementById("sn-score").innerHTML="";
+
+}
+
+buildSNQuiz();
+
+})();
+
+</script>
+
+</div>
+
+<!-- END -->
 
 B) Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same sending, but it’s not necessary. Translate the noun and adjective, then add “(s)” for subject and “(o)” for object. You can use the adjective ending chart above if necessary.
 
