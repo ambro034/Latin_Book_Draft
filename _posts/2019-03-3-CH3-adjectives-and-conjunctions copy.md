@@ -99,8 +99,7 @@ For each pattern recognition section, translate the Latin into English. The seco
       
     the girl prepares the mind but does not protect it \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
->##### Chapter 3 Exercises
-{: .block-warning }
+##### Chapter 3 Exercises
 
 A) Identify the use (subject/object) and number (singular/plural) of each noun:
 
@@ -116,7 +115,6 @@ A) Identify the use (subject/object) and number (singular/plural) of each noun:
 8.  bonam subject (or) object singular (or) plural
 9.  parva subject (or) object singular (or) plural
 10.  ager subject (or) object singular (or) plural
-
 
 B) Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same sending, but it’s not necessary. Translate the noun and adjective, then add “(s)” for subject and “(o)” for object. You can use the adjective ending chart above if necessary.
 
