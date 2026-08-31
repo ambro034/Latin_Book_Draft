@@ -24,9 +24,9 @@ This book is the result of a project to modernize the way Latin is presented in 
 
 Learning Latin is like learning to restore an old car that’s sitting in your garage. Although you may never use it daily, the lessons you learn will help you with future repairs and improvements that are more urgent. If you learn about the ancestors of our ancestors’ culture by understanding it, tinkering with it, and exploring, it will make other languages, communication in general, cultural interaction, and history come alive in new ways.
 
-# Pronunciation and Fundamental Grammar
+## Pronunciation and Fundamental Grammar
 
-## The basics of pronunciation
+### The basics of pronunciation
 
 Languages and alphabets are not the same thing. An alphabet represents a language, but one alphabet can represent different languages (French and English), or one language can even have different alphabets (Cantonese and Mandarin). The alphabet that we use in English is called the Latin alphabet, because it is (almost) the same as the alphabet the Romans used. There are only a few minor differences:
 
@@ -45,7 +45,7 @@ Languages and alphabets are not the same thing. An alphabet represents a languag
         -   oe: like the ‘OI’ in *boing*
         -   au: like the ‘AU’ in *audio*
 
-## The Basics of Language
+### The Basics of Language
 
 Many students have heard the (false) rumor that word order did not matter in Latin. The rules of word order were indeed much more flexible than those of English, but patterns still defined the rules of language.  
 
@@ -53,7 +53,7 @@ Latin, like most early languages (including the linguistic ancestor to English) 
 
 Latin was centered around clauses. A clause in linguistic terms is anything with a **subject** and a **predicate** (“she is,” “they walk,” or “Dead men tell no tales”) are all clauses. Independent clauses are like the previous examples: they do not have to be a sentence, but they do have to stand by themselves (“he walks,” not “if he walks…”). Dependent clauses (“once we get there,” “however much you plan”) still have subjects and predicates, but they need to be joined to an independent clause. In English we tend to write with lots of independent clauses, but the Romans typically had one or two independent clauses with many dependent clauses. Therefore even the longest Latin sentences can often be read by just noting individual clauses and their relationship to each other.
 
-> ##### Chapter 1 Practice
+> ## Chapter 1 Practice
 {: .block-warning }
 
 <!-- Subject predicate  -->

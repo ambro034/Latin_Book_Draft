@@ -99,7 +99,8 @@ For each pattern recognition section, translate the Latin into English. The seco
       
     the girl prepares the mind but does not protect it \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-##### Chapter 3 Exercises
+### Chapter 3 Exercises
+{: .block-warning }
 
 A) Identify the use (subject/object) and number (singular/plural) of each noun:
 
