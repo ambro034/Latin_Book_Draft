@@ -147,7 +147,7 @@ Latin was centered around clauses. A clause in linguistic terms is anything with
 Click a word <strong>once</strong> to identify it as a subject (blue highlight)<br>
 Click a word <strong>twice</strong> to identify it as a predicate (green highlight)<br>
 Click a word <strong>three-times</strong> to de-identify it (remove selection)<br>
-If there is no clause, write an X
+If there is no clause, click the box.
 </p>
 
 
@@ -280,7 +280,7 @@ ${i+1}. ${words}
 <input 
 type="checkbox" 
 id="sp-x-${i}">
-No clause (X)
+No clause
 </label>
 
 <div id="sp-feedback-${i}" class="sp-feedback"></div>
