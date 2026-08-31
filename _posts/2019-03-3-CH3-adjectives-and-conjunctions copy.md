@@ -102,20 +102,505 @@ For each pattern recognition section, translate the Latin into English. The seco
 ### Chapter 3 Exercises
 {: .block-warning }
 
-A) Identify the use (subject/object) and number (singular/plural) of each noun:
+<div class="sn-quiz-container">
 
-(circle one) (circle one)
+<style>
+/* ============================================================
+   SUBJECT / OBJECT + NUMBER EXERCISE
+   Prefix: sn-
+   ============================================================ */
 
-1.  regem subject (or) object singular (or) plural
-2.  virōs subject (or) object singular (or) plural
-3.  natus subject (or) object singular (or) plural
-4.  puerum subject (or) object singular (or) plural
-5.  bonae subject (or) object singular (or) plural
-6.  superī subject (or) object singular (or) plural
-7.  miserās subject (or) object singular (or) plural
-8.  bonam subject (or) object singular (or) plural
-9.  parva subject (or) object singular (or) plural
-10.  ager subject (or) object singular (or) plural
+.sn-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.sn-quiz-container * {
+    box-sizing: border-box;
+}
+
+.sn-title {
+    margin-top: 0;
+}
+
+.sn-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sn-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.sn-word {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.sn-section {
+    margin: 12px 0;
+}
+
+.sn-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.sn-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sn-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.sn-choice:hover {
+    border-color: #4a90e2;
+}
+
+.sn-choice.sn-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.sn-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.sn-feedback {
+    margin-top: 14px;
+    line-height: 1.5;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.sn-correct {
+    color: #0b7a0b;
+}
+
+.sn-incorrect {
+    color: #b00020;
+}
+
+.sn-controls {
+    margin-top: 20px;
+}
+
+.sn-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.sn-control-button:hover {
+    background: #f3f3f3;
+}
+
+.sn-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .sn-quiz-container {
+        padding: 15px;
+    }
+
+    .sn-question {
+        padding: 15px;
+    }
+
+    .sn-choice {
+        flex: 1 1 120px;
+    }
+}
+</style>
+
+
+<h3 class="sn-title">Exercise A</h3>
+
+<p class="sn-instructions">
+    <strong>Identify the use (subject/object) and number
+    (singular/plural) of each noun.</strong>
+    Select one answer for <strong>Use</strong> and one answer for
+    <strong>Number</strong>.
+</p>
+
+<div id="sn-quiz"></div>
+
+<div class="sn-controls">
+    <button
+        type="button"
+        class="sn-control-button"
+        onclick="checkSnQuiz()">
+        Check Answers
+    </button>
+
+    <button
+        type="button"
+        class="sn-control-button"
+        onclick="resetSnQuiz()">
+        Reset
+    </button>
+</div>
+
+<div id="sn-score" class="sn-score"></div>
+
+
+<script>
+(function () {
+
+    /* ========================================================
+       QUESTION DATA
+       ======================================================== */
+
+    const snQuestions = [
+        {
+            word: "regem",
+            use: "Object",
+            number: "Singular"
+        },
+        {
+            word: "virōs",
+            use: "Object",
+            number: "Plural"
+        },
+        {
+            word: "natus",
+            use: "Subject",
+            number: "Singular"
+        },
+        {
+            word: "puerum",
+            use: "Object",
+            number: "Singular"
+        },
+        {
+            word: "bonae",
+            use: "Subject",
+            number: "Plural"
+        },
+        {
+            word: "superī",
+            use: "Subject",
+            number: "Plural"
+        },
+        {
+            word: "miserās",
+            use: "Object",
+            number: "Plural"
+        },
+        {
+            word: "bonam",
+            use: "Object",
+            number: "Singular"
+        },
+        {
+            word: "parva",
+            use: "Subject",
+            number: "Plural"
+        },
+        {
+            word: "ager",
+            use: "Subject",
+            number: "Singular"
+        }
+    ];
+
+
+    /* ========================================================
+       BUILD QUIZ
+       ======================================================== */
+
+    function buildSnQuiz() {
+
+        const quiz = document.getElementById("sn-quiz");
+
+        quiz.innerHTML = "";
+
+        snQuestions.forEach(function (question, index) {
+
+            const card = document.createElement("div");
+            card.className = "sn-question";
+
+            card.innerHTML = `
+                <div class="sn-word">
+                    ${index + 1}. ${question.word}
+                </div>
+
+                <div class="sn-section">
+                    <span class="sn-label">Use:</span>
+
+                    <div class="sn-options">
+                        <button
+                            type="button"
+                            class="sn-choice"
+                            data-question="${index}"
+                            data-category="use"
+                            data-value="Subject">
+                            Subject
+                        </button>
+
+                        <button
+                            type="button"
+                            class="sn-choice"
+                            data-question="${index}"
+                            data-category="use"
+                            data-value="Object">
+                            Object
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sn-section">
+                    <span class="sn-label">Number:</span>
+
+                    <div class="sn-options">
+                        <button
+                            type="button"
+                            class="sn-choice"
+                            data-question="${index}"
+                            data-category="number"
+                            data-value="Singular">
+                            Singular
+                        </button>
+
+                        <button
+                            type="button"
+                            class="sn-choice"
+                            data-question="${index}"
+                            data-category="number"
+                            data-value="Plural">
+                            Plural
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    id="sn-feedback-${index}"
+                    class="sn-feedback"
+                    aria-live="polite">
+                </div>
+            `;
+
+            quiz.appendChild(card);
+        });
+
+
+        /* ----------------------------------------------------
+           CLICKABLE ANSWER BUTTONS
+           ---------------------------------------------------- */
+
+        quiz.querySelectorAll(".sn-choice").forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const questionIndex = button.dataset.question;
+                const category = button.dataset.category;
+
+                const sameGroup = quiz.querySelectorAll(
+                    '.sn-choice[data-question="' +
+                    questionIndex +
+                    '"][data-category="' +
+                    category +
+                    '"]'
+                );
+
+                sameGroup.forEach(function (otherButton) {
+                    otherButton.classList.remove("sn-selected");
+                    otherButton.setAttribute("aria-pressed", "false");
+                });
+
+                button.classList.add("sn-selected");
+                button.setAttribute("aria-pressed", "true");
+
+                document.getElementById(
+                    "sn-feedback-" + questionIndex
+                ).innerHTML = "";
+            });
+        });
+    }
+
+
+    /* ========================================================
+       CHECK ANSWERS
+       ======================================================== */
+
+    window.checkSnQuiz = function () {
+
+        let score = 0;
+
+        snQuestions.forEach(function (question, index) {
+
+            const selectedUse = document.querySelector(
+                '.sn-choice.sn-selected' +
+                '[data-question="' + index + '"]' +
+                '[data-category="use"]'
+            );
+
+            const selectedNumber = document.querySelector(
+                '.sn-choice.sn-selected' +
+                '[data-question="' + index + '"]' +
+                '[data-category="number"]'
+            );
+
+            const feedback = document.getElementById(
+                "sn-feedback-" + index
+            );
+
+            const useCorrect =
+                selectedUse &&
+                selectedUse.dataset.value === question.use;
+
+            const numberCorrect =
+                selectedNumber &&
+                selectedNumber.dataset.value === question.number;
+
+
+            if (useCorrect) {
+                score += 1;
+            }
+
+            if (numberCorrect) {
+                score += 1;
+            }
+
+
+            /* ------------------------------------------------
+               COMPONENT-LEVEL FEEDBACK
+               ------------------------------------------------ */
+
+            if (useCorrect && numberCorrect) {
+
+                feedback.className =
+                    "sn-feedback sn-correct";
+
+                feedback.innerHTML =
+                    "✓ Correct — " +
+                    question.word +
+                    " is " +
+                    question.use.toLowerCase() +
+                    " and " +
+                    question.number.toLowerCase() +
+                    ".";
+
+            } else {
+
+                feedback.className =
+                    "sn-feedback sn-incorrect";
+
+                let feedbackParts = [];
+
+                if (!selectedUse) {
+                    feedbackParts.push(
+                        "Use: select an answer. Correct answer: " +
+                        question.use +
+                        "."
+                    );
+                } else if (!useCorrect) {
+                    feedbackParts.push(
+                        "Use: " +
+                        question.use +
+                        "."
+                    );
+                } else {
+                    feedbackParts.push(
+                        "✓ Use: " +
+                        question.use +
+                        "."
+                    );
+                }
+
+
+                if (!selectedNumber) {
+                    feedbackParts.push(
+                        "Number: select an answer. Correct answer: " +
+                        question.number +
+                        "."
+                    );
+                } else if (!numberCorrect) {
+                    feedbackParts.push(
+                        "Number: " +
+                        question.number +
+                        "."
+                    );
+                } else {
+                    feedbackParts.push(
+                        "✓ Number: " +
+                        question.number +
+                        "."
+                    );
+                }
+
+                feedback.innerHTML =
+                    feedbackParts.join("<br>");
+            }
+        });
+
+
+        /* ----------------------------------------------------
+           SCORE
+           ---------------------------------------------------- */
+
+        const totalPoints = snQuestions.length * 2;
+
+        document.getElementById("sn-score").textContent =
+            "Score: " + score + " / " + totalPoints;
+    };
+
+
+    /* ========================================================
+       RESET QUIZ
+       ======================================================== */
+
+    window.resetSnQuiz = function () {
+
+        buildSnQuiz();
+
+        document.getElementById("sn-score").textContent = "";
+    };
+
+
+    /* ========================================================
+       INITIALIZE
+       ======================================================== */
+
+    buildSnQuiz();
+
+})();
+</script>
+
+</div>
 
 B) Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same sending, but it’s not necessary. Translate the noun and adjective, then add “(s)” for subject and “(o)” for object. You can use the adjective ending chart above if necessary.
 
