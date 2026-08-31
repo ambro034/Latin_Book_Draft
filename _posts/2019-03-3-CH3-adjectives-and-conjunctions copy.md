@@ -102,6 +102,7 @@ For each pattern recognition section, translate the Latin into English. The seco
 ### Chapter 3 Exercises
 {: .block-warning }
 
+
 <div class="sn-quiz-container">
 
 <style>
@@ -766,9 +767,9 @@ For each pattern recognition section, translate the Latin into English. The seco
 <p class="adj-instructions">
 
 <strong>B:</strong> Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same ending, but it is not necessary.
-    
+<br>    
 Choose the correct <strong>adjective form</strong>, translate the <strong>noun and adjective</strong>, and identify whether the noun is being used as a <strong>subject</strong> or <strong>object</strong>.
-    
+<br>    
 You can use the adjective ending chart above if necessary.
 </p>
 
