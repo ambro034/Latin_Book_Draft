@@ -247,11 +247,11 @@ For each pattern recognition section, translate the Latin into English. The seco
 </style>
 
 
-<h3 class="sn-title">Exercise A</h3>
+
 
 <p class="sn-instructions">
-    <strong>Identify the use (subject/object) and number
-    (singular/plural) of each noun.</strong>
+    <strong>A:</strong> Identify the <strong>use (subject/object)</strong> and <strong>number
+    (singular/plural)</strong> of each noun.
     Select one answer for <strong>Use</strong> and one answer for
     <strong>Number</strong>.
 </p>
@@ -602,20 +602,835 @@ For each pattern recognition section, translate the Latin into English. The seco
 
 </div>
 
-B) Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same sending, but it’s not necessary. Translate the noun and adjective, then add “(s)” for subject and “(o)” for object. You can use the adjective ending chart above if necessary.
 
-Circle the correct form Translate:
 
-1.  hominem: magnum magnōs magnus \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  puerōs: miserī miserum miserōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  natus: magnus magna magnum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  rex: novus nova novōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  gentēs: multī multās multam \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-6.  mēns: parva parvās parvōs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-7.  parentēs: miserām novus multae \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-8.  pedem: miserēs longum longa \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-9.  oculus: magnus nova parvum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-10.  pater: super mater longus \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div class="adj-quiz-container">
+
+<style>
+/* ============================================================
+   ADJECTIVE AGREEMENT EXERCISE
+   Prefix: adj-
+   ============================================================ */
+
+.adj-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.adj-quiz-container * {
+    box-sizing: border-box;
+}
+
+.adj-title {
+    margin-top: 0;
+}
+
+.adj-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.adj-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.adj-word {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.adj-section {
+    margin: 14px 0;
+}
+
+.adj-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.adj-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.adj-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.adj-choice:hover {
+    border-color: #4a90e2;
+}
+
+.adj-choice.adj-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.adj-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.adj-translation {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.adj-translation:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.adj-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.adj-correct {
+    color: #0b7a0b;
+}
+
+.adj-incorrect {
+    color: #b00020;
+}
+
+.adj-controls {
+    margin-top: 20px;
+}
+
+.adj-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.adj-control-button:hover {
+    background: #f3f3f3;
+}
+
+.adj-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .adj-quiz-container {
+        padding: 15px;
+    }
+
+    .adj-question {
+        padding: 15px;
+    }
+
+    .adj-choice {
+        flex: 1 1 120px;
+    }
+}
+</style>
+
+<p class="adj-instructions">
+
+<strong>B:</strong> Adjectives MUST agree with a noun in case, gender, and number. Sometimes they CAN have the same ending, but it is not necessary.
+    
+Choose the correct <strong>adjective form</strong>, translate the <strong>noun and adjective</strong>, and identify whether the noun is being used as a <strong>subject</strong> or <strong>object</strong>.
+    
+You can use the adjective ending chart above if necessary.
+</p>
+
+
+<div id="adj-quiz"></div>
+
+
+<div class="adj-controls">
+
+    <button
+        type="button"
+        class="adj-control-button"
+        onclick="checkAdjQuiz()">
+        Check Answers
+    </button>
+
+    <button
+        type="button"
+        class="adj-control-button"
+        onclick="resetAdjQuiz()">
+        Reset
+    </button>
+
+</div>
+
+
+<div id="adj-score" class="adj-score"></div>
+
+
+<script>
+(function () {
+
+    /* ========================================================
+       QUESTION DATA
+       ======================================================== */
+
+    const adjQuestions = [
+
+        {
+            noun: "hominem",
+            choices: ["magnum", "magnōs", "magnus"],
+            adjective: "magnum",
+            translations: [
+                "large man",
+                "great man",
+                "big man"
+            ],
+            use: "Object"
+        },
+
+        {
+            noun: "puerōs",
+            choices: ["miserī", "miserum", "miserōs"],
+            adjective: "miserōs",
+            translations: [
+                "miserable boys",
+                "unhappy boys",
+                "wretched boys"
+            ],
+            use: "Object"
+        },
+
+        {
+            noun: "natus",
+            choices: ["magnus", "magna", "magnum"],
+            adjective: "magnus",
+            translations: [
+                "large son",
+                "great son",
+                "big son"
+            ],
+            use: "Subject"
+        },
+
+        {
+            noun: "rex",
+            choices: ["novus", "nova", "novōs"],
+            adjective: "novus",
+            translations: [
+                "new king"
+            ],
+            use: "Subject"
+        },
+
+        {
+            noun: "gentēs",
+            choices: ["multī", "multās", "multam"],
+            adjective: "multās",
+            translations: [
+                "many peoples",
+                "many nations",
+                "many families"
+            ],
+            use: "Object"
+        },
+
+        {
+            noun: "mēns",
+            choices: ["parva", "parvās", "parvōs"],
+            adjective: "parva",
+            translations: [
+                "small mind",
+                "little mind"
+            ],
+            use: "Subject"
+        },
+
+        {
+            /*
+             Original choices were:
+             miserām / novus / multae
+
+             None agrees with parentēs.
+
+             This version corrects the choices so the question
+             has a valid masculine/feminine nominative plural form.
+            */
+            noun: "parentēs",
+            choices: ["miserī", "novī", "multī"],
+            adjective: "miserī",
+            translations: [
+                "miserable parents",
+                "unhappy parents",
+                "wretched parents"
+            ],
+            use: "Subject"
+        },
+
+        {
+            noun: "pedem",
+            choices: ["miserēs", "longum", "longa"],
+            adjective: "longum",
+            translations: [
+                "long foot"
+            ],
+            use: "Object"
+        },
+
+        {
+            noun: "oculus",
+            choices: ["magnus", "nova", "parvum"],
+            adjective: "magnus",
+            translations: [
+                "large eye",
+                "great eye",
+                "big eye"
+            ],
+            use: "Subject"
+        },
+
+        {
+            noun: "pater",
+            choices: ["super", "mater", "longus"],
+            adjective: "longus",
+            translations: [
+                "long father",
+                "tall father"
+            ],
+            use: "Subject"
+        }
+
+    ];
+
+
+    /* ========================================================
+       NORMALIZE TEXT ANSWERS
+       ======================================================== */
+
+    function normalizeAdjText(text) {
+
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[.,!?;:'"]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+
+    /* ========================================================
+       CHECK TRANSLATION AGAINST ACCEPTED ANSWERS
+       ======================================================== */
+
+    function adjTranslationIsCorrect(studentAnswer, acceptedAnswers) {
+
+        const normalizedStudent =
+            normalizeAdjText(studentAnswer);
+
+        return acceptedAnswers.some(function (answer) {
+
+            return normalizedStudent ===
+                normalizeAdjText(answer);
+
+        });
+    }
+
+
+    /* ========================================================
+       BUILD QUIZ
+       ======================================================== */
+
+    function buildAdjQuiz() {
+
+        const quiz =
+            document.getElementById("adj-quiz");
+
+        quiz.innerHTML = "";
+
+
+        adjQuestions.forEach(function (question, index) {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "adj-question";
+
+
+            const adjectiveButtons =
+                question.choices.map(function (choice) {
+
+                    return `
+                        <button
+                            type="button"
+                            class="adj-choice"
+                            data-question="${index}"
+                            data-category="adjective"
+                            data-value="${choice}"
+                            aria-pressed="false">
+                            ${choice}
+                        </button>
+                    `;
+
+                }).join("");
+
+
+            card.innerHTML = `
+
+                <div class="adj-word">
+                    ${index + 1}. ${question.noun}
+                </div>
+
+
+                <div class="adj-section">
+
+                    <span class="adj-label">
+                        Choose the correct adjective:
+                    </span>
+
+                    <div class="adj-options">
+                        ${adjectiveButtons}
+                    </div>
+
+                </div>
+
+
+                <div class="adj-section">
+
+                    <label
+                        class="adj-label"
+                        for="adj-translation-${index}">
+                        Translate:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adj-translation-${index}"
+                        class="adj-translation"
+                        autocomplete="off"
+                        placeholder="Type the English translation">
+
+                </div>
+
+
+                <div class="adj-section">
+
+                    <span class="adj-label">
+                        Use:
+                    </span>
+
+                    <div class="adj-options">
+
+                        <button
+                            type="button"
+                            class="adj-choice"
+                            data-question="${index}"
+                            data-category="use"
+                            data-value="Subject"
+                            aria-pressed="false">
+                            Subject
+                        </button>
+
+                        <button
+                            type="button"
+                            class="adj-choice"
+                            data-question="${index}"
+                            data-category="use"
+                            data-value="Object"
+                            aria-pressed="false">
+                            Object
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="adj-feedback-${index}"
+                    class="adj-feedback"
+                    aria-live="polite">
+                </div>
+
+            `;
+
+
+            quiz.appendChild(card);
+        });
+
+
+        /* ----------------------------------------------------
+           CLICKABLE ANSWER BUTTONS
+           ---------------------------------------------------- */
+
+        quiz.querySelectorAll(".adj-choice")
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const questionIndex =
+                            button.dataset.question;
+
+                        const category =
+                            button.dataset.category;
+
+
+                        const sameGroup =
+                            quiz.querySelectorAll(
+                                '.adj-choice' +
+                                '[data-question="' +
+                                questionIndex +
+                                '"]' +
+                                '[data-category="' +
+                                category +
+                                '"]'
+                            );
+
+
+                        sameGroup.forEach(
+                            function (otherButton) {
+
+                                otherButton.classList.remove(
+                                    "adj-selected"
+                                );
+
+                                otherButton.setAttribute(
+                                    "aria-pressed",
+                                    "false"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "adj-selected"
+                        );
+
+                        button.setAttribute(
+                            "aria-pressed",
+                            "true"
+                        );
+
+
+                        document.getElementById(
+                            "adj-feedback-" +
+                            questionIndex
+                        ).innerHTML = "";
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* ========================================================
+       CHECK ANSWERS
+       ======================================================== */
+
+    window.checkAdjQuiz = function () {
+
+        let score = 0;
+
+
+        adjQuestions.forEach(
+            function (question, index) {
+
+
+                /* --------------------------------------------
+                   SELECTED ADJECTIVE
+                   -------------------------------------------- */
+
+                const selectedAdjective =
+                    document.querySelector(
+                        '.adj-choice.adj-selected' +
+                        '[data-question="' +
+                        index +
+                        '"]' +
+                        '[data-category="adjective"]'
+                    );
+
+
+                /* --------------------------------------------
+                   TRANSLATION
+                   -------------------------------------------- */
+
+                const translationInput =
+                    document.getElementById(
+                        "adj-translation-" +
+                        index
+                    );
+
+
+                /* --------------------------------------------
+                   SELECTED USE
+                   -------------------------------------------- */
+
+                const selectedUse =
+                    document.querySelector(
+                        '.adj-choice.adj-selected' +
+                        '[data-question="' +
+                        index +
+                        '"]' +
+                        '[data-category="use"]'
+                    );
+
+
+                /* --------------------------------------------
+                   DETERMINE CORRECTNESS
+                   -------------------------------------------- */
+
+                const adjectiveCorrect =
+                    selectedAdjective &&
+                    selectedAdjective.dataset.value ===
+                        question.adjective;
+
+
+                const translationCorrect =
+                    adjTranslationIsCorrect(
+                        translationInput.value,
+                        question.translations
+                    );
+
+
+                const useCorrect =
+                    selectedUse &&
+                    selectedUse.dataset.value ===
+                        question.use;
+
+
+                /* --------------------------------------------
+                   PARTIAL CREDIT
+                   -------------------------------------------- */
+
+                if (adjectiveCorrect) {
+                    score += 1;
+                }
+
+                if (translationCorrect) {
+                    score += 1;
+                }
+
+                if (useCorrect) {
+                    score += 1;
+                }
+
+
+                /* --------------------------------------------
+                   FEEDBACK
+                   -------------------------------------------- */
+
+                const feedback =
+                    document.getElementById(
+                        "adj-feedback-" +
+                        index
+                    );
+
+
+                if (
+                    adjectiveCorrect &&
+                    translationCorrect &&
+                    useCorrect
+                ) {
+
+                    feedback.className =
+                        "adj-feedback adj-correct";
+
+                    feedback.innerHTML =
+                        "✓ Correct — " +
+                        question.noun +
+                        " " +
+                        question.adjective +
+                        " = " +
+                        question.translations[0] +
+                        " (" +
+                        question.use.toLowerCase() +
+                        ").";
+
+                } else {
+
+                    feedback.className =
+                        "adj-feedback adj-incorrect";
+
+
+                    const feedbackParts = [];
+
+
+                    /* ADJECTIVE FEEDBACK */
+
+                    if (!selectedAdjective) {
+
+                        feedbackParts.push(
+                            "Adjective: select an answer. " +
+                            "Correct answer: " +
+                            question.adjective +
+                            "."
+                        );
+
+                    } else if (!adjectiveCorrect) {
+
+                        feedbackParts.push(
+                            "Adjective: " +
+                            question.adjective +
+                            "."
+                        );
+
+                    } else {
+
+                        feedbackParts.push(
+                            "✓ Adjective: " +
+                            question.adjective +
+                            "."
+                        );
+
+                    }
+
+
+                    /* TRANSLATION FEEDBACK */
+
+                    if (!translationInput.value.trim()) {
+
+                        feedbackParts.push(
+                            "Translation: enter an answer. " +
+                            "One correct translation is \"" +
+                            question.translations[0] +
+                            ".\""
+                        );
+
+                    } else if (!translationCorrect) {
+
+                        feedbackParts.push(
+                            "Translation: one correct answer is \"" +
+                            question.translations[0] +
+                            ".\""
+                        );
+
+                    } else {
+
+                        feedbackParts.push(
+                            "✓ Translation: correct."
+                        );
+
+                    }
+
+
+                    /* USE FEEDBACK */
+
+                    if (!selectedUse) {
+
+                        feedbackParts.push(
+                            "Use: select Subject or Object. " +
+                            "Correct answer: " +
+                            question.use +
+                            "."
+                        );
+
+                    } else if (!useCorrect) {
+
+                        feedbackParts.push(
+                            "Use: " +
+                            question.use +
+                            "."
+                        );
+
+                    } else {
+
+                        feedbackParts.push(
+                            "✓ Use: " +
+                            question.use +
+                            "."
+                        );
+
+                    }
+
+
+                    feedback.innerHTML =
+                        feedbackParts.join("<br>");
+
+                }
+
+            }
+        );
+
+
+        /* ----------------------------------------------------
+           SCORE
+           ---------------------------------------------------- */
+
+        const totalPoints =
+            adjQuestions.length * 3;
+
+
+        document.getElementById(
+            "adj-score"
+        ).textContent =
+            "Score: " +
+            score +
+            " / " +
+            totalPoints;
+
+    };
+
+
+    /* ========================================================
+       RESET QUIZ
+       ======================================================== */
+
+    window.resetAdjQuiz = function () {
+
+        buildAdjQuiz();
+
+        document.getElementById(
+            "adj-score"
+        ).textContent = "";
+
+    };
+
+
+    /* ========================================================
+       INITIALIZE
+       ======================================================== */
+
+    buildAdjQuiz();
+
+})();
+</script>
+
+</div>
 
 C) After you are familiar with endings and you have studied your vocabulary, try the following exercises. Pay close attention to endings and identify the pattern (transitive/intransitive). For numbers 8-12, segment the sentence before you translate:
 
