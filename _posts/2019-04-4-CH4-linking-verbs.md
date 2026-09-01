@@ -573,7 +573,7 @@ For numbers <strong>1–5</strong>, translate from Latin into English. For numbe
 </div>
 
 > ### Translations
-{: .block-info }
+{: .block-note }
 
 
 1) Identify the pattern(s) (transitive/intransitive/linking), (2) then translate the sentences into English. Pay careful attention to cases and prepositions. You can identify prepositional phrases as segments. Remember that subjects may change between coordinated clauses. The second sentence for each number follows a similar pattern to the first. Translate it into Latin.
