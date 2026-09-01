@@ -112,26 +112,722 @@ littera scribenda est mihi = the letter *must be* written by me. (or) I must wri
 > ### Chapter 17 Excerises
 {: .block-warning }
 
-A) Change these gerund constructions into gerundives (in Latin):
+<!-- ============================================================
+     EXERCISE A: GERUNDS AND GERUNDIVES
+     Prefix: ger-
+     ============================================================ -->
 
-advēnimus ad capiendum urbes: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div class="ger-quiz-container">
 
-servāmus eōs tenendō virtūtem: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<style>
+.ger-quiz-container,
+.indf-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-Translate the following gerundive contructions into English:
+.ger-quiz-container *,
+.indf-quiz-container * {
+    box-sizing: border-box;
+}
 
-advēnimus ad litora videnda: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.ger-instructions,
+.indf-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-librī legendī sunt ibi: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.ger-question,
+.indf-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-vincimur urbibus capiendīs: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.ger-prompt,
+.indf-prompt {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
 
-B) Translate these indirect statements. Pay close attention to the tense (head verb and infinitive):
+.ger-label,
+.indf-label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 7px;
+}
 
-1.  consūlēs dicunt senēs visūros omnēs
-2.  audivīmus dūrōs ibi mansūrōs esse
-3.  illae matrēs aliōs relictūrōs esse sentīunt
-4.  multī putant sē veritātem petitūrōs esse
+.ger-input,
+.indf-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.ger-input:focus,
+.indf-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.ger-feedback,
+.indf-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.ger-correct,
+.indf-correct {
+    color: #0b7a0b;
+}
+
+.ger-incorrect,
+.indf-incorrect {
+    color: #b00020;
+}
+
+.ger-note,
+.indf-note {
+    margin-top: 8px;
+    color: #444;
+    font-weight: normal;
+}
+
+.ger-control-button,
+.indf-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.ger-control-button:hover,
+.indf-control-button:hover {
+    background: #f3f3f3;
+}
+
+.ger-score,
+.indf-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.ger-subheading {
+    margin: 26px 0 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .ger-quiz-container,
+    .indf-quiz-container {
+        padding: 15px;
+    }
+
+    .ger-question,
+    .indf-question {
+        padding: 15px;
+    }
+}
+</style>
+
+
+<p class="ger-instructions">
+<strong>A:</strong> First, change the <strong>gerund + direct object</strong>
+construction into a <strong>gerundive construction</strong>. The gerundive must
+agree with its noun in case, gender, and number. Then translate the gerundive
+constructions into English.
+</p>
+
+<div class="ger-subheading">
+Change the gerund construction into a gerundive:
+</div>
+
+<div id="ger-change-quiz"></div>
+
+<div class="ger-subheading">
+Translate the gerundive construction:
+</div>
+
+<div id="ger-translate-quiz"></div>
+
+<button type="button" class="ger-control-button" onclick="checkGerQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="ger-control-button" onclick="resetGerQuiz()">
+    Reset
+</button>
+
+<div id="ger-score" class="ger-score"></div>
+
+
+<script>
+(function(){
+
+const gerChangeQuestions = [
+    {
+        prompt: "advēnimus ad capiendum urbes",
+        answers: [
+            "advēnimus ad urbēs capiendās",
+            "ad urbēs capiendās advēnimus",
+            "advēnimus ad capiendas urbes",
+            "ad capiendas urbes advenimus"
+        ],
+        display: "advēnimus ad urbēs capiendās",
+        note:
+            "urbēs becomes the object of ad and therefore accusative plural; capiendās agrees with urbēs."
+    },
+    {
+        prompt: "servāmus eōs tenendō virtūtem",
+        answers: [
+            "servāmus eōs virtūte tenendā",
+            "servāmus eōs tenendā virtūte",
+            "servamus eos virtute tenenda",
+            "servamus eos tenenda virtute"
+        ],
+        display: "servāmus eōs virtūte tenendā",
+        note:
+            "The original ablative gerund tenendō is replaced by an ablative gerundive agreeing with virtūte: tenendā."
+    }
+];
+
+
+const gerTranslateQuestions = [
+    {
+        prompt: "advēnimus ad litora videnda",
+        answers: [
+            "we arrive to see the shores",
+            "we arrive in order to see the shores",
+            "we come to see the shores",
+            "we come in order to see the shores",
+            "we arrive for seeing the shores",
+            "we come for the purpose of seeing the shores",
+            "we arrive for the purpose of seeing the shores"
+        ],
+        display:
+            "we arrive in order to see the shores",
+        note:
+            "ad + accusative gerundive expresses purpose: literally, “for the shores to be seen.”"
+    },
+    {
+        prompt: "librī legendī sunt ibi",
+        answers: [
+            "the books must be read there",
+            "books must be read there",
+            "the books have to be read there",
+            "books have to be read there",
+            "the books ought to be read there",
+            "books ought to be read there"
+        ],
+        display:
+            "the books must be read there",
+        note:
+            "legendī sunt is the passive periphrastic and expresses necessity or obligation."
+    },
+    {
+        prompt: "vincimur urbibus capiendīs",
+        answers: [
+            "we are conquered by capturing cities",
+            "we are defeated by capturing cities",
+            "we are conquered by the capturing of cities",
+            "we are defeated by the capturing of cities",
+            "we are conquered through capturing cities",
+            "we are defeated through capturing cities"
+        ],
+        display:
+            "we are conquered by capturing cities",
+        note:
+            "urbibus capiendīs is an ablative gerundive construction corresponding to an ablative gerund + object: “by capturing cities.”"
+    }
+];
+
+
+function normalizeGer(text) {
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildGerQuiz() {
+
+    const changeQuiz =
+        document.getElementById("ger-change-quiz");
+
+    const translateQuiz =
+        document.getElementById("ger-translate-quiz");
+
+    changeQuiz.innerHTML = "";
+    translateQuiz.innerHTML = "";
+
+
+    gerChangeQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "ger-question";
+
+        card.innerHTML = `
+            <div class="ger-prompt">
+                ${i + 1}. ${q.prompt}
+            </div>
+
+            <label class="ger-label" for="ger-change-${i}">
+                Gerundive construction:
+            </label>
+
+            <input
+                type="text"
+                id="ger-change-${i}"
+                class="ger-input"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Type the Latin gerundive construction">
+
+            <div
+                id="ger-change-feedback-${i}"
+                class="ger-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        changeQuiz.appendChild(card);
+    });
+
+
+    gerTranslateQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "ger-question";
+
+        card.innerHTML = `
+            <div class="ger-prompt">
+                ${i + 1}. ${q.prompt}
+            </div>
+
+            <label class="ger-label" for="ger-translation-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="ger-translation-${i}"
+                class="ger-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+            <div
+                id="ger-translation-feedback-${i}"
+                class="ger-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        translateQuiz.appendChild(card);
+    });
+}
+
+
+window.checkGerQuiz = function() {
+
+    let score = 0;
+
+    const possible =
+        gerChangeQuestions.length +
+        gerTranslateQuestions.length;
+
+
+    gerChangeQuestions.forEach(function(q, i) {
+
+        const student =
+            normalizeGer(
+                document.getElementById(
+                    `ger-change-${i}`
+                ).value
+            );
+
+        const correct =
+            q.answers.some(function(answer) {
+                return student === normalizeGer(answer);
+            });
+
+        const feedback =
+            document.getElementById(
+                `ger-change-feedback-${i}`
+            );
+
+        if (correct) {
+
+            score++;
+
+            feedback.innerHTML = `
+                <div class="ger-correct">
+                    ✓ Correct.
+                </div>
+
+                <div class="ger-note">
+                    ${q.note}
+                </div>
+            `;
+
+        } else {
+
+            feedback.innerHTML = `
+                <div class="ger-incorrect">
+                    ✗ Correct form:
+                    <strong>${q.display}</strong>.
+                </div>
+
+                <div class="ger-note">
+                    ${q.note}
+                </div>
+            `;
+        }
+    });
+
+
+    gerTranslateQuestions.forEach(function(q, i) {
+
+        const student =
+            normalizeGer(
+                document.getElementById(
+                    `ger-translation-${i}`
+                ).value
+            );
+
+        const correct =
+            q.answers.some(function(answer) {
+                return student === normalizeGer(answer);
+            });
+
+        const feedback =
+            document.getElementById(
+                `ger-translation-feedback-${i}`
+            );
+
+        if (correct) {
+
+            score++;
+
+            feedback.innerHTML = `
+                <div class="ger-correct">
+                    ✓ Correct.
+                </div>
+
+                <div class="ger-note">
+                    ${q.note}
+                </div>
+            `;
+
+        } else {
+
+            feedback.innerHTML = `
+                <div class="ger-incorrect">
+                    ✗ One correct translation is:
+                    <strong>${q.display}</strong>.
+                </div>
+
+                <div class="ger-note">
+                    ${q.note}
+                </div>
+            `;
+        }
+    });
+
+
+    document.getElementById(
+        "ger-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+
+window.resetGerQuiz = function() {
+
+    buildGerQuiz();
+
+    document.getElementById(
+        "ger-score"
+    ).textContent = "";
+};
+
+
+buildGerQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: FUTURE INFINITIVE INDIRECT STATEMENTS
+     Prefix: indf-
+     ============================================================ -->
+
+<div class="indf-quiz-container">
+
+<p class="indf-instructions">
+<strong>B:</strong> Translate the following <strong>indirect statements</strong>.
+Pay close attention to the tense of both the <strong>head verb</strong> and the
+<strong>infinitive</strong>. Remember that a future infinitive expresses an action
+that occurs <strong>after</strong> the action of the head verb.
+</p>
+
+<div id="indf-quiz"></div>
+
+<button type="button" class="indf-control-button" onclick="checkIndfQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="indf-control-button" onclick="resetIndfQuiz()">
+    Reset
+</button>
+
+<div id="indf-score" class="indf-score"></div>
+
+
+<script>
+(function(){
+
+const indfQuestions = [
+    {
+        prompt:
+            "consūlēs dicunt senēs visūrōs omnēs",
+        answers: [
+            "the consuls say that the old men will see everyone",
+            "the consuls say the old men will see everyone",
+            "the consuls say that the old men are going to see everyone",
+            "the consuls say the old men are going to see everyone",
+            "the consuls say that the old men will see them all",
+            "the consuls say the old men will see them all"
+        ],
+        display:
+            "the consuls say that the old men will see everyone",
+        note:
+            "dicunt is present, while visūrōs is future relative to dicunt: the seeing will happen after the saying."
+    },
+
+    {
+        prompt:
+            "audīvimus dūrōs ibi mansūrōs esse",
+        answers: [
+            "we heard that the harsh men would remain there",
+            "we heard the harsh men would remain there",
+            "we heard that the harsh men were going to remain there",
+            "we heard the harsh men were going to remain there",
+            "we heard that the hard men would remain there",
+            "we heard that the stern men would remain there"
+        ],
+        display:
+            "we heard that the harsh men would remain there",
+        note:
+            "audīvimus is perfect. The future infinitive mansūrōs esse therefore becomes “would remain” in natural English."
+    },
+
+    {
+        prompt:
+            "illae matrēs aliōs relictūrōs esse sentīunt",
+        answers: [
+            "those mothers perceive that the others will leave",
+            "those mothers perceive the others will leave",
+            "those mothers feel that the others will leave",
+            "those mothers sense that the others will leave",
+            "those mothers perceive that others will leave",
+            "those mothers think that the others will leave",
+            "those mothers perceive that the others are going to leave"
+        ],
+        display:
+            "those mothers perceive that the others will leave",
+        note:
+            "aliōs is accusative plural, the subject of the indirect statement; relictūrōs agrees with it."
+    },
+
+    {
+        prompt:
+            "multī putant sē veritātem petitūrōs esse",
+        answers: [
+            "many think that they will seek the truth",
+            "many think they will seek the truth",
+            "many people think that they will seek the truth",
+            "many people think they will seek the truth",
+            "many think that they are going to seek the truth",
+            "many think they are going to seek the truth",
+            "many think that they will pursue the truth",
+            "many think they will pursue the truth"
+        ],
+        display:
+            "many think that they will seek the truth",
+        note:
+            "sē refers back to multī. petitūrōs esse is future active infinitive: their seeking happens after their thinking."
+    }
+];
+
+
+function normalizeIndf(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildIndfQuiz() {
+
+    const quiz =
+        document.getElementById("indf-quiz");
+
+    quiz.innerHTML = "";
+
+
+    indfQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "indf-question";
+
+        card.innerHTML = `
+            <div class="indf-prompt">
+                ${i + 1}. ${q.prompt}
+            </div>
+
+            <label
+                class="indf-label"
+                for="indf-answer-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="indf-answer-${i}"
+                class="indf-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+            <div
+                id="indf-feedback-${i}"
+                class="indf-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+
+window.checkIndfQuiz = function() {
+
+    let score = 0;
+
+
+    indfQuestions.forEach(function(q, i) {
+
+        const student =
+            normalizeIndf(
+                document.getElementById(
+                    `indf-answer-${i}`
+                ).value
+            );
+
+        const correct =
+            q.answers.some(function(answer) {
+                return student === normalizeIndf(answer);
+            });
+
+        const feedback =
+            document.getElementById(
+                `indf-feedback-${i}`
+            );
+
+
+        if (correct) {
+
+            score++;
+
+            feedback.innerHTML = `
+                <div class="indf-correct">
+                    ✓ Correct.
+                </div>
+
+                <div class="indf-note">
+                    ${q.note}
+                </div>
+            `;
+
+        } else {
+
+            feedback.innerHTML = `
+                <div class="indf-incorrect">
+                    ✗ One correct translation is:
+                    <strong>${q.display}</strong>.
+                </div>
+
+                <div class="indf-note">
+                    ${q.note}
+                </div>
+            `;
+        }
+    });
+
+
+    document.getElementById(
+        "indf-score"
+    ).textContent =
+        `Score: ${score} / ${indfQuestions.length}`;
+};
+
+
+window.resetIndfQuiz = function() {
+
+    buildIndfQuiz();
+
+    document.getElementById(
+        "indf-score"
+    ).textContent = "";
+};
+
+
+buildIndfQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 17 Translations
 
