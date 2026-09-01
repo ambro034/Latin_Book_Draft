@@ -576,32 +576,392 @@ For numbers <strong>1–5</strong>, translate from Latin into English. For numbe
 {: .block-success }
 
 
-1) Identify the pattern(s) (transitive/intransitive/linking), (2) then translate the sentences into English. Pay careful attention to cases and prepositions. You can identify prepositional phrases as segments. Remember that subjects may change between coordinated clauses. The second sentence for each number follows a similar pattern to the first. Translate it into Latin.
+<div class="translation-block">
 
-1.  sub novō locō iacent  
-    she lies in the large places
-2.  ē silvā equus ambulat sed nōn eum nunc vident  
-    The boys walk on the mountain but the young men certainly do not see them.
-3.  pater materque mare\* parvum amant  
-    \*both *litus* and *mare* are neuter, so their accusative form is the same as their nominative (this is true of all neuter nouns), so use context to determine which case this is.  
-      
-    The masters and mistresses protect a large kingdom.  
-    
-4.  euntne fratrēs dē montibus superīs?  
-    Do the dogs walk on the long path.
-5.  vidēnt litus mareque nec coniugēs in aquīs sunt  
-    They don’t, however, see the spouses on the shore or in the water.
-6.  in magnō locō multī montēs iacent  
-    The kingdoms lie under the mountain. \*remember the rule for neuter plurals
-7.  nōn ab magnō litore ambulat domina, nam puellām videt  
-    Surely the master goes out of the water, but the girls do not see him.
-8.  regna bona enim sub aquā sunt ac dominī ea servant  
-    The places, however, are on the shore, and few cultivate them.
-9.  pedēs ex novā terrā aut dē montibus multī hominēs movent  
-    The evil young men move their mothers out of the new land.
-10.  novus natus est parvus sed magnum regnum parat  
-       
-     The field is cheap but large, and he prepares it. \*think about what word *it* replaces and what its ending should be.
+<style>
+.translation-block {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #198754;
+    border-radius: 10px;
+    background: #d1e7dd;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.translation-block * {
+    box-sizing: border-box;
+}
+
+.translation-instructions {
+    margin: 0 0 20px;
+    line-height: 1.55;
+}
+
+.translation-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border: 1px solid #198754;
+    border-radius: 6px;
+}
+
+.translation-number {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.translation-direction {
+    margin: 14px 0 6px;
+    color: #146c43;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.translation-sentence {
+    font-size: 1.12em;
+    line-height: 1.55;
+}
+
+.translation-latin {
+    font-weight: bold;
+}
+
+.translation-english {
+    font-weight: normal;
+}
+
+.translation-note {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-left: 4px solid #198754;
+    border-radius: 4px;
+    background: #f5fbf7;
+    color: #444;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.translation-note strong {
+    color: #222;
+}
+
+.translation-divider {
+    margin: 16px 0;
+    border: 0;
+    border-top: 1px solid #d8d8d8;
+}
+
+@media (max-width: 500px) {
+    .translation-block {
+        padding: 15px;
+    }
+
+    .translation-question {
+        padding: 15px;
+    }
+}
+</style>
+
+
+<p class="translation-instructions">
+    <strong>Translation Practice:</strong>
+    (1) Identify the <strong>pattern(s)</strong>
+    (transitive, intransitive, or linking), and
+    (2) translate the Latin sentence into <strong>English</strong>.
+    Pay careful attention to <strong>cases</strong> and
+    <strong>prepositions</strong>. You can identify prepositional phrases
+    as segments. Remember that subjects may change between coordinated
+    clauses.
+    <br><br>
+    The second sentence for each number follows a similar pattern to the
+    first. Translate it into <strong>Latin</strong>.
+</p>
+
+
+<!-- 1 -->
+<div class="translation-question">
+
+    <div class="translation-number">1.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        sub novō locō iacent
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        She lies in the large places.
+    </div>
+
+</div>
+
+
+<!-- 2 -->
+<div class="translation-question">
+
+    <div class="translation-number">2.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        ē silvā equus ambulat sed nōn eum nunc vident
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The boys walk on the mountain but the young men certainly do not see them.
+    </div>
+
+</div>
+
+
+<!-- 3 -->
+<div class="translation-question">
+
+    <div class="translation-number">3.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        pater māterque mare parvum amant
+    </div>
+
+    <div class="translation-note">
+        <strong>Remember:</strong>
+        Both <em>litus</em> and <em>mare</em> are neuter, so their
+        accusative form is the same as their nominative form.
+        This is true of all neuter nouns. Use the sentence pattern
+        and context to determine which case is being used.
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The masters and mistresses protect a large kingdom.
+    </div>
+
+</div>
+
+
+<!-- 4 -->
+<div class="translation-question">
+
+    <div class="translation-number">4.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        euntne frātrēs dē montibus superīs?
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        Do the dogs walk on the long path?
+    </div>
+
+</div>
+
+
+<!-- 5 -->
+<div class="translation-question">
+
+    <div class="translation-number">5.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        vident litus mareque nec coniugēs in aquīs sunt
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        They don’t, however, see the spouses on the shore or in the water.
+    </div>
+
+</div>
+
+
+<!-- 6 -->
+<div class="translation-question">
+
+    <div class="translation-number">6.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        in magnō locō multī montēs iacent
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The kingdoms lie under the mountain.
+    </div>
+
+    <div class="translation-note">
+        <strong>Remember:</strong>
+        Apply the rule for <strong>neuter plurals</strong>.
+    </div>
+
+</div>
+
+
+<!-- 7 -->
+<div class="translation-question">
+
+    <div class="translation-number">7.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        nōn ab magnō litore ambulat domina, nam puellam videt
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        Surely the master goes out of the water, but the girls do not see him.
+    </div>
+
+</div>
+
+
+<!-- 8 -->
+<div class="translation-question">
+
+    <div class="translation-number">8.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        rēgna bona enim sub aquā sunt ac dominī ea servant
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The places, however, are on the shore, and few cultivate them.
+    </div>
+
+</div>
+
+
+<!-- 9 -->
+<div class="translation-question">
+
+    <div class="translation-number">9.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        pedēs ex novā terrā aut dē montibus multī hominēs movent
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The evil young men move their mothers out of the new land.
+    </div>
+
+</div>
+
+
+<!-- 10 -->
+<div class="translation-question">
+
+    <div class="translation-number">10.</div>
+
+    <div class="translation-direction">
+        Latin → English
+    </div>
+
+    <div class="translation-sentence translation-latin">
+        novus nātus est parvus sed magnum rēgnum parat
+    </div>
+
+    <hr class="translation-divider">
+
+    <div class="translation-direction">
+        English → Latin
+    </div>
+
+    <div class="translation-sentence translation-english">
+        The field is cheap but large, and he prepares it.
+    </div>
+
+    <div class="translation-note">
+        <strong>Hint:</strong>
+        Think about which word <em>it</em> replaces and what ending
+        the corresponding Latin pronoun should have.
+    </div>
+
+</div>
+
+</div>
 
 > ### Vocabulary
 {: .block-danger }
