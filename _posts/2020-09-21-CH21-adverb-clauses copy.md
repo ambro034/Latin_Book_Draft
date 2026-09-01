@@ -86,7 +86,8 @@ Unreal:
 
 Many conditions you see in Latin are a combination (a perfect subjunctive in the protasis and a present indicative in the apodosis. Just remember the translation rule for each part of the condition and combine.
 
-##### Chapter 21 Exercises
+> ### Chapter 21 Exercises
+{: .block-warning }
 
 A) Identify the use of the subjunctive(s) and translate:
 

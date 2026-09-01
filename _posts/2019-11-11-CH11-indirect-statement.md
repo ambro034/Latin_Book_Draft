@@ -123,7 +123,8 @@ The infinitive of the indirect statement is relative to the tense of the primary
 
 No matter the tense of the primary action (she thinks, she was thinking, or she thought), the tense of the infinitive shows an action happening at that time. Even though *venire* stays present tense, its translated tense depends on the main verb.
 
-##### Chapter 11 Exercises
+> ### Chapter 11 Exercises
+{: .block-warning }
 
 A) Vocabulary and ending practice. After studying chapter 11 vocabulary and reviewing chapter 10, complete the Latin verbs to match the English phrase
 

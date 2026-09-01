@@ -131,7 +131,8 @@ In English, passive verbs always have a “be” helping verb (“it is thought,
 
 In Latin, this isn’t always the case. The pattern is \*subject\* (receives) \*verb\* (optional: by person (agent) or thing (means)
 
-##### Chapter 10 Excercises
+> ### Chapter 10 Excercises
+{: .block-warning }
 
 A) For the following English clauses, identify the pattern: **Active (transitive or intransitive); Passive; or Linking**. If possible, change the voice of the sentence (this will not be possible for intransitive or linking patterns) without changing the meaning or tense. You do not need to translate.
 

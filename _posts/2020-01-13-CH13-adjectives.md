@@ -214,7 +214,8 @@ Although it’s difficult to choose the right sense of the participle when trans
 
 Segmenting: Participles can mark sentence segments just like verbs, punctuation, conjunctions, and prepositions. Participles are often used to govern an independent clause, so they will contain the same place/time/means constructions as the verbs from which they come.
 
-##### Chapter 13 Exercises
+> ### Chapter 13 Exercises
+{: .block-warning }
 
 A) translate the following segments/clauses
 

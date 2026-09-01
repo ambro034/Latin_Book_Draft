@@ -131,7 +131,8 @@ Head Verb Infinitive Translation
 
 *Caesar dīxit eōs vēnisse* perfect perfect Caesar said that they had come
 
-##### Chapter 16 Exercises
+> ### Chapter 16 Exercises
+{: .block-warning }
 
 After memorizing case endings, verb forms, and vocabulary, complete the following exercises.
 

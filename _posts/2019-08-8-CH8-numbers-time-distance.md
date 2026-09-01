@@ -81,7 +81,8 @@ Pattern Recognition
 
 -   The new prepositions follow the same pattern as the directional prepositions you have already learned. Once you see the preposition, keep reading until you find the correct case. Everything in between will be part of the segment. |*ante dei et deae templa* | *sedimus* = We sit | in front of the temples of the god and goddess|.
 
-##### Chapter 8 Exercises
+> ### Chapter 8 Exercises
+{: .block-warning }
 
 A) After memorizing the cardinal numbers (one through twelve), give the names of the following Roman numerals without using a dictionary:
 

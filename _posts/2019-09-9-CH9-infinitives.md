@@ -100,7 +100,8 @@ Notes:
 | 2nd person | fēcistī | fēcistis |
 | 3rd person | fēcit | fēcērunt / fēcēre |
 
-##### Chapter 9 Exercises
+> ### Chapter 9 Exercises
+{: .block-warning }
 
 A) Identify the sentence pattern (either infinitive use or ablative use) and translate:
 

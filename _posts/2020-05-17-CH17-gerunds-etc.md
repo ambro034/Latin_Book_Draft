@@ -109,7 +109,8 @@ deī colendī sunt = the gods *must be* worshipped.
 
 littera scribenda est mihi = the letter *must be* written by me. (or) I must write the letter.
 
-##### Chapter 17 Excerises
+> ### Chapter 17 Excerises
+{: .block-warning }
 
 A) Change these gerund constructions into gerundives (in Latin):
 

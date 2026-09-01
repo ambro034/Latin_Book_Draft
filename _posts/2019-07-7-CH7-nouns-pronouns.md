@@ -166,7 +166,8 @@ Pattern Recognition
 -   Demonstratives can be pronouns (he, she, him, they, them, etc.) or adjectives (*this* person, *those* mountains, *that* guy). If the word is close to another word of the same gender, case, and number, it is likely and adjective. If it’s a pronoun, always identify the antecedent.
 -   Antecedents typically come before the pronoun, but they do not have to. Compare the English sentence: We asked for her, but the manager was out of her office.
 
-##### Chapter 7 Exercises
+> ### Chapter 7 Exercises
+{: .block-warning }
 
 A) pronoun or adjective? Identify the underlined word as a pronoun or adjective. If it is an adjective, write the noun it modifies.
 

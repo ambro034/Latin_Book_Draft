@@ -126,7 +126,8 @@ For 3^rd^, 3^rd^ –io, and 4^th^, conjugations, though, a vowel change occurs. 
 
 For the future tense of irregular verbs like sum and possum, see the **appendix**.
 
-##### Chapter 15 Exericises
+> ### Chapter 15 Exericises
+{: .block-warning }
 
 A) For the verb amō, amāre, amāvī, amātus (to love), make the following changes:
 

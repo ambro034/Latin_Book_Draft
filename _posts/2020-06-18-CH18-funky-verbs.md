@@ -41,7 +41,8 @@ Special Deponent Verbs: there are five verbs that obey the typical rules of depo
 
 Semi Deponent Verbs: the last of the funky verbs are semi-deponent verbs. These are perhaps the funkiest of them all. These verbs are deponent only in the perfect system. For example, *audeō, audēre, ausus sum* (to dare), seems like a usual verb in the present, imperfect, and future, but in the perfect tenses it is deponent (so *ausus sum* means “I dared,” not “I have been dared”). Fortunately, there are not many of these verbs in Latin.
 
-##### Chapter 18 Exercises
+> ### Chapter 18 Exercises
+{: .block-warning }
 
 A) After memorizing vocabulary, identify the type of verb (underline all that apply) and translate without the aid of vocabulary or notes. If you are not sure about the verb, try to guess based on the sentence pattern.
 

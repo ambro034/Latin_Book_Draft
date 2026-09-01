@@ -197,7 +197,8 @@ One common translation (but again, translation depends on the pattern) of the pl
 
 *vocavissem*: Had I called *vocatus essem*: Had I been called
 
-##### Chapter 20 Exercises
+> ### Chapter 20 Exercises
+{: .block-warning }
 
 Chapters 20-22 will have additional exercises but shorter translations. This is to help you get into reading the final passage more quickly.
 
