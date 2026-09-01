@@ -82,214 +82,6 @@ The following chart lists the relative pronoun and its translations. Relative pr
 > ### Chapter 12 Exercises
 {: .block-warning }
 
-<!-- ============================================================
-     EXERCISE A: RELATIVE CLAUSES AND RELATIVE PRONOUNS
-     Prefix: rel-
-     ============================================================ -->
-
-<div class="rel-quiz-container">
-
-<style>
-.rel-quiz-container {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 3px solid #e7c000;
-    border-radius: 10px;
-    background: #fff8d8;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-}
-
-.rel-quiz-container * {
-    box-sizing: border-box;
-}
-
-.rel-instructions {
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.rel-question {
-    margin: 20px 0;
-    padding: 16px 20px;
-    background: white;
-    border-radius: 6px;
-    border: 1px solid #e7c000;
-}
-
-.rel-sentence {
-    line-height: 2.2;
-    margin: 14px 0;
-    font-size: 1.05em;
-}
-
-.rel-token {
-    display: inline-block;
-    padding: 4px 6px;
-    margin: 2px 1px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.rel-token:hover {
-    border-color: #4a90e2;
-}
-
-.rel-token.rel-antecedent {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 4px;
-    background: #fff3a8;
-}
-
-.rel-token.rel-clause {
-    background: #cce5ff;
-    border-color: #4a90e2;
-}
-
-.rel-token.rel-antecedent.rel-clause {
-    background: #d9c8ff;
-}
-
-.rel-mode-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.rel-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.rel-choice {
-    padding: 9px 16px;
-    border: 2px solid #b8b8b8;
-    border-radius: 6px;
-    background: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.rel-choice:hover {
-    border-color: #4a90e2;
-}
-
-.rel-choice.rel-selected {
-    background: #cce5ff;
-    border-color: #4a90e2;
-}
-
-.rel-label {
-    display: block;
-    font-weight: bold;
-    margin: 14px 0 7px;
-}
-
-.rel-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-}
-
-.rel-input:focus {
-    outline: 2px solid #4a90e2;
-    border-color: #4a90e2;
-}
-
-.rel-feedback {
-    margin-top: 14px;
-    line-height: 1.55;
-    font-weight: bold;
-    min-height: 22px;
-}
-
-.rel-correct {
-    color: #0b7a0b;
-}
-
-.rel-incorrect {
-    color: #b00020;
-}
-
-.rel-note {
-    margin-top: 10px;
-    font-weight: normal;
-    line-height: 1.5;
-}
-
-.rel-control-button {
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 10px 18px;
-    font-size: 1em;
-    cursor: pointer;
-    border: 1px solid #777;
-    border-radius: 5px;
-    background: white;
-}
-
-.rel-control-button:hover {
-    background: #f3f3f3;
-}
-
-.rel-score {
-    margin-top: 20px;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-@media (max-width: 500px) {
-    .rel-quiz-container {
-        padding: 15px;
-    }
-
-    .rel-question {
-        padding: 15px;
-    }
-
-    .rel-choice {
-        flex: 1 1 135px;
-    }
-}
-</style>
-
-<p class="rel-instructions">
-<strong>A:</strong> For each English sentence, <strong>underline the antecedent</strong>
-and <strong>put brackets around the relative clause</strong>. Then translate only the
-<strong>relative pronoun</strong>, or the <strong>preposition and relative pronoun</strong>,
-into Latin. Pay attention to the antecedent's gender and number and to the pronoun's
-function inside its own clause.
-</p>
-
-<p class="rel-instructions">
-To mark the sentence digitally, choose <strong>Antecedent</strong> or
-<strong>Relative Clause</strong> and then click the appropriate word or words.
-</p>
-
-<div id="rel-quiz"></div>
-
-<button type="button" class="rel-control-button" onclick="checkRelQuiz()">
-    Check Answers
-</button>
-
-<button type="button" class="rel-control-button" onclick="resetRelQuiz()">
-    Reset
-</button>
-
-<div id="rel-score" class="rel-score"></div>
-
 <script>
 (function(){
 
@@ -380,15 +172,33 @@ const relQuestions = [
     }
 ];
 
-const relState = relQuestions.map(function(){
+
+/* ============================================================
+   STATE
+
+   Each word has one of three states:
+
+   0 = clear
+   1 = antecedent
+   2 = relative clause
+
+   Clicking cycles:
+   clear → antecedent → relative clause → clear
+   ============================================================ */
+
+const relState = relQuestions.map(function(q) {
+
     return {
-        mode: "antecedent",
-        antecedent: null,
-        clause: new Set()
+        wordStates: q.tokens.map(function(){
+            return 0;
+        })
     };
+
 });
 
+
 function normalizeRel(text) {
+
     return text
         .toLowerCase()
         .normalize("NFD")
@@ -398,52 +208,44 @@ function normalizeRel(text) {
         .trim();
 }
 
+
 function buildRelQuiz() {
 
-    const quiz = document.getElementById("rel-quiz");
+    const quiz =
+        document.getElementById("rel-quiz");
+
     quiz.innerHTML = "";
 
     relQuestions.forEach(function(q, i) {
 
-        const card = document.createElement("div");
-        card.className = "rel-question";
+        const card =
+            document.createElement("div");
 
-        const tokens = q.tokens.map(function(token, j) {
-            return `
-                <button
-                    type="button"
-                    class="rel-token"
-                    id="rel-token-${i}-${j}"
-                    data-q="${i}"
-                    data-token="${j}">
-                    ${token}
-                </button>
-            `;
-        }).join(" ");
+        card.className =
+            "rel-question";
+
+        const tokens =
+            q.tokens.map(function(token, j) {
+
+                return `
+                    <button
+                        type="button"
+                        class="rel-token"
+                        id="rel-token-${i}-${j}"
+                        data-q="${i}"
+                        data-token="${j}"
+                        title="Click once: antecedent | twice: relative clause | three times: clear"
+                        aria-label="${token}. Click once for antecedent, twice for relative clause, three times to clear.">
+                        ${token}
+                    </button>
+                `;
+
+            }).join(" ");
 
         card.innerHTML = `
-            <div class="rel-mode-label">
+
+            <div class="rel-question-label">
                 ${i + 1}. Mark the sentence:
-            </div>
-
-            <div class="rel-options">
-                <button
-                    type="button"
-                    class="rel-choice rel-selected"
-                    id="rel-mode-ant-${i}"
-                    data-q="${i}"
-                    data-mode="antecedent">
-                    Antecedent
-                </button>
-
-                <button
-                    type="button"
-                    class="rel-choice"
-                    id="rel-mode-clause-${i}"
-                    data-q="${i}"
-                    data-mode="clause">
-                    Relative Clause
-                </button>
             </div>
 
             <div class="rel-sentence">
@@ -475,177 +277,386 @@ function buildRelQuiz() {
         quiz.appendChild(card);
     });
 
-    quiz.querySelectorAll(".rel-choice").forEach(function(button) {
 
-        button.addEventListener("click", function() {
+    /* ========================================================
+       WORD CLICK CYCLE
+       ======================================================== */
 
-            const q = Number(button.dataset.q);
-            relState[q].mode = button.dataset.mode;
+    quiz.querySelectorAll(
+        ".rel-token"
+    ).forEach(function(button) {
 
-            document.getElementById(
-                `rel-mode-ant-${q}`
-            ).classList.toggle(
-                "rel-selected",
-                relState[q].mode === "antecedent"
-            );
+        button.addEventListener(
+            "click",
+            function() {
 
-            document.getElementById(
-                `rel-mode-clause-${q}`
-            ).classList.toggle(
-                "rel-selected",
-                relState[q].mode === "clause"
-            );
-        });
-    });
+                const q =
+                    Number(button.dataset.q);
 
-    quiz.querySelectorAll(".rel-token").forEach(function(button) {
+                const token =
+                    Number(button.dataset.token);
 
-        button.addEventListener("click", function() {
+                /*
+                 * Cycle:
+                 *
+                 * 0 → 1 = antecedent
+                 * 1 → 2 = relative clause
+                 * 2 → 0 = clear
+                 */
 
-            const q = Number(button.dataset.q);
-            const token = Number(button.dataset.token);
+                relState[q].wordStates[token] =
+                    (
+                        relState[q].wordStates[token] + 1
+                    ) % 3;
 
-            if (relState[q].mode === "antecedent") {
 
-                if (relState[q].antecedent === token) {
-                    relState[q].antecedent = null;
-                } else {
-                    relState[q].antecedent = token;
+                /*
+                 * Only one word may be the antecedent.
+                 *
+                 * If this word has just become the antecedent,
+                 * clear antecedent status from all other words.
+                 */
+
+                if (
+                    relState[q].wordStates[token] === 1
+                ) {
+
+                    relState[q].wordStates.forEach(
+                        function(state, j) {
+
+                            if (
+                                j !== token &&
+                                state === 1
+                            ) {
+
+                                relState[q].wordStates[j] = 0;
+
+                            }
+
+                        }
+                    );
+
                 }
 
-            } else {
+                updateRelDisplay(q);
 
-                if (relState[q].clause.has(token)) {
-                    relState[q].clause.delete(token);
-                } else {
-                    relState[q].clause.add(token);
-                }
             }
+        );
 
-            updateRelDisplay(q);
-        });
     });
+
 }
+
 
 function updateRelDisplay(q) {
 
-    relQuestions[q].tokens.forEach(function(token, j) {
+    relQuestions[q].tokens.forEach(
+        function(token, j) {
 
-        const el = document.getElementById(
-            `rel-token-${q}-${j}`
-        );
+            const el =
+                document.getElementById(
+                    `rel-token-${q}-${j}`
+                );
 
-        el.classList.toggle(
-            "rel-antecedent",
-            relState[q].antecedent === j
-        );
+            const state =
+                relState[q].wordStates[j];
 
-        el.classList.toggle(
-            "rel-clause",
-            relState[q].clause.has(j)
-        );
-    });
+
+            /* Antecedent */
+
+            el.classList.toggle(
+                "rel-antecedent",
+                state === 1
+            );
+
+
+            /* Relative clause */
+
+            el.classList.toggle(
+                "rel-clause",
+                state === 2
+            );
+
+
+            /*
+             * Accessibility:
+             * describe the current state.
+             */
+
+            if (state === 1) {
+
+                el.setAttribute(
+                    "aria-label",
+                    `${token}. Currently marked as antecedent. Click again to mark as part of the relative clause.`
+                );
+
+            }
+
+            else if (state === 2) {
+
+                el.setAttribute(
+                    "aria-label",
+                    `${token}. Currently marked as part of the relative clause. Click again to clear.`
+                );
+
+            }
+
+            else {
+
+                el.setAttribute(
+                    "aria-label",
+                    `${token}. Currently unmarked. Click to mark as antecedent.`
+                );
+
+            }
+
+        }
+    );
+
 }
 
-function sameSetRel(studentSet, correctArray) {
 
-    if (studentSet.size !== correctArray.length) {
+function getAntecedentRel(q) {
+
+    return relState[q].wordStates.findIndex(
+        function(state) {
+            return state === 1;
+        }
+    );
+
+}
+
+
+function getClauseRel(q) {
+
+    const clause =
+        new Set();
+
+    relState[q].wordStates.forEach(
+        function(state, index) {
+
+            if (state === 2) {
+                clause.add(index);
+            }
+
+        }
+    );
+
+    return clause;
+
+}
+
+
+function sameSetRel(
+    studentSet,
+    correctArray
+) {
+
+    if (
+        studentSet.size !==
+        correctArray.length
+    ) {
+
         return false;
+
     }
 
-    return correctArray.every(function(x) {
-        return studentSet.has(x);
-    });
+    return correctArray.every(
+        function(x) {
+
+            return studentSet.has(x);
+
+        }
+    );
+
 }
+
 
 window.checkRelQuiz = function() {
 
     let score = 0;
-    const possible = relQuestions.length * 3;
 
-    relQuestions.forEach(function(q, i) {
+    const possible =
+        relQuestions.length * 3;
 
-        const feedback = [];
 
-        if (relState[i].antecedent === q.antecedent) {
-            score++;
+    relQuestions.forEach(
+        function(q, i) {
+
+            const feedback = [];
+
+
+            /* ================================================
+               ANTECEDENT
+               ================================================ */
+
+            const studentAntecedent =
+                getAntecedentRel(i);
+
+
+            if (
+                studentAntecedent ===
+                q.antecedent
+            ) {
+
+                score++;
+
+                feedback.push(
+                    `<div class="rel-correct">
+                        ✓ Antecedent correct.
+                    </div>`
+                );
+
+            }
+
+            else {
+
+                feedback.push(
+                    `<div class="rel-incorrect">
+                        ✗ Check the antecedent.
+                    </div>`
+                );
+
+            }
+
+
+            /* ================================================
+               RELATIVE CLAUSE
+               ================================================ */
+
+            const studentClause =
+                getClauseRel(i);
+
+
+            if (
+                sameSetRel(
+                    studentClause,
+                    q.clause
+                )
+            ) {
+
+                score++;
+
+                feedback.push(
+                    `<div class="rel-correct">
+                        ✓ Relative clause correct.
+                    </div>`
+                );
+
+            }
+
+            else {
+
+                feedback.push(
+                    `<div class="rel-incorrect">
+                        ✗ Check the limits of the relative clause.
+                    </div>`
+                );
+
+            }
+
+
+            /* ================================================
+               LATIN RELATIVE PRONOUN
+               ================================================ */
+
+            const student =
+                document.getElementById(
+                    `rel-answer-${i}`
+                ).value;
+
+
+            const pronounCorrect =
+                q.answers.some(
+                    function(answer) {
+
+                        return (
+                            normalizeRel(student) ===
+                            normalizeRel(answer)
+                        );
+
+                    }
+                );
+
+
+            if (pronounCorrect) {
+
+                score++;
+
+                feedback.push(
+                    `<div class="rel-correct">
+                        ✓ Latin form correct.
+                    </div>`
+                );
+
+            }
+
+            else {
+
+                feedback.push(
+                    `<div class="rel-incorrect">
+                        ✗ Correct Latin:
+                        <strong>${q.display}</strong>.
+                    </div>`
+                );
+
+            }
+
+
             feedback.push(
-                `<div class="rel-correct">✓ Antecedent correct.</div>`
-            );
-        } else {
-            feedback.push(
-                `<div class="rel-incorrect">✗ Check the antecedent.</div>`
-            );
-        }
-
-        if (sameSetRel(relState[i].clause, q.clause)) {
-            score++;
-            feedback.push(
-                `<div class="rel-correct">✓ Relative clause correct.</div>`
-            );
-        } else {
-            feedback.push(
-                `<div class="rel-incorrect">✗ Check the limits of the relative clause.</div>`
-            );
-        }
-
-        const student =
-            document.getElementById(`rel-answer-${i}`).value;
-
-        const pronounCorrect =
-            q.answers.some(function(answer) {
-                return normalizeRel(student) === normalizeRel(answer);
-            });
-
-        if (pronounCorrect) {
-            score++;
-            feedback.push(
-                `<div class="rel-correct">✓ Latin form correct.</div>`
-            );
-        } else {
-            feedback.push(
-                `<div class="rel-incorrect">
-                    ✗ Correct Latin: <strong>${q.display}</strong>.
+                `<div class="rel-note">
+                    ${q.explanation}
                 </div>`
             );
+
+
+            document.getElementById(
+                `rel-feedback-${i}`
+            ).innerHTML =
+                feedback.join("");
+
         }
+    );
 
-        feedback.push(
-            `<div class="rel-note">${q.explanation}</div>`
-        );
-
-        document.getElementById(
-            `rel-feedback-${i}`
-        ).innerHTML = feedback.join("");
-    });
 
     document.getElementById(
         "rel-score"
     ).textContent =
         `Score: ${score} / ${possible}`;
+
 };
+
 
 window.resetRelQuiz = function() {
 
-    relQuestions.forEach(function(q, i) {
-        relState[i].mode = "antecedent";
-        relState[i].antecedent = null;
-        relState[i].clause = new Set();
-    });
+    relQuestions.forEach(
+        function(q, i) {
+
+            relState[i].wordStates =
+                q.tokens.map(
+                    function(){
+                        return 0;
+                    }
+                );
+
+        }
+    );
+
 
     buildRelQuiz();
+
 
     document.getElementById(
         "rel-score"
     ).textContent = "";
+
 };
+
 
 buildRelQuiz();
 
 })();
 </script>
-
-</div>
 
 
 
