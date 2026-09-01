@@ -134,41 +134,1027 @@ Head Verb Infinitive Translation
 > ### Chapter 16 Exercises
 {: .block-warning }
 
-After memorizing case endings, verb forms, and vocabulary, complete the following exercises.
+<!-- ============================================================
+     EXERCISE A: NOUN / PHRASE FORMS
+     Prefix: npf-
+     ============================================================ -->
 
-A) Translate the following nouns / participial phrases into Latin.
+<div class="npf-quiz-container">
 
-for the affairs: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ from the house: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<style>
+.npf-quiz-container,
+.tv-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-with faith: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ of the armies: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-quiz-container *,
+.tv-quiz-container * {
+    box-sizing: border-box;
+}
 
-the knees: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ fears (d.o.): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-instructions,
+.tv-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-of the day: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ in the hand: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-question,
+.tv-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-B) Identify the tense and voice of the verb, then translate.
+.npf-prompt,
+.tv-verb {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-Verb (some are infinitives) tense and voice translate
+.npf-label,
+.tv-label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 7px;
+}
 
-captus est \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-input,
+.tv-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
 
-vocāvisse \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-input:focus,
+.tv-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
 
-vīsa esse \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-feedback,
+.tv-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
 
-capta erat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-correct,
+.tv-correct {
+    color: #0b7a0b;
+}
 
-captī eritis \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-incorrect,
+.tv-incorrect {
+    color: #b00020;
+}
 
-audīae erant \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-note,
+.tv-note {
+    margin-top: 8px;
+    color: #444;
+    font-weight: normal;
+}
 
-cēpī \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-control-button,
+.tv-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
 
-cēpisse \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-control-button:hover,
+.tv-control-button:hover {
+    background: #f3f3f3;
+}
 
-vocāvērunt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.npf-score,
+.tv-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
 
-vocatī erunt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+/* ============================================================
+   EXERCISE B SPECIFIC STYLES
+   ============================================================ */
+
+.tv-section {
+    margin: 14px 0;
+}
+
+.tv-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tv-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.tv-choice:hover {
+    border-color: #4a90e2;
+}
+
+.tv-choice.tv-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.tv-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+
+@media (max-width: 500px) {
+
+    .npf-quiz-container,
+    .tv-quiz-container {
+        padding: 15px;
+    }
+
+    .npf-question,
+    .tv-question {
+        padding: 15px;
+    }
+
+    .tv-choice {
+        flex: 1 1 135px;
+    }
+}
+</style>
+
+
+<p class="npf-instructions">
+<strong>A:</strong> After memorizing the case endings and vocabulary,
+translate the following <strong>nouns and phrases into Latin</strong>.
+Pay attention to the case required by the English phrase.
+Macrons are optional.
+</p>
+
+<div id="npf-quiz"></div>
+
+<button
+    type="button"
+    class="npf-control-button"
+    onclick="checkNpfQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="npf-control-button"
+    onclick="resetNpfQuiz()">
+    Reset
+</button>
+
+<div id="npf-score" class="npf-score"></div>
+
+
+<script>
+(function(){
+
+const npfQuestions = [
+
+    {
+        prompt: "for the affairs",
+        answers: [
+            "rēbus",
+            "rebus"
+        ],
+        display: "rēbus",
+        note:
+            "rēs, reī is feminine 5th declension. “For” requires the dative plural here."
+    },
+
+    {
+        prompt: "from the house",
+        answers: [
+            "domō",
+            "domo"
+        ],
+        display: "domō",
+        note:
+            "With domus, motion from the house is expressed by the ablative domō without a preposition."
+    },
+
+    {
+        prompt: "with faith",
+        answers: [
+            "fide",
+            "cum fide"
+        ],
+        display: "fide",
+        note:
+            "fidēs, fideī becomes ablative singular fide. Depending on context, cum fide is also possible."
+    },
+
+    {
+        prompt: "of the armies",
+        answers: [
+            "exercituum"
+        ],
+        display: "exercituum",
+        note:
+            "exercitus is 4th declension; the genitive plural ending is -uum."
+    },
+
+    {
+        prompt: "the knees",
+        answers: [
+            "genua"
+        ],
+        display: "genua",
+        note:
+            "genū is a neuter 4th-declension noun. Its nominative/accusative plural is genua."
+    },
+
+    {
+        prompt: "fears (direct object)",
+        answers: [
+            "metūs",
+            "metus"
+        ],
+        display: "metūs",
+        note:
+            "metus is masculine 4th declension. The accusative plural is metūs."
+    },
+
+    {
+        prompt: "of the day",
+        answers: [
+            "diēī",
+            "diei"
+        ],
+        display: "diēī",
+        note:
+            "diēs is 5th declension; its genitive singular is diēī."
+    },
+
+    {
+        prompt: "in the hand",
+        answers: [
+            "in manū",
+            "in manu"
+        ],
+        display: "in manū",
+        note:
+            "Location with in takes the ablative. manus has ablative singular manū."
+    }
+
+];
+
+
+function normalizeNpf(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildNpfQuiz() {
+
+    const quiz =
+        document.getElementById("npf-quiz");
+
+    quiz.innerHTML = "";
+
+
+    npfQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "npf-question";
+
+        card.innerHTML = `
+
+            <div class="npf-prompt">
+                ${i + 1}. ${q.prompt}
+            </div>
+
+            <label
+                class="npf-label"
+                for="npf-answer-${i}">
+                Latin:
+            </label>
+
+            <input
+                type="text"
+                id="npf-answer-${i}"
+                class="npf-input"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Type the Latin form">
+
+            <div
+                id="npf-feedback-${i}"
+                class="npf-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+
+    });
+
+}
+
+
+window.checkNpfQuiz = function() {
+
+    let score = 0;
+
+
+    npfQuestions.forEach(function(q, i) {
+
+        const student =
+            normalizeNpf(
+                document.getElementById(
+                    `npf-answer-${i}`
+                ).value
+            );
+
+
+        const correct =
+            q.answers.some(function(answer) {
+
+                return (
+                    student ===
+                    normalizeNpf(answer)
+                );
+
+            });
+
+
+        const feedback =
+            document.getElementById(
+                `npf-feedback-${i}`
+            );
+
+
+        if (correct) {
+
+            score++;
+
+            feedback.innerHTML = `
+
+                <div class="npf-correct">
+                    ✓ Correct.
+                </div>
+
+                <div class="npf-note">
+                    ${q.note}
+                </div>
+            `;
+
+        } else {
+
+            feedback.innerHTML = `
+
+                <div class="npf-incorrect">
+                    ✗ Correct form:
+                    <strong>${q.display}</strong>.
+                </div>
+
+                <div class="npf-note">
+                    ${q.note}
+                </div>
+            `;
+
+        }
+
+    });
+
+
+    document.getElementById(
+        "npf-score"
+    ).textContent =
+        `Score: ${score} / ${npfQuestions.length}`;
+
+};
+
+
+window.resetNpfQuiz = function() {
+
+    buildNpfQuiz();
+
+    document.getElementById(
+        "npf-score"
+    ).textContent = "";
+
+};
+
+
+buildNpfQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: TENSE + VOICE + TRANSLATION
+     Prefix: tv-
+     ============================================================ -->
+
+<div class="tv-quiz-container">
+
+<p class="tv-instructions">
+<strong>B:</strong> Identify the <strong>tense</strong> and
+<strong>voice</strong> of each verb, then translate it into English.
+Some forms are <strong>infinitives</strong>. Each question is worth
+three points: one for tense, one for voice, and one for translation.
+</p>
+
+<div id="tv-quiz"></div>
+
+<button
+    type="button"
+    class="tv-control-button"
+    onclick="checkTvQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="tv-control-button"
+    onclick="resetTvQuiz()">
+    Reset
+</button>
+
+<div id="tv-score" class="tv-score"></div>
+
+
+<script>
+(function(){
+
+const tvTenses = [
+    "Present",
+    "Imperfect",
+    "Future",
+    "Perfect",
+    "Pluperfect",
+    "Future Perfect"
+];
+
+const tvVoices = [
+    "Active",
+    "Passive"
+];
+
+
+const tvQuestions = [
+
+    {
+        verb: "captus est",
+        tense: "Perfect",
+        voice: "Passive",
+        translations: [
+            "he was captured",
+            "he has been captured",
+            "he was seized",
+            "he has been seized",
+            "he was taken",
+            "he has been taken"
+        ],
+        display:
+            "he was / has been captured",
+        note:
+            "captus is masculine singular; est supplies the perfect passive auxiliary."
+    },
+
+    {
+        verb: "vocāvisse",
+        tense: "Perfect",
+        voice: "Active",
+        translations: [
+            "to have called",
+            "to have summoned"
+        ],
+        display:
+            "to have called",
+        note:
+            "The ending -isse marks a perfect active infinitive."
+    },
+
+    {
+        verb: "vīsa esse",
+        tense: "Perfect",
+        voice: "Passive",
+        translations: [
+            "to have been seen"
+        ],
+        display:
+            "to have been seen",
+        note:
+            "A perfect passive infinitive consists of a perfect passive participle plus esse."
+    },
+
+    {
+        verb: "capta erat",
+        tense: "Pluperfect",
+        voice: "Passive",
+        translations: [
+            "she had been captured",
+            "she had been seized",
+            "she had been taken",
+            "it had been captured",
+            "it had been seized",
+            "it had been taken"
+        ],
+        display:
+            "she had been captured",
+        note:
+            "capta is feminine singular or neuter plural in isolation, but erat is singular, so the intended form is feminine singular."
+    },
+
+    {
+        verb: "captī eritis",
+        tense: "Future Perfect",
+        voice: "Passive",
+        translations: [
+            "you will have been captured",
+            "you all will have been captured",
+            "yall will have been captured",
+            "you will have been seized",
+            "you all will have been seized",
+            "you will have been taken",
+            "you all will have been taken"
+        ],
+        display:
+            "you (plural) will have been captured",
+        note:
+            "captī is masculine plural and eritis supplies the future-perfect passive auxiliary."
+    },
+
+    {
+        verb: "audītae erant",
+        tense: "Pluperfect",
+        voice: "Passive",
+        translations: [
+            "they had been heard",
+            "the women had been heard",
+            "the feminine things had been heard"
+        ],
+        display:
+            "they (feminine) had been heard",
+        note:
+            "audītae is feminine plural; erant makes the construction pluperfect passive."
+    },
+
+    {
+        verb: "cēpī",
+        tense: "Perfect",
+        voice: "Active",
+        translations: [
+            "i seized",
+            "i have seized",
+            "i took",
+            "i have taken",
+            "i captured",
+            "i have captured"
+        ],
+        display:
+            "I seized / have seized",
+        note:
+            "cēpī is first-person singular perfect active."
+    },
+
+    {
+        verb: "cēpisse",
+        tense: "Perfect",
+        voice: "Active",
+        translations: [
+            "to have seized",
+            "to have taken",
+            "to have captured"
+        ],
+        display:
+            "to have seized / taken",
+        note:
+            "cēpisse is the perfect active infinitive of capiō."
+    },
+
+    {
+        verb: "vocāvērunt",
+        tense: "Perfect",
+        voice: "Active",
+        translations: [
+            "they called",
+            "they have called",
+            "they summoned",
+            "they have summoned"
+        ],
+        display:
+            "they called / have called",
+        note:
+            "vocāvērunt is third-person plural perfect active."
+    },
+
+    {
+        verb: "vocātī erunt",
+        tense: "Future Perfect",
+        voice: "Passive",
+        translations: [
+            "they will have been called",
+            "they will have been summoned"
+        ],
+        display:
+            "they will have been called",
+        note:
+            "vocātī is masculine plural and erunt supplies the future-perfect passive auxiliary."
+    }
+
+];
+
+
+function normalizeTv(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+
+function buildTvQuiz() {
+
+    const quiz =
+        document.getElementById("tv-quiz");
+
+    quiz.innerHTML = "";
+
+
+    tvQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "tv-question";
+
+
+        const tenseButtons =
+            tvTenses.map(function(tense) {
+
+                return `
+                    <button
+                        type="button"
+                        class="tv-choice"
+                        data-q="${i}"
+                        data-category="tense"
+                        data-value="${tense}"
+                        aria-pressed="false">
+                        ${tense}
+                    </button>
+                `;
+
+            }).join("");
+
+
+        const voiceButtons =
+            tvVoices.map(function(voice) {
+
+                return `
+                    <button
+                        type="button"
+                        class="tv-choice"
+                        data-q="${i}"
+                        data-category="voice"
+                        data-value="${voice}"
+                        aria-pressed="false">
+                        ${voice}
+                    </button>
+                `;
+
+            }).join("");
+
+
+        card.innerHTML = `
+
+            <div class="tv-verb">
+                ${i + 1}. ${q.verb}
+            </div>
+
+
+            <div class="tv-section">
+
+                <span class="tv-label">
+                    Tense:
+                </span>
+
+                <div class="tv-options">
+                    ${tenseButtons}
+                </div>
+
+            </div>
+
+
+            <div class="tv-section">
+
+                <span class="tv-label">
+                    Voice:
+                </span>
+
+                <div class="tv-options">
+                    ${voiceButtons}
+                </div>
+
+            </div>
+
+
+            <div class="tv-section">
+
+                <label
+                    class="tv-label"
+                    for="tv-translation-${i}">
+                    Translate:
+                </label>
+
+                <input
+                    type="text"
+                    id="tv-translation-${i}"
+                    class="tv-input"
+                    autocomplete="off"
+                    placeholder="Type the English translation">
+
+            </div>
+
+
+            <div
+                id="tv-feedback-${i}"
+                class="tv-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+
+        quiz.appendChild(card);
+
+    });
+
+
+    quiz.querySelectorAll(
+        ".tv-choice"
+    ).forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                const q =
+                    button.dataset.q;
+
+                const category =
+                    button.dataset.category;
+
+
+                quiz.querySelectorAll(
+                    `.tv-choice[data-q="${q}"][data-category="${category}"]`
+                ).forEach(function(other) {
+
+                    other.classList.remove(
+                        "tv-selected"
+                    );
+
+                    other.setAttribute(
+                        "aria-pressed",
+                        "false"
+                    );
+
+                });
+
+
+                button.classList.add(
+                    "tv-selected"
+                );
+
+                button.setAttribute(
+                    "aria-pressed",
+                    "true"
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+window.checkTvQuiz = function() {
+
+    let score = 0;
+
+    const possible =
+        tvQuestions.length * 3;
+
+
+    tvQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+
+        /* ====================================================
+           TENSE
+           ==================================================== */
+
+        const tenseSelected =
+            document.querySelector(
+                `.tv-choice.tv-selected[data-q="${i}"][data-category="tense"]`
+            );
+
+
+        if (
+            tenseSelected &&
+            tenseSelected.dataset.value === q.tense
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="tv-correct">
+                    ✓ Tense correct:
+                    ${q.tense}.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="tv-incorrect">
+                    ✗ Tense:
+                    <strong>${q.tense}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* ====================================================
+           VOICE
+           ==================================================== */
+
+        const voiceSelected =
+            document.querySelector(
+                `.tv-choice.tv-selected[data-q="${i}"][data-category="voice"]`
+            );
+
+
+        if (
+            voiceSelected &&
+            voiceSelected.dataset.value === q.voice
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="tv-correct">
+                    ✓ Voice correct:
+                    ${q.voice}.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="tv-incorrect">
+                    ✗ Voice:
+                    <strong>${q.voice}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* ====================================================
+           TRANSLATION
+           ==================================================== */
+
+        const student =
+            normalizeTv(
+                document.getElementById(
+                    `tv-translation-${i}`
+                ).value
+            );
+
+
+        const translationCorrect =
+            q.translations.some(function(answer) {
+
+                return (
+                    student ===
+                    normalizeTv(answer)
+                );
+
+            });
+
+
+        if (translationCorrect) {
+
+            score++;
+
+            feedback.push(
+                `<div class="tv-correct">
+                    ✓ Translation correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="tv-incorrect">
+                    ✗ Translation:
+                    <strong>${q.display}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        feedback.push(
+            `<div class="tv-note">
+                ${q.note}
+            </div>`
+        );
+
+
+        document.getElementById(
+            `tv-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+
+    });
+
+
+    document.getElementById(
+        "tv-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+
+};
+
+
+window.resetTvQuiz = function() {
+
+    buildTvQuiz();
+
+    document.getElementById(
+        "tv-score"
+    ).textContent = "";
+
+};
+
+
+buildTvQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 16 Translations
 
