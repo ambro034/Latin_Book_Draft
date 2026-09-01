@@ -82,34 +82,1049 @@ The following chart lists the relative pronoun and its translations. Relative pr
 > ### Chapter 12 Exercises
 {: .block-warning }
 
-A) For the following English sentences, put brackets around the relative clause, underline the antecedent, then translate the pronoun (or preposition and pronoun) into Latin. Pay attention to the number and gender of the antecedent (\*you only need to translate the pronoun, not the rest of the clause\*).
+<!-- ============================================================
+     EXERCISE A: RELATIVE CLAUSES AND RELATIVE PRONOUNS
+     Prefix: rel-
+     ============================================================ -->
 
-Some of the vocabulary words are from Chapter 12 vocabulary below.
+<div class="rel-quiz-container">
 
-1.  I gave gifts to the men who brought me water. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  I found the glory that you have been seeking. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  The punishments from which you fled are severe. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  The woman whose horse was stolen has seen the thief. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  The one to whom I shared my treasure betrayed me. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    (the gender of this antecedent is unclear, but it can still be translated. Why?)
-6.  I see many kinds (genus, generis) that have convened here. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<style>
+.rel-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-**B)** For the following (slightly edited) passages, practice segmenting. Look for coordinating conjunctions, relative pronouns, *cum-*clauses, punctuation, and prepositional phrases. Put brackets around each segment. You do not need to translate, and you may not know all the words, so just focus on recognizing any patterns.
+.rel-quiz-container * {
+    box-sizing: border-box;
+}
 
-1\. Cicero, *in Catilinam* 1.5
+.rel-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-Castra sunt in Italia contra populum Romanum in Etruriae faucibus conlocata, crescit in dies singulos hostium numerus; autem eorum castrorum imperatorem ducemque hostium intra moenia atque adeo in aedificio videtis intestinam perniciem.
+.rel-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-2\. Augustus, *Res Gestae* (*praefatio*)
+.rel-sentence {
+    line-height: 2.2;
+    margin: 14px 0;
+    font-size: 1.05em;
+}
 
-Rerum gestarum divi Augusti, quibus orbem terrarum imperio populi Romani subiecit, et impensarum quas in rem publicam populumque Romanum fecit, incisarum in duabus aheneis pilis, quae sunt Romae positae, exemplar subiectum.
+.rel-token {
+    display: inline-block;
+    padding: 4px 6px;
+    margin: 2px 1px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
 
-3\. Vergil, *Aeneid* 10.96-102
+.rel-token:hover {
+    border-color: #4a90e2;
+}
 
-Talibus orabat Iuno, cunctique fremebant  
-caelicolae adsensu vario, ceu flamina prima  
-cum deprensa fremunt silvis et caeca volutant  
-murmura venturos nautis prodentia ventos.
+.rel-token.rel-antecedent {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    background: #fff3a8;
+}
+
+.rel-token.rel-clause {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.rel-token.rel-antecedent.rel-clause {
+    background: #d9c8ff;
+}
+
+.rel-mode-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.rel-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.rel-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.rel-choice:hover {
+    border-color: #4a90e2;
+}
+
+.rel-choice.rel-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.rel-label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 7px;
+}
+
+.rel-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.rel-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.rel-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.rel-correct {
+    color: #0b7a0b;
+}
+
+.rel-incorrect {
+    color: #b00020;
+}
+
+.rel-note {
+    margin-top: 10px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.rel-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.rel-control-button:hover {
+    background: #f3f3f3;
+}
+
+.rel-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .rel-quiz-container {
+        padding: 15px;
+    }
+
+    .rel-question {
+        padding: 15px;
+    }
+
+    .rel-choice {
+        flex: 1 1 135px;
+    }
+}
+</style>
+
+<p class="rel-instructions">
+<strong>A:</strong> For each English sentence, <strong>underline the antecedent</strong>
+and <strong>put brackets around the relative clause</strong>. Then translate only the
+<strong>relative pronoun</strong>, or the <strong>preposition and relative pronoun</strong>,
+into Latin. Pay attention to the antecedent's gender and number and to the pronoun's
+function inside its own clause.
+</p>
+
+<p class="rel-instructions">
+To mark the sentence digitally, choose <strong>Antecedent</strong> or
+<strong>Relative Clause</strong> and then click the appropriate word or words.
+</p>
+
+<div id="rel-quiz"></div>
+
+<button type="button" class="rel-control-button" onclick="checkRelQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="rel-control-button" onclick="resetRelQuiz()">
+    Reset
+</button>
+
+<div id="rel-score" class="rel-score"></div>
+
+<script>
+(function(){
+
+const relQuestions = [
+    {
+        tokens: [
+            "I","gave","gifts","to","the","men","who",
+            "brought","me","water."
+        ],
+        antecedent: 5,
+        clause: [6,7,8,9],
+        answers: ["quī","qui"],
+        display: "quī",
+        explanation:
+            "The antecedent is men: masculine plural. Who is the subject of brought, so the relative pronoun is nominative masculine plural: quī."
+    },
+
+    {
+        tokens: [
+            "I","found","the","glory","that","you","have",
+            "been","seeking."
+        ],
+        antecedent: 3,
+        clause: [4,5,6,7,8],
+        answers: ["quam"],
+        display: "quam",
+        explanation:
+            "The antecedent is glory: feminine singular. That is the direct object of seeking, so accusative feminine singular is quam."
+    },
+
+    {
+        tokens: [
+            "The","punishments","from","which","you","fled",
+            "are","severe."
+        ],
+        antecedent: 1,
+        clause: [2,3,4,5],
+        answers: [
+            "ā quibus",
+            "a quibus",
+            "ab quibus",
+            "ē quibus",
+            "e quibus",
+            "ex quibus"
+        ],
+        display: "ā quibus / ab quibus",
+        explanation:
+            "The antecedent punishments is neuter plural. The relative pronoun is ablative plural, quibus, after a preposition meaning from."
+    },
+
+    {
+        tokens: [
+            "The","woman","whose","horse","was","stolen",
+            "has","seen","the","thief."
+        ],
+        antecedent: 1,
+        clause: [2,3,4,5],
+        answers: ["cuius"],
+        display: "cuius",
+        explanation:
+            "The antecedent is woman, but whose expresses possession. The genitive singular relative pronoun is cuius."
+    },
+
+    {
+        tokens: [
+            "The","one","to","whom","I","shared","my",
+            "treasure","betrayed","me."
+        ],
+        antecedent: 1,
+        clause: [2,3,4,5,6,7],
+        answers: ["cui"],
+        display: "cui",
+        explanation:
+            "To whom requires the dative singular cui. The antecedent's gender is unnecessary because cui has the same form for masculine, feminine, and neuter."
+    },
+
+    {
+        tokens: [
+            "I","see","many","kinds","that","have",
+            "convened","here."
+        ],
+        antecedent: 3,
+        clause: [4,5,6,7],
+        answers: ["quae"],
+        display: "quae",
+        explanation:
+            "The antecedent genera (kinds) is neuter plural. That is the subject of have convened, so the form is nominative neuter plural quae."
+    }
+];
+
+const relState = relQuestions.map(function(){
+    return {
+        mode: "antecedent",
+        antecedent: null,
+        clause: new Set()
+    };
+});
+
+function normalizeRel(text) {
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildRelQuiz() {
+
+    const quiz = document.getElementById("rel-quiz");
+    quiz.innerHTML = "";
+
+    relQuestions.forEach(function(q, i) {
+
+        const card = document.createElement("div");
+        card.className = "rel-question";
+
+        const tokens = q.tokens.map(function(token, j) {
+            return `
+                <button
+                    type="button"
+                    class="rel-token"
+                    id="rel-token-${i}-${j}"
+                    data-q="${i}"
+                    data-token="${j}">
+                    ${token}
+                </button>
+            `;
+        }).join(" ");
+
+        card.innerHTML = `
+            <div class="rel-mode-label">
+                ${i + 1}. Mark the sentence:
+            </div>
+
+            <div class="rel-options">
+                <button
+                    type="button"
+                    class="rel-choice rel-selected"
+                    id="rel-mode-ant-${i}"
+                    data-q="${i}"
+                    data-mode="antecedent">
+                    Antecedent
+                </button>
+
+                <button
+                    type="button"
+                    class="rel-choice"
+                    id="rel-mode-clause-${i}"
+                    data-q="${i}"
+                    data-mode="clause">
+                    Relative Clause
+                </button>
+            </div>
+
+            <div class="rel-sentence">
+                ${tokens}
+            </div>
+
+            <label
+                class="rel-label"
+                for="rel-answer-${i}">
+                Latin relative pronoun
+                ${i === 2 ? "(include the preposition):" : ":"}
+            </label>
+
+            <input
+                type="text"
+                id="rel-answer-${i}"
+                class="rel-input"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Type only the Latin form">
+
+            <div
+                id="rel-feedback-${i}"
+                class="rel-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+    });
+
+    quiz.querySelectorAll(".rel-choice").forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const q = Number(button.dataset.q);
+            relState[q].mode = button.dataset.mode;
+
+            document.getElementById(
+                `rel-mode-ant-${q}`
+            ).classList.toggle(
+                "rel-selected",
+                relState[q].mode === "antecedent"
+            );
+
+            document.getElementById(
+                `rel-mode-clause-${q}`
+            ).classList.toggle(
+                "rel-selected",
+                relState[q].mode === "clause"
+            );
+        });
+    });
+
+    quiz.querySelectorAll(".rel-token").forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const q = Number(button.dataset.q);
+            const token = Number(button.dataset.token);
+
+            if (relState[q].mode === "antecedent") {
+
+                if (relState[q].antecedent === token) {
+                    relState[q].antecedent = null;
+                } else {
+                    relState[q].antecedent = token;
+                }
+
+            } else {
+
+                if (relState[q].clause.has(token)) {
+                    relState[q].clause.delete(token);
+                } else {
+                    relState[q].clause.add(token);
+                }
+            }
+
+            updateRelDisplay(q);
+        });
+    });
+}
+
+function updateRelDisplay(q) {
+
+    relQuestions[q].tokens.forEach(function(token, j) {
+
+        const el = document.getElementById(
+            `rel-token-${q}-${j}`
+        );
+
+        el.classList.toggle(
+            "rel-antecedent",
+            relState[q].antecedent === j
+        );
+
+        el.classList.toggle(
+            "rel-clause",
+            relState[q].clause.has(j)
+        );
+    });
+}
+
+function sameSetRel(studentSet, correctArray) {
+
+    if (studentSet.size !== correctArray.length) {
+        return false;
+    }
+
+    return correctArray.every(function(x) {
+        return studentSet.has(x);
+    });
+}
+
+window.checkRelQuiz = function() {
+
+    let score = 0;
+    const possible = relQuestions.length * 3;
+
+    relQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+        if (relState[i].antecedent === q.antecedent) {
+            score++;
+            feedback.push(
+                `<div class="rel-correct">✓ Antecedent correct.</div>`
+            );
+        } else {
+            feedback.push(
+                `<div class="rel-incorrect">✗ Check the antecedent.</div>`
+            );
+        }
+
+        if (sameSetRel(relState[i].clause, q.clause)) {
+            score++;
+            feedback.push(
+                `<div class="rel-correct">✓ Relative clause correct.</div>`
+            );
+        } else {
+            feedback.push(
+                `<div class="rel-incorrect">✗ Check the limits of the relative clause.</div>`
+            );
+        }
+
+        const student =
+            document.getElementById(`rel-answer-${i}`).value;
+
+        const pronounCorrect =
+            q.answers.some(function(answer) {
+                return normalizeRel(student) === normalizeRel(answer);
+            });
+
+        if (pronounCorrect) {
+            score++;
+            feedback.push(
+                `<div class="rel-correct">✓ Latin form correct.</div>`
+            );
+        } else {
+            feedback.push(
+                `<div class="rel-incorrect">
+                    ✗ Correct Latin: <strong>${q.display}</strong>.
+                </div>`
+            );
+        }
+
+        feedback.push(
+            `<div class="rel-note">${q.explanation}</div>`
+        );
+
+        document.getElementById(
+            `rel-feedback-${i}`
+        ).innerHTML = feedback.join("");
+    });
+
+    document.getElementById(
+        "rel-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetRelQuiz = function() {
+
+    relQuestions.forEach(function(q, i) {
+        relState[i].mode = "antecedent";
+        relState[i].antecedent = null;
+        relState[i].clause = new Set();
+    });
+
+    buildRelQuiz();
+
+    document.getElementById(
+        "rel-score"
+    ).textContent = "";
+};
+
+buildRelQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: LATIN SEGMENTATION
+     Prefix: seg12-
+     ============================================================ -->
+
+<div class="seg12-quiz-container">
+
+<style>
+.seg12-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.seg12-quiz-container * {
+    box-sizing: border-box;
+}
+
+.seg12-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.seg12-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.seg12-source {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.seg12-passage {
+    line-height: 2.6;
+    font-size: 1.03em;
+}
+
+.seg12-word {
+    display: inline;
+}
+
+.seg12-break {
+    display: inline-block;
+    min-width: 22px;
+    min-height: 32px;
+    margin: 0 2px;
+    padding: 2px 3px;
+    border: 1px dashed #bbb;
+    border-radius: 4px;
+    background: #fff;
+    color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.seg12-break:hover {
+    border-color: #4a90e2;
+}
+
+.seg12-break.seg12-selected {
+    background: #cce5ff;
+    border: 2px solid #4a90e2;
+    color: #111;
+    font-weight: bold;
+}
+
+.seg12-break.seg12-selected::after {
+    content: "][";
+}
+
+.seg12-break:not(.seg12-selected)::after {
+    content: "·";
+}
+
+.seg12-feedback {
+    margin-top: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.seg12-correct {
+    color: #0b7a0b;
+}
+
+.seg12-incorrect {
+    color: #b00020;
+}
+
+.seg12-model {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    color: #222;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+.seg12-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.seg12-control-button:hover {
+    background: #f3f3f3;
+}
+
+.seg12-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .seg12-quiz-container {
+        padding: 15px;
+    }
+
+    .seg12-question {
+        padding: 15px;
+    }
+
+    .seg12-passage {
+        font-size: 1em;
+    }
+}
+</style>
+
+<p class="seg12-instructions">
+<strong>B:</strong> Practice <strong>segmenting</strong> the following passages.
+Look especially for <strong>coordinating conjunctions</strong>,
+<strong>relative pronouns</strong>, <strong><em>cum</em>-clauses</strong>,
+<strong>punctuation</strong>, and <strong>prepositional phrases</strong>.
+You do not need to translate.
+</p>
+
+<p class="seg12-instructions">
+Click the <strong>dots between words</strong> wherever you think one segment ends
+and another begins. A selected boundary appears as <strong>][</strong>.
+The model answer represents one useful way to segment the passage; some Latin
+can reasonably be divided somewhat differently.
+</p>
+
+<div id="seg12-quiz"></div>
+
+<button
+    type="button"
+    class="seg12-control-button"
+    onclick="checkSeg12Quiz()">
+    Check Segmentation
+</button>
+
+<button
+    type="button"
+    class="seg12-control-button"
+    onclick="resetSeg12Quiz()">
+    Reset
+</button>
+
+<div id="seg12-score" class="seg12-score"></div>
+
+<script>
+(function(){
+
+const seg12Questions = [
+
+    {
+        source: "1. Cicero, In Catilinam 1.5",
+
+        segments: [
+            "Castra sunt",
+            "in Italia",
+            "contra populum Romanum",
+            "in Etruriae faucibus",
+            "conlocata,",
+            "crescit",
+            "in dies singulos",
+            "hostium numerus;",
+            "autem eorum castrorum imperatorem ducemque hostium",
+            "intra moenia",
+            "atque adeo in aedificio",
+            "videtis intestinam perniciem."
+        ]
+    },
+
+    {
+        source: "2. Augustus, Res Gestae (praefatio)",
+
+        segments: [
+            "Rerum gestarum divi Augusti,",
+            "quibus orbem terrarum",
+            "imperio populi Romani",
+            "subiecit,",
+            "et impensarum",
+            "quas",
+            "in rem publicam populumque Romanum",
+            "fecit,",
+            "incisarum",
+            "in duabus aheneis pilis,",
+            "quae sunt Romae positae,",
+            "exemplar subiectum."
+        ]
+    },
+
+    {
+        source: "3. Vergil, Aeneid 10.96–102",
+
+        segments: [
+            "Talibus orabat Iuno,",
+            "cunctique fremebant caelicolae",
+            "adsensu vario,",
+            "ceu flamina prima",
+            "cum deprensa fremunt silvis",
+            "et caeca volutant murmura venturos nautis prodentia ventos."
+        ]
+    }
+
+];
+
+const seg12State = [];
+
+function prepareSeg12Data() {
+
+    seg12Questions.forEach(function(q, qIndex) {
+
+        q.words = [];
+        q.expectedBreaks = [];
+
+        q.segments.forEach(function(segment, segmentIndex) {
+
+            const words = segment.split(/\s+/);
+
+            words.forEach(function(word) {
+                q.words.push(word);
+            });
+
+            if (segmentIndex < q.segments.length - 1) {
+                q.expectedBreaks.push(q.words.length - 1);
+            }
+        });
+
+        seg12State[qIndex] = new Set();
+    });
+}
+
+function buildSeg12Quiz() {
+
+    const quiz =
+        document.getElementById("seg12-quiz");
+
+    quiz.innerHTML = "";
+
+    seg12Questions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "seg12-question";
+
+        let passageHTML = "[";
+
+        q.words.forEach(function(word, j) {
+
+            passageHTML +=
+                `<span class="seg12-word">${word}</span>`;
+
+            if (j < q.words.length - 1) {
+
+                passageHTML += `
+                    <button
+                        type="button"
+                        class="seg12-break"
+                        id="seg12-break-${i}-${j}"
+                        data-q="${i}"
+                        data-after="${j}"
+                        aria-label="Toggle segment boundary after ${word}">
+                    </button>
+                `;
+            }
+        });
+
+        passageHTML += "]";
+
+        card.innerHTML = `
+
+            <div class="seg12-source">
+                ${q.source}
+            </div>
+
+            <div class="seg12-passage">
+                ${passageHTML}
+            </div>
+
+            <div
+                id="seg12-feedback-${i}"
+                class="seg12-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+    });
+
+    quiz.querySelectorAll(
+        ".seg12-break"
+    ).forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                const q =
+                    Number(button.dataset.q);
+
+                const after =
+                    Number(button.dataset.after);
+
+                if (
+                    seg12State[q].has(after)
+                ) {
+
+                    seg12State[q].delete(after);
+
+                    button.classList.remove(
+                        "seg12-selected"
+                    );
+
+                } else {
+
+                    seg12State[q].add(after);
+
+                    button.classList.add(
+                        "seg12-selected"
+                    );
+                }
+            }
+        );
+    });
+}
+
+function sameSeg12Set(student, expected) {
+
+    if (
+        student.size !==
+        expected.length
+    ) {
+        return false;
+    }
+
+    return expected.every(function(x) {
+        return student.has(x);
+    });
+}
+
+function modelSeg12(q) {
+
+    return q.segments
+        .map(function(segment) {
+            return `[${segment}]`;
+        })
+        .join(" ");
+}
+
+window.checkSeg12Quiz = function() {
+
+    let score = 0;
+
+    seg12Questions.forEach(function(q, i) {
+
+        const feedback =
+            document.getElementById(
+                `seg12-feedback-${i}`
+            );
+
+        const exact =
+            sameSeg12Set(
+                seg12State[i],
+                q.expectedBreaks
+            );
+
+        const correctChosen =
+            Array.from(seg12State[i])
+                .filter(function(x) {
+                    return q.expectedBreaks.includes(x);
+                }).length;
+
+        const missed =
+            q.expectedBreaks.filter(
+                function(x) {
+                    return !seg12State[i].has(x);
+                }
+            ).length;
+
+        const extra =
+            Array.from(seg12State[i])
+                .filter(function(x) {
+                    return !q.expectedBreaks.includes(x);
+                }).length;
+
+        if (exact) {
+
+            score++;
+
+            feedback.innerHTML = `
+                <div class="seg12-correct">
+                    ✓ Your segmentation matches the model.
+                </div>
+
+                <div class="seg12-model">
+                    <strong>One possible segmentation:</strong><br>
+                    ${modelSeg12(q)}
+                </div>
+            `;
+
+        } else {
+
+            feedback.innerHTML = `
+                <div class="seg12-incorrect">
+                    Your segmentation does not exactly match the model.
+                    You identified ${correctChosen} model boundary/boundaries correctly;
+                    ${missed} model boundary/boundaries are missing;
+                    ${extra} additional boundary/boundaries were added.
+                </div>
+
+                <div class="seg12-model">
+                    <strong>One possible segmentation:</strong><br>
+                    ${modelSeg12(q)}
+                </div>
+            `;
+        }
+    });
+
+    document.getElementById(
+        "seg12-score"
+    ).textContent =
+        `Passages matching the model: ${score} / ${seg12Questions.length}`;
+};
+
+window.resetSeg12Quiz = function() {
+
+    seg12Questions.forEach(function(q, i) {
+        seg12State[i] = new Set();
+    });
+
+    buildSeg12Quiz();
+
+    document.getElementById(
+        "seg12-score"
+    ).textContent = "";
+};
+
+prepareSeg12Data();
+buildSeg12Quiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 12 Sentences
 
