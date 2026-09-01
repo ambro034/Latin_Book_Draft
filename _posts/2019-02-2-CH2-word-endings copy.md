@@ -1220,45 +1220,6 @@ buildTransQuiz();
 
 </div>
 
-> **Nouns**  
->
->| :---: | :---: |
->| LATIN | ENGLISH |
->| --- | --- |
->| pater, patris (masculine) | father |
->| vir, virī (m.) | man, husband |
->| homō, hominis (m.) | human, man |
->| māter, mātris (feminine) | mother |
->| mēns, mentis (f.) | mind |
->| parēns, parentis (masculine or feminine) | parent |
->| puer, puerī (m.) | boy |
->| gēns, gentis (f.) | family, tribe, race, nation |
->| pēs, pedis (m.) | foot |
->| oculus, oculī (m.) | eye |
->| nātus, natī (m.) | son |
->| coniunx, coniugis (m./f.) | spouse/husband/wife |
->| rēx, rēgis (m) | king |
->
-> **Verbs** 
->
->| :---: | :---: |
->| LATIN | ENGLISH |
->| --- | --- |
->| amat/amant | he/she/it loves; they love |
->| videt/vident | he/she/it sees; they see |
->| habet/habent | he/she/it has, holds; they have, hold |
->| vocat/vocant | he/she/it calls; they call |
->| movet/movent | he/she/it moves; they move |
->
-> **Special words**
->  
->| :---: | :---: |
->| LATIN | ENGLISH |
->| --- | --- |
->| is / ea | he / she |
->| eum / eam | him / her |
->| nōn | not |
-{: .block-danger }
 
 >**Note:** All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
 {: .block-tip }
