@@ -217,31 +217,960 @@ Segmenting: Participles can mark sentence segments just like verbs, punctuation,
 > ### Chapter 13 Exercises
 {: .block-warning }
 
-A) translate the following segments/clauses
+<!-- ============================================================
+     EXERCISE A: TRANSLATE LATIN SEGMENTS / CLAUSES
+     Prefix: cltr-
+     ============================================================ -->
 
-1.  credunt suīs filiīs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  fratrēs utrius \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  uter frater \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  currimus ad potentem pātriam \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  capita ingentium campōrum \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-6.  sē ferre totum caelum credunt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-7.  cum sē vocat, ea audit \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-8.  meum os noscunt \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-9.  tua membra iacent \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-10.  sua pectōra ferēbant \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div class="cltr-quiz-container">
 
-B) translate the following phrases into Latin. First, determine whether you should use a verb and/or participle
+<style>
+.cltr-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-1.  we sent the soldiers \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  soldiers sent from the skies \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  some are running \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  the men carrying the water are running \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  sent to the fatherland \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-6.  they were sent from the fatherland \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-7.  friends of the captured soldier \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-8.  a gift to the running women \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-9.  we run toward the savage ones carrying the limbs \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-10.  do you see the captured fields? \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+.cltr-quiz-container * {
+    box-sizing: border-box;
+}
+
+.cltr-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cltr-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.cltr-phrase {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.cltr-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.cltr-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.cltr-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.cltr-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.cltr-correct {
+    color: #0b7a0b;
+}
+
+.cltr-incorrect {
+    color: #b00020;
+}
+
+.cltr-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.cltr-control-button:hover {
+    background: #f3f3f3;
+}
+
+.cltr-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .cltr-quiz-container {
+        padding: 15px;
+    }
+
+    .cltr-question {
+        padding: 15px;
+    }
+}
+</style>
+
+<p class="cltr-instructions">
+<strong>A:</strong> Translate the following <strong>Latin segments and clauses</strong>
+into English. Pay attention to case, tense, reflexive pronouns, and indirect statement.
+</p>
+
+<div id="cltr-quiz"></div>
+
+<button
+    type="button"
+    class="cltr-control-button"
+    onclick="checkCltrQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="cltr-control-button"
+    onclick="resetCltrQuiz()">
+    Reset
+</button>
+
+<div id="cltr-score" class="cltr-score"></div>
+
+<script>
+(function(){
+
+const cltrQuestions = [
+
+    {
+        phrase: "credunt suīs filiīs",
+        answers: [
+            "they believe their sons",
+            "they believe their own sons",
+            "they trust their sons",
+            "they trust their own sons"
+        ],
+        display: "they believe their own sons"
+    },
+
+    {
+        phrase: "fratrēs utrius",
+        answers: [
+            "the brothers of which one",
+            "brothers of which one",
+            "the brothers of which of the two",
+            "brothers of which of the two"
+        ],
+        display: "the brothers of which one (of the two)"
+    },
+
+    {
+        phrase: "uter frater",
+        answers: [
+            "which brother",
+            "which of the two brothers"
+        ],
+        display: "which brother (of the two)"
+    },
+
+    {
+        phrase: "currimus ad potentem pātriam",
+        answers: [
+            "we run toward the powerful fatherland",
+            "we are running toward the powerful fatherland",
+            "we run to the powerful fatherland",
+            "we are running to the powerful fatherland",
+            "we run toward the powerful homeland",
+            "we are running toward the powerful homeland"
+        ],
+        display: "we run toward the powerful fatherland"
+    },
+
+    {
+        phrase: "capita ingentium campōrum",
+        answers: [
+            "the heads of the huge fields",
+            "heads of the huge fields",
+            "the heads of immense fields",
+            "heads of immense fields",
+            "the heads of the enormous fields",
+            "heads of the enormous fields"
+        ],
+        display: "the heads of the huge fields"
+    },
+
+    {
+        phrase: "sē ferre totum caelum credunt",
+        answers: [
+            "they believe that they carry the whole sky",
+            "they believe they carry the whole sky",
+            "they believe that they are carrying the whole sky",
+            "they believe themselves to carry the whole sky",
+            "they believe that they carry the entire sky",
+            "they believe they carry the entire sky"
+        ],
+        display: "they believe that they carry the whole sky"
+    },
+
+    {
+        phrase: "cum sē vocat, ea audit",
+        answers: [
+            "when she calls herself she hears",
+            "when she calls herself she listens",
+            "when she calls herself, she hears",
+            "when she calls herself, she listens",
+            "when he calls himself she hears",
+            "when he calls himself she hears",
+            "when it calls itself she hears",
+            "when it calls itself she hears"
+        ],
+        display: "when she calls herself, she hears"
+    },
+
+    {
+        phrase: "meum os noscunt",
+        answers: [
+            "they know my face",
+            "they are learning my face",
+            "they recognize my face",
+            "they know my mouth",
+            "they recognize my mouth"
+        ],
+        display: "they know my face"
+    },
+
+    {
+        phrase: "tua membra iacent",
+        answers: [
+            "your limbs lie",
+            "your limbs are lying",
+            "your body parts lie",
+            "your body parts are lying"
+        ],
+        display: "your limbs are lying"
+    },
+
+    {
+        phrase: "sua pectōra ferēbant",
+        answers: [
+            "they were carrying their chests",
+            "they were carrying their own chests",
+            "they carried their chests",
+            "they carried their own chests",
+            "they were carrying their breasts",
+            "they were carrying their own breasts"
+        ],
+        display: "they were carrying their own chests"
+    }
+
+];
+
+function normalizeCltr(text) {
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildCltrQuiz() {
+
+    const quiz =
+        document.getElementById("cltr-quiz");
+
+    quiz.innerHTML = "";
+
+    cltrQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "cltr-question";
+
+        card.innerHTML = `
+
+            <div class="cltr-phrase">
+                ${i + 1}. ${q.phrase}
+            </div>
+
+            <label
+                class="cltr-label"
+                for="cltr-answer-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="cltr-answer-${i}"
+                class="cltr-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+            <div
+                id="cltr-feedback-${i}"
+                class="cltr-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkCltrQuiz = function() {
+
+    let score = 0;
+
+    cltrQuestions.forEach(function(q, i) {
+
+        const student =
+            document.getElementById(
+                `cltr-answer-${i}`
+            ).value;
+
+        const feedback =
+            document.getElementById(
+                `cltr-feedback-${i}`
+            );
+
+        const correct =
+            q.answers.some(function(answer) {
+
+                return normalizeCltr(student) ===
+                       normalizeCltr(answer);
+
+            });
+
+        if (correct) {
+
+            score++;
+
+            feedback.className =
+                "cltr-feedback cltr-correct";
+
+            feedback.textContent =
+                "✓ Correct.";
+
+        } else {
+
+            feedback.className =
+                "cltr-feedback cltr-incorrect";
+
+            feedback.innerHTML =
+                `✗ One correct translation is:
+                 <strong>${q.display}</strong>.`;
+        }
+    });
+
+    document.getElementById(
+        "cltr-score"
+    ).textContent =
+        `Score: ${score} / ${cltrQuestions.length}`;
+};
+
+window.resetCltrQuiz = function() {
+
+    buildCltrQuiz();
+
+    document.getElementById(
+        "cltr-score"
+    ).textContent = "";
+};
+
+buildCltrQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: VERB OR PARTICIPLE?
+     Prefix: vp-
+     ============================================================ -->
+
+<div class="vp-quiz-container">
+
+<style>
+.vp-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.vp-quiz-container * {
+    box-sizing: border-box;
+}
+
+.vp-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.vp-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.vp-prompt {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.vp-section {
+    margin: 14px 0;
+}
+
+.vp-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.vp-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vp-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.vp-choice:hover {
+    border-color: #4a90e2;
+}
+
+.vp-choice.vp-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.vp-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.vp-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.vp-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.vp-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.vp-correct {
+    color: #0b7a0b;
+}
+
+.vp-incorrect {
+    color: #b00020;
+}
+
+.vp-note {
+    margin-top: 7px;
+    font-weight: normal;
+    color: #444;
+}
+
+.vp-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.vp-control-button:hover {
+    background: #f3f3f3;
+}
+
+.vp-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .vp-quiz-container {
+        padding: 15px;
+    }
+
+    .vp-question {
+        padding: 15px;
+    }
+
+    .vp-choice {
+        flex: 1 1 130px;
+    }
+}
+</style>
+
+<p class="vp-instructions">
+<strong>B:</strong> Translate each phrase into <strong>Latin</strong>.
+First determine whether the English requires a <strong>verb</strong>,
+a <strong>participle</strong>, or <strong>both</strong>. Then give the complete
+Latin phrase. Macron marks are optional.
+</p>
+
+<div id="vp-quiz"></div>
+
+<button
+    type="button"
+    class="vp-control-button"
+    onclick="checkVpQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="vp-control-button"
+    onclick="resetVpQuiz()">
+    Reset
+</button>
+
+<div id="vp-score" class="vp-score"></div>
+
+<script>
+(function(){
+
+const vpQuestions = [
+
+    {
+        prompt: "we sent the soldiers",
+        type: "Verb",
+        answers: [
+            "mīlitēs mīsimus",
+            "milites misimus",
+            "mīsimus mīlitēs",
+            "misimus milites"
+        ],
+        display: "mīlitēs mīsimus"
+    },
+
+    {
+        prompt: "soldiers sent from the skies",
+        type: "Participle",
+        answers: [
+            "mīlitēs ē caelīs missī",
+            "milites e caelis missi",
+            "mīlitēs ex caelīs missī",
+            "milites ex caelis missi",
+            "mīlitēs ā caelō missī",
+            "milites a caelo missi",
+            "mīlitēs missī ē caelīs",
+            "milites missi e caelis"
+        ],
+        display: "mīlitēs ē caelīs missī"
+    },
+
+    {
+        prompt: "some are running",
+        type: "Verb",
+        answers: [
+            "aliquī currunt",
+            "aliqui currunt",
+            "quīdam currunt",
+            "quidam currunt",
+            "nonnullī currunt",
+            "nonnulli currunt"
+        ],
+        display: "aliquī currunt"
+    },
+
+    {
+        prompt: "the men carrying the water are running",
+        type: "Both",
+        answers: [
+            "virī aquam ferentēs currunt",
+            "viri aquam ferentes currunt",
+            "virī ferentēs aquam currunt",
+            "viri ferentes aquam currunt",
+            "currunt virī aquam ferentēs",
+            "currunt viri aquam ferentes"
+        ],
+        display: "virī aquam ferentēs currunt"
+    },
+
+    {
+        prompt: "sent to the fatherland",
+        type: "Participle",
+        answers: [
+            "missus ad patriam",
+            "missa ad patriam",
+            "missum ad patriam",
+            "ad patriam missus",
+            "ad patriam missa",
+            "ad patriam missum"
+        ],
+        display: "missus / missa / missum ad patriam",
+        note:
+            "Because no noun is supplied, the participle's gender is not determined by the English phrase."
+    },
+
+    {
+        prompt: "they were sent from the fatherland",
+        type: "Both",
+        answers: [
+            "ē patriā missī sunt",
+            "e patria missi sunt",
+            "ex patriā missī sunt",
+            "ex patria missi sunt",
+            "ā patriā missī sunt",
+            "a patria missi sunt",
+            "missī sunt ē patriā",
+            "missi sunt e patria",
+            "ē patriā missae sunt",
+            "e patria missae sunt",
+            "ē patriā missa sunt",
+            "e patria missa sunt"
+        ],
+        display: "ē patriā missī sunt",
+        note:
+            "The masculine plural is the usual default for an unspecified mixed or masculine group; feminine or neuter plural may be possible with different antecedents."
+    },
+
+    {
+        prompt: "friends of the captured soldier",
+        type: "Participle",
+        answers: [
+            "amīcī mīlitis captī",
+            "amici militis capti",
+            "amīcī captī mīlitis",
+            "amici capti militis"
+        ],
+        display: "amīcī mīlitis captī"
+    },
+
+    {
+        prompt: "a gift to the running women",
+        type: "Participle",
+        answers: [
+            "dōnum fēminīs currentibus",
+            "donum feminis currentibus",
+            "fēminīs currentibus dōnum",
+            "feminis currentibus donum"
+        ],
+        display: "dōnum fēminīs currentibus"
+    },
+
+    {
+        prompt: "we run toward the savage ones carrying the limbs",
+        type: "Both",
+        answers: [
+            "currimus ad ferōcēs membra ferentēs",
+            "currimus ad feroces membra ferentes",
+            "ad ferōcēs membra ferentēs currimus",
+            "ad feroces membra ferentes currimus",
+            "currimus ad ferentēs membra ferōcēs",
+            "currimus ad ferentes membra feroces"
+        ],
+        display: "currimus ad ferōcēs membra ferentēs"
+    },
+
+    {
+        prompt: "do you see the captured fields?",
+        type: "Both",
+        answers: [
+            "vidēsne agrōs captōs",
+            "videsne agros captos",
+            "agrōs captōs vidēsne",
+            "agros captos videsne",
+            "vidēs agrōs captōsne",
+            "vides agros captosne"
+        ],
+        display: "vidēsne agrōs captōs?"
+    }
+
+];
+
+const vpTypes = [
+    "Verb",
+    "Participle",
+    "Both"
+];
+
+function normalizeVp(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildVpQuiz() {
+
+    const quiz =
+        document.getElementById("vp-quiz");
+
+    quiz.innerHTML = "";
+
+    vpQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "vp-question";
+
+        const buttons =
+            vpTypes.map(function(type) {
+
+                return `
+                    <button
+                        type="button"
+                        class="vp-choice"
+                        data-q="${i}"
+                        data-value="${type}"
+                        aria-pressed="false">
+                        ${type}
+                    </button>
+                `;
+            }).join("");
+
+        card.innerHTML = `
+
+            <div class="vp-prompt">
+                ${i + 1}. ${q.prompt}
+            </div>
+
+            <div class="vp-section">
+
+                <span class="vp-label">
+                    What does the phrase require?
+                </span>
+
+                <div class="vp-options">
+                    ${buttons}
+                </div>
+
+            </div>
+
+            <div class="vp-section">
+
+                <label
+                    class="vp-label"
+                    for="vp-answer-${i}">
+                    Translate to Latin:
+                </label>
+
+                <input
+                    type="text"
+                    id="vp-answer-${i}"
+                    class="vp-input"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Type the complete Latin phrase">
+
+            </div>
+
+            <div
+                id="vp-feedback-${i}"
+                class="vp-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+    });
+
+    quiz.querySelectorAll(
+        ".vp-choice"
+    ).forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                quiz.querySelectorAll(
+                    `.vp-choice[data-q="${button.dataset.q}"]`
+                ).forEach(function(other) {
+
+                    other.classList.remove(
+                        "vp-selected"
+                    );
+
+                    other.setAttribute(
+                        "aria-pressed",
+                        "false"
+                    );
+                });
+
+                button.classList.add(
+                    "vp-selected"
+                );
+
+                button.setAttribute(
+                    "aria-pressed",
+                    "true"
+                );
+            }
+        );
+    });
+}
+
+window.checkVpQuiz = function() {
+
+    let score = 0;
+    const possible =
+        vpQuestions.length * 2;
+
+    vpQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+        const selected =
+            document.querySelector(
+                `.vp-choice.vp-selected[data-q="${i}"]`
+            );
+
+        if (
+            selected &&
+            selected.dataset.value === q.type
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="vp-correct">
+                    ✓ ${q.type} is correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="vp-incorrect">
+                    ✗ This phrase requires:
+                    <strong>${q.type}</strong>.
+                </div>`
+            );
+        }
+
+        const student =
+            document.getElementById(
+                `vp-answer-${i}`
+            ).value;
+
+        const translationCorrect =
+            q.answers.some(function(answer) {
+
+                return normalizeVp(student) ===
+                       normalizeVp(answer);
+
+            });
+
+        if (translationCorrect) {
+
+            score++;
+
+            feedback.push(
+                `<div class="vp-correct">
+                    ✓ Latin translation correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="vp-incorrect">
+                    ✗ One correct form is:
+                    <strong>${q.display}</strong>.
+                </div>`
+            );
+        }
+
+        if (q.note) {
+
+            feedback.push(
+                `<div class="vp-note">
+                    ${q.note}
+                </div>`
+            );
+        }
+
+        document.getElementById(
+            `vp-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById(
+        "vp-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetVpQuiz = function() {
+
+    buildVpQuiz();
+
+    document.getElementById(
+        "vp-score"
+    ).textContent = "";
+};
+
+buildVpQuiz();
+
+})();
+</script>
+
+</div>
      
 
 ##### Chapter 13 Translations
