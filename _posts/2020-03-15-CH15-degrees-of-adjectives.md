@@ -129,80 +129,1296 @@ For the future tense of irregular verbs like sum and possum, see the **appendix*
 > ### Chapter 15 Exericises
 {: .block-warning }
 
-A) For the verb amō, amāre, amāvī, amātus (to love), make the following changes:
+<!-- ============================================================
+     EXERCISE A: AMŌ, AMĀRE, AMĀVĪ, AMĀTUS
+     Prefix: amo-
+     ============================================================ -->
 
-make amat future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div class="amo-quiz-container">
 
-make amāvit plural: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<style>
+.amo-quiz-container,
+.reg-quiz-container,
+.cap-quiz-container,
+.mixv-quiz-container,
+.comp-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-make amābitis passive: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-quiz-container *,
+.reg-quiz-container *,
+.cap-quiz-container *,
+.mixv-quiz-container *,
+.comp-quiz-container * {
+    box-sizing: border-box;
+}
 
-make amābātur active: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-instructions,
+.reg-instructions,
+.cap-instructions,
+.mixv-instructions,
+.comp-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-make amavēre 2^nd^ person: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-question,
+.reg-question,
+.cap-question,
+.mixv-question,
+.comp-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-make amō future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-prompt,
+.reg-prompt,
+.cap-prompt,
+.mixv-prompt,
+.comp-prompt {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
 
-make amāmus imperfect: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-label,
+.reg-label,
+.cap-label,
+.mixv-label,
+.comp-label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 7px;
+}
 
-B) For the verb regō, regere, rēxī, rectus (to rule), make the following changes:
+.amo-input,
+.reg-input,
+.cap-input,
+.mixv-input,
+.comp-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
 
-make regis future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-input:focus,
+.reg-input:focus,
+.cap-input:focus,
+.mixv-input:focus,
+.comp-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
 
-make regēbāris active: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-feedback,
+.reg-feedback,
+.cap-feedback,
+.mixv-feedback,
+.comp-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
 
-make rēxērunt 1^st^ person: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-correct,
+.reg-correct,
+.cap-correct,
+.mixv-correct,
+.comp-correct {
+    color: #0b7a0b;
+}
 
-make recta est plural: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-incorrect,
+.reg-incorrect,
+.cap-incorrect,
+.mixv-incorrect,
+.comp-incorrect {
+    color: #b00020;
+}
 
-make reget plural: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-note,
+.reg-note,
+.cap-note,
+.mixv-note,
+.comp-note {
+    margin-top: 8px;
+    font-weight: normal;
+    color: #444;
+}
 
-make regō future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-control-button,
+.reg-control-button,
+.cap-control-button,
+.mixv-control-button,
+.comp-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
 
-make rēxistis singular: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.amo-control-button:hover,
+.reg-control-button:hover,
+.cap-control-button:hover,
+.mixv-control-button:hover,
+.comp-control-button:hover {
+    background: #f3f3f3;
+}
 
-C) For the verb capiō, capere, cēpī, captus (to seize, take), make the following changes:
+.amo-score,
+.reg-score,
+.cap-score,
+.mixv-score,
+.comp-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
 
-make cēpī passive: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+@media (max-width: 500px) {
+    .amo-quiz-container,
+    .reg-quiz-container,
+    .cap-quiz-container,
+    .mixv-quiz-container,
+    .comp-quiz-container {
+        padding: 15px;
+    }
 
-make capiō future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    .amo-question,
+    .reg-question,
+    .cap-question,
+    .mixv-question,
+    .comp-question {
+        padding: 15px;
+    }
+}
+</style>
 
-make captī sunt 1^st^ person: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<p class="amo-instructions">
+<strong>A:</strong> For the verb <strong>amō, amāre, amāvī, amātus</strong>
+(to love), make the requested change while keeping everything else the same.
+Then <strong>translate the new form</strong>.
+</p>
 
-make capit imperfect: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div id="amo-quiz"></div>
 
-make capiētis passive: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<button type="button" class="amo-control-button" onclick="checkAmoQuiz()">
+    Check Answers
+</button>
 
-make capiēbamus future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<button type="button" class="amo-control-button" onclick="resetAmoQuiz()">
+    Reset
+</button>
 
-make capere passive: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_: translate\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<div id="amo-score" class="amo-score"></div>
 
-D) Translate, then make the change requested (keeping everything else the same):
+<script>
+(function(){
 
-faciō: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+const amoQuestions = [
+    {
+        prompt: "make amat future",
+        forms: ["amābit", "amabit"],
+        display: "amābit",
+        translations: [
+            "he will love",
+            "she will love",
+            "it will love",
+            "he will be loving",
+            "she will be loving",
+            "it will be loving"
+        ],
+        translationDisplay: "he/she/it will love"
+    },
+    {
+        prompt: "make amāvit plural",
+        forms: ["amāvērunt", "amaverunt", "amāvēre", "amavere"],
+        display: "amāvērunt",
+        translations: [
+            "they loved",
+            "they have loved",
+            "they did love"
+        ],
+        translationDisplay: "they loved / have loved"
+    },
+    {
+        prompt: "make amābitis passive",
+        forms: ["amābiminī", "amabimini"],
+        display: "amābiminī",
+        translations: [
+            "you will be loved",
+            "you all will be loved",
+            "yall will be loved"
+        ],
+        translationDisplay: "you (plural) will be loved"
+    },
+    {
+        prompt: "make amābātur active",
+        forms: ["amābat", "amabat"],
+        display: "amābat",
+        translations: [
+            "he was loving",
+            "she was loving",
+            "it was loving",
+            "he used to love",
+            "she used to love",
+            "it used to love",
+            "he loved",
+            "she loved",
+            "it loved"
+        ],
+        translationDisplay: "he/she/it was loving"
+    },
+    {
+        prompt: "make amāvēre 2nd person",
+        forms: ["amāvistis", "amavistis"],
+        display: "amāvistis",
+        translations: [
+            "you loved",
+            "you have loved",
+            "you all loved",
+            "you all have loved",
+            "yall loved",
+            "yall have loved"
+        ],
+        translationDisplay: "you (plural) loved / have loved"
+    },
+    {
+        prompt: "make amō future",
+        forms: ["amābō", "amabo"],
+        display: "amābō",
+        translations: [
+            "i will love",
+            "i shall love"
+        ],
+        translationDisplay: "I will love"
+    },
+    {
+        prompt: "make amāmus imperfect",
+        forms: ["amābāmus", "amabamus"],
+        display: "amābāmus",
+        translations: [
+            "we were loving",
+            "we used to love",
+            "we loved"
+        ],
+        translationDisplay: "we were loving"
+    }
+];
 
-regēbat: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+function normalizeAmo(text) {
+    return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[.,!?;:'’"]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+}
 
-vocabitur: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ plural: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+function buildAmoQuiz() {
 
-regam: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ plural: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    const quiz = document.getElementById("amo-quiz");
+    quiz.innerHTML = "";
 
-videt: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ future: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    amoQuestions.forEach(function(q,i){
 
-vīdī: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 3^rd^ person: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+        const card = document.createElement("div");
+        card.className = "amo-question";
 
-audita sunt: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ singular: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+        card.innerHTML = `
+            <div class="amo-prompt">${i+1}. ${q.prompt}</div>
 
-  
-E) Make the change requested (keeping everything else the same), then translate the new form:
+            <label class="amo-label" for="amo-form-${i}">
+                New Latin form:
+            </label>
 
-celer: comparative: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ translate: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+            <input
+                id="amo-form-${i}"
+                class="amo-input"
+                type="text"
+                autocomplete="off">
 
-superīs: comparative: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ translate: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+            <label class="amo-label" for="amo-trans-${i}">
+                Translate:
+            </label>
 
-nova: superlative: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ translate: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+            <input
+                id="amo-trans-${i}"
+                class="amo-input"
+                type="text"
+                autocomplete="off">
 
-amico: superlative: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ translate: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+            <div id="amo-feedback-${i}" class="amo-feedback"></div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkAmoQuiz = function(){
+
+    let score = 0;
+    const possible = amoQuestions.length * 2;
+
+    amoQuestions.forEach(function(q,i){
+
+        const feedback = [];
+
+        const form = normalizeAmo(
+            document.getElementById(`amo-form-${i}`).value
+        );
+
+        const trans = normalizeAmo(
+            document.getElementById(`amo-trans-${i}`).value
+        );
+
+        const formCorrect = q.forms.some(function(a){
+            return form === normalizeAmo(a);
+        });
+
+        const transCorrect = q.translations.some(function(a){
+            return trans === normalizeAmo(a);
+        });
+
+        if(formCorrect){
+            score++;
+            feedback.push(`<div class="amo-correct">✓ Latin form correct.</div>`);
+        } else {
+            feedback.push(`<div class="amo-incorrect">✗ Correct form: <strong>${q.display}</strong>.</div>`);
+        }
+
+        if(transCorrect){
+            score++;
+            feedback.push(`<div class="amo-correct">✓ Translation correct.</div>`);
+        } else {
+            feedback.push(`<div class="amo-incorrect">✗ Translation: <strong>${q.translationDisplay}</strong>.</div>`);
+        }
+
+        document.getElementById(`amo-feedback-${i}`).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById("amo-score").textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetAmoQuiz = function(){
+    buildAmoQuiz();
+    document.getElementById("amo-score").textContent = "";
+};
+
+buildAmoQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: REGŌ, REGERE, RĒXĪ, RECTUS
+     Prefix: reg-
+     ============================================================ -->
+
+<div class="reg-quiz-container">
+
+<p class="reg-instructions">
+<strong>B:</strong> For the verb <strong>regō, regere, rēxī, rectus</strong>
+(to rule), make the requested change while keeping everything else the same.
+Then <strong>translate the new form</strong>.
+</p>
+
+<div id="reg-quiz"></div>
+
+<button type="button" class="reg-control-button" onclick="checkRegQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="reg-control-button" onclick="resetRegQuiz()">
+    Reset
+</button>
+
+<div id="reg-score" class="reg-score"></div>
+
+<script>
+(function(){
+
+const regQuestions = [
+    {
+        prompt: "make regis future",
+        forms: ["regēs", "reges"],
+        display: "regēs",
+        translations: [
+            "you will rule",
+            "you shall rule"
+        ],
+        translationDisplay: "you will rule"
+    },
+    {
+        prompt: "make regēbāris active",
+        forms: ["regēbās", "regebas"],
+        display: "regēbās",
+        translations: [
+            "you were ruling",
+            "you used to rule",
+            "you ruled"
+        ],
+        translationDisplay: "you were ruling"
+    },
+    {
+        prompt: "make rēxērunt 1st person",
+        forms: ["rēximus", "reximus"],
+        display: "rēximus",
+        translations: [
+            "we ruled",
+            "we have ruled"
+        ],
+        translationDisplay: "we ruled / have ruled"
+    },
+    {
+        prompt: "make recta est plural",
+        forms: ["rectae sunt"],
+        display: "rectae sunt",
+        translations: [
+            "they were ruled",
+            "they have been ruled",
+            "the women were ruled",
+            "the women have been ruled",
+            "they were governed",
+            "they have been governed"
+        ],
+        translationDisplay: "they (feminine) were / have been ruled"
+    },
+    {
+        prompt: "make reget plural",
+        forms: ["regent"],
+        display: "regent",
+        translations: [
+            "they will rule",
+            "they shall rule"
+        ],
+        translationDisplay: "they will rule"
+    },
+    {
+        prompt: "make regō future",
+        forms: ["regam"],
+        display: "regam",
+        translations: [
+            "i will rule",
+            "i shall rule"
+        ],
+        translationDisplay: "I will rule"
+    },
+    {
+        prompt: "make rēxistis singular",
+        forms: ["rēxistī", "rexisti"],
+        display: "rēxistī",
+        translations: [
+            "you ruled",
+            "you have ruled"
+        ],
+        translationDisplay: "you ruled / have ruled"
+    }
+];
+
+function normalizeReg(text) {
+    return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[.,!?;:'’"]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+}
+
+function buildRegQuiz(){
+
+    const quiz = document.getElementById("reg-quiz");
+    quiz.innerHTML = "";
+
+    regQuestions.forEach(function(q,i){
+
+        const card = document.createElement("div");
+        card.className = "reg-question";
+
+        card.innerHTML = `
+            <div class="reg-prompt">${i+1}. ${q.prompt}</div>
+
+            <label class="reg-label" for="reg-form-${i}">
+                New Latin form:
+            </label>
+
+            <input id="reg-form-${i}" class="reg-input" type="text" autocomplete="off">
+
+            <label class="reg-label" for="reg-trans-${i}">
+                Translate:
+            </label>
+
+            <input id="reg-trans-${i}" class="reg-input" type="text" autocomplete="off">
+
+            <div id="reg-feedback-${i}" class="reg-feedback"></div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkRegQuiz = function(){
+
+    let score = 0;
+    const possible = regQuestions.length * 2;
+
+    regQuestions.forEach(function(q,i){
+
+        const feedback = [];
+
+        const form = normalizeReg(
+            document.getElementById(`reg-form-${i}`).value
+        );
+
+        const trans = normalizeReg(
+            document.getElementById(`reg-trans-${i}`).value
+        );
+
+        const formCorrect = q.forms.some(function(a){
+            return form === normalizeReg(a);
+        });
+
+        const transCorrect = q.translations.some(function(a){
+            return trans === normalizeReg(a);
+        });
+
+        if(formCorrect){
+            score++;
+            feedback.push(`<div class="reg-correct">✓ Latin form correct.</div>`);
+        } else {
+            feedback.push(`<div class="reg-incorrect">✗ Correct form: <strong>${q.display}</strong>.</div>`);
+        }
+
+        if(transCorrect){
+            score++;
+            feedback.push(`<div class="reg-correct">✓ Translation correct.</div>`);
+        } else {
+            feedback.push(`<div class="reg-incorrect">✗ Translation: <strong>${q.translationDisplay}</strong>.</div>`);
+        }
+
+        document.getElementById(`reg-feedback-${i}`).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById("reg-score").textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetRegQuiz = function(){
+    buildRegQuiz();
+    document.getElementById("reg-score").textContent = "";
+};
+
+buildRegQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE C: CAPIŌ, CAPERE, CĒPĪ, CAPTUS
+     Prefix: cap-
+     ============================================================ -->
+
+<div class="cap-quiz-container">
+
+<p class="cap-instructions">
+<strong>C:</strong> For the verb <strong>capiō, capere, cēpī, captus</strong>
+(to seize, take), make the requested change while keeping everything else the same.
+Then <strong>translate the new form</strong>.
+</p>
+
+<div id="cap-quiz"></div>
+
+<button type="button" class="cap-control-button" onclick="checkCapQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="cap-control-button" onclick="resetCapQuiz()">
+    Reset
+</button>
+
+<div id="cap-score" class="cap-score"></div>
+
+<script>
+(function(){
+
+const capQuestions = [
+    {
+        prompt: "make cēpī passive",
+        forms: [
+            "captus sum",
+            "capta sum"
+        ],
+        display: "captus sum / capta sum",
+        translations: [
+            "i was seized",
+            "i have been seized",
+            "i was taken",
+            "i have been taken",
+            "i was captured",
+            "i have been captured"
+        ],
+        translationDisplay: "I was / have been seized"
+    },
+    {
+        prompt: "make capiō future",
+        forms: ["capiam"],
+        display: "capiam",
+        translations: [
+            "i will seize",
+            "i shall seize",
+            "i will take",
+            "i will capture"
+        ],
+        translationDisplay: "I will seize"
+    },
+    {
+        prompt: "make captī sunt 1st person",
+        forms: ["captī sumus", "capti sumus"],
+        display: "captī sumus",
+        translations: [
+            "we were seized",
+            "we have been seized",
+            "we were taken",
+            "we have been taken",
+            "we were captured",
+            "we have been captured"
+        ],
+        translationDisplay: "we were / have been seized"
+    },
+    {
+        prompt: "make capit imperfect",
+        forms: ["capiēbat", "capiebat"],
+        display: "capiēbat",
+        translations: [
+            "he was seizing",
+            "she was seizing",
+            "it was seizing",
+            "he was taking",
+            "she was taking",
+            "it was taking",
+            "he used to seize",
+            "she used to seize",
+            "it used to seize"
+        ],
+        translationDisplay: "he/she/it was seizing"
+    },
+    {
+        prompt: "make capiētis passive",
+        forms: ["capiēminī", "capiemini"],
+        display: "capiēminī",
+        translations: [
+            "you will be seized",
+            "you all will be seized",
+            "yall will be seized",
+            "you will be taken",
+            "you all will be taken",
+            "yall will be taken"
+        ],
+        translationDisplay: "you (plural) will be seized"
+    },
+    {
+        prompt: "make capiēbāmus future",
+        forms: ["capiēmus", "capiemus"],
+        display: "capiēmus",
+        translations: [
+            "we will seize",
+            "we shall seize",
+            "we will take",
+            "we will capture"
+        ],
+        translationDisplay: "we will seize"
+    },
+    {
+        prompt: "make capere passive",
+        forms: ["capī", "capi"],
+        display: "capī",
+        translations: [
+            "to be seized",
+            "to be taken",
+            "to be captured"
+        ],
+        translationDisplay: "to be seized / taken"
+    }
+];
+
+function normalizeCap(text){
+    return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[.,!?;:'’"]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+}
+
+function buildCapQuiz(){
+
+    const quiz = document.getElementById("cap-quiz");
+    quiz.innerHTML = "";
+
+    capQuestions.forEach(function(q,i){
+
+        const card = document.createElement("div");
+        card.className = "cap-question";
+
+        card.innerHTML = `
+            <div class="cap-prompt">${i+1}. ${q.prompt}</div>
+
+            <label class="cap-label" for="cap-form-${i}">
+                New Latin form:
+            </label>
+
+            <input id="cap-form-${i}" class="cap-input" type="text" autocomplete="off">
+
+            <label class="cap-label" for="cap-trans-${i}">
+                Translate:
+            </label>
+
+            <input id="cap-trans-${i}" class="cap-input" type="text" autocomplete="off">
+
+            <div id="cap-feedback-${i}" class="cap-feedback"></div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkCapQuiz = function(){
+
+    let score = 0;
+    const possible = capQuestions.length * 2;
+
+    capQuestions.forEach(function(q,i){
+
+        const feedback = [];
+
+        const form = normalizeCap(
+            document.getElementById(`cap-form-${i}`).value
+        );
+
+        const trans = normalizeCap(
+            document.getElementById(`cap-trans-${i}`).value
+        );
+
+        const formCorrect = q.forms.some(function(a){
+            return form === normalizeCap(a);
+        });
+
+        const transCorrect = q.translations.some(function(a){
+            return trans === normalizeCap(a);
+        });
+
+        if(formCorrect){
+            score++;
+            feedback.push(`<div class="cap-correct">✓ Latin form correct.</div>`);
+        } else {
+            feedback.push(`<div class="cap-incorrect">✗ Correct form: <strong>${q.display}</strong>.</div>`);
+        }
+
+        if(transCorrect){
+            score++;
+            feedback.push(`<div class="cap-correct">✓ Translation correct.</div>`);
+        } else {
+            feedback.push(`<div class="cap-incorrect">✗ Translation: <strong>${q.translationDisplay}</strong>.</div>`);
+        }
+
+        document.getElementById(`cap-feedback-${i}`).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById("cap-score").textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetCapQuiz = function(){
+    buildCapQuiz();
+    document.getElementById("cap-score").textContent = "";
+};
+
+buildCapQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE D: TRANSLATE THEN CHANGE
+     Prefix: mixv-
+     ============================================================ -->
+
+<div class="mixv-quiz-container">
+
+<p class="mixv-instructions">
+<strong>D:</strong> First <strong>translate the original Latin verb</strong>.
+Then make the requested change while <strong>keeping everything else the same</strong>.
+</p>
+
+<div id="mixv-quiz"></div>
+
+<button type="button" class="mixv-control-button" onclick="checkMixvQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="mixv-control-button" onclick="resetMixvQuiz()">
+    Reset
+</button>
+
+<div id="mixv-score" class="mixv-score"></div>
+
+<script>
+(function(){
+
+const mixvQuestions = [
+    {
+        form: "faciō",
+        change: "future",
+        translations: [
+            "i make",
+            "i am making",
+            "i do",
+            "i am doing"
+        ],
+        translationDisplay: "I make / am making",
+        changedForms: ["faciam"],
+        changedDisplay: "faciam"
+    },
+    {
+        form: "regēbat",
+        change: "future",
+        translations: [
+            "he was ruling",
+            "she was ruling",
+            "it was ruling",
+            "he used to rule",
+            "she used to rule",
+            "it used to rule"
+        ],
+        translationDisplay: "he/she/it was ruling",
+        changedForms: ["reget"],
+        changedDisplay: "reget"
+    },
+    {
+        form: "vocābitur",
+        change: "plural",
+        translations: [
+            "he will be called",
+            "she will be called",
+            "it will be called"
+        ],
+        translationDisplay: "he/she/it will be called",
+        changedForms: ["vocābuntur", "ocabuntur", "vocabuntur"],
+        changedDisplay: "vocābuntur"
+    },
+    {
+        form: "regam",
+        change: "plural",
+        translations: [
+            "i will rule",
+            "i shall rule"
+        ],
+        translationDisplay: "I will rule",
+        changedForms: ["regēmus", "regemus"],
+        changedDisplay: "regēmus"
+    },
+    {
+        form: "videt",
+        change: "future",
+        translations: [
+            "he sees",
+            "she sees",
+            "it sees",
+            "he is seeing",
+            "she is seeing",
+            "it is seeing"
+        ],
+        translationDisplay: "he/she/it sees",
+        changedForms: ["vidēbit", "videbit"],
+        changedDisplay: "vidēbit"
+    },
+    {
+        form: "vīdī",
+        change: "3rd person",
+        translations: [
+            "i saw",
+            "i have seen"
+        ],
+        translationDisplay: "I saw / have seen",
+        changedForms: ["vīdit", "vidit"],
+        changedDisplay: "vīdit"
+    },
+    {
+        form: "audita sunt",
+        change: "singular",
+        translations: [
+            "they were heard",
+            "they have been heard",
+            "the things were heard",
+            "the things have been heard"
+        ],
+        translationDisplay: "they were / have been heard",
+        changedForms: ["auditum est"],
+        changedDisplay: "auditum est"
+    }
+];
+
+function normalizeMixv(text){
+    return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[.,!?;:'’"]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+}
+
+function buildMixvQuiz(){
+
+    const quiz = document.getElementById("mixv-quiz");
+    quiz.innerHTML = "";
+
+    mixvQuestions.forEach(function(q,i){
+
+        const card = document.createElement("div");
+        card.className = "mixv-question";
+
+        card.innerHTML = `
+            <div class="mixv-prompt">
+                ${i+1}. ${q.form} → ${q.change}
+            </div>
+
+            <label class="mixv-label" for="mixv-trans-${i}">
+                Translate ${q.form}:
+            </label>
+
+            <input
+                id="mixv-trans-${i}"
+                class="mixv-input"
+                type="text"
+                autocomplete="off">
+
+            <label class="mixv-label" for="mixv-change-${i}">
+                New Latin form:
+            </label>
+
+            <input
+                id="mixv-change-${i}"
+                class="mixv-input"
+                type="text"
+                autocomplete="off">
+
+            <div id="mixv-feedback-${i}" class="mixv-feedback"></div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkMixvQuiz = function(){
+
+    let score = 0;
+    const possible = mixvQuestions.length * 2;
+
+    mixvQuestions.forEach(function(q,i){
+
+        const feedback = [];
+
+        const trans = normalizeMixv(
+            document.getElementById(`mixv-trans-${i}`).value
+        );
+
+        const changed = normalizeMixv(
+            document.getElementById(`mixv-change-${i}`).value
+        );
+
+        const transCorrect = q.translations.some(function(a){
+            return trans === normalizeMixv(a);
+        });
+
+        const changeCorrect = q.changedForms.some(function(a){
+            return changed === normalizeMixv(a);
+        });
+
+        if(transCorrect){
+            score++;
+            feedback.push(`<div class="mixv-correct">✓ Original translation correct.</div>`);
+        } else {
+            feedback.push(`<div class="mixv-incorrect">✗ Translation: <strong>${q.translationDisplay}</strong>.</div>`);
+        }
+
+        if(changeCorrect){
+            score++;
+            feedback.push(`<div class="mixv-correct">✓ New form correct.</div>`);
+        } else {
+            feedback.push(`<div class="mixv-incorrect">✗ Correct new form: <strong>${q.changedDisplay}</strong>.</div>`);
+        }
+
+        document.getElementById(`mixv-feedback-${i}`).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById("mixv-score").textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetMixvQuiz = function(){
+    buildMixvQuiz();
+    document.getElementById("mixv-score").textContent = "";
+};
+
+buildMixvQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE E: COMPARATIVE / SUPERLATIVE ADJECTIVES
+     Prefix: comp-
+     ============================================================ -->
+
+<div class="comp-quiz-container">
+
+<p class="comp-instructions">
+<strong>E:</strong> Make the requested <strong>comparative or superlative</strong>
+form while keeping the original adjective's <strong>case, gender, and number</strong>
+the same. Then translate the new form.
+</p>
+
+<div id="comp-quiz"></div>
+
+<button type="button" class="comp-control-button" onclick="checkCompQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="comp-control-button" onclick="resetCompQuiz()">
+    Reset
+</button>
+
+<div id="comp-score" class="comp-score"></div>
+
+<script>
+(function(){
+
+const compQuestions = [
+    {
+        form: "celer",
+        change: "comparative",
+        answers: ["celerior"],
+        display: "celerior",
+        translations: [
+            "faster",
+            "swifter",
+            "more swift",
+            "more rapid",
+            "more quick"
+        ],
+        translationDisplay: "faster / swifter"
+    },
+    {
+        form: "superīs",
+        change: "comparative",
+        answers: ["superioribus"],
+        display: "superioribus",
+        translations: [
+            "to the higher ones",
+            "for the higher ones",
+            "with the higher ones",
+            "by the higher ones",
+            "from the higher ones",
+            "to the superior ones",
+            "for the superior ones",
+            "with the superior ones",
+            "by the superior ones",
+            "from the superior ones",
+            "higher",
+            "superior"
+        ],
+        translationDisplay:
+            "to/for/with/by/from the higher or superior ones"
+    },
+    {
+        form: "nova",
+        change: "superlative",
+        answers: ["novissima"],
+        display: "novissima",
+        translations: [
+            "newest",
+            "the newest",
+            "very new",
+            "latest",
+            "the latest",
+            "most recent",
+            "the most recent"
+        ],
+        translationDisplay: "newest / very new / latest"
+    },
+    {
+        form: "amīcō",
+        change: "superlative",
+        answers: ["amīcissimō", "amicissimo"],
+        display: "amīcissimō",
+        translations: [
+            "to the friendliest",
+            "for the friendliest",
+            "with the friendliest",
+            "by the friendliest",
+            "from the friendliest",
+            "to the most friendly",
+            "for the most friendly",
+            "with the most friendly",
+            "by the most friendly",
+            "from the most friendly",
+            "very friendly",
+            "most friendly",
+            "friendliest"
+        ],
+        translationDisplay:
+            "to/for/with/by/from the friendliest or most friendly"
+    }
+];
+
+function normalizeComp(text){
+    return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[.,!?;:'’"]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+}
+
+function buildCompQuiz(){
+
+    const quiz = document.getElementById("comp-quiz");
+    quiz.innerHTML = "";
+
+    compQuestions.forEach(function(q,i){
+
+        const card = document.createElement("div");
+        card.className = "comp-question";
+
+        card.innerHTML = `
+            <div class="comp-prompt">
+                ${i+1}. ${q.form} → ${q.change}
+            </div>
+
+            <label class="comp-label" for="comp-form-${i}">
+                New adjective form:
+            </label>
+
+            <input
+                id="comp-form-${i}"
+                class="comp-input"
+                type="text"
+                autocomplete="off">
+
+            <label class="comp-label" for="comp-trans-${i}">
+                Translate:
+            </label>
+
+            <input
+                id="comp-trans-${i}"
+                class="comp-input"
+                type="text"
+                autocomplete="off">
+
+            <div id="comp-feedback-${i}" class="comp-feedback"></div>
+        `;
+
+        quiz.appendChild(card);
+    });
+}
+
+window.checkCompQuiz = function(){
+
+    let score = 0;
+    const possible = compQuestions.length * 2;
+
+    compQuestions.forEach(function(q,i){
+
+        const feedback = [];
+
+        const form = normalizeComp(
+            document.getElementById(`comp-form-${i}`).value
+        );
+
+        const trans = normalizeComp(
+            document.getElementById(`comp-trans-${i}`).value
+        );
+
+        const formCorrect = q.answers.some(function(a){
+            return form === normalizeComp(a);
+        });
+
+        const transCorrect = q.translations.some(function(a){
+            return trans === normalizeComp(a);
+        });
+
+        if(formCorrect){
+            score++;
+            feedback.push(`<div class="comp-correct">✓ Adjective form correct.</div>`);
+        } else {
+            feedback.push(`<div class="comp-incorrect">✗ Correct form: <strong>${q.display}</strong>.</div>`);
+        }
+
+        if(transCorrect){
+            score++;
+            feedback.push(`<div class="comp-correct">✓ Translation correct.</div>`);
+        } else {
+            feedback.push(`<div class="comp-incorrect">✗ Translation: <strong>${q.translationDisplay}</strong>.</div>`);
+        }
+
+        document.getElementById(`comp-feedback-${i}`).innerHTML =
+            feedback.join("");
+    });
+
+    document.getElementById("comp-score").textContent =
+        `Score: ${score} / ${possible}`;
+};
+
+window.resetCompQuiz = function(){
+    buildCompQuiz();
+    document.getElementById("comp-score").textContent = "";
+};
+
+buildCompQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 15 Translations
 
