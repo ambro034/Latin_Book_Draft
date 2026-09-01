@@ -244,38 +244,41 @@
 
 /* Green translation block — modeled on block-danger */
 
-.block-translation {
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-    border-left: 0.25rem solid #198754;
-    background-color: #d1e7dd;
-    color: #0f5132;
-}
-
-.block-translation > :first-child {
-    margin-top: 0;
-}
-
-.block-translation > :last-child {
-    margin-bottom: 0;
-}
-
-.block-translation a {
-    color: #0f5132;
-    font-weight: 600;
+.markdown-section blockquote.block-translation {
+    border-color: var(--c-translation);
+    background-color: var(--c-translation-bg);
+    color: var(--c-translation-text);
+    font-family: var(--font-family);
+    padding: 10px;
 }
 
 
-pre:has(code.language-mermaid[data-processed="true"]) {
-    background-color: #ffffff;
-    text-align: center;
+.markdown-section blockquote.block-translation h1,
+.markdown-section blockquote.block-translation h2,
+.markdown-section blockquote.block-translation h3,
+.markdown-section blockquote.block-translation h4,
+.markdown-section blockquote.block-translation h5,
+.markdown-section blockquote.block-translation h6 {
+    color: var(--c-translation-title);
+    margin: 0px;
+    margin-bottom: 5px;
 }
+
+.markdown-section blockquote.block-translation p {
+    margin-bottom: 0px;
+}
+
+
 
 :root {
-    --c-tip: #42b983;
-    --c-tip-bg: #e2f5ec;
-    --c-tip-text: #215d42;
-    --c-tip-title: #359469;
+    --c-tip: #0d6efd;
+    --c-tip-bg: #cfe2ff;
+    --c-tip-text: #084298;
+    --c-tip-title: #356C94;
+    --c-translation: #42b983;
+    --c-translation-bg: #e2f5ec;
+    --c-translation-text: #215d42;
+    --c-translation-title: #359469;
     --c-warning: #e7c000;
     --c-warning-bg: rgba(255, 229, 100, .25);
     --c-warning-text: #6b5900;
