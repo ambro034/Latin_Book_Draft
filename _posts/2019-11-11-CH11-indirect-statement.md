@@ -126,30 +126,926 @@ No matter the tense of the primary action (she thinks, she was thinking, or she 
 > ### Chapter 11 Exercises
 {: .block-warning }
 
-A) Vocabulary and ending practice. After studying chapter 11 vocabulary and reviewing chapter 10, complete the Latin verbs to match the English phrase
+<!-- ============================================================
+     EXERCISE A: VOCABULARY AND ENDING PRACTICE
+     Prefix: c11v-
+     ============================================================ -->
 
-1\. they believe: cred\_\_\_\_\_\_\_ 2. it was said: dic\_\_\_\_\_\_\_
+<div class="c11v-quiz-container">
 
-3\. we were thinking: put\_\_\_\_\_\_\_ 4. he believed: credid\_\_\_\_\_\_\_
+<style>
+/* ============================================================
+   EXERCISE A
+   Prefix: c11v-
+   ============================================================ */
 
-5\. y’all denied: neg\_\_\_\_\_\_\_ 6. it has been though: putāt\_\_\_\_\_\_\_
+.c11v-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-7\. it is believed: cred\_\_\_\_\_\_ 8. we run: cur\_\_\_\_\_\_\_
+.c11v-quiz-container * {
+    box-sizing: border-box;
+}
 
-9\. you were sought: pet\_\_\_\_\_\_ 10. I am learning: cogno\_\_\_\_\_\_\_
+.c11v-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-B) Fill in the blanks to complete the clause. Some (but not all) include an indirect statement
+.c11v-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-1.  we know that she is seeking the road sentimus e\_\_\_\_\_ viam petere
-2.  they say that we are coming nōs ven\_\_\_\_\_ dicunt
-3.  I think that you are bringing a method putō t\_\_\_\_ rationem fer\_\_\_\_\_
-4.  they are learning her voice nosc\_\_\_\_\_ e\_\_\_\_\_vocem
-5.  she often makes poems with words saepe verb\_\_\_ \_\_\_\_\_\_ facit
-6.  we deny that the boys are running puer\_\_\_\_\_ cur\_\_\_\_\_ negāmus
-7.  the shadow lies on the city umbr\_\_\_\_\_ in urb\_\_\_\_\_ iac\_\_\_\_\_
-8.  he was being led by the enemies ducē\_\_\_\_\_ \_\_\_\_\_ hostibus
-9.  do they believe that the water moves? illī aquam mov\_\_\_\_\_ cred\_\_\_\_\_\_?
-10.  the citizens know they are escaping civēs s\_\_\_\_\_ fug\_\_\_\_\_ sciunt
+.c11v-prompt {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.c11v-stem {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.c11v-stem strong {
+    font-size: 1.1em;
+}
+
+.c11v-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.c11v-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.c11v-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.c11v-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.c11v-correct {
+    color: #0b7a0b;
+}
+
+.c11v-incorrect {
+    color: #b00020;
+}
+
+.c11v-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.c11v-control-button:hover {
+    background: #f3f3f3;
+}
+
+.c11v-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .c11v-quiz-container {
+        padding: 15px;
+    }
+
+    .c11v-question {
+        padding: 15px;
+    }
+}
+</style>
+
+<p class="c11v-instructions">
+<strong>A:</strong> <strong>Vocabulary and ending practice.</strong>
+After studying Chapter 11 vocabulary and reviewing Chapter 10,
+complete each <strong>Latin verb</strong> to match the English phrase.
+Type only the <strong>missing portion</strong> of the verb. Macron marks are optional.
+</p>
+
+<div id="c11v-quiz"></div>
+
+<button
+    type="button"
+    class="c11v-control-button"
+    onclick="checkC11vQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="c11v-control-button"
+    onclick="resetC11vQuiz()">
+    Reset
+</button>
+
+<div id="c11v-score" class="c11v-score"></div>
+
+<script>
+(function(){
+
+const c11vQuestions = [
+
+    {
+        english: "they believe",
+        stem: "cred",
+        ending: "unt",
+        full: "credunt"
+    },
+
+    {
+        english: "it was said",
+        stem: "dic",
+        ending: "ēbatur",
+        full: "dicēbatur"
+    },
+
+    {
+        english: "we were thinking",
+        stem: "put",
+        ending: "ābāmus",
+        full: "putābāmus"
+    },
+
+    {
+        english: "he believed",
+        stem: "credid",
+        ending: "it",
+        full: "credidit"
+    },
+
+    {
+        english: "y’all denied",
+        stem: "neg",
+        ending: "āvistis",
+        full: "negāvistis"
+    },
+
+    {
+        english: "it has been thought",
+        stem: "putāt",
+        ending: "um est",
+        full: "putātum est"
+    },
+
+    {
+        english: "it is believed",
+        stem: "cred",
+        ending: "itur",
+        full: "creditur"
+    },
+
+    {
+        english: "we run",
+        stem: "cur",
+        ending: "rimus",
+        full: "currimus"
+    },
+
+    {
+        english: "you were sought",
+        stem: "pet",
+        ending: "ēbāris",
+        full: "petēbāris"
+    },
+
+    {
+        english: "I am learning",
+        stem: "cogno",
+        ending: "scō",
+        full: "cognoscō"
+    }
+
+];
+
+function normalizeC11v(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildC11vQuiz() {
+
+    const quiz =
+        document.getElementById("c11v-quiz");
+
+    quiz.innerHTML = "";
+
+    c11vQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "c11v-question";
+
+        card.innerHTML = `
+
+            <div class="c11v-prompt">
+                ${i + 1}. ${q.english}
+            </div>
+
+            <div class="c11v-stem">
+                <strong>${q.stem}</strong> + ______
+            </div>
+
+            <label
+                class="c11v-label"
+                for="c11v-answer-${i}">
+                Missing letters/form:
+            </label>
+
+            <input
+                type="text"
+                id="c11v-answer-${i}"
+                class="c11v-input"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Type only the missing portion">
+
+            <div
+                id="c11v-feedback-${i}"
+                class="c11v-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+
+    });
+
+}
+
+window.checkC11vQuiz = function() {
+
+    let score = 0;
+
+    c11vQuestions.forEach(function(q, i) {
+
+        const student =
+            document.getElementById(
+                `c11v-answer-${i}`
+            ).value;
+
+        const feedback =
+            document.getElementById(
+                `c11v-feedback-${i}`
+            );
+
+        if (
+            normalizeC11v(student) ===
+            normalizeC11v(q.ending)
+        ) {
+
+            score++;
+
+            feedback.className =
+                "c11v-feedback c11v-correct";
+
+            feedback.innerHTML =
+                `✓ Correct. <strong>${q.full}</strong>`;
+
+        } else {
+
+            feedback.className =
+                "c11v-feedback c11v-incorrect";
+
+            feedback.innerHTML =
+                `✗ Missing portion: <strong>${q.ending}</strong>.
+                 Complete form: <strong>${q.full}</strong>.`;
+
+        }
+
+    });
+
+    document.getElementById(
+        "c11v-score"
+    ).textContent =
+        `Score: ${score} / ${c11vQuestions.length}`;
+
+};
+
+window.resetC11vQuiz = function() {
+
+    buildC11vQuiz();
+
+    document.getElementById(
+        "c11v-score"
+    ).textContent = "";
+
+};
+
+buildC11vQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: COMPLETE THE LATIN CLAUSE
+     Prefix: isc-
+     ============================================================ -->
+
+<div class="isc-quiz-container">
+
+<style>
+/* ============================================================
+   EXERCISE B
+   Prefix: isc-
+   ============================================================ */
+
+.isc-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.isc-quiz-container * {
+    box-sizing: border-box;
+}
+
+.isc-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.isc-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.isc-english {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.isc-clause {
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    background: #fff8d8;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+.isc-blank {
+    font-weight: bold;
+    color: #555;
+}
+
+.isc-answer-row {
+    margin: 14px 0;
+}
+
+.isc-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.isc-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.isc-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.isc-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.isc-correct {
+    color: #0b7a0b;
+}
+
+.isc-incorrect {
+    color: #b00020;
+}
+
+.isc-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.isc-control-button:hover {
+    background: #f3f3f3;
+}
+
+.isc-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .isc-quiz-container {
+        padding: 15px;
+    }
+
+    .isc-question {
+        padding: 15px;
+    }
+}
+</style>
+
+<p class="isc-instructions">
+<strong>B:</strong> Fill in the blanks to complete each <strong>Latin clause</strong>.
+Some, but not all, contain an <strong>indirect statement</strong>.
+Type only the missing portion shown for each blank. Macron marks are optional.
+</p>
+
+<div id="isc-quiz"></div>
+
+<button
+    type="button"
+    class="isc-control-button"
+    onclick="checkIscQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="isc-control-button"
+    onclick="resetIscQuiz()">
+    Reset
+</button>
+
+<div id="isc-score" class="isc-score"></div>
+
+<script>
+(function(){
+
+const iscQuestions = [
+
+    {
+        english: "we know that she is seeking the road",
+        clause:
+            'sentimus e<span class="isc-blank">_____</span> viam petere',
+        blanks: [
+            {
+                label: "e_____",
+                answer: "am",
+                display: "eam"
+            }
+        ],
+        complete:
+            "sentimus eam viam petere"
+    },
+
+    {
+        english: "they say that we are coming",
+        clause:
+            'nōs ven<span class="isc-blank">_____</span> dicunt',
+        blanks: [
+            {
+                label: "ven_____",
+                answer: "īre",
+                alternatives: ["ire"],
+                display: "venīre"
+            }
+        ],
+        complete:
+            "nōs venīre dicunt"
+    },
+
+    {
+        english: "I think that you are bringing a method",
+        clause:
+            'putō t<span class="isc-blank">_____</span> rationem fer<span class="isc-blank">_____</span>',
+        blanks: [
+            {
+                label: "t_____",
+                answer: "ē",
+                alternatives: ["e"],
+                display: "tē"
+            },
+            {
+                label: "fer_____",
+                answer: "re",
+                display: "ferre"
+            }
+        ],
+        complete:
+            "putō tē rationem ferre"
+    },
+
+    {
+        english: "they are learning her voice",
+        clause:
+            'nosc<span class="isc-blank">_____</span> e<span class="isc-blank">_____</span> vocem',
+        blanks: [
+            {
+                label: "nosc_____",
+                answer: "unt",
+                display: "noscunt"
+            },
+            {
+                label: "e_____",
+                answer: "ius",
+                display: "eius"
+            }
+        ],
+        complete:
+            "noscunt eius vocem"
+    },
+
+    {
+        english: "she often makes poems with words",
+        clause:
+            'saepe verb<span class="isc-blank">_____</span> <span class="isc-blank">_____</span> facit',
+        blanks: [
+            {
+                label: "verb_____",
+                answer: "īs",
+                alternatives: ["is"],
+                display: "verbīs"
+            },
+            {
+                label: "_____",
+                answer: "carmina",
+                display: "carmina"
+            }
+        ],
+        complete:
+            "saepe verbīs carmina facit"
+    },
+
+    {
+        english: "we deny that the boys are running",
+        clause:
+            'puer<span class="isc-blank">_____</span> cur<span class="isc-blank">_____</span> negāmus',
+        blanks: [
+            {
+                label: "puer_____",
+                answer: "ōs",
+                alternatives: ["os"],
+                display: "puerōs"
+            },
+            {
+                label: "cur_____",
+                answer: "rere",
+                display: "currere"
+            }
+        ],
+        complete:
+            "puerōs currere negāmus"
+    },
+
+    {
+        english: "the shadow lies on the city",
+        clause:
+            'umbr<span class="isc-blank">_____</span> in urb<span class="isc-blank">_____</span> iac<span class="isc-blank">_____</span>',
+        blanks: [
+            {
+                label: "umbr_____",
+                answer: "a",
+                display: "umbra"
+            },
+            {
+                label: "urb_____",
+                answer: "e",
+                display: "urbe"
+            },
+            {
+                label: "iac_____",
+                answer: "et",
+                display: "iacet"
+            }
+        ],
+        complete:
+            "umbra in urbe iacet"
+    },
+
+    {
+        english: "he was being led by the enemies",
+        clause:
+            'ducē<span class="isc-blank">_____</span> <span class="isc-blank">_____</span> hostibus',
+        blanks: [
+            {
+                label: "ducē_____",
+                answer: "bātur",
+                alternatives: ["batur"],
+                display: "ducēbātur"
+            },
+            {
+                label: "_____ hostibus",
+                answer: "ā",
+                alternatives: ["a", "ab"],
+                display: "ā / ab"
+            }
+        ],
+        complete:
+            "ducēbātur ā hostibus"
+    },
+
+    {
+        english: "do they believe that the water moves?",
+        clause:
+            'illī aquam mov<span class="isc-blank">_____</span> cred<span class="isc-blank">_____</span>?',
+        blanks: [
+            {
+                label: "mov_____",
+                answer: "ēre",
+                alternatives: ["ere"],
+                display: "movēre"
+            },
+            {
+                label: "cred_____",
+                answer: "unt",
+                display: "credunt"
+            }
+        ],
+        complete:
+            "illī aquam movēre credunt?"
+    },
+
+    {
+        english: "the citizens know they are escaping",
+        clause:
+            'civēs s<span class="isc-blank">_____</span> fug<span class="isc-blank">_____</span> sciunt',
+        blanks: [
+            {
+                label: "s_____",
+                answer: "ē",
+                alternatives: ["e"],
+                display: "sē"
+            },
+            {
+                label: "fug_____",
+                answer: "ere",
+                display: "fugere"
+            }
+        ],
+        complete:
+            "civēs sē fugere sciunt"
+    }
+
+];
+
+function normalizeIsc(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function iscAnswerCorrect(student, blank) {
+
+    const accepted =
+        [blank.answer].concat(
+            blank.alternatives || []
+        );
+
+    return accepted.some(function(answer) {
+
+        return normalizeIsc(student) ===
+               normalizeIsc(answer);
+
+    });
+
+}
+
+function buildIscQuiz() {
+
+    const quiz =
+        document.getElementById("isc-quiz");
+
+    quiz.innerHTML = "";
+
+    iscQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "isc-question";
+
+        let inputs = "";
+
+        q.blanks.forEach(function(blank, j) {
+
+            inputs += `
+
+                <div class="isc-answer-row">
+
+                    <label
+                        class="isc-label"
+                        for="isc-answer-${i}-${j}">
+                        Blank ${j + 1}: ${blank.label}
+                    </label>
+
+                    <input
+                        type="text"
+                        id="isc-answer-${i}-${j}"
+                        class="isc-input"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="Type only the missing portion">
+
+                </div>
+            `;
+
+        });
+
+        card.innerHTML = `
+
+            <div class="isc-english">
+                ${i + 1}. ${q.english}
+            </div>
+
+            <div class="isc-clause">
+                ${q.clause}
+            </div>
+
+            ${inputs}
+
+            <div
+                id="isc-feedback-${i}"
+                class="isc-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+        quiz.appendChild(card);
+
+    });
+
+}
+
+window.checkIscQuiz = function() {
+
+    let score = 0;
+    let possible = 0;
+
+    iscQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+        q.blanks.forEach(function(blank, j) {
+
+            possible++;
+
+            const student =
+                document.getElementById(
+                    `isc-answer-${i}-${j}`
+                ).value;
+
+            if (
+                iscAnswerCorrect(
+                    student,
+                    blank
+                )
+            ) {
+
+                score++;
+
+                feedback.push(
+                    `<div class="isc-correct">
+                        ✓ Blank ${j + 1} correct.
+                    </div>`
+                );
+
+            } else {
+
+                feedback.push(
+                    `<div class="isc-incorrect">
+                        ✗ Blank ${j + 1}: <strong>${blank.display}</strong>.
+                    </div>`
+                );
+
+            }
+
+        });
+
+        const allCorrect =
+            q.blanks.every(function(blank, j) {
+
+                const student =
+                    document.getElementById(
+                        `isc-answer-${i}-${j}`
+                    ).value;
+
+                return iscAnswerCorrect(
+                    student,
+                    blank
+                );
+
+            });
+
+        if (!allCorrect) {
+
+            feedback.push(
+                `<div class="isc-incorrect">
+                    Complete clause:
+                    <strong>${q.complete}</strong>
+                </div>`
+            );
+
+        }
+
+        document.getElementById(
+            `isc-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+
+    });
+
+    document.getElementById(
+        "isc-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+
+};
+
+window.resetIscQuiz = function() {
+
+    buildIscQuiz();
+
+    document.getElementById(
+        "isc-score"
+    ).textContent = "";
+
+};
+
+buildIscQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 11 Translations
 
