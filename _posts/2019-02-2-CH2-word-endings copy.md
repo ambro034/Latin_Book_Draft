@@ -905,8 +905,9 @@ buildTransQuiz();
 
 <!-- Translation verb endings END -->
 
-> ##### Chapter 2 Vocabulary
->
+> ### Chapter 2 Vocabulary
+{: .block-danger }
+
 > **Nouns**  
 >
 >| :---: | :---: |
