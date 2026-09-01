@@ -2596,7 +2596,8 @@ For numbers <strong>8–12</strong>, <strong>segment the sentence</strong> befor
 
 </div>
 
-##### Chapter 3 Vocabulary
+> ### Vocabulary
+{: .block-danger }
 
 <div class="vocab-block">
 

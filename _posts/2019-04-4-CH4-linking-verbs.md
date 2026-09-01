@@ -572,7 +572,9 @@ For numbers <strong>1–5</strong>, translate from Latin into English. For numbe
 
 </div>
 
-##### Chapter 4 Translations
+> ### Translations
+{: .block-info }
+
 
 1) Identify the pattern(s) (transitive/intransitive/linking), (2) then translate the sentences into English. Pay careful attention to cases and prepositions. You can identify prepositional phrases as segments. Remember that subjects may change between coordinated clauses. The second sentence for each number follows a similar pattern to the first. Translate it into Latin.
 
@@ -601,40 +603,477 @@ For numbers <strong>1–5</strong>, translate from Latin into English. For numbe
        
      The field is cheap but large, and he prepares it. \*think about what word *it* replaces and what its ending should be.
 
-##### Chapter 4 Vocabulary
+> ### Vocabulary
+{: .block-danger }
 
-| **Prepositions** |  |
-| --- | --- |
-| in (+ablative) | in, on |
-| ā, ab (+abl.) | from, away from |
-| ex, ē (+abl.) | out of, from |
-| dē (+abl.) | down from, about, concerning |
-| sub (+abl.) | under |
-| **Nouns** |  |
-| canis, canis (m./f.) | dog |
-| locus, locī (m.) | place |
-| terra, terrae (f.) | land |
-| rēgnum, regnī (neuter) | kingdom |
-| mare, maris (n.) | sea |
-| mons, montis (m.) | mountain |
-| litus, litoris (n.) | shore, coast |
-| aqua, aquae (f.) | water |
-| **Adjectives** |  |
-| malus, mala, malum | bad, evil |
-| paucus, pauca, paucum | small, few (usually plural) |
-| **Verbs** | *intransitive verbs are marked with an asterisk |
-| it / eunt* | he/she/it goes, they go |
-| est / sunt | he/she/it is, exists; they are, exist |
-| ambulat / ambulant* | he/she/it walks; they walk |
-| **Pronouns** |  |
-| id (singular) ea (plural) | it, them (neuter pronoun) |
-| **Adverbs** |  |
-| -nē (enclitic)* | _creates a yes/no question_ |
-| bene | well |
+<div class="vocab-block">
 
-*\*-ne* can be added to most sentences, usually (but not always) to the first word or the verb, to create a question. The Romans did not have question marks, so this was their way of signaling a question. The question can only be a “magic 8-ball” question though: “do they know the truth?”; not “what is the truth?”
+<style>
+.vocab-block {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #dc3545;
+    border-radius: 10px;
+    background: #f8d7da;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-## Recap: Noun Endings so far
+.vocab-block * {
+    box-sizing: border-box;
+}
+
+.vocab-section {
+    margin: 0 0 24px;
+}
+
+.vocab-section:last-child {
+    margin-bottom: 0;
+}
+
+.vocab-heading {
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.vocab-heading-note {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78em;
+    font-weight: normal;
+    color: #555;
+}
+
+.vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.vocab-table th,
+.vocab-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.vocab-table th {
+    background: #f3f3f3;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.vocab-table tr:last-child td {
+    border-bottom: none;
+}
+
+.vocab-latin {
+    width: 48%;
+    font-weight: bold;
+}
+
+.vocab-english {
+    width: 52%;
+}
+
+.vocab-grammar-note {
+    font-weight: normal;
+    color: #555;
+}
+
+.vocab-footnote {
+    margin-top: 8px;
+    padding: 14px 16px;
+    background: white;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    line-height: 1.55;
+    font-size: 0.95em;
+}
+
+@media (max-width: 500px) {
+    .vocab-block {
+        padding: 15px;
+    }
+
+    .vocab-table th,
+    .vocab-table td {
+        padding: 9px 10px;
+    }
+
+    .vocab-latin {
+        width: 52%;
+    }
+
+    .vocab-english {
+        width: 48%;
+    }
+}
+</style>
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Prepositions
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    in
+                    <span class="vocab-grammar-note">(+ ablative)</span>
+                </td>
+                <td class="vocab-english">
+                    in, on
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    ā, ab
+                    <span class="vocab-grammar-note">(+ ablative)</span>
+                </td>
+                <td class="vocab-english">
+                    from, away from
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    ex, ē
+                    <span class="vocab-grammar-note">(+ ablative)</span>
+                </td>
+                <td class="vocab-english">
+                    out of, from
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    dē
+                    <span class="vocab-grammar-note">(+ ablative)</span>
+                </td>
+                <td class="vocab-english">
+                    down from, about, concerning
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    sub
+                    <span class="vocab-grammar-note">(+ ablative)</span>
+                </td>
+                <td class="vocab-english">
+                    under
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Nouns
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    canis, canis
+                    <span class="vocab-grammar-note">(m./f.)</span>
+                </td>
+                <td class="vocab-english">
+                    dog
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    locus, locī
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    place
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    terra, terrae
+                    <span class="vocab-grammar-note">(f.)</span>
+                </td>
+                <td class="vocab-english">
+                    land
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    rēgnum, rēgnī
+                    <span class="vocab-grammar-note">(n.)</span>
+                </td>
+                <td class="vocab-english">
+                    kingdom
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    mare, maris
+                    <span class="vocab-grammar-note">(n.)</span>
+                </td>
+                <td class="vocab-english">
+                    sea
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    mons, montis
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    mountain
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    litus, litoris
+                    <span class="vocab-grammar-note">(n.)</span>
+                </td>
+                <td class="vocab-english">
+                    shore, coast
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    aqua, aquae
+                    <span class="vocab-grammar-note">(f.)</span>
+                </td>
+                <td class="vocab-english">
+                    water
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Adjectives
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    malus, mala, malum
+                </td>
+                <td class="vocab-english">
+                    bad, evil
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    paucus, pauca, paucum
+                </td>
+                <td class="vocab-english">
+                    small, few
+                    <span class="vocab-grammar-note">(usually plural)</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Verbs
+
+        <span class="vocab-heading-note">
+            * Intransitive verbs are marked with an asterisk.
+        </span>
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    it / eunt*
+                </td>
+                <td class="vocab-english">
+                    he/she/it goes; they go
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    est / sunt
+                </td>
+                <td class="vocab-english">
+                    he/she/it is, exists; they are, exist
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    ambulat / ambulant*
+                </td>
+                <td class="vocab-english">
+                    he/she/it walks; they walk
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Pronouns
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    id
+                    <span class="vocab-grammar-note">(singular)</span>;
+                    ea
+                    <span class="vocab-grammar-note">(plural)</span>
+                </td>
+                <td class="vocab-english">
+                    it; them
+                    <span class="vocab-grammar-note">(neuter pronoun)</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Adverbs
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    -ne
+                    <span class="vocab-grammar-note">(enclitic)*</span>
+                </td>
+                <td class="vocab-english">
+                    creates a yes/no question
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    bene
+                </td>
+                <td class="vocab-english">
+                    well
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-footnote">
+    <strong>* A note about <em>-ne</em>:</strong>
+    <em>-ne</em> can be added to most sentences, usually—though not always—to
+    the first word or to the verb in order to create a question. The Romans
+    did not use question marks in the same way we do, so <em>-ne</em> helps
+    signal that the sentence is a question. It creates a
+    <strong>yes/no question</strong>: think of it as a “Magic 8-Ball” question,
+    such as “Do they know the truth?” rather than an open-ended question like
+    “What is the truth?”
+</div>
+
+</div>
+
+### Recap: Noun Endings so far
 
 These are the endings for Nominative, Genitive, Accusative, and Ablative for the first three declensions. Remember that for the third declension, there is no standard nominative singular ending. This chart does not include the genitive, which is for identification purposes only at this point.
 

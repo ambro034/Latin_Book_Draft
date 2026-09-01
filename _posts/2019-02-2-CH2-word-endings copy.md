@@ -905,7 +905,7 @@ buildTransQuiz();
 
 <!-- Translation verb endings END -->
 
-> ### Chapter 2 Vocabulary
+> ### Vocabulary
 {: .block-danger }
 
 <div class="vocab-block">
