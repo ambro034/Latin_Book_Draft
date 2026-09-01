@@ -1433,20 +1433,1168 @@ You can use the adjective ending chart above if necessary.
 
 </div>
 
-C) After you are familiar with endings and you have studied your vocabulary, try the following exercises. Pay close attention to endings and identify the pattern (transitive/intransitive). For numbers 8-12, segment the sentence before you translate:
+<div class="pt-quiz-container">
 
-1.  mater silvam videt
-2.  agrum superī servant
-3.  iacent equī multī
-4.  nunc iuvenēs misera domina vōcat
-5.  ea agrōs omnēs parat
-6.  nōvus oculus multās gentēs videt
-7.  certē bonās dominās is amat
-8.  puellae nunc superōs vident sed miserae matrēs eās vōcant
-9.  servant magnī puerī puellaeque magnōs equōs
-10.  certē matrēs eōs amant et vocant nātōs parvōs patrēs
-11.  miserī virī agrum parant et bonus\* agrum servat (\*see vocabulary notes).
-12.  superōs tunc dominī amant atque vocant
+<style>
+/* ============================================================
+   PATTERN, SEGMENTATION, AND TRANSLATION EXERCISE
+   Prefix: pt-
+   ============================================================ */
+
+.pt-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.pt-quiz-container * {
+    box-sizing: border-box;
+}
+
+.pt-title {
+    margin-top: 0;
+}
+
+.pt-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.pt-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.pt-sentence {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.pt-section {
+    margin: 14px 0;
+}
+
+.pt-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.pt-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pt-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.pt-choice:hover {
+    border-color: #4a90e2;
+}
+
+.pt-choice.pt-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.pt-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.pt-translation {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.pt-translation:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+
+/* ============================================================
+   SEGMENTATION AREA
+   ============================================================ */
+
+.pt-segment-box {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    line-height: 2.2;
+}
+
+.pt-segment-instructions {
+    margin: 0 0 8px 0;
+    font-size: 0.92em;
+    color: #555;
+}
+
+.pt-word {
+    display: inline;
+    font-size: 1.05em;
+}
+
+.pt-divider {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 1px 5px;
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+    background: white;
+    color: #777;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.pt-divider:hover {
+    border-color: #4a90e2;
+    color: #4a90e2;
+}
+
+.pt-divider.pt-divider-selected {
+    background: #cce5ff;
+    border: 2px solid #4a90e2;
+    color: #1f5f9f;
+}
+
+.pt-divider.pt-divider-selected::after {
+    content: "|";
+}
+
+
+/* ============================================================
+   FEEDBACK
+   ============================================================ */
+
+.pt-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.pt-correct {
+    color: #0b7a0b;
+}
+
+.pt-incorrect {
+    color: #b00020;
+}
+
+.pt-feedback-line {
+    margin: 3px 0;
+}
+
+.pt-feedback-good {
+    color: #0b7a0b;
+}
+
+.pt-feedback-bad {
+    color: #b00020;
+}
+
+
+/* ============================================================
+   CONTROLS
+   ============================================================ */
+
+.pt-controls {
+    margin-top: 20px;
+}
+
+.pt-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.pt-control-button:hover {
+    background: #f3f3f3;
+}
+
+.pt-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.pt-score-detail {
+    margin-top: 7px;
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+    .pt-quiz-container {
+        padding: 15px;
+    }
+
+    .pt-question {
+        padding: 15px;
+    }
+
+    .pt-choice {
+        flex: 1 1 120px;
+    }
+
+    .pt-segment-box {
+        line-height: 2.5;
+    }
+}
+</style>
+
+
+<p class="pt-instructions">
+
+<strong>C:</strong> After you are familiar with endings and you have studied your vocabulary, try the following exercises.
+
+Pay close attention to <strong>endings</strong>, identify the pattern as <strong>transitive</strong> or <strong>intransitive</strong>, and translate each sentence.
+
+For numbers <strong>8–12</strong>, <strong>segment the sentence</strong> before you translate.
+
+</p>
+
+
+<div id="pt-quiz"></div>
+
+
+<div class="pt-controls">
+
+    <button
+        type="button"
+        class="pt-control-button"
+        onclick="checkPtQuiz()">
+        Check Answers
+    </button>
+
+    <button
+        type="button"
+        class="pt-control-button"
+        onclick="resetPtQuiz()">
+        Reset
+    </button>
+
+</div>
+
+
+<div id="pt-score" class="pt-score"></div>
+
+
+<script>
+(function () {
+
+    /* ========================================================
+       QUESTION DATA
+
+       segmentAfter uses zero-based word positions.
+
+       Example:
+       ["puellae","nunc","superōs","vident","sed",...]
+
+       segmentAfter: [3]
+       means a division after "vident":
+
+       puellae nunc superōs vident | sed ...
+       ======================================================== */
+
+    const ptQuestions = [
+
+        {
+            sentence: "mater silvam videt",
+            pattern: "Transitive",
+            translations: [
+                "the mother sees the forest",
+                "a mother sees the forest",
+                "the mother sees a forest",
+                "a mother sees a forest"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "agrum superī servant",
+            pattern: "Transitive",
+            translations: [
+                "the gods preserve the field",
+                "the gods protect the field",
+                "the gods save the field",
+                "the gods guard the field"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "iacent equī multī",
+            pattern: "Intransitive",
+            translations: [
+                "many horses lie",
+                "many horses are lying",
+                "many horses lie down",
+                "many horses are lying down"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "nunc iuvenēs misera domina vōcat",
+            pattern: "Transitive",
+            translations: [
+                "now the miserable mistress calls the young men",
+                "now the unhappy mistress calls the young men",
+                "now the wretched mistress calls the young men",
+                "the miserable mistress now calls the young men",
+                "the unhappy mistress now calls the young men",
+                "the wretched mistress now calls the young men"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "ea agrōs omnēs parat",
+            pattern: "Transitive",
+            translations: [
+                "she prepares all the fields",
+                "she prepares all fields",
+                "she is preparing all the fields",
+                "she is preparing all fields"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "nōvus oculus multās gentēs videt",
+            pattern: "Transitive",
+            translations: [
+                "the new eye sees many peoples",
+                "the new eye sees many nations",
+                "a new eye sees many peoples",
+                "a new eye sees many nations"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence: "certē bonās dominās is amat",
+            pattern: "Transitive",
+            translations: [
+                "certainly he loves the good mistresses",
+                "surely he loves the good mistresses",
+                "he certainly loves the good mistresses",
+                "he surely loves the good mistresses",
+                "certainly he loves the good ladies",
+                "surely he loves the good ladies"
+            ],
+            segmentation: null
+        },
+
+        {
+            sentence:
+                "puellae nunc superōs vident sed miserae matrēs eās vōcant",
+
+            pattern: "Transitive",
+
+            translations: [
+                "the girls now see the gods but the miserable mothers call them",
+                "the girls now see the gods but the unhappy mothers call them",
+                "the girls see the gods now but the miserable mothers call them",
+                "the girls see the gods now but the unhappy mothers call them"
+            ],
+
+            segmentation: {
+                correctAfter: [3]
+            }
+        },
+
+        {
+            sentence:
+                "servant magnī puerī puellaeque magnōs equōs",
+
+            pattern: "Transitive",
+
+            translations: [
+                "the big boys and girls preserve the big horses",
+                "the large boys and girls preserve the large horses",
+                "the big boys and the girls preserve the big horses",
+                "the large boys and the girls preserve the large horses",
+                "the big boys and girls protect the big horses",
+                "the large boys and girls protect the large horses"
+            ],
+
+            segmentation: {
+                correctAfter: []
+            }
+        },
+
+        {
+            sentence:
+                "certē matrēs eōs amant et vocant nātōs parvōs patrēs",
+
+            pattern: "Transitive",
+
+            translations: [
+                "certainly the mothers love them and the fathers call the small sons",
+                "certainly the mothers love them and the fathers call the little sons",
+                "surely the mothers love them and the fathers call the small sons",
+                "surely the mothers love them and the fathers call the little sons"
+            ],
+
+            segmentation: {
+                correctAfter: [3]
+            }
+        },
+
+        {
+            sentence:
+                "miserī virī agrum parant et bonus agrum servat",
+
+            pattern: "Transitive",
+
+            translations: [
+                "the miserable men prepare the field and the good man preserves the field",
+                "the unhappy men prepare the field and the good man preserves the field",
+                "the wretched men prepare the field and the good man preserves the field",
+                "the miserable men prepare the field and the good man protects the field",
+                "the unhappy men prepare the field and the good man protects the field"
+            ],
+
+            segmentation: {
+                correctAfter: [3]
+            }
+        },
+
+        {
+            sentence:
+                "superōs tunc dominī amant atque vocant",
+
+            pattern: "Transitive",
+
+            translations: [
+                "then the masters love and call the gods",
+                "then the lords love and call the gods",
+                "the masters then love and call the gods",
+                "the lords then love and call the gods"
+            ],
+
+            segmentation: {
+                correctAfter: []
+            }
+        }
+
+    ];
+
+
+    /* ========================================================
+       NORMALIZE TEXT
+       ======================================================== */
+
+    function normalizePtText(text) {
+
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[.,!?;:'"]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+
+    /* ========================================================
+       TRANSLATION CHECKING
+       ======================================================== */
+
+    function ptTranslationIsCorrect(studentAnswer, acceptedAnswers) {
+
+        const normalizedStudent =
+            normalizePtText(studentAnswer);
+
+        return acceptedAnswers.some(function (answer) {
+
+            return normalizedStudent ===
+                normalizePtText(answer);
+
+        });
+    }
+
+
+    /* ========================================================
+       ARRAY COMPARISON
+       ======================================================== */
+
+    function ptArraysEqual(a, b) {
+
+        if (a.length !== b.length) {
+            return false;
+        }
+
+        const sortedA = a.slice().sort(function (x, y) {
+            return x - y;
+        });
+
+        const sortedB = b.slice().sort(function (x, y) {
+            return x - y;
+        });
+
+        return sortedA.every(function (value, index) {
+            return value === sortedB[index];
+        });
+    }
+
+
+    /* ========================================================
+       BUILD SEGMENTATION INTERFACE
+       ======================================================== */
+
+    function buildPtSegmentation(question, index) {
+
+        const words =
+            question.sentence.split(" ");
+
+        let html = `
+            <div class="pt-section">
+
+                <span class="pt-label">
+                    Segment the sentence:
+                </span>
+
+                <p class="pt-segment-instructions">
+                    Click between words to mark a sentence division.
+                </p>
+
+                <div class="pt-segment-box">
+        `;
+
+
+        words.forEach(function (word, wordIndex) {
+
+            html += `
+                <span class="pt-word">${word}</span>
+            `;
+
+
+            if (wordIndex < words.length - 1) {
+
+                html += `
+                    <button
+                        type="button"
+                        class="pt-divider"
+                        data-question="${index}"
+                        data-after="${wordIndex}"
+                        aria-pressed="false"
+                        aria-label="Add division after ${word}">
+                    </button>
+                `;
+
+            }
+
+        });
+
+
+        html += `
+                </div>
+            </div>
+        `;
+
+
+        return html;
+    }
+
+
+    /* ========================================================
+       BUILD QUIZ
+       ======================================================== */
+
+    function buildPtQuiz() {
+
+        const quiz =
+            document.getElementById("pt-quiz");
+
+        quiz.innerHTML = "";
+
+
+        ptQuestions.forEach(function (question, index) {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "pt-question";
+
+
+            let segmentationHTML = "";
+
+            if (question.segmentation !== null) {
+
+                segmentationHTML =
+                    buildPtSegmentation(
+                        question,
+                        index
+                    );
+
+            }
+
+
+            card.innerHTML = `
+
+                <div class="pt-sentence">
+                    ${index + 1}. ${question.sentence}
+                </div>
+
+
+                <div class="pt-section">
+
+                    <span class="pt-label">
+                        Pattern:
+                    </span>
+
+                    <div class="pt-options">
+
+                        <button
+                            type="button"
+                            class="pt-choice"
+                            data-question="${index}"
+                            data-category="pattern"
+                            data-value="Transitive"
+                            aria-pressed="false">
+                            Transitive
+                        </button>
+
+                        <button
+                            type="button"
+                            class="pt-choice"
+                            data-question="${index}"
+                            data-category="pattern"
+                            data-value="Intransitive"
+                            aria-pressed="false">
+                            Intransitive
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                ${segmentationHTML}
+
+
+                <div class="pt-section">
+
+                    <label
+                        class="pt-label"
+                        for="pt-translation-${index}">
+                        Translate:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pt-translation-${index}"
+                        class="pt-translation"
+                        autocomplete="off"
+                        placeholder="Type the English translation">
+
+                </div>
+
+
+                <div
+                    id="pt-feedback-${index}"
+                    class="pt-feedback"
+                    aria-live="polite">
+                </div>
+
+            `;
+
+
+            quiz.appendChild(card);
+        });
+
+
+        /* ----------------------------------------------------
+           PATTERN BUTTONS
+           ---------------------------------------------------- */
+
+        quiz.querySelectorAll(".pt-choice")
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const questionIndex =
+                            button.dataset.question;
+
+                        const category =
+                            button.dataset.category;
+
+
+                        const sameGroup =
+                            quiz.querySelectorAll(
+                                '.pt-choice' +
+                                '[data-question="' +
+                                questionIndex +
+                                '"]' +
+                                '[data-category="' +
+                                category +
+                                '"]'
+                            );
+
+
+                        sameGroup.forEach(
+                            function (otherButton) {
+
+                                otherButton.classList.remove(
+                                    "pt-selected"
+                                );
+
+                                otherButton.setAttribute(
+                                    "aria-pressed",
+                                    "false"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "pt-selected"
+                        );
+
+                        button.setAttribute(
+                            "aria-pressed",
+                            "true"
+                        );
+
+
+                        document.getElementById(
+                            "pt-feedback-" +
+                            questionIndex
+                        ).innerHTML = "";
+
+                    }
+                );
+
+            });
+
+
+        /* ----------------------------------------------------
+           SEGMENTATION BUTTONS
+           ---------------------------------------------------- */
+
+        quiz.querySelectorAll(".pt-divider")
+            .forEach(function (divider) {
+
+                divider.addEventListener(
+                    "click",
+                    function () {
+
+                        const selected =
+                            divider.classList.toggle(
+                                "pt-divider-selected"
+                            );
+
+                        divider.setAttribute(
+                            "aria-pressed",
+                            selected ? "true" : "false"
+                        );
+
+
+                        document.getElementById(
+                            "pt-feedback-" +
+                            divider.dataset.question
+                        ).innerHTML = "";
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* ========================================================
+       GET STUDENT SEGMENTATION
+       ======================================================== */
+
+    function getPtSegmentation(index) {
+
+        const selected =
+            document.querySelectorAll(
+                '.pt-divider.pt-divider-selected' +
+                '[data-question="' +
+                index +
+                '"]'
+            );
+
+
+        return Array.from(selected).map(
+            function (divider) {
+
+                return Number(
+                    divider.dataset.after
+                );
+
+            }
+        );
+
+    }
+
+
+    /* ========================================================
+       DISPLAY CORRECT SEGMENTATION
+       ======================================================== */
+
+    function formatPtSegmentation(question) {
+
+        const words =
+            question.sentence.split(" ");
+
+        const correct =
+            question.segmentation.correctAfter;
+
+        let output = "";
+
+
+        words.forEach(function (word, index) {
+
+            output += word;
+
+            if (
+                correct.indexOf(index) !== -1
+            ) {
+
+                output += " |";
+
+            }
+
+            if (index < words.length - 1) {
+                output += " ";
+            }
+
+        });
+
+
+        if (correct.length === 0) {
+
+            output +=
+                " (no internal division needed)";
+
+        }
+
+
+        return output;
+    }
+
+
+    /* ========================================================
+       CHECK ANSWERS
+       ======================================================== */
+
+    window.checkPtQuiz = function () {
+
+        let score = 0;
+
+        let possiblePoints = 0;
+
+        let patternPoints = 0;
+
+        let translationPoints = 0;
+
+        let segmentationPoints = 0;
+
+
+        ptQuestions.forEach(
+            function (question, index) {
+
+
+                const selectedPattern =
+                    document.querySelector(
+                        '.pt-choice.pt-selected' +
+                        '[data-question="' +
+                        index +
+                        '"]' +
+                        '[data-category="pattern"]'
+                    );
+
+
+                const translationInput =
+                    document.getElementById(
+                        "pt-translation-" +
+                        index
+                    );
+
+
+                const patternCorrect =
+                    selectedPattern &&
+                    selectedPattern.dataset.value ===
+                        question.pattern;
+
+
+                const translationCorrect =
+                    ptTranslationIsCorrect(
+                        translationInput.value,
+                        question.translations
+                    );
+
+
+                possiblePoints += 2;
+
+
+                if (patternCorrect) {
+
+                    score += 1;
+                    patternPoints += 1;
+
+                }
+
+
+                if (translationCorrect) {
+
+                    score += 1;
+                    translationPoints += 1;
+
+                }
+
+
+                let segmentationCorrect = null;
+
+
+                if (question.segmentation !== null) {
+
+                    possiblePoints += 1;
+
+
+                    const studentSegmentation =
+                        getPtSegmentation(index);
+
+
+                    segmentationCorrect =
+                        ptArraysEqual(
+                            studentSegmentation,
+                            question.segmentation.correctAfter
+                        );
+
+
+                    if (segmentationCorrect) {
+
+                        score += 1;
+                        segmentationPoints += 1;
+
+                    }
+
+                }
+
+
+                /* --------------------------------------------
+                   FEEDBACK
+                   -------------------------------------------- */
+
+                const feedback =
+                    document.getElementById(
+                        "pt-feedback-" +
+                        index
+                    );
+
+
+                const feedbackParts = [];
+
+
+                /* PATTERN */
+
+                if (!selectedPattern) {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-bad">' +
+                        'Pattern: select an answer. ' +
+                        'Correct answer: ' +
+                        question.pattern +
+                        '.</div>'
+                    );
+
+                } else if (patternCorrect) {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-good">' +
+                        '✓ Pattern: ' +
+                        question.pattern +
+                        '.</div>'
+                    );
+
+                } else {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-bad">' +
+                        '✗ Pattern: ' +
+                        question.pattern +
+                        '.</div>'
+                    );
+
+                }
+
+
+                /* SEGMENTATION */
+
+                if (question.segmentation !== null) {
+
+                    if (segmentationCorrect) {
+
+                        feedbackParts.push(
+                            '<div class="pt-feedback-line pt-feedback-good">' +
+                            '✓ Segmentation: correct.' +
+                            '</div>'
+                        );
+
+                    } else {
+
+                        feedbackParts.push(
+                            '<div class="pt-feedback-line pt-feedback-bad">' +
+                            '✗ Segmentation: ' +
+                            formatPtSegmentation(question) +
+                            '</div>'
+                        );
+
+                    }
+
+                }
+
+
+                /* TRANSLATION */
+
+                if (!translationInput.value.trim()) {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-bad">' +
+                        'Translation: enter an answer. ' +
+                        'One correct translation is "' +
+                        question.translations[0] +
+                        '."</div>'
+                    );
+
+                } else if (translationCorrect) {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-good">' +
+                        '✓ Translation: correct.' +
+                        '</div>'
+                    );
+
+                } else {
+
+                    feedbackParts.push(
+                        '<div class="pt-feedback-line pt-feedback-bad">' +
+                        '✗ Translation: one correct answer is "' +
+                        question.translations[0] +
+                        '."</div>'
+                    );
+
+                }
+
+
+                feedback.className =
+                    "pt-feedback";
+
+                feedback.innerHTML =
+                    feedbackParts.join("");
+
+            }
+        );
+
+
+        /* ====================================================
+           SCORE
+           ==================================================== */
+
+        const scoreBox =
+            document.getElementById(
+                "pt-score"
+            );
+
+
+        scoreBox.innerHTML =
+            "Score: " +
+            score +
+            " / " +
+            possiblePoints +
+
+            '<div class="pt-score-detail">' +
+            'Pattern: ' +
+            patternPoints +
+            ' / 12' +
+            '<br>' +
+            'Translation: ' +
+            translationPoints +
+            ' / 12' +
+            '<br>' +
+            'Segmentation: ' +
+            segmentationPoints +
+            ' / 5' +
+            '</div>';
+
+    };
+
+
+    /* ========================================================
+       RESET QUIZ
+       ======================================================== */
+
+    window.resetPtQuiz = function () {
+
+        buildPtQuiz();
+
+        document.getElementById(
+            "pt-score"
+        ).innerHTML = "";
+
+    };
+
+
+    /* ========================================================
+       INITIALIZE
+       ======================================================== */
+
+    buildPtQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 3 Vocabulary
 
