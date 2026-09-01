@@ -908,6 +908,318 @@ buildTransQuiz();
 > ### Chapter 2 Vocabulary
 {: .block-danger }
 
+<div class="vocab-block">
+
+<style>
+.vocab-block {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #dc3545;
+    border-radius: 10px;
+    background: #f8d7da;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.vocab-block * {
+    box-sizing: border-box;
+}
+
+.vocab-section {
+    margin: 0 0 24px;
+}
+
+.vocab-section:last-child {
+    margin-bottom: 0;
+}
+
+.vocab-heading {
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.vocab-table th,
+.vocab-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: left;
+    vertical-align: top;
+}
+
+.vocab-table th {
+    background: #f3f3f3;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.vocab-table tr:last-child td {
+    border-bottom: none;
+}
+
+.vocab-latin {
+    width: 48%;
+    font-weight: bold;
+}
+
+.vocab-english {
+    width: 52%;
+}
+
+.vocab-note {
+    font-weight: normal;
+    color: #555;
+}
+
+@media (max-width: 500px) {
+    .vocab-block {
+        padding: 15px;
+    }
+
+    .vocab-table th,
+    .vocab-table td {
+        padding: 9px 10px;
+    }
+
+    .vocab-latin {
+        width: 52%;
+    }
+
+    .vocab-english {
+        width: 48%;
+    }
+}
+</style>
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Nouns
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    pater, patris
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">father</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    vir, virī
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">man, husband</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    homō, hominis
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">human, man</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    māter, mātris
+                    <span class="vocab-note">(f.)</span>
+                </td>
+                <td class="vocab-english">mother</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    mēns, mentis
+                    <span class="vocab-note">(f.)</span>
+                </td>
+                <td class="vocab-english">mind</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    parēns, parentis
+                    <span class="vocab-note">(m./f.)</span>
+                </td>
+                <td class="vocab-english">parent</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    puer, puerī
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">boy</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    gēns, gentis
+                    <span class="vocab-note">(f.)</span>
+                </td>
+                <td class="vocab-english">family, tribe, race, nation</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    pēs, pedis
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">foot</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    oculus, oculī
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">eye</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    nātus, nātī
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">son</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    coniunx, coniugis
+                    <span class="vocab-note">(m./f.)</span>
+                </td>
+                <td class="vocab-english">spouse, husband, wife</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    rēx, rēgis
+                    <span class="vocab-note">(m.)</span>
+                </td>
+                <td class="vocab-english">king</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Verbs
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">amat / amant</td>
+                <td class="vocab-english">
+                    he/she/it loves; they love
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">videt / vident</td>
+                <td class="vocab-english">
+                    he/she/it sees; they see
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">habet / habent</td>
+                <td class="vocab-english">
+                    he/she/it has, holds; they have, hold
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">vocat / vocant</td>
+                <td class="vocab-english">
+                    he/she/it calls; they call
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">movet / movent</td>
+                <td class="vocab-english">
+                    he/she/it moves; they move
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Special Words
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">is / ea</td>
+                <td class="vocab-english">he / she</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">eum / eam</td>
+                <td class="vocab-english">him / her</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">nōn</td>
+                <td class="vocab-english">not</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</div>
+
 > **Nouns**  
 >
 >| :---: | :---: |
@@ -948,5 +1260,5 @@ buildTransQuiz();
 >| nōn | not |
 {: .block-danger }
 
->\*Note: All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
+>**Note:** All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
 {: .block-tip }
