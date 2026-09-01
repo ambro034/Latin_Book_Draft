@@ -169,87 +169,1296 @@ Pattern Recognition
 > ### Chapter 7 Exercises
 {: .block-warning }
 
-A) pronoun or adjective? Identify the underlined word as a pronoun or adjective. If it is an adjective, write the noun it modifies.
+<div class="pa-quiz-container">
 
-(circle one)
+<style>
+/* ============================================================
+   PRONOUN OR ADJECTIVE EXERCISE
+   Prefix: pa-
+   ============================================================ */
 
-1\. misera puella hanc silvam servābat pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-2\. illa beneficia sunt bona pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-quiz-container * { box-sizing: border-box; }
 
-3\. in hōc fortūnas vīdimus pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-4\. haec verba scripsīmus pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
 
-5\. hoc scribēbant pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-sentence {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-6\. ad illum poētam ambulāmus pronouns / adjective \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-target {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
 
-B: Translate the sentences.
+.pa-section {
+    margin: 14px 0;
+}
 
-1\. misera puella hanc silvam servābat \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
 
-2\. illa beneficia sunt bona \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-3\. in hōc fortūnas vīdimus \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
 
-4\. haec verba scripsīmus \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-choice:hover { border-color: #4a90e2; }
 
-5\. hoc scribēbant \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-choice.pa-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
 
-6\. ad illum poētam ambulāmus \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.pa-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
 
-C: Fill in the blank to match the English translation.
+.pa-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
 
-1\. her story: e\_\_\_\_\_\_\_\_ fabula 2. for him: h\_\_\_\_\_\_\_\_
+.pa-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
 
-3\. about those names: dē ill\_\_\_\_\_\_\_\_ nominibus 4. toward it: ad ill\_\_\_\_\_\_\_\_\_\_
+.pa-good { color: #0b7a0b; }
+.pa-bad { color: #b00020; }
 
-5\. she sees: e\_\_\_\_\_\_\_\_ videt 6. they left: ist\_\_\_\_\_\_\_\_ relīquērunt
+.pa-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
 
-7\. I hear her: audiō e\_\_\_\_\_\_\_\_\_\_ 8. about his island: dē e\_\_\_\_\_\_\_\_\_ insulā
+.pa-control-button:hover { background: #f3f3f3; }
 
-9\. a gift for them ist\_\_\_\_\_\_\_\_\_\_ donum 10. their gifts ist\_\_\_\_\_\_\_\_\_\_ dona  
+.pa-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
 
-##### Chapter 7 Translations
-  
-Give the person, number, and tense of each verb. Identify the segment pattern, then translate. The second sentence has similar vocabulary and the same pattern. Translate the sentence into Latin (pay attention to your choice of is, hic, ille, or iste).
+@media (max-width: 500px) {
+    .pa-quiz-container { padding: 15px; }
+    .pa-question { padding: 15px; }
+    .pa-choice { flex: 1 1 120px; }
+}
+</style>
 
-1.  deae eius regnī fortūnam servāvēre, sed ubi bene regēbāmus?  
-      
-    Where were we ruling the habits of that kingdom?
-2.  sub montibus puellae mentem aquae iuvant sed ea in terrām ambulābat  
-      
-    Friendship was helping the mind of this girl, for she walked away from the wars.
-3.  verba carminis legēbāmus atque illīs hominibus beneficium nunc damus  
-      
-    Either they were reading these words or they were giving those kindnesses.
-4.  illae matrēs nōmina hōrum puerōrum vocāvērunt  
-      
-    The gods called the name of this boy.
-5.  fata\* haec verba canēbant, sed nōn hunc virum sub terram movēbant  
-    \*note: fatum, fati (n): can mean “fate,” as in destiny, or in the plural (as here) it can refer to “the fates,” who controlled everyone’s destiny  
-      
-    The poems of the goddesses did not move those women (use a demonstrative) out of the bounadaries of the land.
-6.  illius fortūna erat misera nam istī equōs ad insulās nōn egērunt  
-      
-    His sister was noble and she drove those horses from the trees.  
-    
-7.  multa carmina de magnō bellō cecinērunt nec iuvenēs eās ibi vidērunt  
-      
-    That man (use a demonstrative) heard words about their devotion.
-8.  fēminae beneficia deae nōn dedīmus sed istārum terrārum amicitiam multī vīdēre  
-    \*note: the first person plural can be named as a subject (e.g., “we the people … do ordain”)  
-      
-    The gods gave the name of the island, but the good women prepared the fields.  
-    
-9.  illud nōmen ē gentis finibus iacēbat nam virī fēminaeque in hīs terrīs nōn ambulāvērunt  
-      
-    They sing about her character, for the poets write about her in those (far away) shores.  
-    
-10.  deōs deāsque iuvāmus et eōrum mōrēs semper servāmus  
-       
-     We aid the sons and daughters and drive them to good habits.  
+<p class="pa-instructions">
+<strong>A:</strong> <strong>Pronoun or adjective?</strong> Identify the underlined word as a
+<strong>pronoun</strong> or <strong>adjective</strong>. If it is an adjective, write the
+<strong>noun it modifies</strong>.
+</p>
+
+<div id="pa-quiz"></div>
+
+<button type="button" class="pa-control-button" onclick="checkPaQuiz()">Check Answers</button>
+<button type="button" class="pa-control-button" onclick="resetPaQuiz()">Reset</button>
+
+<div id="pa-score" class="pa-score"></div>
+
+<script>
+(function(){
+
+const questions = [
+ {
+  sentence:'misera puella <span class="pa-target">hanc</span> silvam servābat',
+  type:"Adjective",
+  noun:"silvam"
+ },
+ {
+  sentence:'<span class="pa-target">illa</span> beneficia sunt bona',
+  type:"Adjective",
+  noun:"beneficia"
+ },
+ {
+  sentence:'in <span class="pa-target">hōc</span> fortūnas vīdimus',
+  type:"Pronoun",
+  noun:""
+ },
+ {
+  sentence:'<span class="pa-target">haec</span> verba scripsīmus',
+  type:"Adjective",
+  noun:"verba"
+ },
+ {
+  sentence:'<span class="pa-target">hoc</span> scribēbant',
+  type:"Pronoun",
+  noun:""
+ },
+ {
+  sentence:'ad <span class="pa-target">illum</span> poētam ambulāmus',
+  type:"Adjective",
+  noun:"poētam"
+ }
+];
+
+function norm(text){
+ return text.toLowerCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g,"")
+   .replace(/[.,!?;:'"]/g,"")
+   .replace(/\s+/g," ")
+   .trim();
+}
+
+function build(){
+ const quiz = document.getElementById("pa-quiz");
+ quiz.innerHTML = "";
+
+ questions.forEach((q,i)=>{
+  const card = document.createElement("div");
+  card.className = "pa-question";
+
+  card.innerHTML = `
+   <div class="pa-sentence">${i+1}. ${q.sentence}</div>
+
+   <div class="pa-section">
+    <span class="pa-label">The underlined word is a:</span>
+    <div class="pa-options">
+     <button type="button" class="pa-choice"
+      data-q="${i}" data-value="Pronoun">Pronoun</button>
+
+     <button type="button" class="pa-choice"
+      data-q="${i}" data-value="Adjective">Adjective</button>
+    </div>
+   </div>
+
+   <div class="pa-section">
+    <label class="pa-label" for="pa-noun-${i}">
+     If adjective, what noun does it modify?
+    </label>
+    <input type="text" id="pa-noun-${i}" class="pa-input"
+     autocomplete="off" placeholder="Type the noun">
+   </div>
+
+   <div id="pa-feedback-${i}" class="pa-feedback" aria-live="polite"></div>
+  `;
+
+  quiz.appendChild(card);
+ });
+
+ quiz.querySelectorAll(".pa-choice").forEach(button=>{
+  button.addEventListener("click",()=>{
+   quiz.querySelectorAll(`.pa-choice[data-q="${button.dataset.q}"]`)
+    .forEach(other=>other.classList.remove("pa-selected"));
+
+   button.classList.add("pa-selected");
+  });
+ });
+}
+
+window.checkPaQuiz = function(){
+ let score = 0;
+ let possible = 0;
+
+ questions.forEach((q,i)=>{
+  const selected = document.querySelector(
+   `.pa-choice.pa-selected[data-q="${i}"]`
+  );
+
+  const feedback = [];
+  possible++;
+
+  if(selected && selected.dataset.value === q.type){
+   score++;
+   feedback.push(`<div class="pa-good">✓ ${q.type} is correct.</div>`);
+  } else {
+   feedback.push(`<div class="pa-bad">✗ The word is a ${q.type.toLowerCase()}.</div>`);
+  }
+
+  if(q.type === "Adjective"){
+   possible++;
+
+   const noun = document.getElementById(`pa-noun-${i}`).value;
+
+   if(norm(noun) === norm(q.noun)){
+    score++;
+    feedback.push(`<div class="pa-good">✓ It modifies ${q.noun}.</div>`);
+   } else {
+    feedback.push(`<div class="pa-bad">✗ It modifies ${q.noun}.</div>`);
+   }
+  }
+
+  document.getElementById(`pa-feedback-${i}`).innerHTML =
+   feedback.join("");
+ });
+
+ document.getElementById("pa-score").textContent =
+  `Score: ${score} / ${possible}`;
+};
+
+window.resetPaQuiz = function(){
+ build();
+ document.getElementById("pa-score").textContent = "";
+};
+
+build();
+
+})();
+</script>
+
+</div>
+
+<div class="dt-quiz-container">
+
+<style>
+/* ============================================================
+   DEMONSTRATIVE TRANSLATION EXERCISE
+   Prefix: dt-
+   ============================================================ */
+
+.dt-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.dt-quiz-container * { box-sizing: border-box; }
+
+.dt-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.dt-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.dt-sentence {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.dt-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.dt-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.dt-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.dt-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.dt-correct { color: #0b7a0b; }
+.dt-incorrect { color: #b00020; }
+
+.dt-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.dt-control-button:hover { background: #f3f3f3; }
+
+.dt-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media(max-width:500px){
+ .dt-quiz-container { padding:15px; }
+ .dt-question { padding:15px; }
+}
+</style>
+
+<p class="dt-instructions">
+<strong>B:</strong> Translate each sentence into <strong>English</strong>. Pay particular
+attention to whether the demonstrative is functioning as a <strong>pronoun</strong> or
+an <strong>adjective</strong>.
+</p>
+
+<div id="dt-quiz"></div>
+
+<button type="button" class="dt-control-button" onclick="checkDtQuiz()">Check Answers</button>
+<button type="button" class="dt-control-button" onclick="resetDtQuiz()">Reset</button>
+
+<div id="dt-score" class="dt-score"></div>
+
+<script>
+(function(){
+
+const questions = [
+ {
+  latin:"misera puella hanc silvam servābat",
+  answers:[
+   "the miserable girl was preserving this forest",
+   "the miserable girl was protecting this forest",
+   "the unhappy girl was protecting this forest",
+   "the unhappy girl was preserving this forest"
+  ],
+  display:"The miserable girl was protecting this forest."
+ },
+ {
+  latin:"illa beneficia sunt bona",
+  answers:[
+   "those benefits are good",
+   "those kindnesses are good",
+   "those favors are good"
+  ],
+  display:"Those benefits are good."
+ },
+ {
+  latin:"in hōc fortūnas vīdimus",
+  answers:[
+   "in this we saw fortunes",
+   "in this we saw the fortunes",
+   "in this thing we saw fortunes",
+   "in this thing we saw the fortunes"
+  ],
+  display:"In this, we saw the fortunes."
+ },
+ {
+  latin:"haec verba scripsīmus",
+  answers:[
+   "we wrote these words",
+   "we have written these words",
+   "these words we wrote"
+  ],
+  display:"We wrote these words."
+ },
+ {
+  latin:"hoc scribēbant",
+  answers:[
+   "they were writing this",
+   "they wrote this",
+   "they were writing this thing"
+  ],
+  display:"They were writing this."
+ },
+ {
+  latin:"ad illum poētam ambulāmus",
+  answers:[
+   "we walk toward that poet",
+   "we are walking toward that poet",
+   "we walk to that poet",
+   "we are walking to that poet"
+  ],
+  display:"We walk toward that poet."
+ }
+];
+
+function norm(text){
+ return text.toLowerCase()
+  .replace(/[.,!?;:'"]/g,"")
+  .replace(/\s+/g," ")
+  .trim();
+}
+
+function build(){
+ const quiz=document.getElementById("dt-quiz");
+ quiz.innerHTML="";
+
+ questions.forEach((q,i)=>{
+  const card=document.createElement("div");
+  card.className="dt-question";
+
+  card.innerHTML=`
+   <div class="dt-sentence">${i+1}. ${q.latin}</div>
+
+   <label class="dt-label" for="dt-answer-${i}">
+    Translate:
+   </label>
+
+   <input type="text" id="dt-answer-${i}" class="dt-input"
+    autocomplete="off" placeholder="Type the English translation">
+
+   <div id="dt-feedback-${i}" class="dt-feedback" aria-live="polite"></div>
+  `;
+
+  quiz.appendChild(card);
+ });
+}
+
+window.checkDtQuiz=function(){
+ let score=0;
+
+ questions.forEach((q,i)=>{
+  const student=document.getElementById(`dt-answer-${i}`).value;
+  const correct=q.answers.some(a=>norm(a)===norm(student));
+  const feedback=document.getElementById(`dt-feedback-${i}`);
+
+  if(correct){
+   score++;
+   feedback.className="dt-feedback dt-correct";
+   feedback.textContent="✓ Correct.";
+  } else {
+   feedback.className="dt-feedback dt-incorrect";
+   feedback.innerHTML=`✗ One correct translation is <strong>${q.display}</strong>`;
+  }
+ });
+
+ document.getElementById("dt-score").textContent=
+  `Score: ${score} / ${questions.length}`;
+};
+
+window.resetDtQuiz=function(){
+ build();
+ document.getElementById("dt-score").textContent="";
+};
+
+build();
+
+})();
+</script>
+
+</div>
+
+<div class="df-quiz-container">
+
+<style>
+/* ============================================================
+   DEMONSTRATIVE FORMS EXERCISE
+   Prefix: df-
+   ============================================================ */
+
+.df-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.df-quiz-container * { box-sizing: border-box; }
+
+.df-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.df-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.df-prompt {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.df-context {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.df-label {
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.df-input {
+    width:100%;
+    padding:10px;
+    border:1px solid #999;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+}
+
+.df-input:focus {
+    outline:2px solid #4a90e2;
+    border-color:#4a90e2;
+}
+
+.df-feedback {
+    margin-top:14px;
+    line-height:1.55;
+    font-weight:bold;
+    min-height:22px;
+}
+
+.df-correct { color:#0b7a0b; }
+.df-incorrect { color:#b00020; }
+
+.df-control-button {
+    margin-top:20px;
+    margin-right:10px;
+    padding:10px 18px;
+    font-size:1em;
+    cursor:pointer;
+    border:1px solid #777;
+    border-radius:5px;
+    background:white;
+}
+
+.df-control-button:hover { background:#f3f3f3; }
+
+.df-score {
+    margin-top:20px;
+    font-size:1.1em;
+    font-weight:bold;
+}
+
+@media(max-width:500px){
+ .df-quiz-container{padding:15px;}
+ .df-question{padding:15px;}
+}
+</style>
+
+<p class="df-instructions">
+<strong>C:</strong> Fill in the blank with the correct <strong>Latin demonstrative form</strong>
+to match the English translation. Type the complete missing word.
+</p>
+
+<div id="df-quiz"></div>
+
+<button type="button" class="df-control-button" onclick="checkDfQuiz()">Check Answers</button>
+<button type="button" class="df-control-button" onclick="resetDfQuiz()">Reset</button>
+
+<div id="df-score" class="df-score"></div>
+
+<script>
+(function(){
+
+const questions=[
+ {prompt:"her story", context:"_____ fabula", answer:"eius"},
+ {prompt:"for him", context:"_____", answer:"huic"},
+ {prompt:"about those names", context:"dē _____ nominibus", answer:"illīs"},
+ {prompt:"toward it", context:"ad _____", answer:"illud"},
+ {prompt:"she sees", context:"_____ videt", answer:"ea"},
+ {prompt:"they left", context:"_____ relīquērunt", answer:"istī"},
+ {prompt:"I hear her", context:"audiō _____", answer:"eam"},
+ {prompt:"about his island", context:"dē _____ insulā", answer:"eius"},
+ {prompt:"a gift for them", context:"_____ donum", answer:"istīs"},
+ {prompt:"their gifts", context:"_____ dona", answer:"istōrum"}
+];
+
+function norm(text){
+ return text.toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g,"")
+  .replace(/[.,!?;:'"]/g,"")
+  .trim();
+}
+
+function build(){
+ const quiz=document.getElementById("df-quiz");
+ quiz.innerHTML="";
+
+ questions.forEach((q,i)=>{
+  const card=document.createElement("div");
+  card.className="df-question";
+
+  card.innerHTML=`
+   <div class="df-prompt">${i+1}. ${q.prompt}</div>
+   <div class="df-context">${q.context}</div>
+
+   <label class="df-label" for="df-answer-${i}">
+    Missing Latin form:
+   </label>
+
+   <input type="text" id="df-answer-${i}" class="df-input"
+    autocomplete="off" spellcheck="false"
+    placeholder="Type the complete Latin word">
+
+   <div id="df-feedback-${i}" class="df-feedback" aria-live="polite"></div>
+  `;
+
+  quiz.appendChild(card);
+ });
+}
+
+window.checkDfQuiz=function(){
+ let score=0;
+
+ questions.forEach((q,i)=>{
+  const student=document.getElementById(`df-answer-${i}`).value;
+  const feedback=document.getElementById(`df-feedback-${i}`);
+
+  if(norm(student)===norm(q.answer)){
+   score++;
+   feedback.className="df-feedback df-correct";
+   feedback.textContent="✓ Correct.";
+  } else {
+   feedback.className="df-feedback df-incorrect";
+   feedback.innerHTML=`✗ Correct form: <strong>${q.answer}</strong>.`;
+  }
+ });
+
+ document.getElementById("df-score").textContent=
+  `Score: ${score} / ${questions.length}`;
+};
+
+window.resetDfQuiz=function(){
+ build();
+ document.getElementById("df-score").textContent="";
+};
+
+build();
+
+})();
+</script>
+
+</div>
+
+<div class="c7-quiz-container">
+
+<style>
+/* ============================================================
+   CHAPTER 7 TRANSLATIONS
+   Prefix: c7-
+   ============================================================ */
+
+.c7-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.c7-quiz-container * { box-sizing:border-box; }
+
+.c7-instructions {
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.c7-question {
+    margin:20px 0;
+    padding:16px 20px;
+    background:white;
+    border-radius:6px;
+    border:1px solid #e7c000;
+}
+
+.c7-sentence {
+    font-size:1.15em;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.c7-section {
+    margin:16px 0;
+}
+
+.c7-label {
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.c7-verb {
+    padding:12px;
+    margin:12px 0;
+    border:1px solid #ddd;
+    border-radius:6px;
+    background:#fafafa;
+}
+
+.c7-verb-name {
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.c7-options {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:10px;
+}
+
+.c7-choice {
+    padding:9px 14px;
+    border:2px solid #b8b8b8;
+    border-radius:6px;
+    background:white;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor:pointer;
+}
+
+.c7-choice:hover { border-color:#4a90e2; }
+
+.c7-choice.c7-selected {
+    background:#cce5ff;
+    border-color:#4a90e2;
+}
+
+.c7-input {
+    width:100%;
+    padding:10px;
+    border:1px solid #999;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+}
+
+.c7-input:focus {
+    outline:2px solid #4a90e2;
+    border-color:#4a90e2;
+}
+
+.c7-english {
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+.c7-feedback {
+    margin-top:14px;
+    line-height:1.55;
+    font-weight:bold;
+}
+
+.c7-good { color:#0b7a0b; }
+.c7-bad { color:#b00020; }
+
+.c7-control-button {
+    margin-top:20px;
+    margin-right:10px;
+    padding:10px 18px;
+    font-size:1em;
+    cursor:pointer;
+    border:1px solid #777;
+    border-radius:5px;
+    background:white;
+}
+
+.c7-control-button:hover { background:#f3f3f3; }
+
+.c7-score {
+    margin-top:20px;
+    font-size:1.1em;
+    font-weight:bold;
+}
+
+@media(max-width:500px){
+ .c7-quiz-container{padding:15px;}
+ .c7-question{padding:15px;}
+ .c7-choice{flex:1 1 110px;}
+}
+</style>
+
+<p class="c7-instructions">
+<strong>Chapter 7 Translations:</strong> Give the <strong>person</strong>,
+<strong>number</strong>, and <strong>tense</strong> of each verb. Identify the
+<strong>segment pattern</strong>, then translate.
+
+The second sentence has similar vocabulary and the same general pattern.
+Translate it into <strong>Latin</strong>, paying attention to your choice of
+<em>is</em>, <em>hic</em>, <em>ille</em>, or <em>iste</em>.
+</p>
+
+<div id="c7-quiz"></div>
+
+<button type="button" class="c7-control-button" onclick="checkC7Quiz()">Check Answers</button>
+<button type="button" class="c7-control-button" onclick="resetC7Quiz()">Reset</button>
+
+<div id="c7-score" class="c7-score"></div>
+
+<script>
+(function(){
+
+const data=[
+
+{
+ latin:"deae eius regnī fortūnam servāvēre, sed ubi bene regēbāmus?",
+ verbs:[
+  {word:"servāvēre",person:"3rd",number:"Plural",tense:"Perfect"},
+  {word:"regēbāmus",person:"1st",number:"Plural",tense:"Imperfect"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "the goddesses preserved the fortune of that kingdom but where were we ruling well",
+  "the goddesses protected the fortune of that kingdom but where were we ruling well"
+ ],
+ prompt:"Where were we ruling the habits of that kingdom?",
+ latinAnswers:[
+  "ubi illius regni mores regebamus",
+  "ubi eius regni mores regebamus"
+ ],
+ display:"ubi illius regnī mōrēs regēbāmus?"
+},
+
+{
+ latin:"sub montibus puellae mentem aquae iuvant sed ea in terrām ambulābat",
+ verbs:[
+  {word:"iuvant",person:"3rd",number:"Plural",tense:"Present"},
+  {word:"ambulābat",person:"3rd",number:"Singular",tense:"Imperfect"}
+ ],
+ patterns:["Transitive","Intransitive"],
+ english:[
+  "the waters under the mountains help the girls mind but she was walking into the land",
+  "under the mountains the waters help the girls mind but she was walking into the land"
+ ],
+ prompt:"Friendship was helping the mind of this girl, for she walked away from the wars.",
+ latinAnswers:[
+  "amicitia huius puellae mentem iuvabat nam ea a bellis ambulabat",
+  "amicitia mentem huius puellae iuvabat nam ea a bellis ambulabat"
+ ],
+ display:"amicitia huius puellae mentem iuvābat, nam ea ā bellīs ambulābat."
+},
+
+{
+ latin:"verba carminis legēbāmus atque illīs hominibus beneficium nunc damus",
+ verbs:[
+  {word:"legēbāmus",person:"1st",number:"Plural",tense:"Imperfect"},
+  {word:"damus",person:"1st",number:"Plural",tense:"Present"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "we were reading the words of the song and now we give a benefit to those people",
+  "we were reading words of the song and now we give a kindness to those people"
+ ],
+ prompt:"Either they were reading these words or they were giving those kindnesses.",
+ latinAnswers:[
+  "aut haec verba legebant aut illa beneficia dabant",
+  "aut haec verba legebant aut illa beneficia dare"
+ ],
+ display:"aut haec verba legēbant aut illa beneficia dabant."
+},
+
+{
+ latin:"illae matrēs nōmina hōrum puerōrum vocāvērunt",
+ verbs:[
+  {word:"vocāvērunt",person:"3rd",number:"Plural",tense:"Perfect"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "those mothers called the names of these boys",
+  "those mothers have called the names of these boys"
+ ],
+ prompt:"The gods called the name of this boy.",
+ latinAnswers:[
+  "dei huius pueri nomen vocaverunt",
+  "huius pueri nomen dei vocaverunt"
+ ],
+ display:"deī huius puerī nōmen vocāvērunt."
+},
+
+{
+ latin:"fata haec verba canēbant sed nōn hunc virum sub terram movēbant",
+ verbs:[
+  {word:"canēbant",person:"3rd",number:"Plural",tense:"Imperfect"},
+  {word:"movēbant",person:"3rd",number:"Plural",tense:"Imperfect"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "the fates were singing these words but they were not moving this man under the earth",
+  "the fates sang these words but they were not moving this man under the earth"
+ ],
+ prompt:"The poems of the goddesses did not move those women out of the boundaries of the land.",
+ latinAnswers:[
+  "carmina dearum illas feminas e finibus terrae non moverunt",
+  "carmina dearum illas feminas ex finibus terrae non moverunt"
+ ],
+ display:"carmina deārum illās fēminās ē finibus terrae nōn mōvērunt."
+},
+
+{
+ latin:"illius fortūna erat misera nam istī equōs ad insulās nōn egērunt",
+ verbs:[
+  {word:"erat",person:"3rd",number:"Singular",tense:"Imperfect"},
+  {word:"egērunt",person:"3rd",number:"Plural",tense:"Perfect"}
+ ],
+ patterns:["Intransitive","Transitive"],
+ english:[
+  "his fortune was miserable for those men did not drive the horses to the islands",
+  "her fortune was miserable for those men did not drive the horses to the islands",
+  "that persons fortune was miserable for those men did not drive the horses to the islands"
+ ],
+ prompt:"His sister was noble and she drove those horses from the trees.",
+ latinAnswers:[
+  "eius soror erat nobilis et ea illos equos ab arboribus egit",
+  "eius soror nobilis erat et ea illos equos ab arboribus egit"
+ ],
+ display:"eius soror erat nōbilis et ea illōs equōs ab arboribus ēgit."
+},
+
+{
+ latin:"multa carmina de magnō bellō cecinērunt nec iuvenēs eās ibi vidērunt",
+ verbs:[
+  {word:"cecinērunt",person:"3rd",number:"Plural",tense:"Perfect"},
+  {word:"vidērunt",person:"3rd",number:"Plural",tense:"Perfect"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "they sang many songs about the great war and the young men did not see them there",
+  "they sang many poems about the great war and the young men did not see them there"
+ ],
+ prompt:"That man heard words about their devotion.",
+ latinAnswers:[
+  "ille vir verba de eorum pietate audivit",
+  "ille vir de eorum pietate verba audivit"
+ ],
+ display:"ille vir verba dē eōrum pietāte audīvit."
+},
+
+{
+ latin:"fēminae beneficia deae nōn dedīmus sed istārum terrārum amicitiam multī vīdēre",
+ verbs:[
+  {word:"dedīmus",person:"1st",number:"Plural",tense:"Perfect"},
+  {word:"vīdēre",person:"3rd",number:"Plural",tense:"Perfect"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "we women did not give benefits to the goddess but many saw the friendship of those lands",
+  "we women did not give kindnesses to the goddess but many saw the friendship of those lands"
+ ],
+ prompt:"The gods gave the name of the island, but the good women prepared the fields.",
+ latinAnswers:[
+  "dei nomen insulae dederunt sed bonae feminae agros paraverunt",
+  "dei insulae nomen dederunt sed bonae feminae agros paraverunt"
+ ],
+ display:"deī nōmen insulae dedērunt, sed bonae fēminae agrōs parāvērunt."
+},
+
+{
+ latin:"illud nōmen ē gentis finibus iacēbat nam virī fēminaeque in hīs terrīs nōn ambulāvērunt",
+ verbs:[
+  {word:"iacēbat",person:"3rd",number:"Singular",tense:"Imperfect"},
+  {word:"ambulāvērunt",person:"3rd",number:"Plural",tense:"Perfect"}
+ ],
+ patterns:["Intransitive"],
+ english:[
+  "that name was lying outside the boundaries of the nation for the men and women did not walk in these lands",
+  "that name lay outside the boundaries of the nation for the men and women did not walk in these lands"
+ ],
+ prompt:"They sing about her character, for the poets write about her in those far away shores.",
+ latinAnswers:[
+  "de eius moribus canunt nam poetae de ea in illis litoribus scribunt",
+  "canunt de eius moribus nam poetae de ea in illis litoribus scribunt"
+ ],
+ display:"dē eius mōribus canunt, nam poetae dē eā in illīs litoribus scribunt."
+},
+
+{
+ latin:"deōs deāsque iuvāmus et eōrum mōrēs semper servāmus",
+ verbs:[
+  {word:"iuvāmus",person:"1st",number:"Plural",tense:"Present"},
+  {word:"servāmus",person:"1st",number:"Plural",tense:"Present"}
+ ],
+ patterns:["Transitive"],
+ english:[
+  "we help the gods and goddesses and always preserve their customs",
+  "we aid the gods and goddesses and always preserve their habits"
+ ],
+ prompt:"We aid the sons and daughters and drive them to good habits.",
+ latinAnswers:[
+  "filios filiasque iuvamus et eos ad bonos mores agimus",
+  "iuvamus filios filiasque et eos ad bonos mores agimus"
+ ],
+ display:"filiōs filiāsque iuvāmus et eōs ad bonōs mōrēs agimus."
+}
+
+];
+
+function norm(text){
+ return text.toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g,"")
+  .replace(/[.,!?;:'"]/g,"")
+  .replace(/\s+/g," ")
+  .trim();
+}
+
+function choiceGroup(q,v,cat,values){
+ return `<div class="c7-options">` +
+ values.map(value=>`
+  <button type="button" class="c7-choice"
+   data-q="${q}" data-v="${v}" data-cat="${cat}"
+   data-value="${value}">${value}</button>
+ `).join("") +
+ `</div>`;
+}
+
+function build(){
+ const quiz=document.getElementById("c7-quiz");
+ quiz.innerHTML="";
+
+ data.forEach((q,i)=>{
+
+  let verbs="";
+
+  q.verbs.forEach((v,j)=>{
+   verbs+=`
+    <div class="c7-verb">
+     <div class="c7-verb-name">Verb: ${v.word}</div>
+
+     <span class="c7-label">Person:</span>
+     ${choiceGroup(i,j,"person",["1st","2nd","3rd"])}
+
+     <span class="c7-label">Number:</span>
+     ${choiceGroup(i,j,"number",["Singular","Plural"])}
+
+     <span class="c7-label">Tense:</span>
+     ${choiceGroup(i,j,"tense",["Present","Imperfect","Perfect"])}
+    </div>
+   `;
+  });
+
+  const card=document.createElement("div");
+  card.className="c7-question";
+
+  card.innerHTML=`
+   <div class="c7-sentence">${i+1}. ${q.latin}</div>
+
+   <div class="c7-section">
+    <span class="c7-label">Identify each verb:</span>
+    ${verbs}
+   </div>
+
+   <div class="c7-section">
+    <span class="c7-label">Segment pattern(s):</span>
+    ${choiceGroup(i,"pattern","pattern",["Transitive","Intransitive"])}
+    <div style="font-size:.92em;">
+     Select both if the sentence contains both types.
+    </div>
+   </div>
+
+   <div class="c7-section">
+    <label class="c7-label" for="c7-eng-${i}">
+     Translate the Latin sentence:
+    </label>
+    <input type="text" id="c7-eng-${i}" class="c7-input"
+     autocomplete="off" placeholder="Type the English translation">
+   </div>
+
+   <div class="c7-english">
+    Translate into Latin: ${q.prompt}
+   </div>
+
+   <div class="c7-section">
+    <input type="text" id="c7-lat-${i}" class="c7-input"
+     autocomplete="off" spellcheck="false"
+     placeholder="Type the Latin translation">
+   </div>
+
+   <div id="c7-feedback-${i}" class="c7-feedback" aria-live="polite"></div>
+  `;
+
+  quiz.appendChild(card);
+ });
+
+ quiz.querySelectorAll(".c7-choice").forEach(button=>{
+  button.addEventListener("click",()=>{
+
+   if(button.dataset.cat==="pattern"){
+    button.classList.toggle("c7-selected");
+    return;
+   }
+
+   quiz.querySelectorAll(
+    `.c7-choice[data-q="${button.dataset.q}"]`+
+    `[data-v="${button.dataset.v}"]`+
+    `[data-cat="${button.dataset.cat}"]`
+   ).forEach(other=>other.classList.remove("c7-selected"));
+
+   button.classList.add("c7-selected");
+  });
+ });
+}
+
+function selected(q,v,cat){
+ const button=document.querySelector(
+  `.c7-choice.c7-selected[data-q="${q}"]`+
+  `[data-v="${v}"][data-cat="${cat}"]`
+ );
+
+ return button ? button.dataset.value : "";
+}
+
+function patterns(q){
+ return Array.from(document.querySelectorAll(
+  `.c7-choice.c7-selected[data-q="${q}"][data-cat="pattern"]`
+ )).map(b=>b.dataset.value).sort();
+}
+
+function arraysEqual(a,b){
+ if(a.length!==b.length) return false;
+ return a.every((x,i)=>x===b[i]);
+}
+
+window.checkC7Quiz=function(){
+
+ let score=0;
+ let possible=0;
+
+ data.forEach((q,i)=>{
+
+  const feedback=[];
+
+  q.verbs.forEach((verb,j)=>{
+
+   ["person","number","tense"].forEach(cat=>{
+    possible++;
+
+    if(selected(i,j,cat)===verb[cat]){
+     score++;
+     feedback.push(
+      `<div class="c7-good">✓ ${verb.word}: ${cat} correct.</div>`
+     );
+    } else {
+     feedback.push(
+      `<div class="c7-bad">✗ ${verb.word}: ${cat} = ${verb[cat]}.</div>`
+     );
+    }
+   });
+
+  });
+
+  possible++;
+
+  const correctPatterns=[...new Set(q.patterns)].sort();
+  const studentPatterns=patterns(i);
+
+  if(arraysEqual(studentPatterns,correctPatterns)){
+   score++;
+   feedback.push(`<div class="c7-good">✓ Segment pattern correct.</div>`);
+  } else {
+   feedback.push(
+    `<div class="c7-bad">✗ Pattern: ${correctPatterns.join(" + ")}.</div>`
+   );
+  }
+
+  possible++;
+
+  const english=document.getElementById(`c7-eng-${i}`).value;
+
+  if(q.english.some(answer=>norm(answer)===norm(english))){
+   score++;
+   feedback.push(`<div class="c7-good">✓ English translation correct.</div>`);
+  } else {
+   feedback.push(
+    `<div class="c7-bad">✗ One translation is: ${q.english[0]}.</div>`
+   );
+  }
+
+  possible++;
+
+  const latin=document.getElementById(`c7-lat-${i}`).value;
+
+  if(q.latinAnswers.some(answer=>norm(answer)===norm(latin))){
+   score++;
+   feedback.push(`<div class="c7-good">✓ Latin translation correct.</div>`);
+  } else {
+   feedback.push(
+    `<div class="c7-bad">✗ One correct version is: ${q.display}</div>`
+   );
+  }
+
+  document.getElementById(`c7-feedback-${i}`).innerHTML=
+   feedback.join("");
+ });
+
+ document.getElementById("c7-score").textContent=
+  `Score: ${score} / ${possible}`;
+};
+
+window.resetC7Quiz=function(){
+ build();
+ document.getElementById("c7-score").textContent="";
+};
+
+build();
+
+})();
+</script>
+
+</div>
      
 ##### Chapter 7 vocabulary
 
