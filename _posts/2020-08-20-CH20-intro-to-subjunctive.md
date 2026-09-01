@@ -200,57 +200,1276 @@ One common translation (but again, translation depends on the pattern) of the pl
 > ### Chapter 20 Exercises
 {: .block-warning }
 
-Chapters 20-22 will have additional exercises but shorter translations. This is to help you get into reading the final passage more quickly.
+<!-- ============================================================
+     EXERCISE A: MOOD + TRANSLATION + MOOD CHANGE
+     Prefix: mood-
+     ============================================================ -->
 
-A) For the following words, identify the mood and translate. Then change the mood of the word (from subjunctive to indicative or indicative to subjunctive). Remember, there is no future subjunctive!
+<div class="mood-quiz-container">
 
-Word Mood/Translation New Mood
+<style>
+.mood-quiz-container,
+.isub-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-1.  vocātī sunt indicative, “they have been called” vocātī sint
-2.  videbar
-3.  regamus
-4.  auditae essent
-5.  cēperant
-6.  vocō
-7.  videamur
-8.  rexissētis
-9.  audirēris
-10.  capit
-11.  vocāverim
-12.  vīsa sunt
-13.  regimus
-14.  auditae sint
-15.  cēpī
+.mood-quiz-container *,
+.isub-quiz-container * {
+    box-sizing: border-box;
+}
 
-B) Identify the independent use of the subjunctive and translate. If more than one use is possible, translate in a way consistent with the use you choose.
+.mood-instructions,
+.isub-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-1.  scribant illās epistulās clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-2.  utinam bonae discipulae mittantur clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  forsitan hās epistulās legam clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  patrēs iuribus pareant clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-5.  iaceamus in illo amoeno litore? clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-    
-6.  amorem magis quam bellum aestimemus clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-7.  litterae hodie sriberentur? clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-8.  omnes puellum salvum fore cogitent clause:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.mood-question,
+.isub-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.mood-word,
+.isub-sentence {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mood-section,
+.isub-section {
+    margin: 14px 0;
+}
+
+.mood-label,
+.isub-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.mood-options,
+.isub-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mood-choice,
+.isub-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.mood-choice:hover,
+.isub-choice:hover {
+    border-color: #4a90e2;
+}
+
+.mood-choice.mood-selected,
+.isub-choice.isub-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.mood-choice:focus-visible,
+.isub-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.mood-input,
+.isub-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.mood-input:focus,
+.isub-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.mood-feedback,
+.isub-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.mood-correct,
+.isub-correct {
+    color: #0b7a0b;
+}
+
+.mood-incorrect,
+.isub-incorrect {
+    color: #b00020;
+}
+
+.mood-note,
+.isub-note {
+    margin-top: 8px;
+    color: #444;
+    font-weight: normal;
+}
+
+.mood-control-button,
+.isub-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.mood-control-button:hover,
+.isub-control-button:hover {
+    background: #f3f3f3;
+}
+
+.mood-score,
+.isub-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .mood-quiz-container,
+    .isub-quiz-container {
+        padding: 15px;
+    }
+
+    .mood-question,
+    .isub-question {
+        padding: 15px;
+    }
+
+    .mood-choice,
+    .isub-choice {
+        flex: 1 1 135px;
+    }
+}
+</style>
+
+
+<p class="mood-instructions">
+<strong>A:</strong> For each form, identify whether it is
+<strong>indicative</strong> or <strong>subjunctive</strong> and translate it.
+Then change the verb to the <strong>opposite mood</strong> while keeping
+its person, number, tense, and voice the same. Remember that Latin has
+<strong>no future subjunctive</strong>. Macrons are optional.
+</p>
+
+<div id="mood-quiz"></div>
+
+<button
+    type="button"
+    class="mood-control-button"
+    onclick="checkMoodQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="mood-control-button"
+    onclick="resetMoodQuiz()">
+    Reset
+</button>
+
+<div id="mood-score" class="mood-score"></div>
+
+
+<script>
+(function(){
+
+const moodQuestions = [
+
+    {
+        word: "vocātī sunt",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "they have been called",
+            "they were called"
+        ],
+        translationDisplay: "they have been called",
+        newForms: ["vocātī sint", "vocati sint"],
+        newDisplay: "vocātī sint",
+        note:
+            "Perfect passive indicative → perfect passive subjunctive."
+    },
+
+    {
+        word: "vidēbar",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "i was being seen",
+            "i was seen",
+            "i used to be seen"
+        ],
+        translationDisplay: "I was being seen",
+        newForms: ["vidērer", "viderer"],
+        newDisplay: "vidērer",
+        note:
+            "Imperfect passive indicative → imperfect passive subjunctive."
+    },
+
+    {
+        word: "regāmus",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "we may rule",
+            "let us rule",
+            "we should rule"
+        ],
+        translationDisplay: "we may rule / let us rule",
+        newForms: ["regimus"],
+        newDisplay: "regimus",
+        note:
+            "Present active subjunctive → present active indicative."
+    },
+
+    {
+        word: "audītae essent",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "they had been heard",
+            "they might have been heard"
+        ],
+        translationDisplay: "they had been heard",
+        newForms: ["audītae erant", "auditae erant"],
+        newDisplay: "audītae erant",
+        note:
+            "Pluperfect passive subjunctive → pluperfect passive indicative."
+    },
+
+    {
+        word: "cēperant",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "they had seized",
+            "they had taken",
+            "they had captured"
+        ],
+        translationDisplay: "they had seized / taken",
+        newForms: ["cēpissent", "cepissent"],
+        newDisplay: "cēpissent",
+        note:
+            "Pluperfect active indicative → pluperfect active subjunctive."
+    },
+
+    {
+        word: "vocō",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "i call",
+            "i am calling"
+        ],
+        translationDisplay: "I call",
+        newForms: ["vocem"],
+        newDisplay: "vocem",
+        note:
+            "Present active indicative → present active subjunctive."
+    },
+
+    {
+        word: "videāmur",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "we may be seen",
+            "we might be seen",
+            "let us be seen"
+        ],
+        translationDisplay: "we may be seen",
+        newForms: ["vidēmur", "videmur"],
+        newDisplay: "vidēmur",
+        note:
+            "Present passive subjunctive → present passive indicative."
+    },
+
+    {
+        word: "rēxissētis",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "you had ruled",
+            "you all had ruled",
+            "yall had ruled"
+        ],
+        translationDisplay: "you (plural) had ruled",
+        newForms: ["rēxistis", "rexistis"],
+        newDisplay: "rēxistis",
+        note:
+            "Pluperfect active subjunctive → perfect active indicative."
+    },
+
+    {
+        word: "audīrēris",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "you might be heard",
+            "you were being heard",
+            "you might have been heard"
+        ],
+        translationDisplay: "you might be heard / were being heard",
+        newForms: ["audiēbāris", "audiebaris"],
+        newDisplay: "audiēbāris",
+        note:
+            "Imperfect passive subjunctive → imperfect passive indicative."
+    },
+
+    {
+        word: "capit",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "he seizes",
+            "she seizes",
+            "it seizes",
+            "he takes",
+            "she takes",
+            "it takes",
+            "he is taking",
+            "she is taking",
+            "it is taking"
+        ],
+        translationDisplay: "he/she/it seizes",
+        newForms: ["capiat"],
+        newDisplay: "capiat",
+        note:
+            "Present active indicative → present active subjunctive."
+    },
+
+    {
+        word: "vocāverim",
+        moods: [
+            "Subjunctive",
+            "Indicative"
+        ],
+        moodDisplay:
+            "Subjunctive (perfect) OR Indicative (future perfect)",
+        translations: [
+            "i may have called",
+            "i might have called",
+            "i will have called"
+        ],
+        translationDisplay:
+            "I may have called / I will have called",
+        newForms: [
+            "vocāvī",
+            "vocavi"
+        ],
+        newDisplay:
+            "vocāvī if analyzed as perfect subjunctive",
+        note:
+            "vocāverim is genuinely ambiguous without context: it can be perfect subjunctive or future-perfect indicative. Because there is no future subjunctive, the regular mood-change exercise works cleanly only if it is analyzed here as perfect subjunctive → perfect indicative vocāvī."
+    },
+
+    {
+        word: "vīsa sunt",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "they have been seen",
+            "they were seen",
+            "the things have been seen",
+            "the things were seen"
+        ],
+        translationDisplay: "they were / have been seen",
+        newForms: ["vīsa sint", "visa sint"],
+        newDisplay: "vīsa sint",
+        note:
+            "Perfect passive indicative → perfect passive subjunctive."
+    },
+
+    {
+        word: "regimus",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "we rule",
+            "we are ruling"
+        ],
+        translationDisplay: "we rule",
+        newForms: ["regāmus", "regamus"],
+        newDisplay: "regāmus",
+        note:
+            "Present active indicative → present active subjunctive."
+    },
+
+    {
+        word: "audītae sint",
+        moods: ["Subjunctive"],
+        moodDisplay: "Subjunctive",
+        translations: [
+            "they may have been heard",
+            "they might have been heard",
+            "they have been heard"
+        ],
+        translationDisplay: "they may have been heard",
+        newForms: ["audītae sunt", "auditae sunt"],
+        newDisplay: "audītae sunt",
+        note:
+            "Perfect passive subjunctive → perfect passive indicative."
+    },
+
+    {
+        word: "cēpī",
+        moods: ["Indicative"],
+        moodDisplay: "Indicative",
+        translations: [
+            "i seized",
+            "i have seized",
+            "i took",
+            "i have taken",
+            "i captured",
+            "i have captured"
+        ],
+        translationDisplay: "I seized / have seized",
+        newForms: ["cēperim", "ceperim"],
+        newDisplay: "cēperim",
+        note:
+            "Perfect active indicative → perfect active subjunctive."
+    }
+
+];
+
+
+const moodState =
+    moodQuestions.map(function(){
+        return null;
+    });
+
+
+function normalizeMood(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildMoodQuiz() {
+
+    const quiz =
+        document.getElementById("mood-quiz");
+
+    quiz.innerHTML = "";
+
+
+    moodQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "mood-question";
+
+
+        card.innerHTML = `
+
+            <div class="mood-word">
+                ${i + 1}. ${q.word}
+            </div>
+
+
+            <div class="mood-section">
+
+                <span class="mood-label">
+                    Mood:
+                </span>
+
+                <div class="mood-options">
+
+                    <button
+                        type="button"
+                        class="mood-choice"
+                        data-q="${i}"
+                        data-value="Indicative">
+                        Indicative
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-choice"
+                        data-q="${i}"
+                        data-value="Subjunctive">
+                        Subjunctive
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <label
+                class="mood-label"
+                for="mood-trans-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="mood-trans-${i}"
+                class="mood-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+
+            <label
+                class="mood-label"
+                for="mood-new-${i}">
+                Change to the opposite mood:
+            </label>
+
+            <input
+                type="text"
+                id="mood-new-${i}"
+                class="mood-input"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Type the new Latin form">
+
+
+            <div
+                id="mood-feedback-${i}"
+                class="mood-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+
+        quiz.appendChild(card);
+
+    });
+
+
+    quiz.querySelectorAll(
+        ".mood-choice"
+    ).forEach(function(button){
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                const q =
+                    Number(button.dataset.q);
+
+                moodState[q] =
+                    button.dataset.value;
+
+
+                quiz.querySelectorAll(
+                    `.mood-choice[data-q="${q}"]`
+                ).forEach(function(other){
+
+                    other.classList.remove(
+                        "mood-selected"
+                    );
+
+                });
+
+
+                button.classList.add(
+                    "mood-selected"
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+window.checkMoodQuiz = function() {
+
+    let score = 0;
+
+    const possible =
+        moodQuestions.length * 3;
+
+
+    moodQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+
+        /* MOOD */
+
+        if (
+            moodState[i] &&
+            q.moods.includes(
+                moodState[i]
+            )
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="mood-correct">
+                    ✓ Mood correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="mood-incorrect">
+                    ✗ Mood:
+                    <strong>${q.moodDisplay}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* TRANSLATION */
+
+        const translation =
+            normalizeMood(
+                document.getElementById(
+                    `mood-trans-${i}`
+                ).value
+            );
+
+
+        const translationCorrect =
+            q.translations.some(function(answer){
+
+                return (
+                    translation ===
+                    normalizeMood(answer)
+                );
+
+            });
+
+
+        if (translationCorrect) {
+
+            score++;
+
+            feedback.push(
+                `<div class="mood-correct">
+                    ✓ Translation correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="mood-incorrect">
+                    ✗ Translation:
+                    <strong>${q.translationDisplay}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* NEW FORM */
+
+        const newForm =
+            normalizeMood(
+                document.getElementById(
+                    `mood-new-${i}`
+                ).value
+            );
+
+
+        const newCorrect =
+            q.newForms.some(function(answer){
+
+                return (
+                    newForm ===
+                    normalizeMood(answer)
+                );
+
+            });
+
+
+        if (newCorrect) {
+
+            score++;
+
+            feedback.push(
+                `<div class="mood-correct">
+                    ✓ New form correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="mood-incorrect">
+                    ✗ New form:
+                    <strong>${q.newDisplay}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        feedback.push(
+            `<div class="mood-note">
+                ${q.note}
+            </div>`
+        );
+
+
+        document.getElementById(
+            `mood-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+
+    });
+
+
+    document.getElementById(
+        "mood-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+
+};
+
+
+window.resetMoodQuiz = function() {
+
+    moodState.forEach(function(x, i){
+        moodState[i] = null;
+    });
+
+    buildMoodQuiz();
+
+    document.getElementById(
+        "mood-score"
+    ).textContent = "";
+
+};
+
+
+buildMoodQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: INDEPENDENT USES OF THE SUBJUNCTIVE
+     Prefix: isub-
+     ============================================================ -->
+
+<div class="isub-quiz-container">
+
+<p class="isub-instructions">
+<strong>B:</strong> Identify the <strong>independent use of the subjunctive</strong>
+in each sentence and then translate it. If more than one interpretation is
+possible, choose the translation that is consistent with the use you identify.
+</p>
+
+<div id="isub-quiz"></div>
+
+<button
+    type="button"
+    class="isub-control-button"
+    onclick="checkIsubQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="isub-control-button"
+    onclick="resetIsubQuiz()">
+    Reset
+</button>
+
+<div id="isub-score" class="isub-score"></div>
+
+
+<script>
+(function(){
+
+const isubUses = [
+    "Jussive",
+    "Hortatory",
+    "Optative",
+    "Potential",
+    "Deliberative"
+];
+
+
+const isubQuestions = [
+
+    {
+        sentence:
+            "scribant illās epistulās",
+        uses: [
+            "Jussive"
+        ],
+        useDisplay:
+            "Jussive",
+        translations: [
+            "let them write those letters",
+            "they should write those letters"
+        ],
+        translationDisplay:
+            "let them write those letters",
+        note:
+            "A third-person present subjunctive commonly expresses a jussive command."
+    },
+
+    {
+        sentence:
+            "utinam bonae discipulae mittantur",
+        uses: [
+            "Optative"
+        ],
+        useDisplay:
+            "Optative",
+        translations: [
+            "may the good female students be sent",
+            "if only the good female students may be sent",
+            "would that the good female students be sent",
+            "may the good students be sent"
+        ],
+        translationDisplay:
+            "may the good female students be sent",
+        note:
+            "utinam is a strong marker of the optative subjunctive."
+    },
+
+    {
+        sentence:
+            "forsitan hās epistulās legam",
+        uses: [
+            "Potential"
+        ],
+        useDisplay:
+            "Potential",
+        translations: [
+            "perhaps i may read these letters",
+            "perhaps i might read these letters",
+            "perhaps i will read these letters",
+            "perhaps i could read these letters"
+        ],
+        translationDisplay:
+            "perhaps I may read these letters",
+        note:
+            "forsitan commonly accompanies the potential subjunctive."
+    },
+
+    {
+        sentence:
+            "patrēs iūribus pareant",
+        uses: [
+            "Jussive"
+        ],
+        useDisplay:
+            "Jussive",
+        translations: [
+            "let the fathers obey the laws",
+            "let the fathers obey the rights",
+            "the fathers should obey the laws",
+            "the fathers should obey the rights"
+        ],
+        translationDisplay:
+            "let the fathers obey the laws",
+        note:
+            "pareō takes a dative; iūribus is the thing obeyed. The third-person subjunctive is naturally jussive."
+    },
+
+    {
+        sentence:
+            "iaceāmus in illō amoenō litore?",
+        uses: [
+            "Deliberative"
+        ],
+        useDisplay:
+            "Deliberative",
+        translations: [
+            "should we lie on that pleasant shore",
+            "should we lie down on that pleasant shore",
+            "are we to lie on that pleasant shore",
+            "shall we lie on that pleasant shore"
+        ],
+        translationDisplay:
+            "should we lie on that pleasant shore?",
+        note:
+            "A first-person subjunctive in a question commonly expresses deliberation."
+    },
+
+    {
+        sentence:
+            "amōrem magis quam bellum aestimēmus",
+        uses: [
+            "Hortatory"
+        ],
+        useDisplay:
+            "Hortatory",
+        translations: [
+            "let us value love more than war",
+            "let us esteem love more than war",
+            "we should value love more than war",
+            "we should esteem love more than war"
+        ],
+        translationDisplay:
+            "let us value love more than war",
+        note:
+            "A first-person plural present subjunctive commonly expresses a hortatory “let us...” statement."
+    },
+
+    {
+        sentence:
+            "litterae hodiē scriberentur?",
+        uses: [
+            "Deliberative"
+        ],
+        useDisplay:
+            "Deliberative",
+        translations: [
+            "were the letters to be written today",
+            "should the letters have been written today",
+            "were the letters supposed to be written today",
+            "were letters to be written today"
+        ],
+        translationDisplay:
+            "were the letters to be written today?",
+        note:
+            "The question and imperfect subjunctive support a past deliberative sense. The supplied form “sriberentur” has been corrected here to scriberentur."
+    },
+
+    {
+        sentence:
+            "omnēs puerum salvum fore cōgitent",
+        uses: [
+            "Jussive"
+        ],
+        useDisplay:
+            "Jussive",
+        translations: [
+            "let everyone think that the boy will be safe",
+            "let them all think that the boy will be safe",
+            "everyone should think that the boy will be safe",
+            "let all think that the boy will be safe"
+        ],
+        translationDisplay:
+            "let everyone think that the boy will be safe",
+        note:
+            "cōgitent is a third-person plural jussive. puerum salvum fore is an indirect statement with the future infinitive fore. The supplied “puellum salvum” has been treated as a likely typo for puerum salvum because puellum is not a standard form and salvum requires a masculine or neuter singular referent."
+    }
+
+];
+
+
+const isubState =
+    isubQuestions.map(function(){
+        return null;
+    });
+
+
+function normalizeIsub(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildIsubQuiz() {
+
+    const quiz =
+        document.getElementById(
+            "isub-quiz"
+        );
+
+    quiz.innerHTML = "";
+
+
+    isubQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+        card.className =
+            "isub-question";
+
+
+        const buttons =
+            isubUses.map(function(use){
+
+                return `
+                    <button
+                        type="button"
+                        class="isub-choice"
+                        data-q="${i}"
+                        data-value="${use}">
+                        ${use}
+                    </button>
+                `;
+
+            }).join("");
+
+
+        card.innerHTML = `
+
+            <div class="isub-sentence">
+                ${i + 1}. ${q.sentence}
+            </div>
+
+
+            <div class="isub-section">
+
+                <span class="isub-label">
+                    Independent subjunctive use:
+                </span>
+
+                <div class="isub-options">
+                    ${buttons}
+                </div>
+
+            </div>
+
+
+            <label
+                class="isub-label"
+                for="isub-translation-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="isub-translation-${i}"
+                class="isub-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+
+            <div
+                id="isub-feedback-${i}"
+                class="isub-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+
+        quiz.appendChild(card);
+
+    });
+
+
+    quiz.querySelectorAll(
+        ".isub-choice"
+    ).forEach(function(button){
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                const q =
+                    Number(button.dataset.q);
+
+                isubState[q] =
+                    button.dataset.value;
+
+
+                quiz.querySelectorAll(
+                    `.isub-choice[data-q="${q}"]`
+                ).forEach(function(other){
+
+                    other.classList.remove(
+                        "isub-selected"
+                    );
+
+                });
+
+
+                button.classList.add(
+                    "isub-selected"
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+window.checkIsubQuiz = function() {
+
+    let score = 0;
+
+    const possible =
+        isubQuestions.length * 2;
+
+
+    isubQuestions.forEach(function(q, i) {
+
+        const feedback = [];
+
+
+        /* USE */
+
+        if (
+            isubState[i] &&
+            q.uses.includes(
+                isubState[i]
+            )
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="isub-correct">
+                    ✓ Subjunctive use correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="isub-incorrect">
+                    ✗ Best classification:
+                    <strong>${q.useDisplay}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* TRANSLATION */
+
+        const student =
+            normalizeIsub(
+                document.getElementById(
+                    `isub-translation-${i}`
+                ).value
+            );
+
+
+        const correct =
+            q.translations.some(function(answer){
+
+                return (
+                    student ===
+                    normalizeIsub(answer)
+                );
+
+            });
+
+
+        if (correct) {
+
+            score++;
+
+            feedback.push(
+                `<div class="isub-correct">
+                    ✓ Translation correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="isub-incorrect">
+                    ✗ One translation consistent with this use is:
+                    <strong>${q.translationDisplay}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        feedback.push(
+            `<div class="isub-note">
+                ${q.note}
+            </div>`
+        );
+
+
+        document.getElementById(
+            `isub-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+
+    });
+
+
+    document.getElementById(
+        "isub-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+
+};
+
+
+window.resetIsubQuiz = function() {
+
+    isubState.forEach(function(x, i){
+        isubState[i] = null;
+    });
+
+    buildIsubQuiz();
+
+    document.getElementById(
+        "isub-score"
+    ).textContent = "";
+
+};
+
+
+buildIsubQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 20 Vocabulary
 
