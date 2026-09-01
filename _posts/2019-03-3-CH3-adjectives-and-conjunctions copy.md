@@ -2598,48 +2598,564 @@ For numbers <strong>8–12</strong>, <strong>segment the sentence</strong> befor
 
 ##### Chapter 3 Vocabulary
 
-Vocabulary note:
+<div class="vocab-block">
 
--   For adjectives, entries with 3 endings listed (like magnus, magna, magnum) have three separate forms for masculine, feminine, and neuter (respectively). We have not learned neuter nouns yet, so just remember the vocabulary forms for now.
--   Some adjectives do not modify any specific word (they are called **substantive adjectives**). These modify an understood noun. *Miser* (masculine singular) just means a “wretched (man).” *Bonae* (feminine plural just means “good (women).” This is also the case for *superus, supera, superum* in the list below. The ones who live up above are the gods.
+<style>
+.vocab-block {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #dc3545;
+    border-radius: 10px;
+    background: #f8d7da;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-| **Adjectives** |  |
-| --- | --- |
-| magnus, magna, magnum | large, great |
-| multus, multa, multum | much (singular), many (plural) |
-| bonus, bona, bonum | good, noble, pleasant |
-| superus, supera, superum | above, lofty; (often) “the gods above” |
-| miser, misera, miserum | poor, unfortunate |
-| novus, nova, novum | new, strange |
-| longus, longa, longum | long, tall |
-| parvus, parva, parvum | small, little, cheap |
-| **Nouns** |  |
-| frāter, frātris (m.) | brother |
-| puella, puellae (f.) | girl |
-| silva, silvae (f.) | forest |
-| dominus, dominī (m.); domina, dominae (f.) | master/mistress |
-| equus, equī (m.) | horse |
-| iuvenis, iuvenis (m.) | young man |
-| ager, agrī (m.) | field |
-| **Verbs** | *intransitive verbs are marked with an asterisk |
-| iacet/iacent* | he/she/it lies (on the ground)/they lie |
-| servat/servant | he/she/it protects/guards; they protect/guard |
-| parat/parant | he/she/it prepares, designs, acquires; they (etc)** |
-| **Adverbs** |  |
-| nunc | now |
-| tunc | then |
-| certē | certainly |
-| **Coordinating conjunctions** |  |
-| ac, atque, et, -que, quoque | and |
-| enim, nam | for, indeed |
-| nec, neque | nor; and...not |
-| at, sed | but |
-| aut, autem, -ve | or, however |
-| et...et | both...and |
-| aut...aut | either...or |
-| nec...nec | neither...nor |
+.vocab-block * {
+    box-sizing: border-box;
+}
 
-\*\*This is the first of many words (especially verbs) that you’ll encounter in Latin that have seemingly unrelated definitions. To help, first think about patterns (when you see this word, remember that there may be several possible patterns to follow). Second, try different translations; even if you’re wrong, it will help you see the most likely patterns. In chapter 18 (Funky Verbs) below, you’ll see lists of verbs that have unusual patterns, so this is a chance to start learning special (or funky, if you’d like) verbs.
+.vocab-note-box {
+    margin-bottom: 24px;
+    padding: 16px 18px;
+    background: white;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    line-height: 1.55;
+}
+
+.vocab-note-title {
+    margin: 0 0 10px;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.vocab-note-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.vocab-note-list li {
+    margin: 8px 0;
+}
+
+.vocab-section {
+    margin: 0 0 24px;
+}
+
+.vocab-section:last-child {
+    margin-bottom: 0;
+}
+
+.vocab-heading {
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.vocab-heading-note {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78em;
+    font-weight: normal;
+    color: #555;
+}
+
+.vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.vocab-table th,
+.vocab-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.vocab-table th {
+    background: #f3f3f3;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.vocab-table tr:last-child td {
+    border-bottom: none;
+}
+
+.vocab-latin {
+    width: 48%;
+    font-weight: bold;
+}
+
+.vocab-english {
+    width: 52%;
+}
+
+.vocab-grammar-note {
+    font-weight: normal;
+    color: #555;
+}
+
+.vocab-footnote {
+    margin-top: 8px;
+    padding: 14px 16px;
+    background: white;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    line-height: 1.55;
+    font-size: 0.95em;
+}
+
+@media (max-width: 500px) {
+    .vocab-block {
+        padding: 15px;
+    }
+
+    .vocab-note-box {
+        padding: 14px;
+    }
+
+    .vocab-table th,
+    .vocab-table td {
+        padding: 9px 10px;
+    }
+
+    .vocab-latin {
+        width: 52%;
+    }
+
+    .vocab-english {
+        width: 48%;
+    }
+}
+</style>
+
+
+<div class="vocab-note-box">
+
+    <div class="vocab-note-title">
+        Vocabulary Note
+    </div>
+
+    <ul class="vocab-note-list">
+
+        <li>
+            For adjectives, entries with <strong>three endings</strong>
+            listed (like <em>magnus, magna, magnum</em>) have three
+            separate forms for <strong>masculine, feminine, and neuter</strong>,
+            respectively. We have not learned neuter nouns yet, so just
+            remember the vocabulary forms for now.
+        </li>
+
+        <li>
+            Some adjectives do not modify any specific word. These are called
+            <strong>substantive adjectives</strong> and modify an understood noun.
+            <em>Miser</em> (masculine singular) can simply mean
+            “wretched (man),” while <em>bonae</em> (feminine plural) can mean
+            “good (women).” This is also the case for
+            <em>superus, supera, superum</em> below. The ones who live “above”
+            are the gods.
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Adjectives
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    magnus, magna, magnum
+                </td>
+                <td class="vocab-english">
+                    large, great
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    multus, multa, multum
+                </td>
+                <td class="vocab-english">
+                    much (singular), many (plural)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    bonus, bona, bonum
+                </td>
+                <td class="vocab-english">
+                    good, noble, pleasant
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    superus, supera, superum
+                </td>
+                <td class="vocab-english">
+                    above, lofty; often “the gods above”
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    miser, misera, miserum
+                </td>
+                <td class="vocab-english">
+                    poor, unfortunate
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    novus, nova, novum
+                </td>
+                <td class="vocab-english">
+                    new, strange
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    longus, longa, longum
+                </td>
+                <td class="vocab-english">
+                    long, tall
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    parvus, parva, parvum
+                </td>
+                <td class="vocab-english">
+                    small, little, cheap
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Nouns
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    frāter, frātris
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    brother
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    puella, puellae
+                    <span class="vocab-grammar-note">(f.)</span>
+                </td>
+                <td class="vocab-english">
+                    girl
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    silva, silvae
+                    <span class="vocab-grammar-note">(f.)</span>
+                </td>
+                <td class="vocab-english">
+                    forest
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    dominus, dominī
+                    <span class="vocab-grammar-note">(m.)</span>;
+                    domina, dominae
+                    <span class="vocab-grammar-note">(f.)</span>
+                </td>
+                <td class="vocab-english">
+                    master / mistress
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    equus, equī
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    horse
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    iuvenis, iuvenis
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    young man
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    ager, agrī
+                    <span class="vocab-grammar-note">(m.)</span>
+                </td>
+                <td class="vocab-english">
+                    field
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Verbs
+
+        <span class="vocab-heading-note">
+            * Intransitive verbs are marked with an asterisk.
+        </span>
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    iacet / iacent*
+                </td>
+                <td class="vocab-english">
+                    he/she/it lies (on the ground); they lie
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    servat / servant
+                </td>
+                <td class="vocab-english">
+                    he/she/it protects, guards; they protect, guard
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    parat / parant**
+                </td>
+                <td class="vocab-english">
+                    he/she/it prepares, designs, acquires; they prepare,
+                    design, acquire
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Adverbs
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">nunc</td>
+                <td class="vocab-english">now</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">tunc</td>
+                <td class="vocab-english">then</td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">certē</td>
+                <td class="vocab-english">certainly</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-section">
+
+    <div class="vocab-heading">
+        Coordinating Conjunctions
+    </div>
+
+    <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>Latin</th>
+                <th>English</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="vocab-latin">
+                    ac, atque, et, -que, quoque
+                </td>
+                <td class="vocab-english">
+                    and
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    enim, nam
+                </td>
+                <td class="vocab-english">
+                    for, indeed
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    nec, neque
+                </td>
+                <td class="vocab-english">
+                    nor; and ... not
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    at, sed
+                </td>
+                <td class="vocab-english">
+                    but
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    aut, autem, -ve
+                </td>
+                <td class="vocab-english">
+                    or, however
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    et ... et
+                </td>
+                <td class="vocab-english">
+                    both ... and
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    aut ... aut
+                </td>
+                <td class="vocab-english">
+                    either ... or
+                </td>
+            </tr>
+
+            <tr>
+                <td class="vocab-latin">
+                    nec ... nec
+                </td>
+                <td class="vocab-english">
+                    neither ... nor
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<div class="vocab-footnote">
+    <strong>** A note about words with multiple meanings:</strong>
+    This is the first of many words—especially verbs—that you will encounter
+    in Latin with seemingly unrelated definitions. To help, first think about
+    <strong>patterns</strong>. When you see a word like this, remember that
+    there may be several possible patterns to follow. Second, try different
+    translations. Even if your first attempt is wrong, testing different
+    meanings will help you recognize the most likely pattern. In Chapter 18,
+    <strong>Funky Verbs</strong>, you will encounter lists of verbs with
+    unusual patterns, so this is a chance to begin learning these special
+    verbs now.
+</div>
+
+</div>
 
 
 >### Reading Chapter I
