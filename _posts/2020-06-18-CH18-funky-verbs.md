@@ -44,38 +44,1011 @@ Semi Deponent Verbs: the last of the funky verbs are semi-deponent verbs. These 
 > ### Chapter 18 Exercises
 {: .block-warning }
 
-A) After memorizing vocabulary, identify the type of verb (underline all that apply) and translate without the aid of vocabulary or notes. If you are not sure about the verb, try to guess based on the sentence pattern.
+<!-- ============================================================
+     EXERCISE A: VERB TYPE + TRANSLATION
+     Prefix: dep-
+     ============================================================ -->
 
-underline all that apply
+<div class="dep-quiz-container">
 
-1.  nōs invenīre tellus audēnt: transitive intransitive deponent (specify)\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  illa mala patī non possumus: transitive intransitive deponent (specify)\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  aliquibus illī cedunt: transitive intransitive deponent (specify)\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  solitae sumus currere: transitive intransitive deponent (specify)\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  mihi iste displicet: transitive intransitive deponent (specify)\_\_\_\_\_\_\_\_\_\_  
-      
-    Translate:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<style>
+.dep-quiz-container,
+.depl-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 
-B) Practice identifying and translating depondent verbs by translating the following phrases into Latin:
+.dep-quiz-container *,
+.depl-quiz-container * {
+    box-sizing: border-box;
+}
 
-1.  we used to urge them: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-2.  they will follow us: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-3.  I did not trust him: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-4.  We have obeyed our father: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-5.  I confess that we did the thing ourselves: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-6.  I do enjoy the countryside: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-7.  We dared them to run on that day: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-8.  They desire friends: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-9.  I am amazed (miror) that you went: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-10.  The fire rose at that time: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+.dep-instructions,
+.depl-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.dep-question,
+.depl-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.dep-sentence,
+.depl-prompt {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dep-section {
+    margin: 14px 0;
+}
+
+.dep-label,
+.depl-label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 7px;
+}
+
+.dep-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dep-choice {
+    padding: 9px 16px;
+    border: 2px solid #b8b8b8;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.dep-choice:hover {
+    border-color: #4a90e2;
+}
+
+.dep-choice.dep-selected {
+    background: #cce5ff;
+    border-color: #4a90e2;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.dep-choice:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.dep-input,
+.depl-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.dep-input:focus,
+.depl-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.dep-feedback,
+.depl-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.dep-correct,
+.depl-correct {
+    color: #0b7a0b;
+}
+
+.dep-incorrect,
+.depl-incorrect {
+    color: #b00020;
+}
+
+.dep-note,
+.depl-note {
+    margin-top: 8px;
+    color: #444;
+    font-weight: normal;
+}
+
+.dep-control-button,
+.depl-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.dep-control-button:hover,
+.depl-control-button:hover {
+    background: #f3f3f3;
+}
+
+.dep-score,
+.depl-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .dep-quiz-container,
+    .depl-quiz-container {
+        padding: 15px;
+    }
+
+    .dep-question,
+    .depl-question {
+        padding: 15px;
+    }
+
+    .dep-choice {
+        flex: 1 1 135px;
+    }
+}
+</style>
+
+
+<p class="dep-instructions">
+<strong>A:</strong> After memorizing vocabulary, identify the
+<strong>type of the target verb</strong> by underlining <strong>all that apply</strong>.
+Then translate the sentence without vocabulary or notes. If the verb is
+<strong>deponent or semi-deponent</strong>, identify that as well.
+</p>
+
+<div id="dep-quiz"></div>
+
+<button
+    type="button"
+    class="dep-control-button"
+    onclick="checkDepQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="dep-control-button"
+    onclick="resetDepQuiz()">
+    Reset
+</button>
+
+<div id="dep-score" class="dep-score"></div>
+
+
+<script>
+(function(){
+
+const depTypes = [
+    "Transitive",
+    "Intransitive",
+    "Deponent",
+    "Semi-deponent"
+];
+
+
+const depQuestions = [
+
+    {
+        sentence:
+            "nōs invenīre tellūs audēnt",
+        target:
+            "audēnt",
+        types: [
+            "Intransitive",
+            "Semi-deponent"
+        ],
+        translations: [
+            "they dare to find us",
+            "they are daring to find us"
+        ],
+        display:
+            "they dare to find us",
+        note:
+            "audēre is semi-deponent: its present-system forms are active, while its perfect system is formed with ausus sum. It normally takes an infinitive rather than a direct object. Note: as written, tellūs does not agree syntactically with plural audēnt; the translation here targets audēnt + nōs invenīre."
+    },
+
+    {
+        sentence:
+            "illa mala patī nōn possumus",
+        target:
+            "patī",
+        types: [
+            "Transitive",
+            "Deponent"
+        ],
+        translations: [
+            "we cannot suffer those evils",
+            "we cannot endure those evils",
+            "we are not able to suffer those evils",
+            "we are not able to endure those evils",
+            "we cannot experience those evils"
+        ],
+        display:
+            "we cannot endure those evils",
+        note:
+            "patior, patī is deponent and can take a direct object. illa mala is the accusative neuter plural object."
+    },
+
+    {
+        sentence:
+            "aliquibus illī cedunt",
+        target:
+            "cedunt",
+        types: [
+            "Intransitive"
+        ],
+        translations: [
+            "those men yield to some people",
+            "those people yield to some people",
+            "they yield to some people",
+            "those men give way to some people",
+            "they give way to some people",
+            "those men yield to some",
+            "they yield to some"
+        ],
+        display:
+            "those men yield to some people",
+        note:
+            "cēdō is intransitive in this construction and takes the dative: aliquibus."
+    },
+
+    {
+        sentence:
+            "solitae sumus currere",
+        target:
+            "solitae sumus",
+        types: [
+            "Intransitive",
+            "Semi-deponent"
+        ],
+        translations: [
+            "we are accustomed to run",
+            "we have become accustomed to run",
+            "we are used to running",
+            "we were accustomed to run",
+            "we have been accustomed to run"
+        ],
+        display:
+            "we are accustomed to run",
+        note:
+            "soleō, solēre, solitus sum is semi-deponent. solitae shows that the understood subject is feminine plural."
+    },
+
+    {
+        sentence:
+            "mihi iste displicet",
+        target:
+            "displicet",
+        types: [
+            "Intransitive"
+        ],
+        translations: [
+            "that man displeases me",
+            "that person displeases me",
+            "he displeases me",
+            "i dislike that man",
+            "i dislike that person",
+            "i do not like that man",
+            "i do not like that person"
+        ],
+        display:
+            "that man displeases me / I dislike that man",
+        note:
+            "displicēre is intransitive and takes a dative of the person affected: mihi, “to me.”"
+    }
+
+];
+
+
+const depState =
+    depQuestions.map(function(){
+        return new Set();
+    });
+
+
+function normalizeDep(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function sameDepTypes(studentSet, correctArray) {
+
+    if (
+        studentSet.size !==
+        correctArray.length
+    ) {
+        return false;
+    }
+
+    return correctArray.every(function(type){
+        return studentSet.has(type);
+    });
+}
+
+
+function buildDepQuiz() {
+
+    const quiz =
+        document.getElementById("dep-quiz");
+
+    quiz.innerHTML = "";
+
+
+    depQuestions.forEach(function(q, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "dep-question";
+
+
+        const buttons =
+            depTypes.map(function(type){
+
+                return `
+                    <button
+                        type="button"
+                        class="dep-choice"
+                        data-q="${i}"
+                        data-type="${type}"
+                        aria-pressed="false">
+                        ${type}
+                    </button>
+                `;
+
+            }).join("");
+
+
+        card.innerHTML = `
+
+            <div class="dep-sentence">
+                ${i + 1}. ${q.sentence}
+            </div>
+
+            <div class="dep-section">
+
+                <span class="dep-label">
+                    Target verb:
+                    <strong>${q.target}</strong>
+                </span>
+
+                <span class="dep-label">
+                    Underline all that apply:
+                </span>
+
+                <div class="dep-options">
+                    ${buttons}
+                </div>
+
+            </div>
+
+
+            <label
+                class="dep-label"
+                for="dep-translation-${i}">
+                Translate:
+            </label>
+
+            <input
+                type="text"
+                id="dep-translation-${i}"
+                class="dep-input"
+                autocomplete="off"
+                placeholder="Type the English translation">
+
+
+            <div
+                id="dep-feedback-${i}"
+                class="dep-feedback"
+                aria-live="polite">
+            </div>
+        `;
+
+
+        quiz.appendChild(card);
+
+    });
+
+
+    quiz.querySelectorAll(
+        ".dep-choice"
+    ).forEach(function(button){
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                const q =
+                    Number(button.dataset.q);
+
+                const type =
+                    button.dataset.type;
+
+
+                if (
+                    depState[q].has(type)
+                ) {
+
+                    depState[q].delete(type);
+
+                    button.classList.remove(
+                        "dep-selected"
+                    );
+
+                    button.setAttribute(
+                        "aria-pressed",
+                        "false"
+                    );
+
+                } else {
+
+                    depState[q].add(type);
+
+                    button.classList.add(
+                        "dep-selected"
+                    );
+
+                    button.setAttribute(
+                        "aria-pressed",
+                        "true"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+}
+
+
+window.checkDepQuiz = function() {
+
+    let score = 0;
+
+    const possible =
+        depQuestions.length * 2;
+
+
+    depQuestions.forEach(function(q, i){
+
+        const feedback = [];
+
+
+        /* VERB TYPE */
+
+        if (
+            sameDepTypes(
+                depState[i],
+                q.types
+            )
+        ) {
+
+            score++;
+
+            feedback.push(
+                `<div class="dep-correct">
+                    ✓ Verb identification correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="dep-incorrect">
+                    ✗ Correct identification:
+                    <strong>${q.types.join(" + ")}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        /* TRANSLATION */
+
+        const student =
+            normalizeDep(
+                document.getElementById(
+                    `dep-translation-${i}`
+                ).value
+            );
+
+
+        const correct =
+            q.translations.some(
+                function(answer){
+
+                    return (
+                        student ===
+                        normalizeDep(answer)
+                    );
+
+                }
+            );
+
+
+        if (correct) {
+
+            score++;
+
+            feedback.push(
+                `<div class="dep-correct">
+                    ✓ Translation correct.
+                </div>`
+            );
+
+        } else {
+
+            feedback.push(
+                `<div class="dep-incorrect">
+                    ✗ One correct translation is:
+                    <strong>${q.display}</strong>.
+                </div>`
+            );
+
+        }
+
+
+        feedback.push(
+            `<div class="dep-note">
+                ${q.note}
+            </div>`
+        );
+
+
+        document.getElementById(
+            `dep-feedback-${i}`
+        ).innerHTML =
+            feedback.join("");
+
+    });
+
+
+    document.getElementById(
+        "dep-score"
+    ).textContent =
+        `Score: ${score} / ${possible}`;
+
+};
+
+
+window.resetDepQuiz = function() {
+
+    depState.forEach(function(set){
+        set.clear();
+    });
+
+    buildDepQuiz();
+
+    document.getElementById(
+        "dep-score"
+    ).textContent = "";
+
+};
+
+
+buildDepQuiz();
+
+})();
+</script>
+
+</div>
+
+
+
+<!-- ============================================================
+     EXERCISE B: DEPONENT / RELATED VERB PRACTICE
+     Prefix: depl-
+     ============================================================ -->
+
+<div class="depl-quiz-container">
+
+<p class="depl-instructions">
+<strong>B:</strong> Practice identifying and forming
+<strong>deponent, semi-deponent, and related verb forms</strong>
+by translating the following phrases into Latin. Pay close attention
+to verbs that require a <strong>dative</strong>, <strong>ablative</strong>,
+or <strong>infinitive</strong>. Macrons are optional.
+</p>
+
+<div id="depl-quiz"></div>
+
+<button
+    type="button"
+    class="depl-control-button"
+    onclick="checkDeplQuiz()">
+    Check Answers
+</button>
+
+<button
+    type="button"
+    class="depl-control-button"
+    onclick="resetDeplQuiz()">
+    Reset
+</button>
+
+<div id="depl-score" class="depl-score"></div>
+
+
+<script>
+(function(){
+
+const deplQuestions = [
+
+    {
+        prompt:
+            "we used to urge them",
+        answers: [
+            "eōs hortābāmur",
+            "eos hortabamur",
+            "hortābāmur eōs",
+            "hortabamur eos"
+        ],
+        display:
+            "eōs hortābāmur",
+        note:
+            "hortor is deponent. Its imperfect form hortābāmur is passive in form but active in meaning."
+    },
+
+    {
+        prompt:
+            "they will follow us",
+        answers: [
+            "nōs sequentur",
+            "nos sequentur",
+            "sequentur nōs",
+            "sequentur nos"
+        ],
+        display:
+            "nōs sequentur",
+        note:
+            "sequor is deponent. sequentur means “they will follow.”"
+    },
+
+    {
+        prompt:
+            "I did not trust him",
+        answers: [
+            "eī nōn confīsus sum",
+            "ei non confisus sum",
+            "nōn eī confīsus sum",
+            "non ei confisus sum",
+            "illī nōn confīsus sum",
+            "illi non confisus sum"
+        ],
+        display:
+            "eī nōn confīsus sum",
+        note:
+            "confīdō is semi-deponent and takes the dative of the person trusted. confīsus sum is perfect in meaning."
+    },
+
+    {
+        prompt:
+            "We have obeyed our father",
+        answers: [
+            "patrī nostrō obsecūtī sumus",
+            "patri nostro obsecuti sumus",
+            "obsecūtī sumus patrī nostrō",
+            "obsecuti sumus patri nostro",
+            "patrī nostrō pārūimus",
+            "patri nostro paruimus",
+            "pārūimus patrī nostrō",
+            "paruimus patri nostro"
+        ],
+        display:
+            "patrī nostrō obsecūtī sumus",
+        note:
+            "If using obsequor, the perfect is obsecūtī sumus and the person obeyed is dative. The regular verb pāreō + dative is also grammatically possible."
+    },
+
+    {
+        prompt:
+            "I confess that we did the thing ourselves",
+        answers: [
+            "fateor nōs rem ipsōs fēcisse",
+            "fateor nos rem ipsos fecisse",
+            "fateor nōs ipsōs rem fēcisse",
+            "fateor nos ipsos rem fecisse",
+            "fateor nōs rem ipsās fēcisse",
+            "fateor nos rem ipsas fecisse"
+        ],
+        display:
+            "fateor nōs rem ipsōs fēcisse",
+        note:
+            "fateor is deponent. The indirect statement uses accusative nōs + perfect active infinitive fēcisse. ipsōs assumes a masculine or mixed group; ipsās is possible for an all-feminine group."
+    },
+
+    {
+        prompt:
+            "I do enjoy the countryside",
+        answers: [
+            "rūre fruor",
+            "rure fruor",
+            "fruor rūre",
+            "fruor rure",
+            "agrīs fruor",
+            "agris fruor",
+            "fruor agrīs",
+            "fruor agris"
+        ],
+        display:
+            "rūre fruor",
+        note:
+            "fruor is deponent and normally takes an ablative: rūre, “the countryside.”"
+    },
+
+    {
+        prompt:
+            "We dared them to run on that day",
+        answers: [
+            "eōs illō diē ad currendum provocāvimus",
+            "eos illo die ad currendum provocavimus",
+            "illō diē eōs ad currendum provocāvimus",
+            "illo die eos ad currendum provocavimus",
+            "eōs ut currerent illō diē provocāvimus",
+            "eos ut currerent illo die provocavimus"
+        ],
+        display:
+            "eōs illō diē ad currendum provocāvimus",
+        note:
+            "English “dare someone to do something” is not the normal construction of Latin audeō. audeō means “dare/venture to do something” with the same subject, so provocō is a more natural rendering here."
+    },
+
+    {
+        prompt:
+            "They desire friends",
+        answers: [
+            "amīcōs cupiunt",
+            "amicos cupiunt",
+            "cupiunt amīcōs",
+            "cupiunt amicos"
+        ],
+        display:
+            "amīcōs cupiunt",
+        note:
+            "cupiō is active rather than deponent and takes a direct object."
+    },
+
+    {
+        prompt:
+            "I am amazed (miror) that you went",
+        answers: [
+            "mīror tē īvisse",
+            "miror te ivisse",
+            "mīror tē iisse",
+            "miror te iisse"
+        ],
+        display:
+            "mīror tē īvisse",
+        note:
+            "mīror is deponent. The indirect statement uses accusative tē plus the perfect active infinitive īvisse."
+    },
+
+    {
+        prompt:
+            "The fire rose at that time",
+        answers: [
+            "ignis illō tempore ortus est",
+            "ignis illo tempore ortus est",
+            "illō tempore ignis ortus est",
+            "illo tempore ignis ortus est"
+        ],
+        display:
+            "ignis illō tempore ortus est",
+        note:
+            "orior is deponent. ortus est is perfect in meaning: “rose/arose.” illō tempore is ablative of time when."
+    }
+
+];
+
+
+function normalizeDepl(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'’"]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+function buildDeplQuiz() {
+
+    const quiz =
+        document.getElementById(
+            "depl-quiz"
+        );
+
+    quiz.innerHTML = "";
+
+
+    deplQuestions.forEach(
+        function(q, i){
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+            card.className =
+                "depl-question";
+
+
+            card.innerHTML = `
+
+                <div class="depl-prompt">
+                    ${i + 1}. ${q.prompt}
+                </div>
+
+                <label
+                    class="depl-label"
+                    for="depl-answer-${i}">
+                    Latin:
+                </label>
+
+                <input
+                    type="text"
+                    id="depl-answer-${i}"
+                    class="depl-input"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Type the Latin translation">
+
+                <div
+                    id="depl-feedback-${i}"
+                    class="depl-feedback"
+                    aria-live="polite">
+                </div>
+            `;
+
+
+            quiz.appendChild(card);
+
+        }
+    );
+
+}
+
+
+window.checkDeplQuiz = function() {
+
+    let score = 0;
+
+
+    deplQuestions.forEach(
+        function(q, i){
+
+            const student =
+                normalizeDepl(
+                    document.getElementById(
+                        `depl-answer-${i}`
+                    ).value
+                );
+
+
+            const correct =
+                q.answers.some(
+                    function(answer){
+
+                        return (
+                            student ===
+                            normalizeDepl(answer)
+                        );
+
+                    }
+                );
+
+
+            const feedback =
+                document.getElementById(
+                    `depl-feedback-${i}`
+                );
+
+
+            if (correct) {
+
+                score++;
+
+                feedback.innerHTML = `
+
+                    <div class="depl-correct">
+                        ✓ Correct.
+                    </div>
+
+                    <div class="depl-note">
+                        ${q.note}
+                    </div>
+                `;
+
+            } else {
+
+                feedback.innerHTML = `
+
+                    <div class="depl-incorrect">
+                        ✗ One correct translation is:
+                        <strong>${q.display}</strong>.
+                    </div>
+
+                    <div class="depl-note">
+                        ${q.note}
+                    </div>
+                `;
+
+            }
+
+        }
+    );
+
+
+    document.getElementById(
+        "depl-score"
+    ).textContent =
+        `Score: ${score} / ${deplQuestions.length}`;
+
+};
+
+
+window.resetDeplQuiz = function() {
+
+    buildDeplQuiz();
+
+    document.getElementById(
+        "depl-score"
+    ).textContent = "";
+
+};
+
+
+buildDeplQuiz();
+
+})();
+</script>
+
+</div>
 
 ##### Chapter 18 Sentences
 
