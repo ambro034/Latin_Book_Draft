@@ -82,6 +82,194 @@ The following chart lists the relative pronoun and its translations. Relative pr
 > ### Chapter 12 Exercises
 {: .block-warning }
 
+<!-- ============================================================
+     EXERCISE A: RELATIVE CLAUSES AND RELATIVE PRONOUNS
+     Prefix: rel-
+     ============================================================ -->
+
+<div class="rel-quiz-container">
+
+<style>
+.rel-quiz-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #e7c000;
+    border-radius: 10px;
+    background: #fff8d8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.rel-quiz-container * {
+    box-sizing: border-box;
+}
+
+.rel-instructions {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.rel-question {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e7c000;
+}
+
+.rel-question-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.rel-sentence {
+    line-height: 2.2;
+    margin: 14px 0;
+    font-size: 1.05em;
+}
+
+.rel-token {
+    display: inline-block;
+    padding: 4px 6px;
+    margin: 2px 1px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.rel-token:hover {
+    border-color: #4a90e2;
+}
+
+.rel-token:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.rel-token.rel-antecedent {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    background: #fff3a8;
+}
+
+.rel-token.rel-clause {
+    background: #cce5ff;
+    border-color: #4a90e2;
+}
+
+.rel-token.rel-antecedent.rel-clause {
+    background: #d9c8ff;
+}
+
+.rel-label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 7px;
+}
+
+.rel-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.rel-input:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
+.rel-feedback {
+    margin-top: 14px;
+    line-height: 1.55;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.rel-correct {
+    color: #0b7a0b;
+}
+
+.rel-incorrect {
+    color: #b00020;
+}
+
+.rel-note {
+    margin-top: 10px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.rel-control-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: white;
+}
+
+.rel-control-button:hover {
+    background: #f3f3f3;
+}
+
+.rel-score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .rel-quiz-container {
+        padding: 15px;
+    }
+
+    .rel-question {
+        padding: 15px;
+    }
+}
+</style>
+
+<p class="rel-instructions">
+<strong>A:</strong> For each English sentence, <strong>underline the antecedent</strong>
+and <strong>put brackets around the relative clause</strong>. Then translate only the
+<strong>relative pronoun</strong>, or the <strong>preposition and relative pronoun</strong>,
+into Latin. Pay attention to the antecedent's gender and number and to the pronoun's
+function inside its own clause.
+</p>
+
+<p class="rel-instructions">
+To mark the sentence digitally, <strong>single-click a word to identify the antecedent</strong>
+and <strong>double-click each word that belongs to the relative clause</strong>.
+Single-clicking an antecedent a second time removes the underline; double-clicking a
+relative-clause word a second time removes it from the clause.
+</p>
+
+<div id="rel-quiz"></div>
+
+<button type="button" class="rel-control-button" onclick="checkRelQuiz()">
+    Check Answers
+</button>
+
+<button type="button" class="rel-control-button" onclick="resetRelQuiz()">
+    Reset
+</button>
+
+<div id="rel-score" class="rel-score"></div>
+
+
 <script>
 (function(){
 
@@ -658,7 +846,7 @@ buildRelQuiz();
 })();
 </script>
 
-
+</div>
 
 <!-- ============================================================
      EXERCISE B: LATIN SEGMENTATION
