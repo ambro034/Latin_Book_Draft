@@ -573,7 +573,7 @@ For numbers <strong>1–5</strong>, translate from Latin into English. For numbe
 </div>
 
 > ### Translations
-{: .block-success }
+{: .block-translation }
 
 
 <div class="translation-block">
