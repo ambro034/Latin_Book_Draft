@@ -7,14 +7,6 @@ layout: post
 keyword: Latin
 ---
 
-<!-- 1. The main content is wrapped in a container that starts blurred -->
-<div id="chapter-body" class="blurred-content">
-  <article class="chapter-content">
-
-
-
-
-
 
 ### Principles of grammar
 
@@ -1233,40 +1225,4 @@ buildTransQuiz();
 
 >**Note:** All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
 {: .block-tip }
-
-
-
-
-  </article>
-</div>
-
-<!-- 2. The overlay prompt that stands on top of the blurred content -->
-<div id="unlock-gate" class="gate-overlay">
-  <div class="gate-box">
-    <h3>This chapter is locked</h3>
-    <p>Enter the correct keyword to reveal the chapter:</p>
-    <input type="text" id="chapter-key" placeholder="Type keyword here...">
-    <button onclick="revealContent()">Unlock</button>
-    <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Incorrect keyword. Try again!</p>
-  </div>
-</div>
-
-<script>
-function revealContent() {
-  var input = document.getElementById("chapter-key").value.trim().toLowerCase();
-  
-  // Dynamically pulls the keyword you set in the Markdown's front matter
-  var correctKeyword = "{{ page.keyword | downcase }}"; 
-  
-  if (input === correctKeyword) {
-    // Remove the blur effect from the text
-    document.getElementById("chapter-body").classList.remove("blurred-content");
-    // Hide the password entry prompt entirely
-    document.getElementById("unlock-gate").style.display = "none";
-  } else {
-    document.getElementById("error-msg").style.display = "block";
-  }
-}
-</script>
-
 
