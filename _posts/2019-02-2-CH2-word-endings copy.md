@@ -6,6 +6,15 @@ category: Chapter-2
 layout: post
 ---
 
+<!-- 1. The main content is wrapped in a container that starts blurred -->
+<div id="chapter-body" class="blurred-content">
+  <article class="chapter-content">
+
+
+
+
+
+
 ### Principles of grammar
 
 Today, words that change forms (he brings, he brought; child, children) are thought to be irregular, but most languages (including English), began with lots of different endings for all words. Speakers changed these endings according to the role each word pays in the sentence. Most modern languages instead use word order to express this information. This is called **inflection** (from the Latin word for *flex* or *bend*, because one can bend the words in different ways to mean something different).
@@ -1223,3 +1232,23 @@ buildTransQuiz();
 
 >**Note:** All Latin nouns have gender. This means that a mind (*mens, mentis*) is a “she” and a foot (*pes, pedis*) is a “he,” and the sea (*mare, maris*) Chapter 4 is an “it.” The most important thing is to remember that gender does not always depend on the definition, and that Romans often used pronouns that we could translate as “her” to mean an abstract idea like the mind.
 {: .block-tip }
+
+
+
+
+  </article>
+</div>
+
+<!-- 2. The overlay prompt that stands on top of the blurred content -->
+<div id="unlock-gate" class="gate-overlay">
+  <div class="gate-box">
+    <h3>This chapter is locked</h3>
+    <p>Enter the correct keyword to reveal the chapter:</p>
+    <input type="text" id="chapter-key" placeholder="Type keyword here...">
+    <button onclick="revealContent()">Unlock</button>
+    <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Incorrect keyword. Try again!</p>
+  </div>
+</div>
+
+
+
