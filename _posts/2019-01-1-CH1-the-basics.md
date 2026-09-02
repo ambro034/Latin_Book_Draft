@@ -56,7 +56,216 @@ Latin was centered around clauses. A clause in linguistic terms is anything with
 > ## Chapter 1 Practice
 {: .block-warning }
 
+
+<!-- ============================================================
+     CHAPTER 1 COMPLETION TRACKER
+     ============================================================ -->
+
+<style>
+.ch1-progress-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  border: 2px solid #b8b8b8;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.ch1-progress-container * {
+  box-sizing: border-box;
+}
+
+.ch1-progress-title {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.ch1-progress-bar {
+  width: 100%;
+  height: 14px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #e6e6e6;
+}
+
+.ch1-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #198754;
+  transition: width 0.3s ease;
+}
+
+.ch1-progress-text {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.ch1-progress-complete {
+  color: #0b7a0b;
+  font-weight: bold;
+}
+</style>
+
+
+<script>
+(function(){
+
+const ch1RequiredExercises = [
+  "ch1-subject-predicate",
+  "ch1-pronunciation"
+];
+
+
+function ch1StorageKey(exerciseId){
+
+  return "latin-complete-" + exerciseId;
+
+}
+
+
+function ch1IsExerciseComplete(exerciseId){
+
+  return localStorage.getItem(
+    ch1StorageKey(exerciseId)
+  ) === "true";
+
+}
+
+
+function ch1IsComplete(){
+
+  return ch1RequiredExercises.every(
+    ch1IsExerciseComplete
+  );
+
+}
+
+
+function ch1UpdateProgress(){
+
+  const completed =
+    ch1RequiredExercises.filter(
+      ch1IsExerciseComplete
+    ).length;
+
+
+  const percent =
+    Math.round(
+      (completed / ch1RequiredExercises.length) * 100
+    );
+
+
+  const fill =
+    document.getElementById(
+      "ch1-progress-fill"
+    );
+
+  const text =
+    document.getElementById(
+      "ch1-progress-text"
+    );
+
+
+  if(fill){
+
+    fill.style.width =
+      percent + "%";
+
+  }
+
+
+  if(text){
+
+    if(
+      completed ===
+      ch1RequiredExercises.length
+    ){
+
+      text.innerHTML =
+        `<span class="ch1-progress-complete">
+        ✓ Chapter 1 complete! Chapter 2 is unlocked.
+        </span>`;
+
+    }
+
+    else{
+
+      text.innerHTML =
+        `${completed} of ${ch1RequiredExercises.length} required exercises completed.`;
+
+    }
+
+  }
+
+
+  if(ch1IsComplete()){
+
+    localStorage.setItem(
+      "latin-chapter-1-complete",
+      "true"
+    );
+
+  }
+
+}
+
+
+window.markChapter1ExerciseComplete =
+function(exerciseId){
+
+  if(
+    !ch1RequiredExercises.includes(
+      exerciseId
+    )
+  ){
+
+    return;
+
+  }
+
+
+  localStorage.setItem(
+    ch1StorageKey(exerciseId),
+    "true"
+  );
+
+
+  ch1UpdateProgress();
+
+};
+
+
+window.isChapter1Complete =
+function(){
+
+  return ch1IsComplete();
+
+};
+
+
+window.updateChapter1Progress =
+function(){
+
+  ch1UpdateProgress();
+
+};
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  ch1UpdateProgress
+);
+
+})();
+</script>
+
+
+
 <!-- Subject predicate  -->
+
 <div class="sp-quiz-container">
 
 <style>
@@ -239,23 +448,29 @@ noclause:false
 ];
 
 
-const spContainer=document.getElementById("sp-quiz");
+const spContainer =
+document.getElementById(
+  "sp-quiz"
+);
 
-let spSelections=[];
+
+let spSelections = [];
 
 
 function buildSPQuiz(){
 
-spContainer.innerHTML="";
-spSelections=[];
+spContainer.innerHTML = "";
+
+spSelections = [];
 
 
 spQuestions.forEach((q,i)=>{
 
-spSelections[i]={};
+spSelections[i] = {};
 
 
-let words=q.sentence.map((word,index)=>{
+let words =
+q.sentence.map((word,index)=>{
 
 return `
 <span 
@@ -268,7 +483,7 @@ ${word}
 }).join(" ");
 
 
-spContainer.innerHTML+=`
+spContainer.innerHTML += `
 
 <div class="sp-question">
 
@@ -283,7 +498,10 @@ id="sp-x-${i}">
 No clause
 </label>
 
-<div id="sp-feedback-${i}" class="sp-feedback"></div>
+<div
+id="sp-feedback-${i}"
+class="sp-feedback">
+</div>
 
 </div>
 
@@ -295,26 +513,39 @@ No clause
 
 
 
-window.selectSPWord=function(question, index, element){
+window.selectSPWord =
+function(question,index,element){
 
-let current=spSelections[question][index];
+let current =
+spSelections[question][index];
 
 
 if(!current){
 
 // First click = Subject
-spSelections[question][index]="subject";
-element.classList.add("sp-subject");
+spSelections[question][index] =
+"subject";
+
+element.classList.add(
+  "sp-subject"
+);
 
 }
 
 
-else if(current==="subject"){
+else if(current === "subject"){
 
 // Second click = Predicate
-spSelections[question][index]="predicate";
-element.classList.remove("sp-subject");
-element.classList.add("sp-predicate");
+spSelections[question][index] =
+"predicate";
+
+element.classList.remove(
+  "sp-subject"
+);
+
+element.classList.add(
+  "sp-predicate"
+);
 
 }
 
@@ -323,87 +554,131 @@ else{
 
 // Third click = Remove
 delete spSelections[question][index];
+
 element.classList.remove(
-"sp-subject",
-"sp-predicate"
+  "sp-subject",
+  "sp-predicate"
 );
 
 }
 
-}
+};
 
 
 
-window.checkSPQuiz=function(){
+window.checkSPQuiz =
+function(){
 
-let score=0;
+let score = 0;
 
 
 spQuestions.forEach((q,i)=>{
 
-let feedback=
-document.getElementById(`sp-feedback-${i}`);
+let feedback =
+document.getElementById(
+  `sp-feedback-${i}`
+);
 
 
-let selectedSubjects=[];
-let selectedPredicates=[];
+let selectedSubjects = [];
+
+let selectedPredicates = [];
 
 
-Object.keys(spSelections[i]).forEach(index=>{
+Object.keys(
+  spSelections[i]
+).forEach(index=>{
 
-let word=q.sentence[index];
+let word =
+q.sentence[index];
 
-if(spSelections[i][index]==="subject"){
-selectedSubjects.push(word);
+
+if(
+  spSelections[i][index] ===
+  "subject"
+){
+
+selectedSubjects.push(
+  word
+);
+
 }
 
-if(spSelections[i][index]==="predicate"){
-selectedPredicates.push(word);
+
+if(
+  spSelections[i][index] ===
+  "predicate"
+){
+
+selectedPredicates.push(
+  word
+);
+
 }
 
 });
 
 
-let noClause=
-document.getElementById(`sp-x-${i}`).checked;
+let noClause =
+document.getElementById(
+  `sp-x-${i}`
+).checked;
 
 
 let subjectsCorrect =
-q.subjects.length===selectedSubjects.length &&
-q.subjects.every(x=>selectedSubjects.includes(x));
+q.subjects.length ===
+selectedSubjects.length &&
+q.subjects.every(
+  x => selectedSubjects.includes(x)
+);
 
 
 let predicatesCorrect =
-q.predicates.length===selectedPredicates.length &&
-q.predicates.every(x=>selectedPredicates.includes(x));
+q.predicates.length ===
+selectedPredicates.length &&
+q.predicates.every(
+  x => selectedPredicates.includes(x)
+);
 
 
 let clauseCorrect =
-q.noclause ? noClause : !noClause;
+q.noclause ?
+noClause :
+!noClause;
 
 
-if(subjectsCorrect && predicatesCorrect && clauseCorrect){
+if(
+  subjectsCorrect &&
+  predicatesCorrect &&
+  clauseCorrect
+){
 
 score++;
 
-feedback.className="sp-feedback sp-correct";
-feedback.innerHTML="✓ Correct.";
+feedback.className =
+"sp-feedback sp-correct";
+
+feedback.innerHTML =
+"✓ Correct.";
 
 }
 
 else{
 
-feedback.className="sp-feedback sp-incorrect";
+feedback.className =
+"sp-feedback sp-incorrect";
+
 
 if(q.noclause){
 
-feedback.innerHTML="Correct answer: X (no clause).";
+feedback.innerHTML =
+"Correct answer: X (no clause).";
 
 }
 
 else{
 
-feedback.innerHTML=
+feedback.innerHTML =
 `<strong>✗ Incorrect</strong><br>
 Subject(s): <strong>${q.subjects.join(", ")}</strong><br>
 Predicate(s): <strong>${q.predicates.join(", ")}</strong>`;
@@ -416,20 +691,48 @@ Predicate(s): <strong>${q.predicates.join(", ")}</strong>`;
 });
 
 
-document.getElementById("sp-score").innerHTML=
+document.getElementById(
+  "sp-score"
+).innerHTML =
 `Score: ${score} / ${spQuestions.length}`;
+
+
+/* ============================================================
+   MARK EXERCISE COMPLETE ONLY ON PERFECT SCORE
+   ============================================================ */
+
+if(
+  score ===
+  spQuestions.length
+){
+
+  if(
+    typeof window.markChapter1ExerciseComplete ===
+    "function"
+  ){
+
+    window.markChapter1ExerciseComplete(
+      "ch1-subject-predicate"
+    );
+
+  }
 
 }
 
+};
 
 
-window.resetSPQuiz=function(){
+
+window.resetSPQuiz =
+function(){
 
 buildSPQuiz();
 
-document.getElementById("sp-score").innerHTML="";
+document.getElementById(
+  "sp-score"
+).innerHTML = "";
 
-}
+};
 
 
 
@@ -443,6 +746,8 @@ buildSPQuiz();
 </div>
 
 <!-- Subject predicate END -->
+
+
 
 <!-- Pronounciation -->
 
@@ -525,8 +830,17 @@ Example: <em>amīcus</em> → a-mee-kus
 <div id="pron-quiz"></div>
 
 
-<button class="pron-button" onclick="checkPronQuiz()">Check Answers</button>
-<button class="pron-button" onclick="resetPronQuiz()">Reset</button>
+<button
+class="pron-button"
+onclick="checkPronQuiz()">
+Check Answers
+</button>
+
+<button
+class="pron-button"
+onclick="resetPronQuiz()">
+Reset
+</button>
 
 
 <div id="pron-score"></div>
@@ -592,7 +906,10 @@ answer:"wee-eye"
 ];
 
 
-const pronContainer=document.getElementById("pron-quiz");
+const pronContainer =
+document.getElementById(
+  "pron-quiz"
+);
 
 
 function normalizePron(text){
@@ -609,7 +926,7 @@ return text
 
 function buildPronQuiz(){
 
-pronContainer.innerHTML="";
+pronContainer.innerHTML = "";
 
 
 pronQuestions.forEach((q,i)=>{
@@ -647,30 +964,41 @@ class="pron-feedback">
 
 
 
-window.checkPronQuiz=function(){
+window.checkPronQuiz =
+function(){
 
-let score=0;
+let score = 0;
 
 
 pronQuestions.forEach((q,i)=>{
 
 
-let studentAnswer=
-document.getElementById(`pron-answer-${i}`).value;
+let studentAnswer =
+document.getElementById(
+  `pron-answer-${i}`
+).value;
 
 
-let feedback=
-document.getElementById(`pron-feedback-${i}`);
+let feedback =
+document.getElementById(
+  `pron-feedback-${i}`
+);
 
 
 
-if(normalizePron(studentAnswer)===normalizePron(q.answer)){
+if(
+  normalizePron(studentAnswer) ===
+  normalizePron(q.answer)
+){
 
 
 score++;
 
-feedback.className="pron-feedback pron-correct";
-feedback.innerHTML="✓ Correct.";
+feedback.className =
+"pron-feedback pron-correct";
+
+feedback.innerHTML =
+"✓ Correct.";
 
 
 }
@@ -678,8 +1006,10 @@ feedback.innerHTML="✓ Correct.";
 else{
 
 
-feedback.className="pron-feedback pron-incorrect";
-feedback.innerHTML=
+feedback.className =
+"pron-feedback pron-incorrect";
+
+feedback.innerHTML =
 `Suggested pronunciation: <strong>${q.answer}</strong>`;
 
 }
@@ -688,21 +1018,48 @@ feedback.innerHTML=
 });
 
 
-document.getElementById("pron-score").innerHTML =
+document.getElementById(
+  "pron-score"
+).innerHTML =
 `Score: ${score} / ${pronQuestions.length}`;
 
 
+/* ============================================================
+   MARK EXERCISE COMPLETE ONLY ON PERFECT SCORE
+   ============================================================ */
+
+if(
+  score ===
+  pronQuestions.length
+){
+
+  if(
+    typeof window.markChapter1ExerciseComplete ===
+    "function"
+  ){
+
+    window.markChapter1ExerciseComplete(
+      "ch1-pronunciation"
+    );
+
+  }
+
 }
 
+};
 
 
-window.resetPronQuiz=function(){
+
+window.resetPronQuiz =
+function(){
 
 buildPronQuiz();
 
-document.getElementById("pron-score").innerHTML="";
+document.getElementById(
+  "pron-score"
+).innerHTML = "";
 
-}
+};
 
 
 
@@ -716,6 +1073,54 @@ buildPronQuiz();
 </div>
 
 <!-- Pronouncation END -->
+
+
+
+<!-- ============================================================
+     CHAPTER 1 PROGRESS DISPLAY
+     ============================================================ -->
+
+<div class="ch1-progress-container">
+
+  <div class="ch1-progress-title">
+    Chapter 1 Progress
+  </div>
+
+  <div
+    class="ch1-progress-bar"
+    role="progressbar"
+    aria-label="Chapter 1 completion progress">
+
+    <div
+      id="ch1-progress-fill"
+      class="ch1-progress-fill">
+    </div>
+
+  </div>
+
+  <div
+    id="ch1-progress-text"
+    class="ch1-progress-text">
+    0 of 2 required exercises completed.
+  </div>
+
+</div>
+
+
+<script>
+
+if(
+  typeof window.updateChapter1Progress ===
+  "function"
+){
+
+  window.updateChapter1Progress();
+
+}
+
+</script>
+
+
 
 >**Note on your Latin education journey**: when you learned your first language, you likely did not do it over a few months in a classroom. You certainly didn’t sit in a room for several hours studying for a big exam. Try to approach Latin like you would to learn the piano or to work out. Daily repetition is much more effective than occasional cramming sessions.
 {: .block-tip }
