@@ -4,6 +4,7 @@ author: Dustin Heinen
 date: 2019-02-02
 category: Chapter-2
 layout: post
+keyword: Latin
 ---
 
 <!-- 1. The main content is wrapped in a container that starts blurred -->
@@ -1250,5 +1251,22 @@ buildTransQuiz();
   </div>
 </div>
 
+<script>
+function revealContent() {
+  var input = document.getElementById("chapter-key").value.trim().toLowerCase();
+  
+  // Dynamically pulls the keyword you set in the Markdown's front matter
+  var correctKeyword = "{{ page.keyword | downcase }}"; 
+  
+  if (input === correctKeyword) {
+    // Remove the blur effect from the text
+    document.getElementById("chapter-body").classList.remove("blurred-content");
+    // Hide the password entry prompt entirely
+    document.getElementById("unlock-gate").style.display = "none";
+  } else {
+    document.getElementById("error-msg").style.display = "block";
+  }
+}
+</script>
 
 
